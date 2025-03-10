@@ -4,8 +4,8 @@ import os
 file_structure = {
     "erp_web_test": {
         "config": ["config.py"],
-        "pages": ["base_page.py", "login_page.py", "sales_plan_page.py"],
-        "testcase": ["conftest.py", "test_sales_plan.py"],
+        "pages": ["base_page.py", "bak_login_page.py", "sales_plan_page.py"],
+        "testcase": ["bak_conftest.py", "test_sales_plan.py"],
         "utils": ["ocr.py"],
         "": ["requirements.txt", "run_tests.py"]
     }

@@ -1,6 +1,7 @@
 import base64
 import requests
 import time
+import sys
 
 API_KEY = 'ImVoymtJPMYkIx8icn0VRBRy'
 SECRET_KEY = '2GFyE5r22o2vh6b1FrTxFF4hslUz6SKO'
@@ -40,7 +41,7 @@ def get_access_token():
         print(f"解析 access_token 响应的 JSON 数据时出错: {e}")
     return None
 
-def ocr_accurate_basic():
+def ocr_accurate_basic(image_path):
     """
     通用文字识别（高精度版）
     """
@@ -48,10 +49,10 @@ def ocr_accurate_basic():
     request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic"
     # 二进制方式打开图片文件
     try:
-        with open('../captcha.png', 'rb') as f:
+        with open(image_path, 'rb') as f:
             img = base64.b64encode(f.read())
     except FileNotFoundError:
-        print("未找到图片文件 'captcha.png'")
+        print(f"未找到图片文件 '{image_path}'")
         return
 
     # 获取 access_token
@@ -86,6 +87,7 @@ def ocr_accurate_basic():
                         try:
                             res2 = new_res['words_result'][0]['words']
                             print(res2)
+                            return res2
                         except (KeyError, IndexError):
                             print("解析文字识别响应结果时出错，请检查响应数据格式。")
                             print("完整的响应数据:", new_res)
@@ -95,6 +97,7 @@ def ocr_accurate_basic():
             try:
                 res2 = res['words_result'][0]['words']
                 print(res2)
+                return res2
             except (KeyError, IndexError):
                 print("解析文字识别响应结果时出错，请检查响应数据格式。")
                 print("完整的响应数据:", res)
@@ -102,8 +105,11 @@ def ocr_accurate_basic():
         print(f"文字识别请求时出现网络异常: {e}")
     except ValueError as e:
         print(f"解析文字识别响应的 JSON 数据时出错: {e}")
-
+    return None
 
 if __name__ == "__main__":
-    ocr_accurate_basic()
-
+    if len(sys.argv) > 1:
+        image_path = sys.argv[1]
+        ocr_accurate_basic(image_path)
+    else:
+        print("请提供图片路径作为参数。")
