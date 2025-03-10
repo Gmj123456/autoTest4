@@ -41,4 +41,5 @@ class LoginPage(BasePage):
         # captcha_text = ocr.ocr_accurate_basic()
         # self.send_keys(*self.CAPTCHA_INPUT, captcha_text + Keys.RETURN)  # 输入验证码后发送回车键
 
+
         time.sleep(2)  # 等待登录完成

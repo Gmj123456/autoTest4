@@ -106,3 +106,4 @@ def ocr_accurate_basic():
 
 if __name__ == "__main__":
     ocr_accurate_basic()
+
