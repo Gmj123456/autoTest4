@@ -11,6 +11,10 @@ find . -type d -name ".git" | while read -r git_dir; do
 
     echo "正在处理仓库: $repo_dir"
 
+    # 获取远程仓库地址
+    remote_url=$(git remote get-url origin)
+    echo "  远程仓库地址: $remote_url"
+
     # 检查是否有文件变更
     if [ -z "$(git status --porcelain)" ]; then
         echo "  此仓库没有文件变更，无需提交。"
@@ -49,4 +53,3 @@ find . -type d -name ".git" | while read -r git_dir; do
 
     cd - > /dev/null
 done
-    
