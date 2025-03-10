@@ -7,7 +7,6 @@ from config.config import USERNAME, PASSWORD, ERP_URL
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 
 @pytest.fixture(scope="function")
 def driver():
