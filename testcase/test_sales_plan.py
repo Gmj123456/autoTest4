@@ -10,7 +10,7 @@ def test_add_sales_plan(logged_in_driver):
     sales_plan_page.add_sales_plan(asin, months, quantities)
 
     # 假设成功提示信息的元素定位器
-    SUCCESS_MESSAGE = (By.ID, "success-message")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR,'body > div.ant-notification.ant-notification-topRight > span > div > div > div > div.ant-notification-notice-message')
     try:
         success_message = sales_plan_page.find_element(*SUCCESS_MESSAGE)
         assert success_message.is_displayed()

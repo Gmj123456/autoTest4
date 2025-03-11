@@ -63,6 +63,9 @@ class LoginPage(BasePage):
                     logging.error(f"调用 OCR 脚本时出现错误: {e.stderr}")
                 if res:
                     captcha_text = res[0].strip()
+                    if captcha_text == "404":
+                        logging.error("验证码识别结果为 404，停止登录尝试")
+                        return False
                     self.send_keys(*self.CAPTCHA_INPUT, captcha_text + Keys.RETURN)
                     logging.info(f"已输入验证码: {captcha_text}，第 {attempts + 1} 次尝试")
 
