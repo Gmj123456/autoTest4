@@ -34,7 +34,7 @@ def driver():
     yield driver
     driver.quit()
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="function")
 def logged_in_driver(driver):
     login_page = LoginPage(driver)
     login_page.login(USERNAME, PASSWORD)
@@ -46,7 +46,8 @@ def logged_in_driver(driver):
         # 等待页面 URL 变为登录成功后的 URL，最多等待 10 秒
         WebDriverWait(driver, 10).until(EC.url_to_be(success_url))
         print("登录成功")
-    except TimeoutException:
-        pytest.fail(f"登录失败，当前页面 URL 为: {driver.current_url}")
+        yield driver
 
-    yield driver
+    except TimeoutException:
+        pytest.fail(f"登录失败，达到最大重试次数")
+

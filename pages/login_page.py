@@ -9,6 +9,8 @@ import logging
 import sys  # 添加 sys 模块的导入
 from selenium.common.exceptions import NoSuchElementException, WebDriverException
 import subprocess
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 # 配置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -18,6 +20,7 @@ class LoginPage(BasePage):
     PASSWORD_INPUT = (By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[2]/div/div/span/input")
     CAPTCHA_INPUT = (By.XPATH,"/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[3]/div[1]/div/div/div/span/span/input")
     CAPTCHA_IMAGE = (By.XPATH,"/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[3]/div[2]/img")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR,'body > div.ant-notification.ant-notification-topRight > span > div > div > div > div.ant-notification-notice-message')
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -62,24 +65,25 @@ class LoginPage(BasePage):
                     captcha_text = res[0].strip()
                     self.send_keys(*self.CAPTCHA_INPUT, captcha_text + Keys.RETURN)
                     logging.info(f"已输入验证码: {captcha_text}，第 {attempts + 1} 次尝试")
-                    time.sleep(4)  # 等待登录完成
 
-                    # 假设成功提示信息的元素定位器
-                    SUCCESS_MESSAGE = (By.CSS_SELECTOR,'body > div.ant-notification.ant-notification-topRight > span > div > div > div > div.ant-notification-notice-message')
+                    # 等待登录结果提示信息加载
                     try:
-                        success_message = self.find_element(*SUCCESS_MESSAGE)
-                        if success_message.is_displayed() and success_message.text == "登录成功":
-                            logging.info("登录成功")
-                            return True
+                        message = WebDriverWait(self.driver, 10).until(
+                            EC.presence_of_element_located(self.SUCCESS_MESSAGE)
+                        )
+                        if message.is_displayed():
+                            if message.text == "登录成功":
+                                logging.info("登录成功")
+                                return True
+                            elif message.text == "登录失败":
+                                logging.warning(f"第 {attempts + 1} 次登录失败，重新尝试")
                     except Exception:
                         pass
 
-                attempts += 1
-                logging.warning(f"第 {attempts} 次验证码识别失败，重新尝试")
-
             except Exception as e:
                 logging.error(f"登录过程中出现错误: {e}")
-                attempts += 1
+
+            attempts += 1
 
         logging.error("验证码识别失败次数达到上限，登录失败")
         return False
