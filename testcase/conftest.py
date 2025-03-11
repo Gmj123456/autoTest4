@@ -34,7 +34,7 @@ def driver():
     yield driver
     driver.quit()
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="session")
 def logged_in_driver(driver):
     login_page = LoginPage(driver)
     login_page.login(USERNAME, PASSWORD)

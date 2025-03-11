@@ -1,4 +1,4 @@
-# pages/bak_login_page2.py
+
 from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 import time
@@ -6,6 +6,9 @@ from config.config import ERP_URL
 from selenium.webdriver.common.keys import Keys
 import os
 import logging
+import sys  # 添加 sys 模块的导入
+from selenium.common.exceptions import NoSuchElementException, WebDriverException
+import subprocess
 
 # 配置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -44,21 +47,22 @@ class LoginPage(BasePage):
                 try:
                     captcha_image = self.find_element(*self.CAPTCHA_IMAGE)
                     captcha_image.screenshot(captcha_path)
-                except Exception as e:
-                    print(f"截图验证码时出现异常: {e}")
+                except NoSuchElementException:
+                    logging.error("未找到验证码图片元素")
+                except WebDriverException as e:
+                    logging.error(f"截图验证码时出现 WebDriver 异常: {e}")
 
                 # 调用OCR接口识别验证码
-                os_str = f'python {os.path.join(current_dir, "../utils/ocr.py")} {captcha_path}'
-                # os_str = 'python ./utils/ocr.py'
-                f = os.popen(os_str, 'r')
-                res = f.readlines()
-                f.close()
-
+                try:
+                    result = subprocess.run([sys.executable, os.path.join(current_dir, "../utils/ocr.py"), captcha_path], capture_output=True, text=True, check=True)
+                    res = result.stdout.splitlines()
+                except subprocess.CalledProcessError as e:
+                    logging.error(f"调用 OCR 脚本时出现错误: {e.stderr}")
                 if res:
                     captcha_text = res[0].strip()
                     self.send_keys(*self.CAPTCHA_INPUT, captcha_text + Keys.RETURN)
                     logging.info(f"已输入验证码: {captcha_text}，第 {attempts + 1} 次尝试")
-                    time.sleep(2)  # 等待登录完成
+                    time.sleep(4)  # 等待登录完成
 
                     # 假设成功提示信息的元素定位器
                     SUCCESS_MESSAGE = (By.CSS_SELECTOR,'body > div.ant-notification.ant-notification-topRight > span > div > div > div > div.ant-notification-notice-message')
