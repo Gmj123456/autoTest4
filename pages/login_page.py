@@ -33,12 +33,6 @@ class LoginPage(BasePage):
                 self.send_keys(*self.PASSWORD_INPUT, password)
                 logging.info("已输入密码")
 
-                # 截图验证码
-                # captcha_image = self.find_element(*self.CAPTCHA_IMAGE)
-                # captcha_image.screenshot("captcha.png")
-                # logging.info("已截取验证码图片")
-
-
                 # 获取当前脚本所在目录
                 current_dir = os.path.dirname(os.path.abspath(__file__))
                 # 构建保存图片的路径，保存到 config 文件夹
@@ -67,7 +61,7 @@ class LoginPage(BasePage):
                     time.sleep(2)  # 等待登录完成
 
                     # 假设成功提示信息的元素定位器
-                    SUCCESS_MESSAGE = (By.ID, "success-message")
+                    SUCCESS_MESSAGE = (By.CSS_SELECTOR,'body > div.ant-notification.ant-notification-topRight > span > div > div > div > div.ant-notification-notice-message')
                     try:
                         success_message = self.find_element(*SUCCESS_MESSAGE)
                         if success_message.is_displayed() and success_message.text == "登录成功":

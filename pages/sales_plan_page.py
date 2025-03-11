@@ -3,7 +3,8 @@ from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 
 class SalesPlanPage(BasePage):
-    SALES_PLAN_MENU = (By.ID, "sales-plan-menu")
+    AMAZON = (By.CSS_SELECTOR,"#app > section > aside > div > ul > li.ant-menu-submenu.ant-menu-submenu-inline.ant-menu-submenu-open > div > span > span")
+    SALES_PLAN_MENU = (By.ID, "//*[@id='app']/section/aside/div/ul/li[3]/ul/li[2]/a/span")
     STORE_SELECT = (By.ID, "store-select")
     MARKET_SELECT = (By.ID, "market-select")
     ASIN_INPUT = (By.ID, "asin-input")
