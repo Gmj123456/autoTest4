@@ -2,6 +2,15 @@
 from pages.sales_plan_page import SalesPlanPage
 from selenium.webdriver.common.by import By
 
+
+def test_menu_navigation(logged_in_driver, module_urls):
+    """验证销售计划菜单跳转"""
+    sales_page = SalesPlanPage(logged_in_driver)
+    sales_page.navigate_to_sales_plan()
+    
+    assert logged_in_driver.current_url == module_urls["sales_plan"], "菜单跳转地址不正确"
+
+
 def test_add_sales_plan(logged_in_driver):
     sales_plan_page = SalesPlanPage(logged_in_driver)
     asin = "your_asin"
@@ -17,3 +26,4 @@ def test_add_sales_plan(logged_in_driver):
         assert success_message.text == "销售计划添加成功"
     except Exception as e:
         assert False, f"添加销售计划失败: {e}"
+

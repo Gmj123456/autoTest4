@@ -40,3 +40,28 @@ def logged_in_driver(driver):
         yield driver
     else:
         pytest.fail("登录失败")
+
+
+# 在已有 fixtures 后添加
+
+@pytest.fixture(scope="session")
+def module_urls(access_token):
+    """获取各模块基础URL"""
+    import requests
+    headers = {"Authorization": f"Bearer {access_token}"}
+    
+    # 调用系统配置接口获取模块URL
+    # 增加容错机制
+    response = requests.get(
+        "http://192.168.150.222:3066/erp/sys/permission/list",
+        headers=headers,
+        timeout=10  # 添加超时控制
+    )
+    response.raise_for_status()  # 自动抛出HTTP错误
+    assert response.status_code == 200, "获取模块URL失败"
+    
+    return {
+        "sales_plan": response.json()["salesPlanUrl"],
+        "dashboard": response.json()["dashboardUrl"],
+        "inventory": response.json()["inventoryUrl"]
+    }
