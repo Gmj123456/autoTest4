@@ -27,3 +27,14 @@ def test_add_sales_plan(logged_in_driver):
     except Exception as e:
         assert False, f"添加销售计划失败: {e}"
 
+
+def test_menu_structure(menu_urls):
+    expected_urls = {
+        "销售计划": "/erp/sale/sales-plan",
+        "库存管理": "/erp/inventory/manage"
+    }
+    
+    for name, url in expected_urls.items():
+        assert name in menu_urls, f"缺少菜单项: {name}"
+        assert menu_urls[name] == url, f"{name} URL不匹配"
+

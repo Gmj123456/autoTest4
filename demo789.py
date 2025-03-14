@@ -1,13 +1,14 @@
+# 测试之前先登录管理员账户获取菜单url
 import requests
 
-# 定义接口 URL
+# 菜单接口 URL
 url = 'http://192.168.150.111:8099/erp/sys/permission/list'
 
 # 设置请求头，带上 token
 headers = {
   'Tenant-Id': '1',
   'accept': 'application/json, text/plain, */*',
-  'X-Access-Token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDE3OTkwNzAsInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.J2lyIbAnoHb_KZ386RJs_6E0vQEYIiymuXlttng2Uqo'
+  'X-Access-Token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDE5NTIyMTksInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.1pf6OcKyzj8jfrXer-PQdwALpFl0zyhTUn5lmVjZFc4'
 }
 
 try:
@@ -18,7 +19,7 @@ try:
   response_data = response.json()
 
   # 打印整个响应内容用于调试
-  print(response_data)
+  # print(response_data)
 
   # 检查 HTTP 状态码是否为 2xx 成功响应
   if response.status_code // 100 == 2:
