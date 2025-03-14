@@ -1,3 +1,5 @@
+import pdb
+
 import pytest
 import requests
 import logging
@@ -8,8 +10,6 @@ from pages.login_page import LoginPage
 from config.config import USERNAME, PASSWORD, PTUSER_USERNAME, PTUSER_PASSWORD
 from pathlib import Path
 
-# 配置日志
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # 获取当前脚本的绝对路径
 script_dir = Path(__file__).resolve().parent
@@ -67,8 +67,7 @@ def menu_urls(ptuser_logged_in, ptuser_driver):
 
         # 添加响应内容验证
         logging.debug(f"响应状态码: {response.status_code}")
-        logging.debug(f"响应内容类型: {response.headers.get('Content-Type')}")
-        logging.debug(f"响应前1000字符: {response.text[:1000]}")
+        logging.debug(f"响应前200字符: {response.text[:200]}")
 
         response.raise_for_status()
 
@@ -99,50 +98,12 @@ def menu_urls(ptuser_logged_in, ptuser_driver):
         menu_data = {}
 
         def extract_menu(menu):
-            # 添加参数校验
-            if not isinstance(menu, dict):
-                logging.warning(f"非法菜单格式，期望dict实际得到: {type(menu)}")
-                return {}
-
             menu_data = {}
-            try:
-                # 扩展支持的路径字段
-                menu_path = menu.get('path') or menu.get('url') or ''
-                menu_path = menu_path.strip('/')
-                
-                # 放宽组件校验条件
-                if menu_path and not menu.get('hidden'):
-                    # 使用更可靠的名称字段
-                    menu_name = menu.get('title') or menu.get('name') or 'unknown'
-                    # 生成标准化路径（修复多余斜杠问题）
-                    full_path = f'/{menu_path}' 
-                    
-                    menu_data[menu_name] = full_path
-                    logging.info(f"注册菜单项: {menu_name} -> {full_path}")
-
-                # 增强子菜单路径拼接逻辑
-                children = menu.get('children', [])
-                for index, child in enumerate(children):
-                    if isinstance(child, dict):
-                        child_data = extract_menu(child)
-                        # 修正路径拼接逻辑（处理嵌套路径）
-                        if child_data and menu_path:
-                            updated_data = {}
-                            for name, path in child_data.items():
-                                # 修正路径拼接逻辑（兼容ERP系统路由规范）
-                                if path.startswith('/'):
-                                    new_path = path  # 保留绝对路径
-                                else:
-                                    new_path = f'/{menu_path}/{path}'
-                                updated_data[name] = new_path
-                            child_data = updated_data
-                        menu_data.update(child_data)
-                    else:
-                        logging.warning(f"跳过非法子菜单类型: {type(child)}")
-                        
-            except Exception as e:
-                logging.error(f"解析菜单异常: {str(e)}", exc_info=True)
-                
+            if 'children' in menu:
+                for child in menu['children']:
+                    if 'path' in child:
+                        menu_data[child.get('name', 'unknown')] = child['path']
+                    menu_data.update(extract_menu(child))
             return menu_data
 
         for root_menu in result_data:
@@ -156,14 +117,14 @@ def menu_urls(ptuser_logged_in, ptuser_driver):
         return menu_data
 
     except Exception as e:
-        # 初始化 error_msg 必须在前
+
         error_msg = f"菜单获取失败: {str(e)}"
-        
-        # 合并 response 存在性检查
+
+        # 添加额外信息
         if response is not None:
             error_msg += f"\nHTTP状态码：{response.status_code}"
             error_msg += f"\n完整响应内容（前1000字符）: {response.text[:1000]}"
         else:
             error_msg += "\n（请求未完成或未获得响应）"
-        
+
         pytest.fail(error_msg)
