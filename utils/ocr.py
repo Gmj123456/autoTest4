@@ -2,9 +2,7 @@ import base64
 import requests
 import time
 import sys
-
-API_KEY = 'ImVoymtJPMYkIx8icn0VRBRy'
-SECRET_KEY = '2GFyE5r22o2vh6b1FrTxFF4hslUz6SKO'
+from config.config import OCR_API_KEY, OCR_SECRET_KEY
 
 # 硬编码的 access_token
 HARDCODED_ACCESS_TOKEN = '24.c9fd59e5d5a36aac446d36a5a80d2e9e.2592000.1742362951.282335-117554037'

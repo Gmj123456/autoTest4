@@ -11,10 +11,8 @@ from pathlib import Path
 # 配置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# 获取当前脚本的绝对路径
-script_dir = Path(__file__).resolve().parent
-# 构建 chromedriver 的相对路径
-CHROME_DRIVER_PATH = script_dir.parent / 'utils' / 'chromedriver.exe'
+# 改为从config导入
+from config.config import CHROME_DRIVER_PATH
 logging.info(f"使用的 ChromeDriver 路径: {CHROME_DRIVER_PATH}")
 
 

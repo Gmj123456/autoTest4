@@ -1,4 +1,3 @@
 selenium
 pytest
 requests
-beautifulsoup4

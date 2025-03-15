@@ -1,18 +1,18 @@
 import json
+import logging
 from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from config.config import ERP_URL, LOGIN_SUCCESS_URL
 from selenium.webdriver.common.keys import Keys
 import pathlib
-import logging
 from selenium.common.exceptions import NoSuchElementException, WebDriverException
 import subprocess
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# 配置日志
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
+# 在文件顶部添加统一日志配置
+from utils.logger import setup_logging
+setup_logging()
 
 class LoginPage(BasePage):
     USERNAME_INPUT = (

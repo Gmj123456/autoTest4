@@ -36,3 +36,4 @@ def test_add_sales_plan(logged_in_driver):
         assert success_message.text == "销售计划添加成功"
     except Exception as e:
         assert False, f"添加销售计划失败: {e}"
+

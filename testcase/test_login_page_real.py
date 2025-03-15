@@ -8,8 +8,8 @@ from config.config import USERNAME, PASSWORD  # 新增导入
 @pytest.fixture(scope="module")
 def browser():
     # 构建chromedriver绝对路径
-    project_root = Path(__file__).parent.parent
-    driver_path = project_root / 'utils' / 'chromedriver.exe'
+    from config.config import CHROME_DRIVER_PATH
+    driver_path = CHROME_DRIVER_PATH
     
     # 初始化浏览器实例
     service = Service(str(driver_path))
