@@ -4,23 +4,15 @@ from pathlib import Path
 from selenium.webdriver.chrome.service import Service
 from pages.login_page import LoginPage  # 新增导入
 from config.config import USERNAME, PASSWORD  # 新增导入
+from config.config import CHROME_DRIVER_PATH  # 导入chromedriver路径
 
 @pytest.fixture(scope="module")
 def browser():
-    # 构建chromedriver绝对路径
-    # 删除本地路径构建
-    # project_root = Path(__file__).parent.parent
-    # driver_path = project_root / 'utils' / 'chromedriver.exe'
-    
-    # 改为从config导入
-    from config.config import CHROME_DRIVER_PATH
-    driver_path = CHROME_DRIVER_PATH
-    
     # 初始化浏览器实例
+    driver_path = CHROME_DRIVER_PATH
     service = Service(str(driver_path))
     driver = Chrome(service=service)
-    # 增加窗口最大化操作
-    driver.maximize_window()
+    driver.maximize_window()  # 窗口最大化操作
     driver.implicitly_wait(10)
     yield driver
     driver.quit()
