@@ -30,3 +30,15 @@ class SalesPlanPage(BasePage):
             self.send_keys(*self.PLAN_QUANTITY_INPUT, quantity)
 
         self.click_element(*self.CONFIRM_BUTTON)
+    
+    def navigate_to_sales_plan(self):
+        """导航到销售计划页面"""
+        self.click_element(*self.SALES_PLAN_MENU)
+        # 添加显式等待确保页面加载完成
+        WebDriverWait(self.driver, 10).until(
+            lambda d: d.current_url.endswith('/sales-plan') or d.current_url.endswith('/salesPlan')
+        )
+    
+    def get_current_url(self):
+        """获取当前页面URL"""
+        return self.driver.current_url
