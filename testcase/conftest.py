@@ -5,7 +5,7 @@ import json
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from pages.login_page import LoginPage
-from config.config import USERNAME,PASSWORD,PTUSER_USERNAME, PTUSER_PASSWORD,GETMENU
+from config.config import USERNAME, PASSWORD, PTUSER_USERNAME, PTUSER_PASSWORD, GETMENU
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')  # 配置日志
 
@@ -15,7 +15,6 @@ logging.info(f"使用的 ChromeDriver 路径: {CHROME_DRIVER_PATH}")
 """特殊权限账号专用浏览器实例（保持打开直到菜单获取结束）"""
 @pytest.fixture(scope="session")
 def ptuser_driver():
-    """特殊权限账号专用浏览器实例（保持打开直到测试结束）"""
     service = Service(str(CHROME_DRIVER_PATH))
     driver = webdriver.Chrome(service=service)
     driver.maximize_window()
@@ -26,7 +25,6 @@ def ptuser_driver():
 """一次性特殊权限账号登录"""
 @pytest.fixture(scope="session")
 def ptuser_logged_in(ptuser_driver):
-    """一次性特殊权限账号登录"""
     login_page = LoginPage(ptuser_driver)
     result = login_page.login(PTUSER_USERNAME, PTUSER_PASSWORD)
     if not result:
@@ -38,7 +36,9 @@ def ptuser_logged_in(ptuser_driver):
     # 返回token时保持浏览器打开
     yield token
 
-    # 实际关闭浏览器的操作由ptuser_driver的teardown完成
+    # 退出特殊账号
+    login_page.logout()
+    driver.quit()
 
 """提取菜单URL（整个测试会话只获取一次）"""
 @pytest.fixture(scope="session")
@@ -103,14 +103,14 @@ def menu_urls(ptuser_logged_in, ptuser_driver):
                 # 扩展支持的路径字段
                 menu_path = menu.get('path') or menu.get('url') or ''
                 menu_path = menu_path.strip('/')
-                
+
                 # 放宽组件校验条件
                 if menu_path and not menu.get('hidden'):
                     # 使用更可靠的名称字段
                     menu_name = menu.get('title') or menu.get('name') or 'unknown'
                     # 生成标准化路径（修复多余斜杠问题）
-                    full_path = f'/{menu_path}' 
-                    
+                    full_path = f'/{menu_path}'
+
                     menu_data[menu_name] = full_path
                     logging.info(f"注册菜单项: {menu_name} -> {full_path}")
 
@@ -135,10 +135,10 @@ def menu_urls(ptuser_logged_in, ptuser_driver):
                         menu_data.update(child_data)
                     else:
                         logging.warning(f"跳过非法子菜单类型: {type(child)}")
-                        
+
             except Exception as e:
                 logging.error(f"解析菜单异常: {str(e)}", exc_info=True)
-                
+
             return menu_data
 
         for root_menu in result_data:
@@ -154,33 +154,26 @@ def menu_urls(ptuser_logged_in, ptuser_driver):
     except Exception as e:
         # 初始化 error_msg 必须在前
         error_msg = f"菜单获取失败: {str(e)}"
-        
+
         # 合并 response 存在性检查
         if response is not None:
             error_msg += f"\nHTTP状态码：{response.status_code}"
             error_msg += f"\n完整响应内容（前1000字符）: {response.text[:1000]}"
         else:
             error_msg += "\n（请求未完成或未获得响应）"
-        
+
         pytest.fail(error_msg)
-
-
-
-@pytest.fixture(scope="function")
-def logged_in_driver():
-    """测试账号浏览器实例"""
-    service = Service(str(CHROME_DRIVER_PATH))
-    driver = webdriver.Chrome(service=service)
-    driver.maximize_window()
-    yield driver
-    driver.quit()
 
 @pytest.fixture(scope="function")
 def logged_in():
-    """测试账号登录"""
-    login_page = LoginPage(logged_in_driver)
-    result = login_page.login(USERNAME,PASSWORD)
+    """测试账号登录，返回登录后的驱动实例"""
+    service = Service(str(CHROME_DRIVER_PATH))
+    driver = webdriver.Chrome(service=service)
+    driver.maximize_window()
+    login_page = LoginPage(driver)
+    result = login_page.login(USERNAME, PASSWORD)
     if not result:
         pytest.fail("登录失败")
+    yield driver
 
-    yield
+    driver.quit()

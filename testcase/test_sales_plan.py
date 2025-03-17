@@ -4,18 +4,19 @@ from pages.sales_plan_page import SalesPlanPage
 from selenium.webdriver.common.by import By
 from pathlib import Path
 import json
+import pdb
 
 class TestSalesPlan:
-    def test_menu_navigation(self,logged_in, menu_urls):
+    def test_menu_navigation(self, logged_in, menu_urls):
         """验证销售计划菜单跳转"""
         # 添加空值检查
         assert menu_urls is not None, "菜单URL数据未正确加载"
         assert "销售计划" in menu_urls, "菜单数据中缺少销售计划项"
-        
+
         sales_page = SalesPlanPage(logged_in)
         expected_url = menu_urls["销售计划"]
 
-        # 执行页面导航
+        # 导航到销售计划页面
         sales_page.navigate_to_sales_plan()
 
         # 获取实际页面URL（添加等待确保页面加载完成）
@@ -32,9 +33,9 @@ class TestSalesPlan:
     @pytest.mark.parametrize('plan_data',
         json.loads(TEST_DATA_PATH.read_text(encoding='utf-8')),
         ids=lambda d: f"添加{d['month']}计划")
-    def test_add_sales_plan(self,logged_in_driver, plan_data):
+    def test_add_sales_plan(self, logged_in, plan_data):
         """集成后的销售计划添加测试（参数化版本）"""
-        sales_plan_page = SalesPlanPage(logged_in_driver)
+        sales_plan_page = SalesPlanPage(logged_in)
         sales_plan_page.navigate_to_sales_plan()
 
         # 使用页面对象方法

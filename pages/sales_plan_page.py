@@ -1,6 +1,7 @@
 # pages/sales_plan_page.py
 from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 
 class SalesPlanPage(BasePage):
     AMAZON = (By.CSS_SELECTOR,"#app > section > aside > div > ul > li.ant-menu-submenu.ant-menu-submenu-inline.ant-menu-submenu-open > div > span > span")

@@ -22,6 +22,10 @@ class LoginPage(BasePage):
     CAPTCHA_INPUT = (
     By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[3]/div[1]/div/div/div/span/span/input")
     CAPTCHA_IMAGE = (By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[3]/div[2]/img")
+    LOGOUT_BUTTON = (By.XPATH, "//*[@id='app']/section/section/header/div/div/span[6]/a/span/span/span")  # 假设退出登录按钮的定位器
+    # CONFIRM_LOGOUT_BUTTON = (By.XPATH, "/html/body/div[8]/div/div[2]/div/div[2]/div/div/div[2]/button[2]")  # 假设确定按钮的定位器
+    CONFIRM_LOGOUT_BUTTON = (By.XPATH,"/html/body/div[8]/div/div[2]/div/div[2]/div/div/div[2]/button[2]/span")
+
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -140,3 +144,28 @@ class LoginPage(BasePage):
 
         logging.error("验证码识别失败次数达到上限，登录失败")
         return False
+
+    def logout(self):
+        """退出登录"""
+        try:
+            logout_button = self.find_element(*self.LOGOUT_BUTTON)
+            logout_button.click()
+            logging.info("已点击退出登录按钮")
+            
+            # 修改部分，使用显式等待
+            from selenium.webdriver.support.ui import WebDriverWait
+            from selenium.webdriver.support import expected_conditions as EC
+            try:
+                # 假设需要等待确认退出登录按钮出现
+                WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(self.CONFIRM_LOGOUT_BUTTON))
+                logging.info("确认退出登录按钮已出现")
+            except Exception as e:
+                logging.error(f"等待确认退出登录按钮出现时出错: {e}")
+            
+            confirm_button = self.find_element(*self.CONFIRM_LOGOUT_BUTTON)
+            confirm_button.click()
+            logging.info("已点击确定按钮，完成退出登录")
+            return True
+        except Exception as e:
+            logging.error(f"退出登录时出现错误: {e}")
+            return False
