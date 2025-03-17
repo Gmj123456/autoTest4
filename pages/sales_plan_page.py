@@ -13,6 +13,21 @@ class SalesPlanPage(BasePage):
     MONTH_SELECT = (By.ID, "month-select")
     PLAN_QUANTITY_INPUT = (By.ID, "plan-quantity-input")
     CONFIRM_BUTTON = (By.ID, "confirm-button")
+    
+    # 新增定位器
+    SALES_PLAN_URL = "/sales-plan"
+    MONTH_LINK = (By.LINK_TEXT, "{}")  # 参数化定位器
+    
+    def add_single_plan(self, month: str, quantity: str):
+        """添加单个销售计划"""
+        self.click_element(*self.ADD_PLAN_BUTTON)
+        
+        # 带参数的定位器使用
+        month_locator = (self.MONTH_LINK[0], self.MONTH_LINK[1].format(month))
+        self.click_element(*month_locator)
+        
+        self.send_keys(*self.PLAN_QUANTITY_INPUT, quantity)
+        self.click_element(*self.CONFIRM_BUTTON)
 
     def __init__(self, driver):
         super().__init__(driver)

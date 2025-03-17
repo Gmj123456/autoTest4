@@ -4,9 +4,9 @@ from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from config.config import ERP_URL, LOGIN_SUCCESS_URL
 from selenium.webdriver.common.keys import Keys
-import pathlib
-from selenium.common.exceptions import NoSuchElementException, WebDriverException
+from pathlib import Path
 import subprocess
+from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -25,10 +25,12 @@ class LoginPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
+        # 确保 self.driver 是正确的驱动对象
+        self.driver = driver
 
     def save_captcha_image(self):
         """保存验证码图片"""
-        current_dir = pathlib.Path(__file__).parent.resolve()
+        current_dir = Path(__file__).parent.resolve()  # 修改 pathlib.Path → Path
         config_dir = current_dir.parent / 'config'
         config_dir.mkdir(parents=True, exist_ok=True)
         captcha_path = config_dir / 'captcha.png'
@@ -48,11 +50,17 @@ class LoginPage(BasePage):
         """调用 OCR 接口识别验证码"""
         if not captcha_path:
             return None
-        current_dir = pathlib.Path(__file__).parent.resolve()
+        current_dir = Path(__file__).parent.resolve()  # 修改 pathlib.Path → Path
         ocr_script_path = current_dir.parent / 'utils' / 'ocr.py'
         try:
-            result = subprocess.run(['python', str(ocr_script_path), str(captcha_path)], capture_output=True, text=True,
-                                    check=True)
+            # 添加工作目录参数
+            result = subprocess.run(
+                ['python', str(ocr_script_path), str(captcha_path)], 
+                cwd=str(Path(__file__).parent.parent.parent),  # 设置工作目录为项目根目录
+                capture_output=True, 
+                text=True,
+                check=True
+            )
             res = result.stdout.splitlines()
             if res:
                 captcha_text = res[0].strip()
@@ -111,9 +119,9 @@ class LoginPage(BasePage):
                 self.driver.get(ERP_URL)
                 logging.info("已打开登录页面")
                 self.send_keys(*self.USERNAME_INPUT, username)
-                logging.info("已输入用户名")
+                logging.info(f"已输入用户名：{username}")
                 self.send_keys(*self.PASSWORD_INPUT, password)
-                logging.info("已输入密码")
+                logging.info(f"已输入密码：{password}")
 
                 captcha_path = self.save_captcha_image()
                 captcha_text = self.recognize_captcha(captcha_path)
@@ -124,7 +132,6 @@ class LoginPage(BasePage):
                     result = self.check_login_result(attempts)
                     if result:
                         self.access_token = self.get_access_token()  # 获取token
-                        print(self.access_token)
                         return True
             except Exception as e:
                 logging.error(f"登录过程中出现错误: {e}")

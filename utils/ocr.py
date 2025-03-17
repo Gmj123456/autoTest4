@@ -2,7 +2,13 @@ import base64
 import requests
 import time
 import sys
-from config.config import OCR_API_KEY, OCR_SECRET_KEY
+from pathlib import Path
+
+# 添加项目根目录到Python路径
+sys.path.append(str(Path(__file__).parent.parent))
+
+# 现在可以正确导入config模块
+from config.config import API_KEY, SECRET_KEY
 
 # 硬编码的 access_token
 HARDCODED_ACCESS_TOKEN = '24.c9fd59e5d5a36aac446d36a5a80d2e9e.2592000.1742362951.282335-117554037'
