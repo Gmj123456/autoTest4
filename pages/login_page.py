@@ -14,6 +14,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from utils.logger import setup_logging
 setup_logging()
 
+
+
 class LoginPage(BasePage):
     USERNAME_INPUT = (
     By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input")
@@ -26,6 +28,7 @@ class LoginPage(BasePage):
     # CONFIRM_LOGOUT_BUTTON = (By.XPATH, "/html/body/div[8]/div/div[2]/div/div[2]/div/div/div[2]/button[2]")  # 假设确定按钮的定位器
     CONFIRM_LOGOUT_BUTTON = (By.XPATH,"/html/body/div[8]/div/div[2]/div/div[2]/div/div/div[2]/button[2]/span")
 
+    NOTIFICATION_CLOSE_BUTTON = (By.XPATH, "/html/body/div[5]/span/div/a/span/i/svg")  # 登录成功通知框的定位器（遮挡退出登录按钮）
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -113,6 +116,16 @@ class LoginPage(BasePage):
             logging.error(f"An error occurred: {e}")
         return None
 
+    def close_notification_box(self, NOTIFICATION_CLOSE_BUTTON=None):
+        """关闭通知框"""
+        try:
+            # 检查通知框是否存在
+            if NOTIFICATION_CLOSE_BUTTON:
+                self.find_element(*NOTIFICATION_CLOSE_BUTTON).click()
+                logging.info("已关闭通知框")
+        except Exception as e:
+            logging.error(f"没有通知框遮挡: {e}")
+
     def login(self, username, password):
         max_attempts = 5
         attempts = 0
@@ -146,24 +159,25 @@ class LoginPage(BasePage):
         return False
 
     def logout(self):
-        """退出登录"""
         try:
+            # 检查并关闭通知框
+            self.close_notification_box()
+
             logout_button = self.find_element(*self.LOGOUT_BUTTON)
             logout_button.click()
             logging.info("已点击退出登录按钮")
-            
+
             # 修改部分，使用显式等待
             from selenium.webdriver.support.ui import WebDriverWait
             from selenium.webdriver.support import expected_conditions as EC
             try:
-                # 假设需要等待确认退出登录按钮出现
-                WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(self.CONFIRM_LOGOUT_BUTTON))
+                WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(self.CONFIRM_LOGOUT_BUTTON))
                 logging.info("确认退出登录按钮已出现")
             except Exception as e:
                 logging.error(f"等待确认退出登录按钮出现时出错: {e}")
-            
-            confirm_button = self.find_element(*self.CONFIRM_LOGOUT_BUTTON)
-            confirm_button.click()
+                return False
+
+            confirm_button = self.find_element(*self.CONFIRM_LOGOUT_BUTTON).click()
             logging.info("已点击确定按钮，完成退出登录")
             return True
         except Exception as e:

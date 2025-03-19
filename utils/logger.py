@@ -1,6 +1,6 @@
 import logging
 from pathlib import Path
-import os
+import datetime
 
 def setup_logging():
     """统一日志配置"""
@@ -12,14 +12,15 @@ def setup_logging():
 
     # 防止重复添加handler
     if logger.handlers:
-        return
+        return logger
 
     formatter = logging.Formatter(
         '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     )
 
-    # 文件处理器（按天滚动）
-    file_handler = logging.FileHandler(log_dir / 'automation.log', encoding='utf-8')
+    # 文件处理器，使用时间戳生成唯一的文件名
+    timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    file_handler = logging.FileHandler(log_dir / f'automation_{timestamp}.log', encoding='utf-8')
     file_handler.setFormatter(formatter)
     
     # 控制台处理器
@@ -32,3 +33,5 @@ def setup_logging():
     # 添加第三方库日志过滤
     logging.getLogger('urllib3').setLevel(logging.WARNING)
     logging.getLogger('selenium').setLevel(logging.WARNING)
+
+    return logger
