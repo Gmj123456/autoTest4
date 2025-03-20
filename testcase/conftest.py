@@ -41,7 +41,7 @@ def ptuser_driver_and_logged_in():
         pytest.fail("特殊账号登录失败")
 
     # 获取访问 token，获取后不关闭浏览器
-    token = login_page.get_access_token()
+    token = login_page.get_access_token_ptuser()
 
     # 返回 token 和浏览器驱动实例，保持浏览器打开
     yield token, driver
@@ -209,6 +209,16 @@ def menu_urls(ptuser_driver_and_logged_in):
         # logging.info(f"提取到的菜单项: {menu_data}")
         # 记录共提取到的菜单项数量
         logging.info(f"共提取到{len(menu_data)}个菜单项")
+        
+        # 新增保存到JSON文件的代码
+        menu_file = r"d:\gmj\workSpaces\workSpaces_pycharm\autoTest1\menu.json"
+        try:
+            with open(menu_file, 'w', encoding='utf-8') as f:
+                json.dump(menu_data, f, ensure_ascii=False, indent=4)
+            logging.info(f"菜单数据已保存至: {menu_file}")
+        except Exception as e:
+            logging.error(f"菜单数据保存失败: {str(e)}")
+
         return menu_data
 
     except Exception as e:

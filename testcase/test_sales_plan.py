@@ -1,10 +1,15 @@
 # testcase/test_sales_plan.py
 import pytest
+from element_location.save_html import save_body_content_to_file
+from element_location.upload_files import analyze_html_for_testing
 from pages.sales_plan_page import SalesPlanPage
 from selenium.webdriver.common.by import By
 from pathlib import Path
 import json
 import pdb
+import element_location
+
+import logging
 
 class TestSalesPlan:
     def test_menu_navigation(self, logged_in, menu_urls):
@@ -20,11 +25,22 @@ class TestSalesPlan:
         sales_page.navigate_to_sales_plan()
 
         # 获取实际页面URL（添加等待确保页面加载完成）
-        current_url = logged_in.current_url
+        current_url_all = logged_in.current_url
+        current_url = current_url_all.replace(ERP_URL,"")
+
+        print(current_url)
+        logging.info(current_url)
+
+        target_url = current_url_all
+
+        save_body_content_to_file(target_url,file_path='sales_plan_body.html')  #保存页面<body>内容到文件
+        analyze_html_for_testing(ele_loc_file='sales_plan_element_location.json')  # 调用AI进行元素定位的识别
 
         # 对比URL时忽略末尾斜杠和大小写
         assert expected_url.lower().rstrip('/') == current_url.lower().rstrip('/'), \
             f"菜单跳转地址不正确\n预期: {expected_url}\n实际: {current_url}"
+
+
 
     # 新增测试数据加载
     TEST_DATA_PATH = Path(__file__).parent.parent / 'testdata' / 'sales_plan_data.json'

@@ -2,6 +2,7 @@
 from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
+import time
 
 class SalesPlanPage(BasePage):
     AMAZON = (By.CSS_SELECTOR,"#app > section > aside > div > ul > li.ant-menu-submenu.ant-menu-submenu-inline.ant-menu-submenu-open > div > span > span")
@@ -18,6 +19,19 @@ class SalesPlanPage(BasePage):
     # 新增定位器
     SALES_PLAN_URL = "/sales-plan"
     MONTH_LINK = (By.LINK_TEXT, "{}")  # 参数化定位器
+
+
+    def navigate_to_sales_plan(self):
+        """导航到销售计划页面"""
+        self.click_element(*self.AMAZON)
+        time.sleep(2)
+        self.click_element(*self.SALES_PLAN_MENU)
+    
+    def get_current_url(self):
+        """获取当前页面URL"""
+        return self.driver.current_url
+
+
     
     def add_single_plan(self, month: str, quantity: str):
         """添加单个销售计划"""
@@ -47,14 +61,4 @@ class SalesPlanPage(BasePage):
 
         self.click_element(*self.CONFIRM_BUTTON)
     
-    def navigate_to_sales_plan(self):
-        """导航到销售计划页面"""
-        self.click_element(*self.SALES_PLAN_MENU)
-        # 添加显式等待确保页面加载完成
-        WebDriverWait(self.driver, 10).until(
-            lambda d: d.current_url.endswith('/sales-plan') or d.current_url.endswith('/salesPlan')
-        )
-    
-    def get_current_url(self):
-        """获取当前页面URL"""
-        return self.driver.current_url
+

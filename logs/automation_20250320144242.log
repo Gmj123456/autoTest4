@@ -1,0 +1,20 @@
+2025-03-20 14:42:42,440 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-20 14:42:42,458 - root - INFO - Test case test_menu_navigation started at 2025-03-20 14:42:42.458117
+2025-03-20 14:42:43,561 - root - INFO - 开始登录操作
+2025-03-20 14:42:45,852 - root - INFO - 已打开登录页面
+2025-03-20 14:42:45,959 - root - INFO - 已输入用户名：ptuser
+2025-03-20 14:42:46,027 - root - INFO - 已输入密码：qwe123
+2025-03-20 14:42:46,121 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-20 14:42:46,857 - root - INFO - 验证码识别结果: z g b r
+2025-03-20 14:42:46,936 - root - INFO - 已输入验证码: z g b r，第 1 次尝试
+2025-03-20 14:42:51,984 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-03-20 14:42:51,984 - root - INFO - 开始登录操作
+2025-03-20 14:42:53,736 - root - INFO - 已打开登录页面
+2025-03-20 14:42:53,823 - root - INFO - 已输入用户名：ptuser
+2025-03-20 14:42:53,883 - root - INFO - 已输入密码：qwe123
+2025-03-20 14:42:53,981 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-20 14:42:54,708 - root - INFO - 验证码识别结果: PBqB
+2025-03-20 14:42:54,788 - root - INFO - 已输入验证码: PBqB，第 2 次尝试
+2025-03-20 14:42:56,675 - root - INFO - 登录成功
+2025-03-20 14:42:56,701 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI0ODE3NzMsInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.9EE8iJOZSyGb_k4nO-iFbC4341j8KnZpGmM0_C3y0dU
+2025-03-20 14:42:56,769 - root - INFO - Test case test_menu_navigation ended at 2025-03-20 14:42:56.769297

@@ -1,0 +1,60 @@
+2025-03-20 15:00:49,197 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-20 15:00:49,215 - root - INFO - Test case test_menu_navigation started at 2025-03-20 15:00:49.215564
+2025-03-20 15:00:50,213 - root - INFO - 开始登录操作
+2025-03-20 15:00:52,425 - root - INFO - 已打开登录页面
+2025-03-20 15:00:52,552 - root - INFO - 已输入用户名：ptuser
+2025-03-20 15:00:52,622 - root - INFO - 已输入密码：qwe123
+2025-03-20 15:00:52,751 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-20 15:00:53,624 - root - INFO - 验证码识别结果: XsFA
+2025-03-20 15:00:53,694 - root - INFO - 已输入验证码: XsFA，第 1 次尝试
+2025-03-20 15:00:55,866 - root - INFO - 登录成功
+2025-03-20 15:00:55,881 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI0ODI4NTQsInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.ZskYUCDEkM7PD3b6rLdG6uTSlgd5h-49EbHvDvZYPVk
+2025-03-20 15:00:55,891 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI0ODI4NTQsInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.ZskYUCDEkM7PD3b6rLdG6uTSlgd5h-49EbHvDvZYPVk
+2025-03-20 15:00:56,045 - root - INFO - 开始解析36个根菜单项
+2025-03-20 15:00:56,046 - root - INFO - 共提取到255个菜单项
+2025-03-20 15:00:57,452 - root - ERROR - 退出登录时出现错误: Message: element click intercepted: Element <span data-v-8ef766a4="">...</span> is not clickable at point (1858, 29). Other element would receive the click: <div class="ant-notification-notice ant-notification-notice-closable">...</div>
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF675C12775+28773]
+	(No symbol) [0x00007FF675B7AFB0]
+	(No symbol) [0x00007FF675A1552A]
+	(No symbol) [0x00007FF675A70B5E]
+	(No symbol) [0x00007FF675A6E5FC]
+	(No symbol) [0x00007FF675A6B7E6]
+	(No symbol) [0x00007FF675A6A741]
+	(No symbol) [0x00007FF675A5C970]
+	(No symbol) [0x00007FF675A8EF9A]
+	(No symbol) [0x00007FF675A5C1C6]
+	(No symbol) [0x00007FF675A8F1B0]
+	(No symbol) [0x00007FF675AAF1A4]
+	(No symbol) [0x00007FF675A8ED43]
+	(No symbol) [0x00007FF675A5A548]
+	(No symbol) [0x00007FF675A5B6B1]
+	GetHandleVerifier [0x00007FF675F3F45D+3358029]
+	GetHandleVerifier [0x00007FF675F5430D+3443709]
+	GetHandleVerifier [0x00007FF675F483FD+3394797]
+	GetHandleVerifier [0x00007FF675CD929B+842635]
+	(No symbol) [0x00007FF675B8654F]
+	(No symbol) [0x00007FF675B81FA4]
+	(No symbol) [0x00007FF675B8213D]
+	(No symbol) [0x00007FF675B71629]
+	BaseThreadInitThunk [0x00007FFE15007614+20]
+	RtlUserThreadStart [0x00007FFE159426A1+33]
+
+2025-03-20 15:01:00,739 - root - INFO - 开始登录操作
+2025-03-20 15:01:02,986 - root - INFO - 已打开登录页面
+2025-03-20 15:01:03,137 - root - INFO - 已输入用户名：guomj
+2025-03-20 15:01:03,226 - root - INFO - 已输入密码：gmj123..
+2025-03-20 15:01:03,329 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-20 15:01:04,046 - root - INFO - 验证码识别结果: eL3V
+2025-03-20 15:01:04,117 - root - INFO - 已输入验证码: eL3V，第 1 次尝试
+2025-03-20 15:01:05,257 - root - INFO - 登录成功
+2025-03-20 15:01:05,303 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI0ODI4NjQsInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.Fa0bVHNtTfY6IJhbaukgmY5eXihJBBgwl9Yr2UnsDyY
+2025-03-20 15:01:21,813 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A8559B95B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/7be7a78c8d44f4c755c67767a47bcaf8/element
+2025-03-20 15:01:25,883 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A8559B9550>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/7be7a78c8d44f4c755c67767a47bcaf8/element
+2025-03-20 15:01:29,946 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A8559B9F40>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/7be7a78c8d44f4c755c67767a47bcaf8/element
+2025-03-20 15:01:34,017 - root - ERROR - 退出登录时出现错误: HTTPConnectionPool(host='localhost', port=58242): Max retries exceeded with url: /session/7be7a78c8d44f4c755c67767a47bcaf8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A8559BA120>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-03-20 15:01:38,098 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A8559BA3C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/7be7a78c8d44f4c755c67767a47bcaf8
+2025-03-20 15:01:42,152 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A8559BA5D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/7be7a78c8d44f4c755c67767a47bcaf8
+2025-03-20 15:01:46,237 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A8559BA840>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/7be7a78c8d44f4c755c67767a47bcaf8
+2025-03-20 15:01:52,347 - root - INFO - Test case test_menu_navigation ended at 2025-03-20 15:01:52.347523

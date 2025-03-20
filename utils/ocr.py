@@ -1,119 +1,125 @@
 import base64
 import requests
-import time
 import sys
+import logging
 from pathlib import Path
 
-# 添加项目根目录到Python路径
-sys.path.append(str(Path(__file__).parent.parent))
 
-# 现在可以正确导入config模块
-from config.config import API_KEY, SECRET_KEY
+class BaiduOCR:
+    def __init__(self, api_key, secret_key):
+        self.api_key = api_key
+        self.secret_key = secret_key
+        self.access_token = None
+        self.setup_logging()
+        self.get_initial_access_token()
 
-# 硬编码的 access_token
-HARDCODED_ACCESS_TOKEN = '24.c9fd59e5d5a36aac446d36a5a80d2e9e.2592000.1742362951.282335-117554037'
-# 假设硬编码的 access_token 还剩的有效时长（秒），你可以根据实际情况调整
-HARDCODED_EXPIRE_TIME = 2592000
-# 缓存 access_token 及其过期时间
-CACHED_ACCESS_TOKEN = HARDCODED_ACCESS_TOKEN
-CACHE_EXPIRATION_TIME = time.time() + HARDCODED_EXPIRE_TIME
+    def setup_logging(self):
+        logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_access_token():
-    """
-    获取百度 AI 平台的 access_token
-    """
-    global CACHED_ACCESS_TOKEN, CACHE_EXPIRATION_TIME
-    current_time = time.time()
-    # 检查缓存的 access_token 是否有效
-    if CACHED_ACCESS_TOKEN and current_time < CACHE_EXPIRATION_TIME:
-        return CACHED_ACCESS_TOKEN
+    def get_initial_access_token(self):
+        self.access_token = self.get_access_token()
+        if not self.access_token:
+            logging.error("无法获取初始 access_token，程序退出。")
+            sys.exit(1)
 
-    # 鉴权接口的 URL
-    auth_url = f"https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id={API_KEY}&client_secret={SECRET_KEY}"
-    try:
-        # 发送 GET 请求获取 access_token
-        response = requests.get(auth_url, timeout=10)
-        response.raise_for_status()  # 检查请求是否成功
-        result = response.json()
-        CACHED_ACCESS_TOKEN = result.get('access_token')
-        # 设置缓存过期时间，有效期一般为 2592000 秒（30 天）
-        CACHE_EXPIRATION_TIME = current_time + result.get('expires_in', 2592000)
-        return CACHED_ACCESS_TOKEN
-    except requests.RequestException as e:
-        print(f"请求 access_token 时出现网络异常: {e}")
-    except ValueError as e:
-        print(f"解析 access_token 响应的 JSON 数据时出错: {e}")
-    return None
-
-def ocr_accurate_basic(image_path):
-    """
-    通用文字识别（高精度版）
-    """
-    # 通用文字识别（高精度版）的请求 URL
-    request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic"
-    # 二进制方式打开图片文件
-    try:
-        with open(image_path, 'rb') as f:
-            img = base64.b64encode(f.read())
-    except FileNotFoundError:
-        print(f"未找到图片文件 '{image_path}'")
-        return
-
-    # 获取 access_token
-    access_token = get_access_token()
-    if access_token is None:
-        return
-
-    # 拼接请求 URL
-    request_url = request_url + "?access_token=" + access_token
-    # 设置请求头
-    headers = {'content-type': 'application/x-www-form-urlencoded'}
-    # 设置请求参数
-    params = {"image": img}
-    try:
-        # 发送 POST 请求
-        response = requests.post(request_url, data=params, headers=headers, timeout=10)
-        response.raise_for_status()  # 检查请求是否成功
-        res = response.json()
-        if 'error_code' in res:
-            # 如果返回错误码为 110（access_token 无效），则重新获取 access_token 并再次请求
-            if res['error_code'] == 110:
-                print("access_token 无效，重新获取...")
-                new_access_token = get_access_token()
-                if new_access_token:
-                    new_request_url = request_url.replace(access_token, new_access_token)
-                    new_response = requests.post(new_request_url, data=params, headers=headers, timeout=10)
-                    new_response.raise_for_status()
-                    new_res = new_response.json()
-                    if 'error_code' in new_res:
-                        print(f"文字识别请求出错，错误码: {new_res['error_code']}，错误信息: {new_res['error_msg']}")
-                    else:
-                        try:
-                            res2 = new_res['words_result'][0]['words']
-                            print(res2)
-                            return res2
-                        except (KeyError, IndexError):
-                            print("解析文字识别响应结果时出错，请检查响应数据格式。")
-                            print("完整的响应数据:", new_res)
+    def get_access_token(self):
+        auth_url = f"https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id={self.api_key}&client_secret={self.secret_key}"
+        try:
+            logging.info(f"请求 access_token 的 URL: {auth_url}")
+            response = requests.get(auth_url, timeout=10)
+            response.raise_for_status()
+            result = response.json()
+            access_token = result.get('access_token')
+            if access_token:
+                logging.info("成功获取 access_token")
+                return access_token
             else:
-                print(f"文字识别请求出错，错误码: {res['error_code']}，错误信息: {res['error_msg']}")
+                logging.error("未从响应中获取到 access_token，响应内容: %s", result)
+        except requests.RequestException as e:
+            logging.error("请求 access_token 时出现网络异常: %s", e)
+        except ValueError as e:
+            logging.error("解析 access_token 响应的 JSON 数据时出错: %s", e)
+        return None
+
+    def read_image(self, image_path):
+        try:
+            with open(image_path, 'rb') as f:
+                return base64.b64encode(f.read())
+        except FileNotFoundError:
+            logging.error("未找到图片文件 '%s'", image_path)
+            return None
+
+    def send_ocr_request(self, request_url, access_token, image):
+        full_request_url = f"{request_url}?access_token={access_token}"
+        headers = {'content-type': 'application/x-www-form-urlencoded'}
+        params = {"image": image}
+        try:
+            response = requests.post(full_request_url, data=params, headers=headers, timeout=10)
+            response.raise_for_status()
+            return response.json()
+        except requests.RequestException as e:
+            logging.error("文字识别请求时出现网络异常: %s", e)
+        except ValueError as e:
+            logging.error("解析文字识别响应的 JSON 数据时出错: %s", e)
+        return None
+
+    def process_ocr_response(self, response):
+        if response is None:
+            return None, None
+        if 'error_code' in response:
+            if response['error_code'] in [110, 111]:
+                return None, response
+            logging.error("文字识别请求出错，错误码: %s，错误信息: %s", response['error_code'], response['error_msg'])
         else:
             try:
-                res2 = res['words_result'][0]['words']
-                print(res2)
-                return res2
+                result = response['words_result'][0]['words']
+                logging.info("识别结果: %s", result)
+                return result, None
             except (KeyError, IndexError):
-                print("解析文字识别响应结果时出错，请检查响应数据格式。")
-                print("完整的响应数据:", res)
-    except requests.RequestException as e:
-        print(f"文字识别请求时出现网络异常: {e}")
-    except ValueError as e:
-        print(f"解析文字识别响应的 JSON 数据时出错: {e}")
-    return None
+                logging.error("解析文字识别响应结果时出错，请检查响应数据格式。完整的响应数据: %s", response)
+        return None, None
+
+    def ocr_accurate_basic(self, image_path):
+        request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic"
+        image = self.read_image(image_path)
+        if image is None:
+            return None
+
+        access_token = self.access_token
+        for _ in range(2):
+            response = self.send_ocr_request(request_url, access_token, image)
+            result, error_response = self.process_ocr_response(response)
+            if result is not None:
+                return result
+            if error_response and error_response['error_code'] in [110, 111]:
+                logging.warning("access_token %s，重新获取...",
+                                "无效" if error_response['error_code'] == 110 else "过期")
+                access_token = self.get_access_token()
+                if access_token is None:
+                    break
+            else:
+                break
+        return None
+
+
+def load_config():
+    try:
+        sys.path.append(str(Path(__file__).parent.parent))
+        from config.config import API_KEY, SECRET_KEY
+        return API_KEY, SECRET_KEY
+    except ImportError:
+        logging.error("无法导入 API_KEY 和 SECRET_KEY，请检查配置文件。")
+        sys.exit(1)
+
 
 if __name__ == "__main__":
+    api_key, secret_key = load_config()
+    ocr_client = BaiduOCR(api_key, secret_key)
+
     if len(sys.argv) > 1:
         image_path = sys.argv[1]
-        ocr_accurate_basic(image_path)
+        result = ocr_client.ocr_accurate_basic(image_path)
+        if result is not None:
+            print(result)
     else:
-        print("请提供图片路径作为参数。")
+        logging.warning("请提供图片路径作为参数。")

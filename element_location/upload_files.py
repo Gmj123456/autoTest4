@@ -3,7 +3,7 @@ from openai import OpenAI
 import json
 import re
 
-def analyze_html_for_testing():
+def analyze_html_for_testing(ele_loc_file='eleLoc.json'):
     client = OpenAI(
         api_key="sk-Mm6vK2FK3bk08Spuu4DcB0roLyAbeepsaq2lcPgf1fip8qk7",
         base_url="https://api.moonshot.cn/v1",
@@ -49,10 +49,10 @@ def analyze_html_for_testing():
     try:
         # 解析 JSON 数据
         data = json.loads(response_content)
-        # 将数据保存到 output.json 文件
-        with open('output.json', 'w', encoding='utf-8') as f:
+        # 将数据保存到指定文件名的文件
+        with open(ele_loc_file, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
-        print("数据已成功保存到 output.json 文件。")
+        print(f"数据已成功保存到 {ele_loc_file} 文件。")
         return data
     except json.JSONDecodeError as e:
         print(f"提取到的 content 内容：\n{response_content}")
@@ -60,5 +60,6 @@ def analyze_html_for_testing():
         return None
 
 
-if __name__ == "__main__":
-    analyze_html_for_testing()
+# if __name__ == "__main__":
+#     # 可以在这里修改保存文件名
+#     analyze_html_for_testing(ele_loc_file='new_output.json')

@@ -1,0 +1,63 @@
+2025-03-20 15:39:33,250 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-20 15:39:33,905 - root - INFO - Test case test_menu_navigation started at 2025-03-20 15:39:33.905725
+2025-03-20 15:39:34,942 - root - INFO - 开始登录操作
+2025-03-20 15:40:02,121 - root - INFO - 已打开登录页面
+2025-03-20 15:40:02,211 - root - INFO - 已输入用户名：ptuser
+2025-03-20 15:40:02,273 - root - INFO - 已输入密码：qwe123
+2025-03-20 15:40:02,384 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-20 15:40:03,199 - root - INFO - 验证码识别结果: 404
+2025-03-20 15:40:03,258 - root - INFO - 已输入验证码: 404，第 1 次尝试
+2025-03-20 15:40:08,307 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-03-20 15:40:08,307 - root - INFO - 开始登录操作
+2025-03-20 15:40:08,988 - root - INFO - 已打开登录页面
+2025-03-20 15:40:09,071 - root - INFO - 已输入用户名：ptuser
+2025-03-20 15:40:09,137 - root - INFO - 已输入密码：qwe123
+2025-03-20 15:40:09,217 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-20 15:40:10,340 - root - INFO - 验证码识别结果: 404
+2025-03-20 15:40:10,393 - root - INFO - 已输入验证码: 404，第 2 次尝试
+2025-03-20 15:40:15,457 - root - WARNING - 第 2 次登录失败，重新尝试
+2025-03-20 15:40:15,457 - root - INFO - 开始登录操作
+2025-03-20 15:40:15,773 - root - INFO - 已打开登录页面
+2025-03-20 15:40:15,841 - root - INFO - 已输入用户名：ptuser
+2025-03-20 15:40:15,902 - root - INFO - 已输入密码：qwe123
+2025-03-20 15:40:15,988 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-20 15:40:16,728 - root - INFO - 验证码识别结果: Gknj
+2025-03-20 15:40:16,791 - root - INFO - 已输入验证码: Gknj，第 3 次尝试
+2025-03-20 15:40:17,400 - root - INFO - 登录成功
+2025-03-20 15:40:17,419 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI0ODUyMTYsInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.fasD_yCYic8Wq3J2XRwrrfLSpC129vgy1MYeU_hprqY
+2025-03-20 15:40:17,430 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI0ODUyMTYsInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.fasD_yCYic8Wq3J2XRwrrfLSpC129vgy1MYeU_hprqY
+2025-03-20 15:40:18,539 - root - ERROR - 退出登录时出现错误: Message: element click intercepted: Element <span data-v-ec98c414="">...</span> is not clickable at point (1858, 29). Other element would receive the click: <div class="ant-notification-notice ant-notification-notice-closable">...</div>
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF675C12775+28773]
+	(No symbol) [0x00007FF675B7AFB0]
+	(No symbol) [0x00007FF675A1552A]
+	(No symbol) [0x00007FF675A70B5E]
+	(No symbol) [0x00007FF675A6E5FC]
+	(No symbol) [0x00007FF675A6B7E6]
+	(No symbol) [0x00007FF675A6A741]
+	(No symbol) [0x00007FF675A5C970]
+	(No symbol) [0x00007FF675A8EF9A]
+	(No symbol) [0x00007FF675A5C1C6]
+	(No symbol) [0x00007FF675A8F1B0]
+	(No symbol) [0x00007FF675AAF1A4]
+	(No symbol) [0x00007FF675A8ED43]
+	(No symbol) [0x00007FF675A5A548]
+	(No symbol) [0x00007FF675A5B6B1]
+	GetHandleVerifier [0x00007FF675F3F45D+3358029]
+	GetHandleVerifier [0x00007FF675F5430D+3443709]
+	GetHandleVerifier [0x00007FF675F483FD+3394797]
+	GetHandleVerifier [0x00007FF675CD929B+842635]
+	(No symbol) [0x00007FF675B8654F]
+	(No symbol) [0x00007FF675B81FA4]
+	(No symbol) [0x00007FF675B8213D]
+	(No symbol) [0x00007FF675B71629]
+	BaseThreadInitThunk [0x00007FFE15007614+20]
+	RtlUserThreadStart [0x00007FFE159426A1+33]
+
+2025-03-20 15:40:24,897 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000281DEA40290>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/07b1875c49d9ee960b6f045331ed3053/element
+2025-03-20 15:40:28,980 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000281DEA40590>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/07b1875c49d9ee960b6f045331ed3053/element
+2025-03-20 15:40:33,058 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000281DEA406E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/07b1875c49d9ee960b6f045331ed3053/element
+2025-03-20 15:40:37,116 - root - ERROR - 退出登录时出现错误: HTTPConnectionPool(host='localhost', port=62566): Max retries exceeded with url: /session/07b1875c49d9ee960b6f045331ed3053/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000281DEA40B90>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-03-20 15:40:41,197 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000281DEA40EF0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/07b1875c49d9ee960b6f045331ed3053
+2025-03-20 15:40:49,357 - root - INFO - Test case test_menu_navigation ended at 2025-03-20 15:40:49.357167

@@ -1,0 +1,48 @@
+2025-03-20 15:42:13,286 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-20 15:42:13,892 - root - INFO - Test case test_menu_navigation started at 2025-03-20 15:42:13.892251
+2025-03-20 15:42:14,940 - root - INFO - 开始登录操作
+2025-03-20 15:42:41,538 - root - INFO - 已打开登录页面
+2025-03-20 15:42:41,640 - root - INFO - 已输入用户名：ptuser
+2025-03-20 15:42:41,723 - root - INFO - 已输入密码：qwe123
+2025-03-20 15:42:41,797 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-20 15:42:42,670 - root - INFO - 验证码识别结果: 8te w
+2025-03-20 15:42:42,739 - root - INFO - 已输入验证码: 8te w，第 1 次尝试
+2025-03-20 15:42:47,788 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-03-20 15:42:47,788 - root - INFO - 开始登录操作
+2025-03-20 15:42:48,326 - root - INFO - 已打开登录页面
+2025-03-20 15:42:48,400 - root - INFO - 已输入用户名：ptuser
+2025-03-20 15:42:48,464 - root - INFO - 已输入密码：qwe123
+2025-03-20 15:42:48,561 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-20 15:42:49,306 - root - INFO - 验证码识别结果: 2FS0
+2025-03-20 15:42:49,368 - root - INFO - 已输入验证码: 2FS0，第 2 次尝试
+2025-03-20 15:42:52,399 - root - INFO - 登录成功
+2025-03-20 15:42:52,417 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI0ODUzNjksInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.4SDFmdAu4StVY1BZ20s_6jgA4cKrEcLOAH8b7HmEp-0
+2025-03-20 15:42:52,427 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI0ODUzNjksInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.4SDFmdAu4StVY1BZ20s_6jgA4cKrEcLOAH8b7HmEp-0
+2025-03-20 15:42:54,542 - root - INFO - 已点击退出登录按钮
+2025-03-20 15:43:14,955 - root - ERROR - 等待确认退出登录按钮出现时出错: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF675C12775+28773]
+	(No symbol) [0x00007FF675B7AFB0]
+	(No symbol) [0x00007FF675A1552A]
+	(No symbol) [0x00007FF675A68EAE]
+	(No symbol) [0x00007FF675A6919C]
+	(No symbol) [0x00007FF675AB23F7]
+	(No symbol) [0x00007FF675A8EFDF]
+	(No symbol) [0x00007FF675AAF1A4]
+	(No symbol) [0x00007FF675A8ED43]
+	(No symbol) [0x00007FF675A5A548]
+	(No symbol) [0x00007FF675A5B6B1]
+	GetHandleVerifier [0x00007FF675F3F45D+3358029]
+	GetHandleVerifier [0x00007FF675F5430D+3443709]
+	GetHandleVerifier [0x00007FF675F483FD+3394797]
+	GetHandleVerifier [0x00007FF675CD929B+842635]
+	(No symbol) [0x00007FF675B8654F]
+	(No symbol) [0x00007FF675B81FA4]
+	(No symbol) [0x00007FF675B8213D]
+	(No symbol) [0x00007FF675B71629]
+	BaseThreadInitThunk [0x00007FFE15007614+20]
+	RtlUserThreadStart [0x00007FFE159426A1+33]
+
+2025-03-20 15:43:21,388 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F98197FC80>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/484834a56fc5f7a3df7cd5ae15ce1bc3/element
+2025-03-20 15:43:25,466 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F98197F1A0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/484834a56fc5f7a3df7cd5ae15ce1bc3/element
+2025-03-20 15:43:29,557 - root - INFO - Test case test_menu_navigation ended at 2025-03-20 15:43:29.557423

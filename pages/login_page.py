@@ -10,6 +10,8 @@ from selenium.common.exceptions import NoSuchElementException, WebDriverExceptio
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+import pdb
+
 # 在文件顶部添加统一日志配置
 from utils.logger import setup_logging
 setup_logging()
@@ -60,6 +62,11 @@ class LoginPage(BasePage):
         current_dir = Path(__file__).parent.resolve()  # 修改 pathlib.Path → Path
         ocr_script_path = current_dir.parent / 'utils' / 'ocr.py'
         try:
+            # 检查 OCR 脚本文件是否存在
+            if not ocr_script_path.exists():
+                logging.error(f"OCR 脚本文件不存在: {ocr_script_path}")
+                return None
+
             # 添加工作目录参数
             result = subprocess.run(
                 ['python', str(ocr_script_path), str(captcha_path)], 
@@ -75,6 +82,8 @@ class LoginPage(BasePage):
                 return captcha_text
         except subprocess.CalledProcessError as e:
             logging.error(f"调用 OCR 脚本时出现错误: {e.stderr}")
+        except Exception as e:
+            logging.error(f"识别验证码时出现未知错误: {e}")
         return None
 
     def check_login_result(self, attempts):
@@ -87,7 +96,7 @@ class LoginPage(BasePage):
             logging.warning(f"第 {attempts + 1} 次登录失败，重新尝试")
             return False
 
-    def get_access_token(self):
+    def get_access_token_ptuser(self):
         """获取并解析token"""
         try:
             # 等待页面加载完成（根据实际情况调整等待条件）
@@ -143,12 +152,14 @@ class LoginPage(BasePage):
                 captcha_path = self.save_captcha_image()
                 captcha_text = self.recognize_captcha(captcha_path)
 
+                print(captcha_text)
+
                 if captcha_text:
                     self.send_keys(*self.CAPTCHA_INPUT, captcha_text + Keys.RETURN)
                     logging.info(f"已输入验证码: {captcha_text}，第 {attempts + 1} 次尝试")
                     result = self.check_login_result(attempts)
                     if result:
-                        self.access_token = self.get_access_token()  # 获取token
+                        self.access_token_ptuser = self.get_access_token_ptuser()  # 获取token
                         return True
             except Exception as e:
                 logging.error(f"登录过程中出现错误: {e}")

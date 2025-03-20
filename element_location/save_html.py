@@ -36,7 +36,7 @@ def save_body_content_to_file(url, file_path='page_content.html'):
     finally:
         driver.quit()
 
-# 调用示例
-if __name__ == "__main__":
-    target_url = "http://124.222.178.125:3006/"
-    save_body_content_to_file(target_url)
+# # 调用示例
+# if __name__ == "__main__":
+#     target_url = "http://124.222.178.125:3006/"
+#     save_body_content_to_file(target_url)
