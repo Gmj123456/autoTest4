@@ -1,0 +1,15 @@
+2025-03-20 18:06:01,460 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-20 18:06:02,111 - root - INFO - Test case test_upload_files started at 2025-03-20 18:06:02.111586
+2025-03-20 18:06:03,146 - root - INFO - 开始登录操作
+2025-03-20 18:06:05,495 - root - INFO - 已打开登录页面
+2025-03-20 18:06:05,593 - root - INFO - 已输入用户名：guomj
+2025-03-20 18:06:05,673 - root - INFO - 已输入密码：gmj123..
+2025-03-20 18:06:05,770 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-20 18:06:06,567 - root - INFO - 验证码识别结果: Ajdr
+2025-03-20 18:06:06,638 - root - INFO - 已输入验证码: Ajdr，第 1 次尝试
+2025-03-20 18:06:08,082 - root - INFO - 登录成功
+2025-03-20 18:06:08,107 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI0OTM5NjYsInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.lSu7BdZcNMsNCPzWXfsIIw37c23vBMlTwvVz_yWd4ag
+2025-03-20 18:06:08,742 - httpx - INFO - HTTP Request: POST https://api.moonshot.cn/v1/files "HTTP/1.1 200 OK"
+2025-03-20 18:06:08,805 - httpx - INFO - HTTP Request: GET https://api.moonshot.cn/v1/files/cvduh476rtp3ki5msomg/content "HTTP/1.1 200 OK"
+2025-03-20 18:06:28,965 - httpx - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-20 18:06:31,332 - root - INFO - Test case test_upload_files ended at 2025-03-20 18:06:31.332403

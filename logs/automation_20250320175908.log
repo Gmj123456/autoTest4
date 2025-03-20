@@ -1,0 +1,12 @@
+2025-03-20 17:59:08,781 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-20 17:59:09,380 - root - INFO - Test case test_save_authorized_pages started at 2025-03-20 17:59:09.380356
+2025-03-20 17:59:10,424 - root - INFO - 开始登录操作
+2025-03-20 17:59:12,663 - root - INFO - 已打开登录页面
+2025-03-20 17:59:12,775 - root - INFO - 已输入用户名：guomj
+2025-03-20 17:59:12,854 - root - INFO - 已输入密码：gmj123..
+2025-03-20 17:59:12,942 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-20 17:59:13,702 - root - INFO - 验证码识别结果: i0VF
+2025-03-20 17:59:13,777 - root - INFO - 已输入验证码: i0VF，第 1 次尝试
+2025-03-20 17:59:14,843 - root - INFO - 登录成功
+2025-03-20 17:59:14,891 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI0OTM1NTMsInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.keUzs5ZPbHB7lsZUkk_jqrqptQf4Zas2nR5rPTIFP74
+2025-03-20 17:59:20,094 - root - INFO - Test case test_save_authorized_pages ended at 2025-03-20 17:59:20.094509

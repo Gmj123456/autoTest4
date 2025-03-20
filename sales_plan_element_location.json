@@ -1,0 +1,104 @@
+{
+  "modules": [
+    {
+      "module_name": "PhotoSwipe Gallery",
+      "elements": [
+        {
+          "element_description": "Close button of PhotoSwipe",
+          "locators": [
+            {
+              "strategy": "css selector",
+              "value": ".pswp__button--close",
+              "priority": 1,
+              "reason": "Specific class name provides a unique identifier for the close button within the PhotoSwipe UI."
+            },
+            {
+              "strategy": "xpath",
+              "value": "//button[@title='Close (Esc)']",
+              "priority": 2,
+              "reason": "The title attribute combined with the button tag offers a secondary way to locate the close button, though it might not be unique if multiple buttons have the same title."
+            }
+          ]
+        },
+        {
+          "element_description": "Previous button in PhotoSwipe",
+          "locators": [
+            {
+              "strategy": "css selector",
+              "value": ".pswp__button--arrow--left",
+              "priority": 1,
+              "reason": "The specific class name is unique to the 'previous' button within the PhotoSwipe UI."
+            },
+            {
+              "strategy": "xpath",
+              "value": "//button[@title='Previous (arrow left)']",
+              "priority": 2,
+              "reason": "Using the title attribute to locate the button, but lower priority due to potential non-uniqueness."
+            }
+          ]
+        },
+        {
+          "element_description": "Next button in PhotoSwipe",
+          "locators": [
+            {
+              "strategy": "css selector",
+              "value": ".pswp__button--arrow--right",
+              "priority": 1,
+              "reason": "The specific class name is unique to the 'next' button within the PhotoSwipe UI."
+            },
+            {
+              "strategy": "xpath",
+              "value": "//button[@title='Next (arrow right)']",
+              "priority": 2,
+              "reason": "Using the title attribute to locate the button, but lower priority due to potential non-uniqueness."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "module_name": "NProgress",
+      "elements": [
+        {
+          "element_description": "NProgress bar",
+          "locators": [
+            {
+              "strategy": "css selector",
+              "value": "#nprogress .bar",
+              "priority": 1,
+              "reason": "The ID of the parent element combined with the class name of the bar provides a unique and specific way to locate the progress bar."
+            },
+            {
+              "strategy": "xpath",
+              "value": "//div[@id='nprogress']//div[@class='bar']",
+              "priority": 2,
+              "reason": "XPath can be used as an alternative, but CSS selector is more straightforward and efficient for this element."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "module_name": "Tooltip",
+      "elements": [
+        {
+          "element_description": "Tooltip content",
+          "locators": [
+            {
+              "strategy": "css selector",
+              "value": ".tui-tooltip .text",
+              "priority": 1,
+              "reason": "The specific class name for the tooltip text is likely unique within the page, making it the best choice for locating the tooltip content."
+            },
+            {
+              "strategy": "xpath",
+              "value": "//div[@class='tui-tooltip']//span[@class='text']",
+              "priority": 2,
+              "reason": "XPath can be used, but it's more verbose and less performant than the CSS selector for this specific element."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
