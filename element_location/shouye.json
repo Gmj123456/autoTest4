@@ -1,0 +1,224 @@
+{
+  "modules": [
+    {
+      "module_name": "Navigation Sidebar",
+      "elements": [
+        {
+          "element_name": "Logo",
+          "description": "The logo at the top of the sidebar leading to the home page.",
+          "locator_strategy": "CSS Selector",
+          "locator": "a.router-link-active"
+        },
+        {
+          "element_name": "Home Menu Item",
+          "description": "The home menu item in the sidebar.",
+          "locator_strategy": "CSS Selector",
+          "locator": "li.ant-menu-item.ant-menu-item-selected > a[aria-current='page']"
+        },
+        {
+          "element_name": "Submenu Toggle",
+          "description": "The submenu toggle for expanding and collapsing sections in the sidebar.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div.ant-menu-submenu-title"
+        },
+        {
+          "element_name": "Menu Items",
+          "description": "Various menu items under different submenus.",
+          "locator_strategy": "CSS Selector",
+          "locator": "li.ant-menu-item > a"
+        }
+      ]
+    },
+    {
+      "module_name": "Header",
+      "elements": [
+        {
+          "element_name": "Menu Fold Trigger",
+          "description": "The icon to fold/unfold the sidebar.",
+          "locator_strategy": "CSS Selector",
+          "locator": "i.anticon-menu-fold"
+        },
+        {
+          "element_name": "Operation Manual",
+          "description": "Link to the operation manual.",
+          "locator_strategy": "CSS Selector",
+          "locator": "span.action[data-v-4031f1a4] > img[src='data:image/png;base64,...']"
+        },
+        {
+          "element_name": "Shop Authorization",
+          "description": "Link to shop authorization.",
+          "locator_strategy": "CSS Selector",
+          "locator": "span.action[data-v-4031f1a4] > img[src='/img/shop.646b980f.png']"
+        },
+        {
+          "element_name": "Notifications",
+          "description": "Notifications dropdown.",
+          "locator_strategy": "CSS Selector",
+          "locator": "span.header-notice.ant-badge"
+        },
+        {
+          "element_name": "User Dropdown",
+          "description": "Dropdown menu for the current user.",
+          "locator_strategy": "CSS Selector",
+          "locator": "span.action-full.ant-dropdown-link.user-dropdown-menu.ant-dropdown-trigger"
+        },
+        {
+          "element_name": "Logout",
+          "description": "Link to logout.",
+          "locator_strategy": "CSS Selector",
+          "locator": "a.logout_title"
+        }
+      ]
+    },
+    {
+      "module_name": "Main Content",
+      "elements": [
+        {
+          "element_name": "Dashboard Tabs",
+          "description": "Tabs for different dashboard views.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div.ant-tabs-tab"
+        },
+        {
+          "element_name": "Refresh Tab",
+          "description": "Refresh current tab.",
+          "locator_strategy": "CSS Selector",
+          "locator": "i.anticon-reload"
+        },
+        {
+          "element_name": "Close Left Sidebar",
+          "description": "Close left sidebar.",
+          "locator_strategy": "CSS Selector",
+          "locator": "i.anticon-arrow-left"
+        },
+        {
+          "element_name": "Close Right Sidebar",
+          "description": "Close right sidebar.",
+          "locator_strategy": "CSS Selector",
+          "locator": "i.anticon-arrow-right"
+        },
+        {
+          "element_name": "Close Other Tabs",
+          "description": "Close other tabs.",
+          "locator_strategy": "CSS Selector",
+          "locator": "i.anticon-close"
+        }
+      ]
+    },
+    {
+      "module_name": "Current Shop Selector",
+      "elements": [
+        {
+          "element_name": "Shop Selector",
+          "description": "Dropdown selector for choosing a shop.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div.ant-select-selection"
+        }
+      ]
+    },
+    {
+      "module_name": "Sync Button",
+      "elements": [
+        {
+          "element_name": "Sync",
+          "description": "Sync button to synchronize data.",
+          "locator_strategy": "CSS Selector",
+          "locator": "i.anticon-sync"
+        }
+      ]
+    },
+    {
+      "module_name": "Current Time Display",
+      "elements": [
+        {
+          "element_name": "Current Time UK",
+          "description": "Displays the current time in the UK.",
+          "locator_strategy": "CSS Selector",
+          "locator": "span[data-v-1a8af9e2]:nth-child(1)"
+        },
+        {
+          "element_name": "Current Time US",
+          "description": "Displays the current time in the US.",
+          "locator_strategy": "CSS Selector",
+          "locator": "span[data-v-1a8af9e2]:nth-child(2)"
+        }
+      ]
+    },
+    {
+      "module_name": "Data Cards",
+      "elements": [
+        {
+          "element_name": "Total Orders Card",
+          "description": "Card displaying total orders.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div.ant-card-body:nth-child(1)"
+        },
+        {
+          "element_name": "Pending Orders Card",
+          "description": "Card displaying pending orders.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div.ant-card-body:nth-child(2)"
+        },
+        {
+          "element_name": "Stock Timeout Orders Card",
+          "description": "Card displaying stock timeout orders.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div.ant-card-body:nth-child(3)"
+        },
+        {
+          "element_name": "Collection Timeout Orders Card",
+          "description": "Card displaying collection timeout orders.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div.ant-card-body:nth-child(4)"
+        },
+        {
+          "element_name": "Processed Orders in 24H Card",
+          "description": "Card displaying processed orders in the last 24 hours.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div.ant-card-body:nth-child(5)"
+        },
+        {
+          "element_name": "Collected Orders in 24H Card",
+          "description": "Card displaying collected orders in the last 24 hours.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div.ant-card-body:nth-child(6)"
+        },
+        {
+          "element_name": "Stock Orders in 24H Card",
+          "description": "Card displaying stock orders in the last 24 hours.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div.ant-card-body:nth-child(7)"
+        },
+        {
+          "element_name": "Cancelled Orders in 24H Card",
+          "description": "Card displaying cancelled orders in the last 24 hours.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div.ant-card-body:nth-child(8)"
+        }
+      ]
+    },
+    {
+      "module_name": "Charts",
+      "elements": [
+        {
+          "element_name": "24H Sales Trend Chart",
+          "description": "Chart displaying the 24-hour sales trend.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div#salesHoursChart"
+        },
+        {
+          "element_name": "Monthly Sales Orders Chart",
+          "description": "Chart displaying the monthly sales orders.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div#salesOrderList"
+        },
+        {
+          "element_name": "Monthly Return Orders Chart",
+          "description": "Chart displaying the monthly return orders.",
+          "locator_strategy": "CSS Selector",
+          "locator": "div#returnOrderList"
+        }
+      ]
+    }
+  ]
+}

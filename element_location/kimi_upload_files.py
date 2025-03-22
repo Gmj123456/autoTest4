@@ -19,12 +19,11 @@ def analyze_html_for_testing(html_file_path='page_content.html', ele_loc_file='e
                 "content": """你是一个资深自动化测试工程师，请根据网页内容生成规范的 JSON 数据：
                         1. 分析页面核心功能模块
                         2. 识别所有用户交互元素（如按钮、输入框、链接等）及其用途，注意必须仅包含真实存在的交互元素
-                        3. 为每个交互元素推荐最优定位方式（按优先级排列），定位方式要保证唯一且稳定
-                        4. 说明推荐理由
+                        3. 为每个交互元素推荐最优定位方式，定位方式要保证唯一且稳定
 
                         输出要求：
                         - 使用规范的 JSON 格式
-                        - 包含元素描述、定位策略、优先级和理由
+                        - 包含元素描述、定位策略
                         - 按模块进行分类组织
 
                         注意：仅输出 JSON 数据，无需任何其他解释或文字"""
@@ -41,6 +40,7 @@ def analyze_html_for_testing(html_file_path='page_content.html', ele_loc_file='e
             model="moonshot-v1-32k",
             messages=messages,
             temperature=0.3,
+            max_tokens=2000  # 新增token限制
         )
 
         response_content = completion.choices[0].message.content
@@ -54,8 +54,12 @@ def analyze_html_for_testing(html_file_path='page_content.html', ele_loc_file='e
             print(f"数据已成功保存到 {ele_loc_file} 文件。")
             return data
         except json.JSONDecodeError as e:
-            print(f"提取到的 content 内容：\n{response_content}")
-            print(f"JSON 解析错误: {e}")
+            # 新增错误处理：保存原始响应用于调试
+            with open('raw_response.txt', 'w', encoding='utf-8') as f:
+                f.write(response_content)
+            print(f"原始响应已保存到 raw_response.txt，请检查以下问题：")
+            print(f"1. 最后一个元素可能缺少闭合括号\n2. JSON 层级结构不完整\n3. 检查第130行附近的逗号分隔符")
+            print(f"JSON 解析错误详情: {e}")
             return None
     except FileNotFoundError:
         print(f"未找到文件: {html_file_path}")
@@ -64,4 +68,4 @@ def analyze_html_for_testing(html_file_path='page_content.html', ele_loc_file='e
 
 if __name__ == "__main__":
     # 可以在这里修改需要分析的 HTML 文件和保存文件名
-    analyze_html_for_testing(html_file_path='shouye.html', ele_loc_file='shouye.json')
+    analyze_html_for_testing(html_file_path='shouye_cleaned.html', ele_loc_file='shouye.json')
