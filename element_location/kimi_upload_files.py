@@ -1,25 +1,24 @@
 from pathlib import Path
 from openai import OpenAI
 import json
-import re
+from config.config import KIMI_API_KEY, KIMI_BASE_URL
 
 def analyze_html_for_testing(html_file_path='page_content.html', ele_loc_file='eleLoc.json'):
     client = OpenAI(
-        api_key="sk-Mm6vK2FK3bk08Spuu4DcB0roLyAbeepsaq2lcPgf1fip8qk7",
-        base_url="https://api.moonshot.cn/v1",
+        api_key=KIMI_API_KEY,
+        base_url=KIMI_BASE_URL,
     )
 
     try:
         file_object = client.files.create(file=Path(html_file_path), purpose="file-extract")
         file_content = client.files.content(file_id=file_object.id).text
 
-        # 把它放进请求中
         messages = [
             {
                 "role": "system",
                 "content": """你是一个资深自动化测试工程师，请根据网页内容生成规范的 JSON 数据：
                         1. 分析页面核心功能模块
-                        2. 识别所有用户交互元素（如按钮、输入框、链接等）及其用途
+                        2. 识别所有用户交互元素（如按钮、输入框、链接等）及其用途，注意必须仅包含真实存在的交互元素
                         3. 为每个交互元素推荐最优定位方式（按优先级排列），定位方式要保证唯一且稳定
                         4. 说明推荐理由
 
@@ -37,7 +36,7 @@ def analyze_html_for_testing(html_file_path='page_content.html', ele_loc_file='e
             {"role": "user", "content": "根据我提供的 html 文件来分析我进行自动化测试需要的元素及其最优定位方式"},
         ]
 
-        # 然后调用 chat-completion, 获取 Kimi 的回答
+        # 调用 chat-completion, 获取 Kimi 的回答
         completion = client.chat.completions.create(
             model="moonshot-v1-32k",
             messages=messages,
@@ -63,6 +62,6 @@ def analyze_html_for_testing(html_file_path='page_content.html', ele_loc_file='e
         return None
 
 
-# if __name__ == "__main__":
-#     # 可以在这里修改需要分析的 HTML 文件和保存文件名
-#     analyze_html_for_testing(html_file_path='new_page_content.html', ele_loc_file='new_output.json')
+if __name__ == "__main__":
+    # 可以在这里修改需要分析的 HTML 文件和保存文件名
+    analyze_html_for_testing(html_file_path='shouye.html', ele_loc_file='shouye.json')

@@ -1,6 +1,6 @@
 import pytest
 import requests
-import logging  # 重新导入 logging 模块
+import logging
 from utils.logger import setup_logging
 import json
 from selenium import webdriver
@@ -253,12 +253,11 @@ def menu_urls(ptuser_driver_and_logged_in):
 :return: 登录后的浏览器驱动实例
 """
 @pytest.fixture(scope="function")
-def logged_in():  # 依赖特殊权限账号的 fixture 已移除
+def logged_in():
     # 创建 Chrome 浏览器服务实例
     service = Service(str(CHROME_DRIVER_PATH))
     # 创建 Chrome 浏览器驱动实例
     driver = webdriver.Chrome(service=service)
-    # 最大化浏览器窗口
     driver.maximize_window()
     # 创建登录页面实例
     login_page = LoginPage(driver)
@@ -267,11 +266,12 @@ def logged_in():  # 依赖特殊权限账号的 fixture 已移除
     # 检查登录是否成功，若失败则终止测试
     if not result:
         pytest.fail("登录失败")
-    # 返回登录后的浏览器驱动实例
-    yield driver
+    yield driver  # 返回登录后的浏览器驱动实例
 
     # 关闭浏览器
+    logging.info("关闭浏览器")
     driver.quit()
+
 
 
 @pytest.hookimpl(hookwrapper=True)

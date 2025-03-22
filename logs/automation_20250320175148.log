@@ -1,3 +1,0 @@
-2025-03-20 17:51:48,897 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
-2025-03-20 17:51:49,553 - root - INFO - Test case test_save_authorized_pages started at 2025-03-20 17:51:49.553257
-2025-03-20 17:51:49,602 - root - INFO - Test case test_save_authorized_pages ended at 2025-03-20 17:51:49.602787

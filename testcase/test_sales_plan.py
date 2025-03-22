@@ -3,34 +3,34 @@ import pytest
 
 from config.config import ERP_URL
 from element_location.save_html import save_body_content_to_file
-from element_location.upload_files import analyze_html_for_testing
+from element_location.kimi_upload_files import analyze_html_for_testing
 from pages.sales_plan_page import SalesPlanPage
 from selenium.webdriver.common.by import By
 from pathlib import Path
 import json
 import logging
 
-from element_location.save_html import batch_save_pages
 from testcase.conftest import logged_in
 
 
 class TestSalesPlan:
 
     def test_save_authorized_pages(self, logged_in):
-        """验证授权页面保存功能"""
-        # 测试URL列表
-        authorized_urls = [
-            "http://192.168.150.222:3066/amzShipment/salesPlan",
-            "http://192.168.150.222:3066/amzShipment/inventory"
-        ]
+        """验证页面html保存功能"""
+        url = r"http://192.168.150.222:3066/amzShipment/salesPlan"
+        output_file = "salesPlan.html"
         
-        # 调用批量保存函数（传递driver实例）
-        from element_location.save_html import batch_save_pages
-        batch_save_pages(logged_in, authorized_urls, output_dir="html_output")  # 关键修改点
+        save_body_content_to_file(logged_in, url, file=output_file)
+        
+        # 验证文件保存结果
+        saved_path = Path(output_file)
+        assert saved_path.exists(), f"文件{saved_path}未成功生成"
+        assert saved_path.stat().st_size > 0, "保存的文件内容为空"
+   
 
     def test_upload_files(self):
         """测试文件上传功能"""
-        from element_location.upload_files import analyze_html_for_testing
+        from element_location.kimi_upload_files import analyze_html_for_testing
     
         # 使用实际保存的HTML文件
         test_html = "html_output/amzShipment_salesPlan.html"

@@ -1,6 +1,0 @@
-2025-03-20 18:13:04,263 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
-2025-03-20 18:13:04,891 - root - INFO - Test case test_upload_files started at 2025-03-20 18:13:04.891926
-2025-03-20 18:13:05,542 - httpx - INFO - HTTP Request: POST https://api.moonshot.cn/v1/files "HTTP/1.1 200 OK"
-2025-03-20 18:13:05,600 - httpx - INFO - HTTP Request: GET https://api.moonshot.cn/v1/files/cvdukc81gem4klbdl8t0/content "HTTP/1.1 200 OK"
-2025-03-20 18:13:21,472 - httpx - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
-2025-03-20 18:13:21,624 - root - INFO - Test case test_upload_files ended at 2025-03-20 18:13:21.624942

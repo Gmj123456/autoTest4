@@ -10,13 +10,9 @@ from selenium.common.exceptions import NoSuchElementException, WebDriverExceptio
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-import pdb
-
 # 在文件顶部添加统一日志配置
 from utils.logger import setup_logging
 setup_logging()
-
-
 
 class LoginPage(BasePage):
     USERNAME_INPUT = (
