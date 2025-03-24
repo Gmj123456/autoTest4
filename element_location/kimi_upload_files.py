@@ -1,7 +1,7 @@
 from pathlib import Path
 from openai import OpenAI
 import json
-from config.config import KIMI_API_KEY, KIMI_BASE_URL
+from ..config.config import KIMI_API_KEY, KIMI_BASE_URL
 
 def analyze_html_for_testing(html_file_path='page_content.html', ele_loc_file='eleLoc.json'):
     client = OpenAI(
@@ -39,8 +39,8 @@ def analyze_html_for_testing(html_file_path='page_content.html', ele_loc_file='e
         completion = client.chat.completions.create(
             model="moonshot-v1-32k",
             messages=messages,
-            temperature=0.3,
-            max_tokens=2000  # 新增token限制
+            temperature=0.3
+            # max_tokens=2000  # 新增token限制
         )
 
         response_content = completion.choices[0].message.content
@@ -68,4 +68,4 @@ def analyze_html_for_testing(html_file_path='page_content.html', ele_loc_file='e
 
 if __name__ == "__main__":
     # 可以在这里修改需要分析的 HTML 文件和保存文件名
-    analyze_html_for_testing(html_file_path='shouye_cleaned.html', ele_loc_file='shouye.json')
+    analyze_html_for_testing(html_file_path='sales_plan_body2_cleaned.html', ele_loc_file='shouye.json')
