@@ -1,0 +1,30 @@
+2025-03-24 15:38:43,010 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-24 15:38:43,717 - root - INFO - Test case test_menu_navigation started at 2025-03-24 15:38:43.717833
+2025-03-24 15:38:44,847 - root - INFO - 开始登录操作
+2025-03-24 15:38:44,875 - root - INFO - 已打开登录页面
+2025-03-24 15:38:48,173 - root - INFO - 已输入用户名：ptuser
+2025-03-24 15:38:48,258 - root - INFO - 已输入密码：qwe123
+2025-03-24 15:38:48,380 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 15:38:49,636 - root - INFO - 验证码识别结果: 5CB1
+2025-03-24 15:38:49,716 - root - INFO - 已输入验证码: 5CB1，第 1 次尝试
+2025-03-24 15:38:51,594 - root - INFO - 登录成功
+2025-03-24 15:38:51,647 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI4MzA3MjksInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.uzlfgim-vzuOb3Uv1KrYwRmSDUWuzNUCf2Kt2-OsrIc
+2025-03-24 15:38:52,093 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI4MzA3MjksInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.uzlfgim-vzuOb3Uv1KrYwRmSDUWuzNUCf2Kt2-OsrIc
+2025-03-24 15:38:52,131 - root - INFO - 开始解析36个根菜单项
+2025-03-24 15:38:52,131 - root - INFO - 共提取到257个菜单项
+2025-03-24 15:38:52,132 - root - INFO - 菜单数据已保存至: d:\gmj\workSpaces\workSpaces_pycharm\autoTest1\menu.json
+2025-03-24 15:38:52,184 - root - INFO - 已关闭通知框
+2025-03-24 15:38:52,429 - root - INFO - 已点击退出登录按钮
+2025-03-24 15:38:53,081 - root - INFO - 已点击确定按钮，完成退出登录
+2025-03-24 15:38:57,943 - root - INFO - 已关闭浏览器
+2025-03-24 15:38:58,952 - root - INFO - 开始登录操作
+2025-03-24 15:39:01,668 - root - INFO - 已打开登录页面
+2025-03-24 15:39:01,818 - root - INFO - 已输入用户名：guomj
+2025-03-24 15:39:01,894 - root - INFO - 已输入密码：gmj123..
+2025-03-24 15:39:01,987 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 15:39:02,739 - root - INFO - 验证码识别结果: ZVks
+2025-03-24 15:39:02,889 - root - INFO - 已输入验证码: ZVks，第 1 次尝试
+2025-03-24 15:39:04,351 - root - INFO - 登录成功
+2025-03-24 15:39:04,366 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI4MzA3NDIsInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.8agED7-MDSMBJlK6_zHDS3cHKKiY-35qgSsCM9EJKxg
+2025-03-24 15:39:04,565 - root - INFO - 关闭浏览器
+2025-03-24 15:39:06,836 - root - INFO - Test case test_menu_navigation ended at 2025-03-24 15:39:06.836140

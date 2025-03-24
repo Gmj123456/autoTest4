@@ -1,0 +1,54 @@
+2025-03-24 15:40:39,603 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-24 15:40:40,352 - root - INFO - Test case test_menu_navigation started at 2025-03-24 15:40:40.352158
+2025-03-24 15:40:41,372 - root - INFO - 开始登录操作
+2025-03-24 15:40:44,631 - root - INFO - 已打开登录页面
+2025-03-24 15:40:44,773 - root - INFO - 已输入用户名：ptuser
+2025-03-24 15:40:44,843 - root - INFO - 已输入密码：qwe123
+2025-03-24 15:40:44,959 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 15:40:45,679 - root - INFO - 验证码识别结果: 7lH3
+2025-03-24 15:40:46,040 - root - INFO - 已输入验证码: 7lH3，第 1 次尝试
+2025-03-24 15:40:47,520 - root - INFO - 登录成功
+2025-03-24 15:40:48,110 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI4MzA4NDYsInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.4d-V0cmYEEaSz7rfo-SXb6U7eP220C1yx-BXDhJBzi0
+2025-03-24 15:40:48,138 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI4MzA4NDYsInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.4d-V0cmYEEaSz7rfo-SXb6U7eP220C1yx-BXDhJBzi0
+2025-03-24 15:40:48,170 - root - INFO - 开始解析36个根菜单项
+2025-03-24 15:40:48,170 - root - INFO - 共提取到257个菜单项
+2025-03-24 15:40:48,171 - root - INFO - 菜单数据已保存至: d:\gmj\workSpaces\workSpaces_pycharm\autoTest1\menu.json
+2025-03-24 15:40:48,260 - root - INFO - 已关闭通知框
+2025-03-24 15:40:48,522 - root - INFO - 已点击退出登录按钮
+2025-03-24 15:40:49,115 - root - INFO - 已点击确定按钮，完成退出登录
+2025-03-24 15:40:53,813 - root - INFO - 已关闭浏览器
+2025-03-24 15:40:54,815 - root - INFO - 开始登录操作
+2025-03-24 15:40:54,835 - root - INFO - 已打开登录页面
+2025-03-24 15:40:58,298 - root - INFO - 已输入用户名：guomj
+2025-03-24 15:40:58,392 - root - INFO - 已输入密码：gmj123..
+2025-03-24 15:40:58,489 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 15:40:59,196 - root - INFO - 验证码识别结果: yQL a
+2025-03-24 15:40:59,311 - root - INFO - 已输入验证码: yQL a，第 1 次尝试
+2025-03-24 15:41:04,358 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-03-24 15:41:04,358 - root - INFO - 开始登录操作
+2025-03-24 15:41:06,339 - root - INFO - 已打开登录页面
+2025-03-24 15:41:06,443 - root - INFO - 已输入用户名：guomj
+2025-03-24 15:41:06,545 - root - INFO - 已输入密码：gmj123..
+2025-03-24 15:41:06,630 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 15:41:07,301 - root - INFO - 验证码识别结果: r 2 C D
+2025-03-24 15:41:07,388 - root - INFO - 已输入验证码: r 2 C D，第 2 次尝试
+2025-03-24 15:41:12,509 - root - WARNING - 第 2 次登录失败，重新尝试
+2025-03-24 15:41:12,509 - root - INFO - 开始登录操作
+2025-03-24 15:41:13,741 - root - INFO - 已打开登录页面
+2025-03-24 15:41:13,830 - root - INFO - 已输入用户名：guomj
+2025-03-24 15:41:13,925 - root - INFO - 已输入密码：gmj123..
+2025-03-24 15:41:14,047 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 15:41:15,109 - root - INFO - 验证码识别结果: fr d w
+2025-03-24 15:41:15,187 - root - INFO - 已输入验证码: fr d w，第 3 次尝试
+2025-03-24 15:41:20,260 - root - WARNING - 第 3 次登录失败，重新尝试
+2025-03-24 15:41:20,261 - root - INFO - 开始登录操作
+2025-03-24 15:41:21,934 - root - INFO - 已打开登录页面
+2025-03-24 15:41:22,013 - root - INFO - 已输入用户名：guomj
+2025-03-24 15:41:22,084 - root - INFO - 已输入密码：gmj123..
+2025-03-24 15:41:22,162 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 15:41:23,064 - root - INFO - 验证码识别结果: 5YNS
+2025-03-24 15:41:23,136 - root - INFO - 已输入验证码: 5YNS，第 4 次尝试
+2025-03-24 15:41:24,340 - root - INFO - 登录成功
+2025-03-24 15:41:24,383 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI4MzA4ODMsInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.yeRTVl8j6nzUaivLxGk0jiOgDzqoEI8Es2TKoQKwIgM
+2025-03-24 15:53:12,338 - root - INFO - 关闭浏览器
+2025-03-24 15:53:16,353 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022DBFA682C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/3b023d706f07abda3778d7f9089f5f24

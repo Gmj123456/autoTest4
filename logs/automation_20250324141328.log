@@ -1,0 +1,47 @@
+2025-03-24 14:13:28,290 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-24 14:13:28,316 - root - INFO - Test case test_logout started at 2025-03-24 14:13:28.316692
+2025-03-24 14:13:29,293 - root - INFO - 开始登录操作
+2025-03-24 14:13:31,681 - root - INFO - 已打开登录页面
+2025-03-24 14:13:31,779 - root - INFO - 已输入用户名：guomj
+2025-03-24 14:13:31,850 - root - INFO - 已输入密码：gmj123..
+2025-03-24 14:13:31,956 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 14:13:32,785 - root - INFO - 验证码识别结果: f 0 u.D
+2025-03-24 14:13:32,901 - root - INFO - 已输入验证码: f 0 u.D，第 1 次尝试
+2025-03-24 14:13:38,035 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-03-24 14:13:38,035 - root - INFO - 开始登录操作
+2025-03-24 14:13:39,893 - root - INFO - 已打开登录页面
+2025-03-24 14:13:40,074 - root - INFO - 已输入用户名：guomj
+2025-03-24 14:13:40,167 - root - INFO - 已输入密码：gmj123..
+2025-03-24 14:13:40,283 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 14:13:41,070 - root - INFO - 验证码识别结果: wBUs
+2025-03-24 14:13:41,145 - root - INFO - 已输入验证码: wBUs，第 2 次尝试
+2025-03-24 14:13:42,248 - root - INFO - 登录成功
+2025-03-24 14:13:42,297 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI4MjU2MjEsInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.0BbXJ96xFtA7dqAylkdhhryZJoNlllpbnGzCmebdiFU
+2025-03-24 14:13:42,816 - root - INFO - 已关闭通知框
+2025-03-24 14:13:43,086 - root - INFO - 已点击退出登录按钮
+2025-03-24 14:14:03,392 - root - ERROR - 等待确认退出登录按钮出现时出错: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF780412775+28773]
+	(No symbol) [0x00007FF78037AFB0]
+	(No symbol) [0x00007FF78021552A]
+	(No symbol) [0x00007FF780268EAE]
+	(No symbol) [0x00007FF78026919C]
+	(No symbol) [0x00007FF7802B23F7]
+	(No symbol) [0x00007FF78028EFDF]
+	(No symbol) [0x00007FF7802AF1A4]
+	(No symbol) [0x00007FF78028ED43]
+	(No symbol) [0x00007FF78025A548]
+	(No symbol) [0x00007FF78025B6B1]
+	GetHandleVerifier [0x00007FF78073F45D+3358029]
+	GetHandleVerifier [0x00007FF78075430D+3443709]
+	GetHandleVerifier [0x00007FF7807483FD+3394797]
+	GetHandleVerifier [0x00007FF7804D929B+842635]
+	(No symbol) [0x00007FF78038654F]
+	(No symbol) [0x00007FF780381FA4]
+	(No symbol) [0x00007FF78038213D]
+	(No symbol) [0x00007FF780371629]
+	BaseThreadInitThunk [0x00007FF8652F7614+20]
+	RtlUserThreadStart [0x00007FF8654E26A1+33]
+
+2025-03-24 14:14:03,455 - root - INFO - 关闭浏览器
+2025-03-24 14:14:05,695 - root - INFO - Test case test_logout ended at 2025-03-24 14:14:05.695685

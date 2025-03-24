@@ -1,6 +1,5 @@
 # autoTest1/testcase/test_sales_plan.py
 import pytest
-
 from config.config import ERP_URL
 from element_location.save_html import save_body_content_to_file
 from element_location.kimi_upload_files import analyze_html_for_testing
@@ -9,6 +8,7 @@ from selenium.webdriver.common.by import By
 from pathlib import Path
 import json
 import logging
+from selenium.webdriver.support.ui import WebDriverWait
 
 from testcase.conftest import logged_in
 
@@ -41,7 +41,18 @@ class TestSalesPlan:
 
     def test_menu_navigation(self, logged_in, menu_urls):
         """验证销售计划菜单跳转"""
-        # 添加空值检查
+        # 添加会话状态检查
+        try:
+            # 添加基础健康检查
+            logged_in.execute_script("return document.readyState;")
+        except Exception as e:
+            pytest.fail(f"浏览器会话已丢失: {str(e)}")
+
+        # 增加显式等待确保页面稳定
+        WebDriverWait(logged_in, 10).until(
+            lambda d: d.execute_script("return document.readyState === 'complete'")
+        )
+        
         assert menu_urls is not None, "菜单URL数据未正确加载"
         assert "销售计划" in menu_urls, "菜单数据中缺少销售计划项"
 
@@ -51,17 +62,19 @@ class TestSalesPlan:
         # 导航到销售计划页面
         sales_page.navigate_to_sales_plan()
 
+        logging.info("已导航到销售计划页面")
+
         # 获取实际页面URL（添加等待确保页面加载完成）
         current_url_all = logged_in.current_url
         current_url = current_url_all.replace(ERP_URL, "")
-
-        print(current_url)
-        logging.info(current_url)
+        logging.info(f"实际页面URL: {current_url}")
 
         target_url = current_url_all
+        logging.info(f"目标URL: {target_url}")
+
 
         # 调用修改后的 save_body_content_to_file 函数，传入 driver 和 url
-        save_body_content_to_file(logged_in, target_url, file_path='sales_plan_body.html')
+        save_body_content_to_file(logged_in, target_url, file='sales_plan_body.html')  # 修正参数名
 
         analyze_html_for_testing(html_file_path='sales_plan_body.html', ele_loc_file='sales_plan_element_location.json')
 

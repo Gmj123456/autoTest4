@@ -1,0 +1,39 @@
+2025-03-24 14:12:04,376 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-24 14:12:04,404 - root - INFO - Test case test_logout started at 2025-03-24 14:12:04.404055
+2025-03-24 14:12:05,583 - root - INFO - 开始登录操作
+2025-03-24 14:12:07,962 - root - INFO - 已打开登录页面
+2025-03-24 14:12:08,130 - root - INFO - 已输入用户名：guomj
+2025-03-24 14:12:08,217 - root - INFO - 已输入密码：gmj123..
+2025-03-24 14:12:08,307 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 14:12:09,001 - root - INFO - 验证码识别结果: PTBx
+2025-03-24 14:12:09,083 - root - INFO - 已输入验证码: PTBx，第 1 次尝试
+2025-03-24 14:12:11,022 - root - INFO - 登录成功
+2025-03-24 14:12:11,077 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI4MjU1MjksInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.B6vSBx7CY_NFVct_6fg5wIG3AFmP8PjdSCuiNFuI0pk
+2025-03-24 14:12:11,158 - root - INFO - 已关闭通知框
+2025-03-24 14:12:11,426 - root - INFO - 已点击退出登录按钮
+2025-03-24 14:12:31,454 - root - ERROR - 等待确认退出登录按钮出现时出错: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF780412775+28773]
+	(No symbol) [0x00007FF78037AFB0]
+	(No symbol) [0x00007FF78021552A]
+	(No symbol) [0x00007FF780268EAE]
+	(No symbol) [0x00007FF78026919C]
+	(No symbol) [0x00007FF7802B23F7]
+	(No symbol) [0x00007FF78028EFDF]
+	(No symbol) [0x00007FF7802AF1A4]
+	(No symbol) [0x00007FF78028ED43]
+	(No symbol) [0x00007FF78025A548]
+	(No symbol) [0x00007FF78025B6B1]
+	GetHandleVerifier [0x00007FF78073F45D+3358029]
+	GetHandleVerifier [0x00007FF78075430D+3443709]
+	GetHandleVerifier [0x00007FF7807483FD+3394797]
+	GetHandleVerifier [0x00007FF7804D929B+842635]
+	(No symbol) [0x00007FF78038654F]
+	(No symbol) [0x00007FF780381FA4]
+	(No symbol) [0x00007FF78038213D]
+	(No symbol) [0x00007FF780371629]
+	BaseThreadInitThunk [0x00007FF8652F7614+20]
+	RtlUserThreadStart [0x00007FF8654E26A1+33]
+
+2025-03-24 14:12:31,523 - root - INFO - 关闭浏览器
+2025-03-24 14:12:33,909 - root - INFO - Test case test_logout ended at 2025-03-24 14:12:33.909148

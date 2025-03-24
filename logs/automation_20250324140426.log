@@ -1,0 +1,71 @@
+2025-03-24 14:04:26,623 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-24 14:04:26,675 - root - INFO - Test case test_logout started at 2025-03-24 14:04:26.675984
+2025-03-24 14:04:27,677 - root - INFO - 开始登录操作
+2025-03-24 14:04:29,922 - root - INFO - 已打开登录页面
+2025-03-24 14:04:30,028 - root - INFO - 已输入用户名：guomj
+2025-03-24 14:04:30,104 - root - INFO - 已输入密码：gmj123..
+2025-03-24 14:04:30,219 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 14:04:31,092 - root - INFO - 验证码识别结果: YXRV
+2025-03-24 14:04:31,167 - root - INFO - 已输入验证码: YXRV，第 1 次尝试
+2025-03-24 14:04:32,288 - root - INFO - 登录成功
+2025-03-24 14:04:32,323 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI4MjUwNzEsInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.Py02NzIPfFBp2KJSG7VCrl38th-MB5GVZSCsNze8fQ4
+2025-03-24 14:04:32,346 - root - ERROR - 没有通知框遮挡: Message: invalid selector
+from javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression body > div.ant-notification.ant-notification-topRight > span > div > a > span > i > svg because of the following error:\nTypeError: Failed to execute 'evaluate' on 'Document': The result is not a node set, and therefore cannot be converted to the desired type."}
+  (Session info: chrome=131.0.6778.70); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF780412775+28773]
+	(No symbol) [0x00007FF78037AFB0]
+	(No symbol) [0x00007FF78021552A]
+	(No symbol) [0x00007FF78021C09F]
+	(No symbol) [0x00007FF78021ED4C]
+	(No symbol) [0x00007FF78021EE1F]
+	(No symbol) [0x00007FF78026895A]
+	(No symbol) [0x00007FF78026919C]
+	(No symbol) [0x00007FF7802B23F7]
+	(No symbol) [0x00007FF78028EFDF]
+	(No symbol) [0x00007FF7802AF1A4]
+	(No symbol) [0x00007FF78028ED43]
+	(No symbol) [0x00007FF78025A548]
+	(No symbol) [0x00007FF78025B6B1]
+	GetHandleVerifier [0x00007FF78073F45D+3358029]
+	GetHandleVerifier [0x00007FF78075430D+3443709]
+	GetHandleVerifier [0x00007FF7807483FD+3394797]
+	GetHandleVerifier [0x00007FF7804D929B+842635]
+	(No symbol) [0x00007FF78038654F]
+	(No symbol) [0x00007FF780381FA4]
+	(No symbol) [0x00007FF78038213D]
+	(No symbol) [0x00007FF780371629]
+	BaseThreadInitThunk [0x00007FF8652F7614+20]
+	RtlUserThreadStart [0x00007FF8654E26A1+33]
+
+2025-03-24 14:04:33,909 - root - ERROR - 退出登录时出现错误: Message: element click intercepted: Element <span data-v-8ef766a4="">...</span> is not clickable at point (1866, 29). Other element would receive the click: <div class="ant-notification-notice ant-notification-notice-closable">...</div>
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF780412775+28773]
+	(No symbol) [0x00007FF78037AFB0]
+	(No symbol) [0x00007FF78021552A]
+	(No symbol) [0x00007FF780270B5E]
+	(No symbol) [0x00007FF78026E5FC]
+	(No symbol) [0x00007FF78026B7E6]
+	(No symbol) [0x00007FF78026A741]
+	(No symbol) [0x00007FF78025C970]
+	(No symbol) [0x00007FF78028EF9A]
+	(No symbol) [0x00007FF78025C1C6]
+	(No symbol) [0x00007FF78028F1B0]
+	(No symbol) [0x00007FF7802AF1A4]
+	(No symbol) [0x00007FF78028ED43]
+	(No symbol) [0x00007FF78025A548]
+	(No symbol) [0x00007FF78025B6B1]
+	GetHandleVerifier [0x00007FF78073F45D+3358029]
+	GetHandleVerifier [0x00007FF78075430D+3443709]
+	GetHandleVerifier [0x00007FF7807483FD+3394797]
+	GetHandleVerifier [0x00007FF7804D929B+842635]
+	(No symbol) [0x00007FF78038654F]
+	(No symbol) [0x00007FF780381FA4]
+	(No symbol) [0x00007FF78038213D]
+	(No symbol) [0x00007FF780371629]
+	BaseThreadInitThunk [0x00007FF8652F7614+20]
+	RtlUserThreadStart [0x00007FF8654E26A1+33]
+
+2025-03-24 14:04:33,978 - root - INFO - 关闭浏览器
+2025-03-24 14:04:36,213 - root - INFO - Test case test_logout ended at 2025-03-24 14:04:36.213821

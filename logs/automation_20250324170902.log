@@ -1,0 +1,15 @@
+2025-03-24 17:09:02,540 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-24 17:09:02,653 - root - INFO - Test case test_sales_plan1 started at 2025-03-24 17:09:02.653242
+2025-03-24 17:09:03,659 - root - INFO - 开始登录操作
+2025-03-24 17:09:06,448 - root - INFO - 已打开登录页面
+2025-03-24 17:09:06,609 - root - INFO - 已输入用户名：guomj
+2025-03-24 17:09:06,688 - root - INFO - 已输入密码：gmj123..
+2025-03-24 17:09:06,780 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 17:09:07,537 - root - INFO - 验证码识别结果: gmf1
+2025-03-24 17:09:07,689 - root - INFO - 已输入验证码: gmf1，第 1 次尝试
+2025-03-24 17:09:09,363 - root - INFO - 登录成功
+2025-03-24 17:09:09,376 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI4MzYxNDcsInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.ZHAizVmIM-dGUhf17jXS3W64J8ksqyVOYNJGtkn6zgo
+2025-03-24 17:09:09,907 - root - INFO - 已点击Amazon菜单
+2025-03-24 17:09:10,674 - root - INFO - 已点击销售计划子菜单
+2025-03-24 17:09:30,681 - root - INFO - 关闭浏览器
+2025-03-24 17:09:33,025 - root - INFO - Test case test_sales_plan1 ended at 2025-03-24 17:09:33.025253

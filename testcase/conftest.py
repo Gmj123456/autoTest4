@@ -47,9 +47,9 @@ def ptuser_driver_and_logged_in():
     yield token, driver
 
     # 退出特殊权限账号
-    login_page.logout()
+    # login_page.logout()
     # 关闭浏览器
-    driver.quit()
+    # driver.quit()
 
 """
 提取菜单 URL（整个测试会话只获取一次）
@@ -243,6 +243,7 @@ def menu_urls(ptuser_driver_and_logged_in):
         login_page = LoginPage(ptuser_driver)
         login_page.logout()
         ptuser_driver.quit()
+        logging.info("已关闭浏览器")
 
 """
 测试账号登录，返回登录后的驱动实例

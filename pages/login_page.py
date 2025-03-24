@@ -24,9 +24,9 @@ class LoginPage(BasePage):
     CAPTCHA_IMAGE = (By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[3]/div[2]/img")
     LOGOUT_BUTTON = (By.XPATH, "//*[@id='app']/section/section/header/div/div/span[6]/a/span/span/span")  # 假设退出登录按钮的定位器
     # CONFIRM_LOGOUT_BUTTON = (By.XPATH, "/html/body/div[8]/div/div[2]/div/div[2]/div/div/div[2]/button[2]")  # 假设确定按钮的定位器
-    CONFIRM_LOGOUT_BUTTON = (By.XPATH,"/html/body/div[8]/div/div[2]/div/div[2]/div/div/div[2]/button[2]/span")
+    CONFIRM_LOGOUT_BUTTON = (By.CSS_SELECTOR,"body > div:nth-child(17) > div > div.ant-modal-wrap > div > div.ant-modal-content > div > div > div.ant-modal-confirm-btns > button.ant-btn.ant-btn-primary")
 
-    NOTIFICATION_CLOSE_BUTTON = (By.XPATH, "/html/body/div[5]/span/div/a/span/i/svg")  # 登录成功通知框的定位器（遮挡退出登录按钮）
+    NOTIFICATION_CLOSE_BUTTON = (By.CSS_SELECTOR, "body > div.ant-notification.ant-notification-topRight > span > div > a > span > i > svg")  # 登录成功通知框的定位器（遮挡退出登录按钮）
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -167,25 +167,44 @@ class LoginPage(BasePage):
 
     def logout(self):
         try:
-            # 检查并关闭通知框
-            self.close_notification_box()
-
-            logout_button = self.find_element(*self.LOGOUT_BUTTON)
-            logout_button.click()
-            logging.info("已点击退出登录按钮")
-
-            # 修改部分，使用显式等待
+            # 加强通知框关闭逻辑
+            self.close_notification_box(self.NOTIFICATION_CLOSE_BUTTON)  # 明确传入定位器
+            
+            # 使用显式等待确保元素可点击
             from selenium.webdriver.support.ui import WebDriverWait
             from selenium.webdriver.support import expected_conditions as EC
+            
+            # 等待退出按钮可点击
+            logout_button = WebDriverWait(self.driver, 10).until(
+                EC.element_to_be_clickable(self.LOGOUT_BUTTON)
+            )
+            logout_button.click()
+            logging.info("已点击退出登录按钮")
+        
+            # 增加弹窗消失等待
+            WebDriverWait(self.driver, 5).until(
+                EC.invisibility_of_element_located(self.NOTIFICATION_CLOSE_BUTTON)
+            )
+        
+            # 优化确认按钮定位和等待策略
             try:
-                WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(self.CONFIRM_LOGOUT_BUTTON))
-                logging.info("确认退出登录按钮已出现")
+                confirm_button = WebDriverWait(self.driver, 10).until(
+                    EC.element_to_be_clickable(
+                        (By.CSS_SELECTOR, "div.ant-modal-confirm-btns > button.ant-btn-primary")
+                    )
+                )
+                confirm_button.click()
+                logging.info("已点击确定按钮，完成退出登录")
+                
+                # 新增等待页面跳转
+                WebDriverWait(self.driver, 10).until(
+                    EC.url_contains("login")
+                )
+                
             except Exception as e:
-                logging.error(f"等待确认退出登录按钮出现时出错: {e}")
+                logging.error(f"确认退出操作失败: {e}")
                 return False
 
-            confirm_button = self.find_element(*self.CONFIRM_LOGOUT_BUTTON).click()
-            logging.info("已点击确定按钮，完成退出登录")
             return True
         except Exception as e:
             logging.error(f"退出登录时出现错误: {e}")

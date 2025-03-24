@@ -1,0 +1,21 @@
+2025-03-24 16:11:49,235 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-24 16:11:49,353 - root - INFO - Test case test_sales_plan1 started at 2025-03-24 16:11:49.353845
+2025-03-24 16:11:50,080 - root - INFO - 开始登录操作
+2025-03-24 16:11:52,912 - root - INFO - 已打开登录页面
+2025-03-24 16:11:53,092 - root - INFO - 已输入用户名：guomj
+2025-03-24 16:11:53,172 - root - INFO - 已输入密码：gmj123..
+2025-03-24 16:11:53,298 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 16:11:54,351 - root - INFO - 验证码识别结果: 2 sY w
+2025-03-24 16:11:54,423 - root - INFO - 已输入验证码: 2 sY w，第 1 次尝试
+2025-03-24 16:11:59,703 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-03-24 16:11:59,704 - root - INFO - 开始登录操作
+2025-03-24 16:12:01,584 - root - INFO - 已打开登录页面
+2025-03-24 16:12:01,688 - root - INFO - 已输入用户名：guomj
+2025-03-24 16:12:01,767 - root - INFO - 已输入密码：gmj123..
+2025-03-24 16:12:01,877 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 16:12:02,974 - root - INFO - 验证码识别结果: CZwv
+2025-03-24 16:12:03,043 - root - INFO - 已输入验证码: CZwv，第 2 次尝试
+2025-03-24 16:12:04,272 - root - INFO - 登录成功
+2025-03-24 16:12:04,835 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI4MzI3MjMsInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.qSS4-1e0-a8YXV2vy6Q8irQV80w5iHDVyAnUB14yMII
+2025-03-24 16:12:20,216 - root - INFO - 关闭浏览器
+2025-03-24 16:12:22,468 - root - INFO - Test case test_sales_plan1 ended at 2025-03-24 16:12:22.468327

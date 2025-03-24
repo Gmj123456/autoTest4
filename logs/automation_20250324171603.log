@@ -1,0 +1,41 @@
+2025-03-24 17:16:03,590 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-24 17:16:04,260 - root - INFO - Test case test_menu_navigation started at 2025-03-24 17:16:04.260139
+2025-03-24 17:16:05,299 - root - INFO - 开始登录操作
+2025-03-24 17:16:08,741 - root - INFO - 已打开登录页面
+2025-03-24 17:16:08,926 - root - INFO - 已输入用户名：ptuser
+2025-03-24 17:16:09,019 - root - INFO - 已输入密码：qwe123
+2025-03-24 17:16:09,119 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 17:16:09,935 - root - INFO - 验证码识别结果: A9 8 g
+2025-03-24 17:16:10,107 - root - INFO - 已输入验证码: A9 8 g，第 1 次尝试
+2025-03-24 17:16:15,224 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-03-24 17:16:15,224 - root - INFO - 开始登录操作
+2025-03-24 17:16:17,708 - root - INFO - 已打开登录页面
+2025-03-24 17:16:17,790 - root - INFO - 已输入用户名：ptuser
+2025-03-24 17:16:17,854 - root - INFO - 已输入密码：qwe123
+2025-03-24 17:16:17,960 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 17:16:18,731 - root - INFO - 验证码识别结果: fW1u
+2025-03-24 17:16:18,846 - root - INFO - 已输入验证码: fW1u，第 2 次尝试
+2025-03-24 17:16:20,801 - root - INFO - 登录成功
+2025-03-24 17:16:20,929 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI4MzY1NzgsInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.tqLsOtBTFF1NJtHM2hHa1wFMsSXdxrBtEjkSToIaxWo
+2025-03-24 17:16:20,981 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI4MzY1NzgsInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.tqLsOtBTFF1NJtHM2hHa1wFMsSXdxrBtEjkSToIaxWo
+2025-03-24 17:16:21,034 - root - INFO - 开始解析36个根菜单项
+2025-03-24 17:16:21,035 - root - INFO - 共提取到257个菜单项
+2025-03-24 17:16:21,036 - root - INFO - 菜单数据已保存至: d:\gmj\workSpaces\workSpaces_pycharm\autoTest1\menu.json
+2025-03-24 17:16:21,154 - root - INFO - 已关闭通知框
+2025-03-24 17:16:21,430 - root - INFO - 已点击退出登录按钮
+2025-03-24 17:16:22,020 - root - INFO - 已点击确定按钮，完成退出登录
+2025-03-24 17:16:25,896 - root - INFO - 已关闭浏览器
+2025-03-24 17:16:26,920 - root - INFO - 开始登录操作
+2025-03-24 17:16:30,097 - root - INFO - 已打开登录页面
+2025-03-24 17:16:30,345 - root - INFO - 已输入用户名：guomj
+2025-03-24 17:16:30,442 - root - INFO - 已输入密码：gmj123..
+2025-03-24 17:16:30,541 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 17:16:31,317 - root - INFO - 验证码识别结果: 2Ukx
+2025-03-24 17:16:31,401 - root - INFO - 已输入验证码: 2Ukx，第 1 次尝试
+2025-03-24 17:16:32,722 - root - INFO - 登录成功
+2025-03-24 17:16:32,747 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI4MzY1OTEsInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.vCo_mCOFUHaPDP56W038nSiXs8PA7gdBbcIzvff56-E
+2025-03-24 17:16:34,262 - root - INFO - 已导航到销售计划页面
+2025-03-24 17:16:34,265 - root - INFO - 实际页面URL: amzShipment/salesPlan
+2025-03-24 17:16:34,265 - root - INFO - 目标URL: http://192.168.150.222:3066/amzShipment/salesPlan
+2025-03-24 17:16:34,414 - root - INFO - 关闭浏览器
+2025-03-24 17:16:36,665 - root - INFO - Test case test_menu_navigation ended at 2025-03-24 17:16:36.665682

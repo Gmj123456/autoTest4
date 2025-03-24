@@ -1,0 +1,16 @@
+2025-03-24 14:17:29,453 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-24 14:17:29,480 - root - INFO - Test case test_logout started at 2025-03-24 14:17:29.480167
+2025-03-24 14:17:30,456 - root - INFO - 开始登录操作
+2025-03-24 14:17:32,751 - root - INFO - 已打开登录页面
+2025-03-24 14:17:32,956 - root - INFO - 已输入用户名：guomj
+2025-03-24 14:17:33,053 - root - INFO - 已输入密码：gmj123..
+2025-03-24 14:17:33,165 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 14:17:33,947 - root - INFO - 验证码识别结果: tpvN
+2025-03-24 14:17:34,032 - root - INFO - 已输入验证码: tpvN，第 1 次尝试
+2025-03-24 14:17:35,143 - root - INFO - 登录成功
+2025-03-24 14:17:35,202 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI4MjU4NTQsInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.fmwCy9KY4uKS-YUZdlohzuas_gciGKuok29WRJxk0Xc
+2025-03-24 14:17:35,691 - root - INFO - 已关闭通知框
+2025-03-24 14:17:35,953 - root - INFO - 已点击退出登录按钮
+2025-03-24 14:17:36,536 - root - INFO - 已点击确定按钮，完成退出登录
+2025-03-24 14:17:38,376 - root - INFO - 关闭浏览器
+2025-03-24 14:17:40,614 - root - INFO - Test case test_logout ended at 2025-03-24 14:17:40.614365

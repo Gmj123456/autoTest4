@@ -1,0 +1,53 @@
+2025-03-24 14:26:30,887 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\utils\chromedriver.exe
+2025-03-24 14:26:31,713 - root - INFO - Test case test_menu_navigation started at 2025-03-24 14:26:31.713254
+2025-03-24 14:26:32,734 - root - INFO - 开始登录操作
+2025-03-24 14:26:35,069 - root - INFO - 已打开登录页面
+2025-03-24 14:26:35,264 - root - INFO - 已输入用户名：ptuser
+2025-03-24 14:26:35,349 - root - INFO - 已输入密码：qwe123
+2025-03-24 14:26:35,460 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 14:26:36,168 - root - INFO - 验证码识别结果: j7 1 s
+2025-03-24 14:26:36,250 - root - INFO - 已输入验证码: j7 1 s，第 1 次尝试
+2025-03-24 14:26:41,314 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-03-24 14:26:41,314 - root - INFO - 开始登录操作
+2025-03-24 14:26:43,160 - root - INFO - 已打开登录页面
+2025-03-24 14:26:43,234 - root - INFO - 已输入用户名：ptuser
+2025-03-24 14:26:43,304 - root - INFO - 已输入密码：qwe123
+2025-03-24 14:26:43,385 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 14:26:44,125 - root - INFO - 验证码识别结果: y d 8 M
+2025-03-24 14:26:44,201 - root - INFO - 已输入验证码: y d 8 M，第 2 次尝试
+2025-03-24 14:26:49,274 - root - WARNING - 第 2 次登录失败，重新尝试
+2025-03-24 14:26:49,274 - root - INFO - 开始登录操作
+2025-03-24 14:26:50,402 - root - INFO - 已打开登录页面
+2025-03-24 14:26:50,514 - root - INFO - 已输入用户名：ptuser
+2025-03-24 14:26:50,587 - root - INFO - 已输入密码：qwe123
+2025-03-24 14:26:50,674 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 14:26:51,526 - root - INFO - 验证码识别结果: nTK8
+2025-03-24 14:26:51,620 - root - INFO - 已输入验证码: nTK8，第 3 次尝试
+2025-03-24 14:26:52,717 - root - INFO - 登录成功
+2025-03-24 14:26:52,760 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI4MjY0MTEsInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.L2A0l08Nn7RFqZcMku0XL_HE9AGV8BGLi1eIFxboZKM
+2025-03-24 14:26:53,234 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NzE0NDExMjc1Mzg4MTQ5NzgiLCJleHAiOjE3NDI4MjY0MTEsInVzZXJuYW1lIjoicHR1c2VyIiwicmVhbG5hbWUiOiLns7vnu5_nrqHnkIblkZgifQ.L2A0l08Nn7RFqZcMku0XL_HE9AGV8BGLi1eIFxboZKM
+2025-03-24 14:26:53,286 - root - INFO - 开始解析36个根菜单项
+2025-03-24 14:26:53,287 - root - INFO - 共提取到256个菜单项
+2025-03-24 14:26:53,288 - root - INFO - 菜单数据已保存至: d:\gmj\workSpaces\workSpaces_pycharm\autoTest1\menu.json
+2025-03-24 14:26:53,354 - root - INFO - 已关闭通知框
+2025-03-24 14:26:53,631 - root - INFO - 已点击退出登录按钮
+2025-03-24 14:26:54,246 - root - INFO - 已点击确定按钮，完成退出登录
+2025-03-24 14:26:58,937 - root - INFO - 开始登录操作
+2025-03-24 14:27:01,310 - root - INFO - 已打开登录页面
+2025-03-24 14:27:01,418 - root - INFO - 已输入用户名：guomj
+2025-03-24 14:27:01,496 - root - INFO - 已输入密码：gmj123..
+2025-03-24 14:27:01,604 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest1\config\captcha.png
+2025-03-24 14:27:02,396 - root - INFO - 验证码识别结果: vEWa
+2025-03-24 14:27:02,487 - root - INFO - 已输入验证码: vEWa，第 1 次尝试
+2025-03-24 14:27:03,548 - root - INFO - 登录成功
+2025-03-24 14:27:03,563 - root - INFO - Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE4NTMyMzM5MjA5MDUwODA4MzMiLCJleHAiOjE3NDI4MjY0MjIsInVzZXJuYW1lIjoiZ3VvbWoiLCJyZWFsbmFtZSI6IumDreaipuWohyjmraPlvI8pIn0.reMtwiuUZVr50Y_XT1X40h2W6jXrXoFzyMpGMVwWIRc
+2025-03-24 14:27:13,883 - root - INFO - 关闭浏览器
+2025-03-24 14:27:20,153 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A49CFBF8C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/096fcd5c2927fc34f4037c9e5340803b/element
+2025-03-24 14:27:24,212 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A49CFBD3A0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/096fcd5c2927fc34f4037c9e5340803b/element
+2025-03-24 14:27:28,279 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A49CFBD8E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/096fcd5c2927fc34f4037c9e5340803b/element
+2025-03-24 14:27:32,346 - root - ERROR - 没有通知框遮挡: HTTPConnectionPool(host='localhost', port=62916): Max retries exceeded with url: /session/096fcd5c2927fc34f4037c9e5340803b/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A49CFBDD00>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-03-24 14:27:36,407 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A49CFBDFA0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/096fcd5c2927fc34f4037c9e5340803b/element
+2025-03-24 14:27:40,471 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A49CFBE270>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/096fcd5c2927fc34f4037c9e5340803b/element
+2025-03-24 14:27:44,527 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A49CFBE540>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/096fcd5c2927fc34f4037c9e5340803b/element
+2025-03-24 14:27:48,590 - root - ERROR - 退出登录时出现错误: HTTPConnectionPool(host='localhost', port=62916): Max retries exceeded with url: /session/096fcd5c2927fc34f4037c9e5340803b/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A49CFBE7B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-03-24 14:27:54,695 - root - INFO - Test case test_menu_navigation ended at 2025-03-24 14:27:54.695881
