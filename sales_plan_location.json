@@ -1,0 +1,164 @@
+{
+  "modules": [
+    {
+      "module_name": "Tab Navigation",
+      "elements": [
+        {
+          "element_description": "Tab for '菲尔斯特'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(1)"
+        },
+        {
+          "element_description": "Tab for '小白'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(2)"
+        },
+        {
+          "element_description": "Tab for '美时美刻'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(3)"
+        },
+        {
+          "element_description": "Tab for '阿洛夫'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(4)"
+        },
+        {
+          "element_description": "Tab for '贝尼'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(5)"
+        },
+        {
+          "element_description": "Tab for '大哲'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(6)"
+        },
+        {
+          "element_description": "Tab for '凡盟'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(7)"
+        },
+        {
+          "element_description": "Tab for '欧赛'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(8)"
+        },
+        {
+          "element_description": "Tab for '极客'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(9)"
+        },
+        {
+          "element_description": "Tab for '泰堂'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(10)"
+        },
+        {
+          "element_description": "Tab for '康塞'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(11)"
+        },
+        {
+          "element_description": "Tab for '佰格'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(12)"
+        },
+        {
+          "element_description": "Tab for '邦盛'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(13)"
+        },
+        {
+          "element_description": "Tab for 'MLCS'",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-tabs-tab:nth-child(14)"
+        }
+      ]
+    },
+    {
+      "module_name": "Search Filters",
+      "elements": [
+        {
+          "element_description": "Start Month Input",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-calendar-picker-input"
+        },
+        {
+          "element_description": "ASIN Input",
+          "locator_strategy": "CSS selector",
+          "locator": "input[placeholder='请输入ASIN']"
+        },
+        {
+          "element_description": "Comparison Status Selector",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-select-selection"
+        }
+      ]
+    },
+    {
+      "module_name": "Action Buttons",
+      "elements": [
+        {
+          "element_description": "Search Button",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-btn.ant-btn-primary span:contains('查询')"
+        },
+        {
+          "element_description": "Reset Button",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-btn span:contains('重置')"
+        },
+        {
+          "element_description": "Export Button",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-btn.ant-btn-primary span:contains('导出')"
+        },
+        {
+          "element_description": "Sync ASIN Button",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-btn.ant-btn-primary span:contains('同步ASIN')"
+        },
+        {
+          "element_description": "Download Template Button",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-btn.ant-btn-primary span:contains('下载模板')"
+        },
+        {
+          "element_description": "Import Button",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-btn.ant-btn-primary span:contains('导入')"
+        }
+      ]
+    },
+    {
+      "module_name": "Pagination",
+      "elements": [
+        {
+          "element_description": "Pagination Total Text",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-pagination-total-text"
+        },
+        {
+          "element_description": "Previous Page Button",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-pagination-prev"
+        },
+        {
+          "element_description": "Next Page Button",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-pagination-next"
+        },
+        {
+          "element_description": "Page Number Links",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-pagination-item a"
+        },
+        {
+          "element_description": "Jump to Page Input",
+          "locator_strategy": "CSS selector",
+          "locator": ".ant-pagination-options-quick-jumper input"
+        }
+      ]
+    }
+  ]
+}

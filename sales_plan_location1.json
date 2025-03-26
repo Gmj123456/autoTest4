@@ -1,0 +1,149 @@
+{
+  "modules": [
+    {
+      "module_name": "Navigation Sidebar",
+      "elements": [
+        {
+          "element_name": "Home Link",
+          "description": "Link to the home page",
+          "locator_strategy": "CSS selector",
+          "locator": "a[href='/']"
+        },
+        {
+          "element_name": "Amazon AI Submenu",
+          "description": "Dropdown menu for Amazon AI related pages",
+          "locator_strategy": "CSS selector",
+          "locator": "li.ant-menu-submenu[role='menuitem'] span[aria-label='图标: codepen-circle']"
+        },
+        {
+          "element_name": "Amazon Shipment Submenu",
+          "description": "Dropdown menu for Amazon shipment related pages",
+          "locator_strategy": "CSS selector",
+          "locator": "li.ant-menu-submenu[role='menuitem'] span[aria-label='图标: folder-open']"
+        }
+      ]
+    },
+    {
+      "module_name": "Header",
+      "elements": [
+        {
+          "element_name": "Menu Fold Trigger",
+          "description": "Button to fold/unfold the sidebar menu",
+          "locator_strategy": "CSS selector",
+          "locator": "i[aria-label='图标: menu-fold']"
+        },
+        {
+          "element_name": "Operation Manual Link",
+          "description": "Link to the operation manual",
+          "locator_strategy": "CSS selector",
+          "locator": "span.action[data-v-8ef766a4] span[data-v-8ef766a4='']:nth-child(1)"
+        },
+        {
+          "element_name": "Logout Button",
+          "description": "Button to logout the current user",
+          "locator_strategy": "CSS selector",
+          "locator": "span.logout_title a"
+        }
+      ]
+    },
+    {
+      "module_name": "Search and Action Buttons",
+      "elements": [
+        {
+          "element_name": "Query Button",
+          "description": "Button to execute search query",
+          "locator_strategy": "CSS selector",
+          "locator": "button.ant-btn-primary i.anticon-search"
+        },
+        {
+          "element_name": "Reset Button",
+          "description": "Button to reset search form",
+          "locator_strategy": "CSS selector",
+          "locator": "button.ant-btn i.anticon-reload"
+        },
+        {
+          "element_name": "Export Button",
+          "description": "Button to export data",
+          "locator_strategy": "CSS selector",
+          "locator": "button.ant-btn-primary i.anticon-file-word"
+        },
+        {
+          "element_name": "Sync ASIN Button",
+          "description": "Button to synchronize ASIN",
+          "locator_strategy": "CSS selector",
+          "locator": "button.ant-btn-primary i.anticon-interaction"
+        },
+        {
+          "element_name": "Download Template Button",
+          "description": "Button to download a template file",
+          "locator_strategy": "CSS selector",
+          "locator": "button.ant-btn-primary i.anticon-download"
+        },
+        {
+          "element_name": "Import Button",
+          "description": "Button to import data from a file",
+          "locator_strategy": "CSS selector",
+          "locator": "button.ant-btn-primary i.anticon-cloud-upload"
+        }
+      ]
+    },
+    {
+      "module_name": "Pagination",
+      "elements": [
+        {
+          "element_name": "Next Page Button",
+          "description": "Button to go to the next page of results",
+          "locator_strategy": "CSS selector",
+          "locator": "li.ant-pagination-next a"
+        },
+        {
+          "element_name": "Previous Page Button",
+          "description": "Button to go to the previous page of results",
+          "locator_strategy": "CSS selector",
+          "locator": "li.ant-pagination-disabled.ant-pagination-prev a"
+        },
+        {
+          "element_name": "Page Number Links",
+          "description": "Links to navigate to specific pages",
+          "locator_strategy": "CSS selector",
+          "locator": "li.ant-pagination-item a"
+        },
+        {
+          "element_name": "Jump to Page Input",
+          "description": "Input to jump to a specific page number",
+          "locator_strategy": "CSS selector",
+          "locator": "div.ant-pagination-options-quick-jumper input"
+        }
+      ]
+    },
+    {
+      "module_name": "Table",
+      "elements": [
+        {
+          "element_name": "Row Expand Icon",
+          "description": "Icon to expand or collapse a row",
+          "locator_strategy": "CSS selector",
+          "locator": "i.vxe-table--expand-btn"
+        },
+        {
+          "element_name": "ASIN Copy Icon",
+          "description": "Icon to copy ASIN value",
+          "locator_strategy": "CSS selector",
+          "locator": "i.anticon-copy"
+        },
+        {
+          "element_name": "Edit Action Icon",
+          "description": "Icon for edit action in the table row",
+          "locator_strategy": "CSS selector",
+          "locator": "span.action-jeecg.actionbianji"
+        },
+        {
+          "element_name": "Replenish Action Icon",
+          "description": "Icon for replenish action in the table row",
+          "locator_strategy": "CSS selector",
+          "locator": "span.action-jeecg.actionreplenish"
+        }
+      ]
+    }
+  ]
+}

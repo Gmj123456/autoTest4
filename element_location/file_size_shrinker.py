@@ -1,14 +1,14 @@
 """
     精简策略：
-    1.移除侧边导航栏、顶部栏，只保留主要内容区域；（侧边栏部分有很多菜单项，可能包含多个链接和子菜单。顶部栏有用户信息、通知、设置等元素。）
+    0.只保留class = "main"和class="ant-tabs-nav-scroll"的div；
+    1. 移除侧边导航栏、顶部栏，只保留主要内容区域；（侧边栏部分有很多菜单项，可能包含多个链接和子菜单。顶部栏有用户信息、通知、设置等元素。）
     2. 移除不必要的 JavaScript 代码；
     3. 移除内联样式代码；
-    4. 移除SVG图标；
+    4. 移除SVG图标、移除img标签；
     5. 移除不必要的 CSS 代码：删除所有的 <style> 标签及其内容；
     6. 移除不必要的 HTML 注释：删除所有的 HTML 注释。
     7. 移除不必要的空格和换行符：删除所有的空格和换行符，包括标签之间的空格。
 """
-
 
 from bs4 import BeautifulSoup
 from bs4.element import Comment
@@ -20,9 +20,28 @@ def remove_unnecessary_content(html_content):
     """
     soup = BeautifulSoup(html_content, 'html.parser')
     
-    # 移除侧边栏和顶部栏
-    for nav in soup.find_all(['aside', 'header']):
-        nav.decompose()
+    # +++ 新增策略0：只保留class="main"的div +++
+    # +++ 策略0：保留main和ant-tabs-nav-scroll的div +++
+    preserved_divs = []
+    # 查找两个目标div
+    main_div = soup.find('div', class_='main')
+    tabs_div = soup.find('div', class_='ant-tabs-nav-scroll')
+    
+    if main_div:
+        preserved_divs.append(main_div)
+    if tabs_div:
+        preserved_divs.append(tabs_div)
+    
+    if preserved_divs:
+        # 创建包含保留元素的容器
+        new_soup = BeautifulSoup('<div id="preserved-container"></div>', 'html.parser')
+        container = new_soup.find('div', id='preserved-container')
+        for div in preserved_divs:
+            container.append(div)
+        soup = new_soup
+    if main_div:
+        # 创建新soup对象仅包含主内容区域
+        soup = BeautifulSoup(str(main_div), 'html.parser')
     
     # 移除所有 script 标签及其内容
     for script in soup.find_all('script'):
@@ -36,17 +55,35 @@ def remove_unnecessary_content(html_content):
     for svg in soup.find_all('svg'):
         svg.decompose()
     
+    # img标签移除
+    for img in soup.find_all('img'):
+        img.decompose()
+    
     # 移除所有 HTML 注释
     for comment in soup.find_all(string=lambda text: isinstance(text, Comment)):
         comment.extract()
     
-    # # 移除内联样式
-    # for tag in soup.find_all(True):
-    #     if isinstance(tag.attrs, dict) and 'style' in tag.attrs:
-    #         tag.attrs.pop('style', None)
+    # 移除内联样式
+    for tag in soup.find_all(True):
+        if isinstance(tag.attrs, dict) and 'style' in tag.attrs:
+            tag.attrs.pop('style', None)
     
-    # 移除不必要的空格和换行符
+    # +++ 新增表格数据截取逻辑 +++
+    for table in soup.find_all('table'):
+        # 定位表格主体区域（通常包含在tbody中）
+        tbody = table.find('tbody')
+        if tbody:
+            # 获取所有数据行（跳过表头）
+            rows = tbody.find_all('tr')[2:]  # 保留前两行（索引0和1）
+            for row in rows:
+                row.decompose()
+
+    # 优化后的空白处理（保留换行符）
     cleaned_html = soup.prettify()
+    # 压缩连续空格为单个，保留换行符
+    cleaned_html = ' '.join(cleaned_html.split()).replace('\n', '\n')
+    # 处理标签间多余空格
+    cleaned_html = cleaned_html.replace('> <', '><')
     
     return cleaned_html
 

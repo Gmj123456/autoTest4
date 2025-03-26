@@ -1,0 +1,71 @@
+{
+  "core_functionality": "ERP system for Amazon shipment management.",
+  "interaction_elements": [
+    {
+      "element": "Logo",
+      "purpose": "Navigation to the homepage",
+      "location": "aside section",
+      "optimal_locator": "#app .layout .ant-layout-sider .logo a"
+    },
+    {
+      "element": "Dashboard Home",
+      "purpose": "Navigation to the dashboard analysis page",
+      "location": "sidebar menu",
+      "optimal_locator": "#app .layout .ant-layout-sider .ant-menu-item a[href='/dashboard/analysis']"
+    },
+    {
+      "element": "Sales Plan",
+      "purpose": "Navigation to the sales plan page",
+      "location": "sidebar menu",
+      "optimal_locator": "#app .layout .ant-layout-sider .ant-menu-item[role='menuitem'] a[href='/amzShipment/salesPlan']"
+    },
+    {
+      "element": "Query Button",
+      "purpose": "Submit search criteria",
+      "location": "search section",
+      "optimal_locator": ".main .ant-card .ant-tabs .ant-row .ant-col .table-page-search-submitButtons .ant-btn-primary"
+    },
+    {
+      "element": "Reset Button",
+      "purpose": "Clear search criteria",
+      "location": "search section",
+      "optimal_locator": ".main .ant-card .ant-tabs .ant-row .ant-col .table-page-search-submitButtons .ant-btn:nth-child(2)"
+    },
+    {
+      "element": "Export Button",
+      "purpose": "Export data",
+      "location": "search section",
+      "optimal_locator": ".main .ant-card .ant-tabs .ant-row .ant-col .table-page-search-submitButtons .ant-btn:nth-child(3)"
+    },
+    {
+      "element": "Synchronize ASIN Button",
+      "purpose": "Synchronize ASIN data",
+      "location": "search section",
+      "optimal_locator": ".main .ant-card .ant-tabs .ant-row .ant-col .table-page-search-submitButtons .ant-btn:nth-child(4)"
+    },
+    {
+      "element": "Download Template Button,",
+      "purpose": "Download template file",
+      "location": "search section",
+      "optimal_locator": ".main .ant-card .ant-tabs .ant-row .ant-col .table-page-search-submitButtons .ant-btn:nth-child(5)"
+    },
+    {
+      "element": "Import Button",
+      "purpose": "Import data from file",
+      "location": "search section",
+      "optimal_locator": ".main .ant-card .ant-tabs .ant-row .ant-col .table-page-search-submitButtons .ant-btn.ant-btn-primary:nth-child(6)"
+    },
+    {
+      "element": "Message Center",
+      "purpose": "Access the message center",
+      "location": "header",
+      "optimal_locator": ".ant-layout-header .header .user-wrapper .header-notice"
+    },
+    {
+      "element": "Logout",
+      "purpose": "Log out of the system",
+      "location": "header",
+      "optimal_locator": ".ant-layout-header .header .user-wrapper .logout_title"
+    }
+  ]
+}

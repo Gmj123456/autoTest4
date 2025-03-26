@@ -24,22 +24,10 @@
     - `ocr.py`：调用百度 AI 平台的通用文字识别接口识别验证码图片。
 - **`testdata/`**：存储测试数据，如 `sales_plan_data.json` 包含销售计划添加测试的月份和计划数量数据。
 - **`config/`**：包含项目的配置文件，如 `config.py` 存储了百度 AI 平台的 `API_KEY` 和 `SECRET_KEY`，以及登录所需的账号密码等信息。
-    - 具体配置示例：# config/config.py
-API_KEY = 'your_api_key'
-SECRET_KEY = 'your_secret_key'
-ERP_URL = "http://192.168.150.222:3066"  # 本地环境
-LOGIN_SUCCESS_URL = "http://192.168.150.222:3066/dashboard/analysis"
-USERNAME = "guomj"  # 主测试账号
-PASSWORD = "gmj123.."
-PTUSER_USERNAME = "ptuser"  # 特殊权限账号
-PTUSER_PASSWORD = "qwe123"
-GETMENU = "http://192.168.150.111:8099/erp/sys/permission/list"  #  请求菜单url接口
-from pathlib import Path
-project_root = Path(__file__).parent.parent
-CHROME_DRIVER_PATH = project_root / 'utils' / 'chromedriver.exe'
+
 # 调Kimi接口配置
-KIMI_API_KEY = "sk-Mm6vK2FK3bk08Spuu4DcB0roLyAbeepsaq2lcPgf1fip8qk7"
-KIMI_BASE_URL ="https://api.moonshot.cn/v1"- **`logs/`**：存储项目的日志文件，日志文件名包含时间戳，如 `automation_20240101120000.log` 记录项目运行过程中的日志信息。日志配置在 `utils/logger.py` 中，示例如下：# utils/logger.py
+KIMI_BASE_URL ="https://api.moonshot.cn/v1"
+- **`logs/`**：存储项目的日志文件，日志文件名包含时间戳，如 `automation_20240101120000.log` 记录项目运行过程中的日志信息。日志配置在 `utils/logger.py` 中，示例如下：# utils/logger.py
 def setup_logging():
     log_dir = Path(__file__).parent.parent / 'logs'
     log_dir.mkdir(exist_ok=True)

@@ -1,0 +1,84 @@
+{
+  "elements": [
+    {
+      "name": "页签切换按钮",
+      "purpose": "切换不同页签内容",
+      "location": ".ant-tabs-tab"
+    },
+    {
+      "name": "起始月份输入框",
+      "purpose": "选择起始月份",
+      "location": "input.ant-calendar-picker-input"
+    },
+    {
+      "name": "ASIN输入框",
+      "purpose": "输入ASIN",
+      "location": "input[placeholder='请输入ASIN']"
+    },
+    {
+      "name": "对照状态选择框",
+      "purpose": "选择对照状态",
+      "location": ".ant-select-selection"
+    },
+    {
+      "name": "查询按钮",
+      "purpose": "执行查询操作",
+      "location": "button.ant-btn-primary:has(i.anticon-search)"
+    },
+    {
+      "name": "重置按钮",
+      "purpose": "重置表单数据",
+      "location": "button.ant-btn:has(i.anticon-reload)"
+    },
+    {
+      "name": "导出按钮",
+      "purpose": "导出数据",
+      "location": "button.ant-btn-primary:has(i.anticon-file-word)"
+    },
+    {
+      "name": "同步ASIN按钮",
+      "purpose": "同步ASIN数据",
+      "location": "button.ant-btn-primary:has(i.anticon-interaction)"
+    },
+    {
+      "name": "下载模板按钮",
+      "purpose": "下载模板文件",
+      "location": "button.ant-btn-primary:has(i.anticon-download)"
+    },
+    {
+      "name": "导入按钮",
+      "purpose": "导入数据",
+      "location": "button.ant-btn-primary:has(i.anticon-cloud-upload)"
+    },
+    {
+      "name": "表格行操作按钮",
+      "purpose": "对表格单行数据进行操作",
+      "location": ".vxe-body--column.col_12 a"
+    },
+    {
+      "name": "分页器上一页按钮",
+      "purpose": "切换到上一页",
+      "location": "li.ant-pagination-prev a"
+    },
+    {
+      "name": "分页器下一页按钮",
+      "purpose": "切换到下一页",
+      "location": "li.ant-pagination-next a"
+    },
+    {
+      "name": "分页器页码按钮",
+      "purpose": "切换到指定页码",
+      "location": "li.ant-pagination-item a"
+    },
+    {
+      "name": "分页器每页条数选择框",
+      "purpose": "选择每页显示条数",
+      "location": ".ant-select-selection__rendered"
+    },
+    {
+      "name": "分页器跳转输入框",
+      "purpose": "输入跳转页码",
+      "location": ".ant-pagination-options-quick-jumper input"
+    }
+  ]
+}

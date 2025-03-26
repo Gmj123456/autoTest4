@@ -19,9 +19,9 @@ API_KEY = '5mPZWWtbEIcYzeFKmhpQ0Cat'
 SECRET_KEY = 'GBd6NyH5oBqXzrZfkyAsKSChKlZEMMTk'
 
 # 调Kimi接口配置
-KIMI_API_KEY = "sk-Mm6vK2FK3bk08Spuu4DcB0roLyAbeepsaq2lcPgf1fip8qk7"
+KIMI_API_KEY = "sk-06yVOgiqtftN3wn0YYMAoMVMbPUeVOy2WJsPuuHwp2EXJ7Ow"
 KIMI_BASE_URL ="https://api.moonshot.cn/v1"
 
 # 调硅基流动接口配置
 GUIJI_API_KEY = "sk-zydsppbcjgjickijjagcftnjqxmrboxconeyyodneweywrcp"
-GUIJI_BASE_URL = "https://api.siliconflow.cn/v1"
+GUIJI_BASE_URL = "https://api.siliconflow.cn/v1/chat/completions"
