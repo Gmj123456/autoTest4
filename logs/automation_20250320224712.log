@@ -1,3 +1,0 @@
-2025-03-20 22:47:12,510 - root - INFO - 使用的 ChromeDriver 路径: D:\workspaces\pycharm\autoTest1\utils\chromedriver.exe
-2025-03-20 22:47:12,570 - root - INFO - Test case test_add started at 2025-03-20 22:47:12.570463
-2025-03-20 22:47:12,573 - root - INFO - Test case test_add ended at 2025-03-20 22:47:12.573568
