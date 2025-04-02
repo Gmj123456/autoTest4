@@ -79,4 +79,4 @@ def analyze_html_for_testing(html_file_path='page_content.html', ele_loc_file='e
 
 if __name__ == "__main__":
     # 可以在这里修改需要分析的 HTML 文件和保存文件名
-    analyze_html_for_testing(html_file_path='sales_plan_body2_cleaned.html', ele_loc_file='sales_plan_location.json')
+    analyze_html_for_testing(html_file_path='sales_plan_body2_cleaned.html', ele_loc_file='sales_plan_location1.json')

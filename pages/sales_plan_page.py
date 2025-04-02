@@ -5,14 +5,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException  # 新增异常导入
 import logging
+from config.config import ASIN
 
 class SalesPlanPage(BasePage):
+    SALES_PLAN_URL = "/amzShipment/salesPlan"
     # AMAZON = (By.CSS_SELECTOR, "li[title='Amazon']")  # 更稳定的CSS选择器
     # SALES_PLAN_MENU = (By.XPATH, "//span[contains(text(),'销售计划')]")  # 使用文本包含匹配
     AMAZON_MENU = (By.XPATH, "//*[@id='app']/section/aside/div/ul/li[3]/div/span/span")
     SALES_PLAN_MENU = (By.CSS_SELECTOR, "#app > section > aside > div > ul > li.ant-menu-submenu.ant-menu-submenu-inline.ant-menu-submenu-open > ul > li:nth-child(2)") 
-
-    SALES_PLAN_URL = "/amzShipment/salesPlan"
+    ASIN_INPUT = (By.CSS_SELECTOR, "input[placeholder='请输入ASIN']")
+    
 
     def navigate_to_sales_plan(self):
         """导航到销售计划页面（添加显式等待和重试机制）"""
@@ -43,29 +45,34 @@ class SalesPlanPage(BasePage):
         """获取当前页面URL"""
         return self.driver.current_url
 
-
-    
-    def add_single_plan(self, month: str, quantity: str):
-        """添加单个销售计划"""
-        self.click_element(*self.ADD_PLAN_BUTTON)
-        
-        # 带参数的定位器使用
-        month_locator = (self.MONTH_LINK[0], self.MONTH_LINK[1].format(month))
-        self.click_element(*month_locator)
-        
-        self.send_keys(*self.PLAN_QUANTITY_INPUT, quantity)
-        self.click_element(*self.CONFIRM_BUTTON)
-
-    def __init__(self, driver):
-        super().__init__(driver)
-
     def add_sales_plan(self, asin, months, quantities):
-        self.click_element(*self.SALES_PLAN_MENU)
-        self.click_element(*self.STORE_SELECT)  # 选择店铺
-        self.click_element(*self.MARKET_SELECT)  # 选择市场
-        self.send_keys(*self.ASIN_INPUT, asin)
-        self.click_element(*self.SEARCH_BUTTON)
+        """添加销售计划"""
+        # 获取店铺、市场定位器
+        store_locator = self.get_locator_by_text('path/to/sales_plan_stroe_location.json', '美时美刻')
+        market_locator = self.get_locator_by_text('path/to/sales_plan_stroe_location.json', '美国')
+        if store_locator and market_locator:
+            self.click_element(*store_locator)  # 选择店铺
+            self.click_element(*market_locator)  # 选择市场
+        else:
+            logging.error("无法找到店铺或市场的定位器")
+            raise ValueError("无法找到店铺或市场的定位器")
 
+        self.click_element(*self.SALES_PLAN_MENU)
+        # 之前已经获取了 store_locator，这里直接使用之前获取的变量
+        if store_locator:
+            self.click_element(*store_locator)  # 选择店铺
+        self.click_element(*market_locator)  # 选择市场
+        self.send_keys(*self.ASIN_INPUT, ASIN)  # 输入ASIN
+        # 点击搜索按钮
+        self.click_element(*self.SEARCH_BUTTON)
+        # 等待搜索结果
+        self.wait_for_element_visibility(*self.SEARCH_RESULT   )
+        # 点击添加销售计划按钮
+        self.click_element(*self.ADD_SALES_PLAN_BUTTON)
+        # 等待销售计划页面加载完成
+        self.wait_for_element_visibility(*self.ADD_PLAN_BUTTON)
+
+        # 选择月份和数量（循环添加多个月份，具体月份和SKU、数量从testdata文件夹下的sales_plan_month.json中获取）
         for month, quantity in zip(months, quantities):
             self.click_element(*self.ADD_PLAN_BUTTON)
             self.send_keys(*self.MONTH_SELECT, month)
