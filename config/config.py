@@ -25,11 +25,3 @@ KIMI_BASE_URL ="https://api.moonshot.cn/v1"
 # 调硅基流动接口配置
 GUIJI_API_KEY = "sk-zydsppbcjgjickijjagcftnjqxmrboxconeyyodneweywrcp"
 GUIJI_BASE_URL = "https://api.siliconflow.cn/v1/chat/completions"
-
-
-# 产品信息
-STORE = "美时美刻"  # 店铺
-MARKET = "美国"  # 市场
-ASIN = "B0C2YQN52D"  # ASIN
-PRODUCT_NAME = "刮痧板 新山刮痧板"  # 产品名称
-SKU1 = "MSMK-GS-0061"  # SKU
