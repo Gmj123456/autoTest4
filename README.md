@@ -7,14 +7,7 @@
 ├── README.md
 ├── auto_git_push.sh
 ├── requirements.txt
-├── .idea/
-├── utils/
-├── testdata/
-├── config/
-├── logs/
-├── testcase/
-├── pages/
-└── __pycache__/
+
 ### 主要目录和文件说明
 - **`.idea/`**：JetBrains IDE（如 PyCharm）的项目配置文件。
 - **`utils/`**：存放工具函数和脚本，如日志管理、验证码识别等。
