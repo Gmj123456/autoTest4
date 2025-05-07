@@ -1,11 +1,11 @@
 # pages/sales_plan_page.py
-from pages.base_page import BasePage
+from Base.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException  # 新增异常导入
 import logging
-from config.config import ASIN
+from Base.config import ASIN
 
 class SalesPlanPage(BasePage):
     SALES_PLAN_URL = "/amzShipment/salesPlan"

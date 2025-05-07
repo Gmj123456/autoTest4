@@ -1,18 +1,18 @@
 import pytest
 import requests
 import logging
-from utils.logger import setup_logging
+from Base.utils.logger import setup_logging
 import json
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from pages.login_page import LoginPage
-from config.config import USERNAME, PASSWORD, PTUSER_USERNAME, PTUSER_PASSWORD, GETMENU
+from PageObject.login_page import LoginPage
+from Base.config import USERNAME, PASSWORD, PTUSER_USERNAME, PTUSER_PASSWORD, GETMENU
 import datetime
 
 # 调用统一的日志配置
 logger = setup_logging()
 
-from config.config import CHROME_DRIVER_PATH
+from Base.config import CHROME_DRIVER_PATH
 # 记录使用的 ChromeDriver 路径
 logging.info(f"使用的 ChromeDriver 路径: {CHROME_DRIVER_PATH}")
 

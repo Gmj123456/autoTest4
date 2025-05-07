@@ -1,13 +1,9 @@
 import pytest
-from pages.sales_plan_page import SalesPlanPage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from config.config import ERP_URL
-from selenium.webdriver.common.action_chains import ActionChains
 import logging
 from selenium.common.exceptions import TimeoutException  # 新增导入
-import pdb
 import time
 
 class TestSalesPlan:

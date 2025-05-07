@@ -5,7 +5,7 @@ import requests
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from config.config import GUIJI_API_KEY, GUIJI_BASE_URL
+from Base.config import GUIJI_API_KEY, GUIJI_BASE_URL
 
 # 将现有代码封装到函数中
 def analyze_html_elements(html_file_path, ele_loc_file):

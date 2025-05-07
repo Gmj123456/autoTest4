@@ -1,8 +1,8 @@
 import json
 import logging
-from pages.base_page import BasePage
+from Base.base_page import BasePage
 from selenium.webdriver.common.by import By
-from config.config import ERP_URL, LOGIN_SUCCESS_URL
+from Base.config import ERP_URL, LOGIN_SUCCESS_URL
 from selenium.webdriver.common.keys import Keys
 from pathlib import Path
 import subprocess
@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # 在文件顶部添加统一日志配置
-from utils.logger import setup_logging
+from Base.utils.logger import setup_logging
 setup_logging()
 
 class LoginPage(BasePage):

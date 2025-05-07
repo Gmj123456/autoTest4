@@ -1,16 +1,15 @@
-# autoTest1/testcase/test_sales_plan.py
+# autoTest1/TestCase/test_sales_plan.py
 import pytest
-from config.config import ERP_URL
+from Base.config import ERP_URL
 from element_location.save_html import save_body_content_to_file
 from element_location.kimi_upload_files import analyze_html_for_testing
-from pages.sales_plan_page import SalesPlanPage
-from selenium.webdriver.common.by import By
+from PageObject.sales_plan_page import SalesPlanPage
 from pathlib import Path
 import json
 import logging
 from selenium.webdriver.support.ui import WebDriverWait
 
-from testcase.conftest import logged_in
+from TestCase.conftest import logged_in
 
 
 class TestSalesPlan:
@@ -83,7 +82,7 @@ class TestSalesPlan:
             f"菜单跳转地址不正确\n预期: {expected_url}\n实际: {current_url}"
 
     # 新增测试数据加载
-    TEST_DATA_PATH = Path(__file__).parent.parent / 'testdata' / 'sales_plan_data.json'
+    TEST_DATA_PATH = Path(__file__).parent.parent / 'TestData' / 'sales_plan_data.json'
 
     # 新增参数化测试用例
     @pytest.mark.parametrize('plan_data',

@@ -1,8 +1,8 @@
 import pytest
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from pages.login_page import LoginPage
-from config.config import LOGIN_SUCCESS_URL
+from PageObject.login_page import LoginPage
+
 
 class TestLogout():
     def test_logout(self, logged_in):

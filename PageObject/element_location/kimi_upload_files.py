@@ -3,7 +3,7 @@ from pathlib import Path
 
 # 添加项目根目录到PYTHONPATH
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from config.config import KIMI_API_KEY, KIMI_BASE_URL
+from Base.config import KIMI_API_KEY, KIMI_BASE_URL
 from openai import OpenAI
 import json
 
