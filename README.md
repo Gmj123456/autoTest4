@@ -6,8 +6,6 @@
 ## 项目结构autoTest1
 ├── README.md
 ├── auto_git_push.sh
-├── debug_loggedin.png
-├── debug_login.png
 ├── requirements.txt
 ├── .idea/
 ├── utils/
