@@ -4,9 +4,6 @@
 `autoTest` 是一个基于 Python、Selenium 和 `pytest` 框架构建的自动化测试项目，主要用于对特定 Web 应用（如 ERP 系统）进行自动化测试。该项目包含登录、销售计划添加等功能的自动化测试脚本，同时具备日志管理、验证码识别等辅助功能，可有效提高测试效率和准确性。
 
 ## 项目结构autoTest1
-├── README.md
-├── auto_git_push.sh
-├── requirements.txt
 
 ### 主要目录和文件说明
 - **`.idea/`**：JetBrains IDE（如 PyCharm）的项目配置文件。
