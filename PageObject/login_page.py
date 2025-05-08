@@ -35,10 +35,10 @@ class LoginPage(BasePage):
 
     def save_captcha_image(self):
         """保存验证码图片"""
-        current_dir = Path(__file__).parent.resolve()  # 修改 pathlib.Path → Path
-        config_dir = current_dir.parent / 'config'
-        config_dir.mkdir(parents=True, exist_ok=True)
-        captcha_path = config_dir / 'captcha.png'
+        current_dir = Path(__file__).parent.resolve()
+        captcha_dir = current_dir.parent /'Base' / 'utils'
+        captcha_dir.mkdir(parents=True, exist_ok=True)
+        captcha_path = captcha_dir / 'captcha.png'
 
         try:
             captcha_image = self.find_element(*self.CAPTCHA_IMAGE)
@@ -55,8 +55,9 @@ class LoginPage(BasePage):
         """调用 OCR 接口识别验证码"""
         if not captcha_path:
             return None
-        current_dir = Path(__file__).parent.resolve()  # 修改 pathlib.Path → Path
-        ocr_script_path = current_dir.parent / 'utils' / 'ocr.py'
+        current_dir = Path(__file__).parent.resolve() 
+        ocr_script_path = current_dir.parent /'Base' / 'utils' / 'ocr.py'
+
         try:
             # 检查 OCR 脚本文件是否存在
             if not ocr_script_path.exists():
@@ -92,34 +93,34 @@ class LoginPage(BasePage):
             logging.warning(f"第 {attempts + 1} 次登录失败，重新尝试")
             return False
 
-    def get_access_token_ptuser(self):
-        """获取并解析token"""
-        try:
-            # 等待页面加载完成（根据实际情况调整等待条件）
-            WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((By.TAG_NAME, 'body')))
-            # 获取localStorage中的所有数据
-            localStorage = self.driver.execute_script('return window.localStorage;')
-            # 尝试从 localStorage 中获取 pro__Access-Token 的值
-            access_token_str = localStorage.get('pro__Access-Token')
-            if access_token_str:
-                try:
-                    # 将获取到的字符串解析为 Python 字典
-                    access_token_dict = json.loads(access_token_str)
-                    # 从字典中提取 "value" 键对应的值
-                    value = access_token_dict.get("value")
-                    if value:
-                        logging.info(f"Token: {value}")
-                        return value
-                    else:
-                        logging.error("pro__Access-Token 中不存在 value 字段")
-                except json.JSONDecodeError:
-                    logging.error("无法将 pro__Access-Token 的值解析为 JSON 格式")
-            else:
-                # 如果未找到 pro__Access-Token，打印提示信息
-                logging.error("未找到 pro__Access-Token")
-        except Exception as e:
-            logging.error(f"An error occurred: {e}")
-        return None
+    # def get_access_token_ptuser(self):
+    #     """获取并解析token"""
+    #     try:
+    #         # 等待页面加载完成（根据实际情况调整等待条件）
+    #         WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((By.TAG_NAME, 'body')))
+    #         # 获取localStorage中的所有数据
+    #         localStorage = self.driver.execute_script('return window.localStorage;')
+    #         # 尝试从 localStorage 中获取 pro__Access-Token 的值
+    #         access_token_str = localStorage.get('pro__Access-Token')
+    #         if access_token_str:
+    #             try:
+    #                 # 将获取到的字符串解析为 Python 字典
+    #                 access_token_dict = json.loads(access_token_str)
+    #                 # 从字典中提取 "value" 键对应的值
+    #                 value = access_token_dict.get("value")
+    #                 if value:
+    #                     logging.info(f"Token: {value}")
+    #                     return value
+    #                 else:
+    #                     logging.error("pro__Access-Token 中不存在 value 字段")
+    #             except json.JSONDecodeError:
+    #                 logging.error("无法将 pro__Access-Token 的值解析为 JSON 格式")
+    #         else:
+    #             # 如果未找到 pro__Access-Token，打印提示信息
+    #             logging.error("未找到 pro__Access-Token")
+    #     except Exception as e:
+    #         logging.error(f"An error occurred: {e}")
+    #     return None
 
     def close_notification_box(self, NOTIFICATION_CLOSE_BUTTON=None):
         """关闭通知框"""

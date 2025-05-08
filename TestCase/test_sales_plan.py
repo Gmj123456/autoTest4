@@ -1,43 +1,14 @@
 # autoTest1/TestCase/test_sales_plan.py
 import pytest
+from Base.base_page import BasePage
 from Base.config import ERP_URL
-from element_location.save_html import save_body_content_to_file
-from element_location.kimi_upload_files import analyze_html_for_testing
 from PageObject.sales_plan_page import SalesPlanPage
 from pathlib import Path
-import json
 import logging
 from selenium.webdriver.support.ui import WebDriverWait
-
 from TestCase.conftest import logged_in
 
-
 class TestSalesPlan:
-
-    def test_save_authorized_pages(self, logged_in):
-        """验证页面html保存功能"""
-        url = r"http://192.168.150.222:3066/amzShipment/salesPlan"
-        output_file = "salesPlan.html"
-        
-        save_body_content_to_file(logged_in, url, file=output_file)
-        
-        # 验证文件保存结果
-        saved_path = Path(output_file)
-        assert saved_path.exists(), f"文件{saved_path}未成功生成"
-        assert saved_path.stat().st_size > 0, "保存的文件内容为空"
-   
-
-    def test_upload_files(self):
-        """测试文件上传功能"""
-        from element_location.kimi_upload_files import analyze_html_for_testing
-    
-        # 使用实际保存的HTML文件
-        test_html = "html_output/amzShipment_salesPlan.html"
-        output_json = "sales_plan_element_location.json"
-    
-        # 生成元素定位文件
-        analyze_html_for_testing(html_file_path=test_html, ele_loc_file=output_json)
-
     def test_menu_navigation(self, logged_in, menu_urls):
         """验证销售计划菜单跳转"""
         # 添加会话状态检查
@@ -72,22 +43,17 @@ class TestSalesPlan:
         logging.info(f"目标URL: {target_url}")
 
 
-        # 调用修改后的 save_body_content_to_file 函数，传入 driver 和 url
-        save_body_content_to_file(logged_in, target_url, file='sales_plan_body.html')  # 修正参数名
-
-        analyze_html_for_testing(html_file_path='sales_plan_body.html', ele_loc_file='sales_plan_element_location.json')
-
         # 对比URL时忽略末尾斜杠和大小写
         assert expected_url.lower().rstrip('/') == current_url.lower().rstrip('/'), \
             f"菜单跳转地址不正确\n预期: {expected_url}\n实际: {current_url}"
 
-    # 新增测试数据加载
-    TEST_DATA_PATH = Path(__file__).parent.parent / 'TestData' / 'sales_plan_data.json'
-
-    # 新增参数化测试用例
-    @pytest.mark.parametrize('plan_data',
-                             json.loads(TEST_DATA_PATH.read_text(encoding='utf-8')),
-                             ids=lambda d: f"添加{d['month']}计划")
+    # 新增BasePage导入
+    from Base.base_page import BasePage
+    
+    # # 修复实例化参数
+    # @pytest.mark.parametrize('plan_data',
+    #                          BasePage(logged_in).load_test_data(PRODUCT_INFO_PATH),
+    #                          ids=lambda d: f"添加{d['month']}计划")
     def test_add_sales_plan(self, logged_in, plan_data):
         """集成后的销售计划添加测试（参数化版本）"""
         sales_plan_page = SalesPlanPage(logged_in)
@@ -95,8 +61,9 @@ class TestSalesPlan:
 
         # 使用页面对象方法
         sales_plan_page.add_single_plan(
-            month=plan_data['month'],
-            quantity=plan_data['value']
+            store=plan_data['store'],
+            market=plan_data['market'],
+            asin=plan_data['asin']
         )
 
         # 验证结果

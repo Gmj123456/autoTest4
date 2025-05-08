@@ -104,7 +104,7 @@ class BaiduOCR:
 
 def load_config():
     try:
-        sys.path.append(str(Path(__file__).parent.parent))
+        sys.path.append(str(Path(__file__).parent.parent.parent))
         from Base.config import API_KEY, SECRET_KEY
         return API_KEY, SECRET_KEY
     except ImportError:

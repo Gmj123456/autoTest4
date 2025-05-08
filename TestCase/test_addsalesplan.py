@@ -19,7 +19,7 @@ class TestAddsalesplan():
     self.driver.quit()
   
   def test_addsalesplan(self):
-    self.driver.get("http://192.168.150.222:3066/dashboard/analysis")
+    self.driver.get("http://124.222.178.125:3006/")
     self.driver.set_window_size(1936, 1056)
     # 点击菜单”Amazon发货“
     self.driver.find_element(By.CSS_SELECTOR, ".ant-menu-submenu-active span > span").click()

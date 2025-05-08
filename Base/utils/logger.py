@@ -4,7 +4,7 @@ import datetime
 
 def setup_logging():
     """统一日志配置"""
-    log_dir = Path(__file__).parent.parent / 'logs'
+    log_dir = Path(__file__).parent.parent.parent / 'logs'
     log_dir.mkdir(exist_ok=True)
     
     logger = logging.getLogger()

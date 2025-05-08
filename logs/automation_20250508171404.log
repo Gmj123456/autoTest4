@@ -1,0 +1,78 @@
+2025-05-08 17:14:04,632 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-08 17:14:04,736 - root - INFO - Test case test_menu_navigation started at 2025-05-08 17:14:04.736903
+2025-05-08 17:14:05,761 - root - INFO - 开始登录操作
+2025-05-08 17:14:16,206 - root - INFO - 已打开登录页面
+2025-05-08 17:14:16,384 - root - INFO - 已输入用户名：guomj
+2025-05-08 17:14:16,480 - root - INFO - 已输入密码：gmj123..
+2025-05-08 17:14:16,481 - root - ERROR - 登录过程中出现错误: name 'config_dir' is not defined
+2025-05-08 17:14:16,481 - root - INFO - 开始登录操作
+2025-05-08 17:14:16,906 - root - INFO - 已打开登录页面
+2025-05-08 17:14:16,999 - root - INFO - 已输入用户名：guomj
+2025-05-08 17:14:17,093 - root - INFO - 已输入密码：gmj123..
+2025-05-08 17:14:17,093 - root - ERROR - 登录过程中出现错误: name 'config_dir' is not defined
+2025-05-08 17:14:17,093 - root - INFO - 开始登录操作
+2025-05-08 17:14:17,461 - root - INFO - 已打开登录页面
+2025-05-08 17:14:17,568 - root - INFO - 已输入用户名：guomj
+2025-05-08 17:14:17,654 - root - INFO - 已输入密码：gmj123..
+2025-05-08 17:14:17,655 - root - ERROR - 登录过程中出现错误: name 'config_dir' is not defined
+2025-05-08 17:14:17,655 - root - INFO - 开始登录操作
+2025-05-08 17:14:18,125 - root - INFO - 已打开登录页面
+2025-05-08 17:14:18,220 - root - INFO - 已输入用户名：guomj
+2025-05-08 17:14:18,327 - root - INFO - 已输入密码：gmj123..
+2025-05-08 17:14:18,327 - root - ERROR - 登录过程中出现错误: name 'config_dir' is not defined
+2025-05-08 17:14:18,327 - root - INFO - 开始登录操作
+2025-05-08 17:14:18,624 - root - INFO - 已打开登录页面
+2025-05-08 17:14:18,699 - root - INFO - 已输入用户名：guomj
+2025-05-08 17:14:18,785 - root - INFO - 已输入密码：gmj123..
+2025-05-08 17:14:18,785 - root - ERROR - 登录过程中出现错误: name 'config_dir' is not defined
+2025-05-08 17:14:18,785 - root - ERROR - 验证码识别失败次数达到上限，登录失败
+2025-05-08 17:14:18,871 - root - INFO - Test case test_menu_navigation ended at 2025-05-08 17:14:18.871250
+2025-05-08 17:14:18,872 - root - INFO - Test case test_add_sales_plan started at 2025-05-08 17:14:18.872226
+2025-05-08 17:14:20,030 - root - INFO - 开始登录操作
+2025-05-08 17:14:51,556 - root - INFO - 已打开登录页面
+2025-05-08 17:14:51,655 - root - INFO - 已输入用户名：guomj
+2025-05-08 17:14:51,719 - root - INFO - 已输入密码：gmj123..
+2025-05-08 17:14:51,720 - root - ERROR - 登录过程中出现错误: name 'config_dir' is not defined
+2025-05-08 17:14:51,720 - root - INFO - 开始登录操作
+2025-05-08 17:14:52,044 - root - INFO - 已打开登录页面
+2025-05-08 17:14:52,117 - root - INFO - 已输入用户名：guomj
+2025-05-08 17:14:52,190 - root - INFO - 已输入密码：gmj123..
+2025-05-08 17:14:52,191 - root - ERROR - 登录过程中出现错误: name 'config_dir' is not defined
+2025-05-08 17:14:52,191 - root - INFO - 开始登录操作
+2025-05-08 17:14:52,440 - root - INFO - 已打开登录页面
+2025-05-08 17:14:52,513 - root - INFO - 已输入用户名：guomj
+2025-05-08 17:14:52,587 - root - INFO - 已输入密码：gmj123..
+2025-05-08 17:14:52,588 - root - ERROR - 登录过程中出现错误: name 'config_dir' is not defined
+2025-05-08 17:14:52,588 - root - INFO - 开始登录操作
+2025-05-08 17:14:52,889 - root - INFO - 已打开登录页面
+2025-05-08 17:14:53,007 - root - INFO - 已输入用户名：guomj
+2025-05-08 17:14:53,116 - root - INFO - 已输入密码：gmj123..
+2025-05-08 17:14:53,117 - root - ERROR - 登录过程中出现错误: name 'config_dir' is not defined
+2025-05-08 17:14:53,117 - root - INFO - 开始登录操作
+2025-05-08 17:14:53,612 - root - INFO - 已打开登录页面
+2025-05-08 17:15:02,826 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7099E2775+28773]
+	(No symbol) [0x00007FF70994AFB0]
+	(No symbol) [0x00007FF7097E552A]
+	(No symbol) [0x00007FF7097BF2B5]
+	(No symbol) [0x00007FF709865FD7]
+	(No symbol) [0x00007FF70987EA92]
+	(No symbol) [0x00007FF70985ED43]
+	(No symbol) [0x00007FF70982A548]
+	(No symbol) [0x00007FF70982B6B1]
+	GetHandleVerifier [0x00007FF709D0F45D+3358029]
+	GetHandleVerifier [0x00007FF709D2430D+3443709]
+	GetHandleVerifier [0x00007FF709D183FD+3394797]
+	GetHandleVerifier [0x00007FF709AA929B+842635]
+	(No symbol) [0x00007FF70995654F]
+	(No symbol) [0x00007FF709951FA4]
+	(No symbol) [0x00007FF70995213D]
+	(No symbol) [0x00007FF709941629]
+	BaseThreadInitThunk [0x00007FFCA9B17614+20]
+	RtlUserThreadStart [0x00007FFCAB3826A1+33]
+
+2025-05-08 17:15:02,827 - root - ERROR - 验证码识别失败次数达到上限，登录失败
+2025-05-08 17:15:02,834 - root - INFO - Test case test_add_sales_plan ended at 2025-05-08 17:15:02.834689

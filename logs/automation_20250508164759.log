@@ -1,0 +1,295 @@
+2025-05-08 16:47:59,588 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-08 16:47:59,672 - root - INFO - Test case test_addsalesplan started at 2025-05-08 16:47:59.672675
+2025-05-08 16:48:31,009 - root - INFO - Test case test_addsalesplan ended at 2025-05-08 16:48:31.009681
+2025-05-08 16:48:31,011 - root - INFO - Test case test_sales_plan1 started at 2025-05-08 16:48:31.011633
+2025-05-08 16:48:32,055 - root - INFO - 开始登录操作
+2025-05-08 16:48:39,328 - root - INFO - 已打开登录页面
+2025-05-08 16:48:39,424 - root - INFO - 已输入用户名：guomj
+2025-05-08 16:48:39,504 - root - INFO - 已输入密码：gmj123..
+2025-05-08 16:48:39,580 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\config\captcha.png
+2025-05-08 16:48:39,580 - root - ERROR - OCR 脚本文件不存在: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\utils\ocr.py
+2025-05-08 16:48:39,580 - root - INFO - 开始登录操作
+2025-05-08 16:48:40,218 - root - INFO - 已打开登录页面
+2025-05-08 16:48:40,286 - root - INFO - 已输入用户名：guomj
+2025-05-08 16:48:40,368 - root - INFO - 已输入密码：gmj123..
+2025-05-08 16:48:40,448 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\config\captcha.png
+2025-05-08 16:48:40,448 - root - ERROR - OCR 脚本文件不存在: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\utils\ocr.py
+2025-05-08 16:48:40,448 - root - INFO - 开始登录操作
+2025-05-08 16:48:40,881 - root - INFO - 已打开登录页面
+2025-05-08 16:48:40,962 - root - INFO - 已输入用户名：guomj
+2025-05-08 16:48:41,084 - root - INFO - 已输入密码：gmj123..
+2025-05-08 16:48:41,172 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\config\captcha.png
+2025-05-08 16:48:41,173 - root - ERROR - OCR 脚本文件不存在: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\utils\ocr.py
+2025-05-08 16:48:41,173 - root - INFO - 开始登录操作
+2025-05-08 16:48:41,200 - root - INFO - 已打开登录页面
+2025-05-08 16:48:42,092 - root - INFO - 已输入用户名：guomj
+2025-05-08 16:48:42,180 - root - INFO - 已输入密码：gmj123..
+2025-05-08 16:48:42,266 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\config\captcha.png
+2025-05-08 16:48:42,267 - root - ERROR - OCR 脚本文件不存在: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\utils\ocr.py
+2025-05-08 16:48:42,267 - root - INFO - 开始登录操作
+2025-05-08 16:48:42,603 - root - INFO - 已打开登录页面
+2025-05-08 16:48:42,691 - root - INFO - 已输入用户名：guomj
+2025-05-08 16:48:42,772 - root - INFO - 已输入密码：gmj123..
+2025-05-08 16:48:42,849 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\config\captcha.png
+2025-05-08 16:48:42,850 - root - ERROR - OCR 脚本文件不存在: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\utils\ocr.py
+2025-05-08 16:48:42,850 - root - ERROR - 验证码识别失败次数达到上限，登录失败
+2025-05-08 16:48:42,857 - root - INFO - Test case test_sales_plan1 ended at 2025-05-08 16:48:42.857316
+2025-05-08 16:48:42,858 - root - INFO - Test case test_logout started at 2025-05-08 16:48:42.858292
+2025-05-08 16:48:43,872 - root - INFO - 开始登录操作
+2025-05-08 16:48:45,373 - root - INFO - 已打开登录页面
+2025-05-08 16:48:45,374 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7099E2775+28773]
+	(No symbol) [0x00007FF70994AFB0]
+	(No symbol) [0x00007FF7097E552A]
+	(No symbol) [0x00007FF7097BF2B5]
+	(No symbol) [0x00007FF709865FD7]
+	(No symbol) [0x00007FF70987EA92]
+	(No symbol) [0x00007FF70985ED43]
+	(No symbol) [0x00007FF70982A548]
+	(No symbol) [0x00007FF70982B6B1]
+	GetHandleVerifier [0x00007FF709D0F45D+3358029]
+	GetHandleVerifier [0x00007FF709D2430D+3443709]
+	GetHandleVerifier [0x00007FF709D183FD+3394797]
+	GetHandleVerifier [0x00007FF709AA929B+842635]
+	(No symbol) [0x00007FF70995654F]
+	(No symbol) [0x00007FF709951FA4]
+	(No symbol) [0x00007FF70995213D]
+	(No symbol) [0x00007FF709941629]
+	BaseThreadInitThunk [0x00007FFCA9B17614+20]
+	RtlUserThreadStart [0x00007FFCAB3826A1+33]
+
+2025-05-08 16:48:45,374 - root - INFO - 开始登录操作
+2025-05-08 16:48:45,375 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7099E2775+28773]
+	(No symbol) [0x00007FF70994AFB0]
+	(No symbol) [0x00007FF7097E552A]
+	(No symbol) [0x00007FF7097BF2B5]
+	(No symbol) [0x00007FF709865FD7]
+	(No symbol) [0x00007FF70987EA92]
+	(No symbol) [0x00007FF70985ED43]
+	(No symbol) [0x00007FF70982A548]
+	(No symbol) [0x00007FF70982B6B1]
+	GetHandleVerifier [0x00007FF709D0F45D+3358029]
+	GetHandleVerifier [0x00007FF709D2430D+3443709]
+	GetHandleVerifier [0x00007FF709D183FD+3394797]
+	GetHandleVerifier [0x00007FF709AA929B+842635]
+	(No symbol) [0x00007FF70995654F]
+	(No symbol) [0x00007FF709951FA4]
+	(No symbol) [0x00007FF70995213D]
+	(No symbol) [0x00007FF709941629]
+	BaseThreadInitThunk [0x00007FFCA9B17614+20]
+	RtlUserThreadStart [0x00007FFCAB3826A1+33]
+
+2025-05-08 16:48:45,375 - root - INFO - 开始登录操作
+2025-05-08 16:48:45,376 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7099E2775+28773]
+	(No symbol) [0x00007FF70994AFB0]
+	(No symbol) [0x00007FF7097E552A]
+	(No symbol) [0x00007FF7097BF2B5]
+	(No symbol) [0x00007FF709865FD7]
+	(No symbol) [0x00007FF70987EA92]
+	(No symbol) [0x00007FF70985ED43]
+	(No symbol) [0x00007FF70982A548]
+	(No symbol) [0x00007FF70982B6B1]
+	GetHandleVerifier [0x00007FF709D0F45D+3358029]
+	GetHandleVerifier [0x00007FF709D2430D+3443709]
+	GetHandleVerifier [0x00007FF709D183FD+3394797]
+	GetHandleVerifier [0x00007FF709AA929B+842635]
+	(No symbol) [0x00007FF70995654F]
+	(No symbol) [0x00007FF709951FA4]
+	(No symbol) [0x00007FF70995213D]
+	(No symbol) [0x00007FF709941629]
+	BaseThreadInitThunk [0x00007FFCA9B17614+20]
+	RtlUserThreadStart [0x00007FFCAB3826A1+33]
+
+2025-05-08 16:48:45,376 - root - INFO - 开始登录操作
+2025-05-08 16:48:45,377 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7099E2775+28773]
+	(No symbol) [0x00007FF70994AFB0]
+	(No symbol) [0x00007FF7097E552A]
+	(No symbol) [0x00007FF7097BF2B5]
+	(No symbol) [0x00007FF709865FD7]
+	(No symbol) [0x00007FF70987EA92]
+	(No symbol) [0x00007FF70985ED43]
+	(No symbol) [0x00007FF70982A548]
+	(No symbol) [0x00007FF70982B6B1]
+	GetHandleVerifier [0x00007FF709D0F45D+3358029]
+	GetHandleVerifier [0x00007FF709D2430D+3443709]
+	GetHandleVerifier [0x00007FF709D183FD+3394797]
+	GetHandleVerifier [0x00007FF709AA929B+842635]
+	(No symbol) [0x00007FF70995654F]
+	(No symbol) [0x00007FF709951FA4]
+	(No symbol) [0x00007FF70995213D]
+	(No symbol) [0x00007FF709941629]
+	BaseThreadInitThunk [0x00007FFCA9B17614+20]
+	RtlUserThreadStart [0x00007FFCAB3826A1+33]
+
+2025-05-08 16:48:45,377 - root - INFO - 开始登录操作
+2025-05-08 16:48:45,378 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7099E2775+28773]
+	(No symbol) [0x00007FF70994AFB0]
+	(No symbol) [0x00007FF7097E552A]
+	(No symbol) [0x00007FF7097BF2B5]
+	(No symbol) [0x00007FF709865FD7]
+	(No symbol) [0x00007FF70987EA92]
+	(No symbol) [0x00007FF70985ED43]
+	(No symbol) [0x00007FF70982A548]
+	(No symbol) [0x00007FF70982B6B1]
+	GetHandleVerifier [0x00007FF709D0F45D+3358029]
+	GetHandleVerifier [0x00007FF709D2430D+3443709]
+	GetHandleVerifier [0x00007FF709D183FD+3394797]
+	GetHandleVerifier [0x00007FF709AA929B+842635]
+	(No symbol) [0x00007FF70995654F]
+	(No symbol) [0x00007FF709951FA4]
+	(No symbol) [0x00007FF70995213D]
+	(No symbol) [0x00007FF709941629]
+	BaseThreadInitThunk [0x00007FFCA9B17614+20]
+	RtlUserThreadStart [0x00007FFCAB3826A1+33]
+
+2025-05-08 16:48:45,378 - root - ERROR - 验证码识别失败次数达到上限，登录失败
+2025-05-08 16:48:45,386 - root - INFO - Test case test_logout ended at 2025-05-08 16:48:45.386439
+2025-05-08 16:48:45,387 - root - INFO - Test case test_menu_navigation started at 2025-05-08 16:48:45.387416
+2025-05-08 16:48:46,406 - root - INFO - 开始登录操作
+2025-05-08 16:48:48,039 - root - INFO - 已打开登录页面
+2025-05-08 16:48:48,040 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7099E2775+28773]
+	(No symbol) [0x00007FF70994AFB0]
+	(No symbol) [0x00007FF7097E552A]
+	(No symbol) [0x00007FF7097BF2B5]
+	(No symbol) [0x00007FF709865FD7]
+	(No symbol) [0x00007FF70987EA92]
+	(No symbol) [0x00007FF70985ED43]
+	(No symbol) [0x00007FF70982A548]
+	(No symbol) [0x00007FF70982B6B1]
+	GetHandleVerifier [0x00007FF709D0F45D+3358029]
+	GetHandleVerifier [0x00007FF709D2430D+3443709]
+	GetHandleVerifier [0x00007FF709D183FD+3394797]
+	GetHandleVerifier [0x00007FF709AA929B+842635]
+	(No symbol) [0x00007FF70995654F]
+	(No symbol) [0x00007FF709951FA4]
+	(No symbol) [0x00007FF70995213D]
+	(No symbol) [0x00007FF709941629]
+	BaseThreadInitThunk [0x00007FFCA9B17614+20]
+	RtlUserThreadStart [0x00007FFCAB3826A1+33]
+
+2025-05-08 16:48:48,040 - root - INFO - 开始登录操作
+2025-05-08 16:48:48,041 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7099E2775+28773]
+	(No symbol) [0x00007FF70994AFB0]
+	(No symbol) [0x00007FF7097E552A]
+	(No symbol) [0x00007FF7097BF2B5]
+	(No symbol) [0x00007FF709865FD7]
+	(No symbol) [0x00007FF70987EA92]
+	(No symbol) [0x00007FF70985ED43]
+	(No symbol) [0x00007FF70982A548]
+	(No symbol) [0x00007FF70982B6B1]
+	GetHandleVerifier [0x00007FF709D0F45D+3358029]
+	GetHandleVerifier [0x00007FF709D2430D+3443709]
+	GetHandleVerifier [0x00007FF709D183FD+3394797]
+	GetHandleVerifier [0x00007FF709AA929B+842635]
+	(No symbol) [0x00007FF70995654F]
+	(No symbol) [0x00007FF709951FA4]
+	(No symbol) [0x00007FF70995213D]
+	(No symbol) [0x00007FF709941629]
+	BaseThreadInitThunk [0x00007FFCA9B17614+20]
+	RtlUserThreadStart [0x00007FFCAB3826A1+33]
+
+2025-05-08 16:48:48,041 - root - INFO - 开始登录操作
+2025-05-08 16:48:48,042 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7099E2775+28773]
+	(No symbol) [0x00007FF70994AFB0]
+	(No symbol) [0x00007FF7097E552A]
+	(No symbol) [0x00007FF7097BF2B5]
+	(No symbol) [0x00007FF709865FD7]
+	(No symbol) [0x00007FF70987EA92]
+	(No symbol) [0x00007FF70985ED43]
+	(No symbol) [0x00007FF70982A548]
+	(No symbol) [0x00007FF70982B6B1]
+	GetHandleVerifier [0x00007FF709D0F45D+3358029]
+	GetHandleVerifier [0x00007FF709D2430D+3443709]
+	GetHandleVerifier [0x00007FF709D183FD+3394797]
+	GetHandleVerifier [0x00007FF709AA929B+842635]
+	(No symbol) [0x00007FF70995654F]
+	(No symbol) [0x00007FF709951FA4]
+	(No symbol) [0x00007FF70995213D]
+	(No symbol) [0x00007FF709941629]
+	BaseThreadInitThunk [0x00007FFCA9B17614+20]
+	RtlUserThreadStart [0x00007FFCAB3826A1+33]
+
+2025-05-08 16:48:48,043 - root - INFO - 开始登录操作
+2025-05-08 16:48:48,044 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7099E2775+28773]
+	(No symbol) [0x00007FF70994AFB0]
+	(No symbol) [0x00007FF7097E552A]
+	(No symbol) [0x00007FF7097BF2B5]
+	(No symbol) [0x00007FF709865FD7]
+	(No symbol) [0x00007FF70987EA92]
+	(No symbol) [0x00007FF70985ED43]
+	(No symbol) [0x00007FF70982A548]
+	(No symbol) [0x00007FF70982B6B1]
+	GetHandleVerifier [0x00007FF709D0F45D+3358029]
+	GetHandleVerifier [0x00007FF709D2430D+3443709]
+	GetHandleVerifier [0x00007FF709D183FD+3394797]
+	GetHandleVerifier [0x00007FF709AA929B+842635]
+	(No symbol) [0x00007FF70995654F]
+	(No symbol) [0x00007FF709951FA4]
+	(No symbol) [0x00007FF70995213D]
+	(No symbol) [0x00007FF709941629]
+	BaseThreadInitThunk [0x00007FFCA9B17614+20]
+	RtlUserThreadStart [0x00007FFCAB3826A1+33]
+
+2025-05-08 16:48:48,044 - root - INFO - 开始登录操作
+2025-05-08 16:48:48,045 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7099E2775+28773]
+	(No symbol) [0x00007FF70994AFB0]
+	(No symbol) [0x00007FF7097E552A]
+	(No symbol) [0x00007FF7097BF2B5]
+	(No symbol) [0x00007FF709865FD7]
+	(No symbol) [0x00007FF70987EA92]
+	(No symbol) [0x00007FF70985ED43]
+	(No symbol) [0x00007FF70982A548]
+	(No symbol) [0x00007FF70982B6B1]
+	GetHandleVerifier [0x00007FF709D0F45D+3358029]
+	GetHandleVerifier [0x00007FF709D2430D+3443709]
+	GetHandleVerifier [0x00007FF709D183FD+3394797]
+	GetHandleVerifier [0x00007FF709AA929B+842635]
+	(No symbol) [0x00007FF70995654F]
+	(No symbol) [0x00007FF709951FA4]
+	(No symbol) [0x00007FF70995213D]
+	(No symbol) [0x00007FF709941629]
+	BaseThreadInitThunk [0x00007FFCA9B17614+20]
+	RtlUserThreadStart [0x00007FFCAB3826A1+33]
+
+2025-05-08 16:48:48,045 - root - ERROR - 验证码识别失败次数达到上限，登录失败
+2025-05-08 16:48:50,069 - root - INFO - Test case test_menu_navigation ended at 2025-05-08 16:48:50.069994
+2025-05-08 16:48:50,071 - root - INFO - Test case test_add_sales_plan started at 2025-05-08 16:48:50.071002

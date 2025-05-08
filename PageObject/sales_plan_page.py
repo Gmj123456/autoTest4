@@ -5,15 +5,24 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException  # 新增异常导入
 import logging
-from Base.config import ASIN
 
 class SalesPlanPage(BasePage):
+
     SALES_PLAN_URL = "/amzShipment/salesPlan"
-    # AMAZON = (By.CSS_SELECTOR, "li[title='Amazon']")  # 更稳定的CSS选择器
-    # SALES_PLAN_MENU = (By.XPATH, "//span[contains(text(),'销售计划')]")  # 使用文本包含匹配
     AMAZON_MENU = (By.XPATH, "//*[@id='app']/section/aside/div/ul/li[3]/div/span/span")
     SALES_PLAN_MENU = (By.CSS_SELECTOR, "#app > section > aside > div > ul > li.ant-menu-submenu.ant-menu-submenu-inline.ant-menu-submenu-open > ul > li:nth-child(2)") 
     ASIN_INPUT = (By.CSS_SELECTOR, "input[placeholder='请输入ASIN']")
+
+    # 店铺市场:美时美刻/美国
+    STORE_LOCATOR = (By.XPATH, "//*[@id='app']/section/section/main/div[2]/div/div/div/div[1]/div[1]/div/div/div/div/div[1]/div[3]")
+    MARKET_LOCATOR = (By.XPATH, "//*[@id='app']/section/section/main/div[2]/div/div/div/div[4]/div[1]/div[1]")
+
+    SEARCH_BUTTON = (By.CSS_SELECTOR, "button[title='搜索']")  # 搜索按钮
+    SEARCH_RESULT = (By.CSS_SELECTOR, ".ant-table-row")  # 搜索结果表格
+    ADD_SALES_PLAN_BUTTON = (By.XPATH, "//button[contains(text(),'添加销售计划')]")  # 添加按钮
+    MONTH_SELECT = (By.CSS_SELECTOR, "input[placeholder='请选择月份']")  # 月份选择
+    PLAN_QUANTITY_INPUT = (By.CSS_SELECTOR, "input[placeholder='请输入数量']")  # 数量输入
+    CONFIRM_BUTTON = (By.XPATH, "//button[contains(text(),'确认')]")  # 确认按钮
     
 
     def navigate_to_sales_plan(self):
@@ -48,25 +57,15 @@ class SalesPlanPage(BasePage):
     def add_sales_plan(self, asin, months, quantities):
         """添加销售计划"""
         # 获取店铺、市场定位器
-        store_locator = self.get_locator_by_text('path/to/sales_plan_stroe_location.json', '美时美刻')
-        market_locator = self.get_locator_by_text('path/to/sales_plan_stroe_location.json', '美国')
-        if store_locator and market_locator:
-            self.click_element(*store_locator)  # 选择店铺
-            self.click_element(*market_locator)  # 选择市场
-        else:
-            logging.error("无法找到店铺或市场的定位器")
-            raise ValueError("无法找到店铺或市场的定位器")
-
+        # 直接使用硬编码定位器
+        self.click_element(*self.STORE_LOCATOR)  # 选择店铺
+        self.click_element(*self.MARKET_LOCATOR)  # 选择市场
         self.click_element(*self.SALES_PLAN_MENU)
-        # 之前已经获取了 store_locator，这里直接使用之前获取的变量
-        if store_locator:
-            self.click_element(*store_locator)  # 选择店铺
-        self.click_element(*market_locator)  # 选择市场
-        self.send_keys(*self.ASIN_INPUT, ASIN)  # 输入ASIN
+        self.send_keys(*self.ASIN_INPUT, "B09G9DNNHV")  # 硬编码ASIN值
         # 点击搜索按钮
         self.click_element(*self.SEARCH_BUTTON)
         # 等待搜索结果
-        self.wait_for_element_visibility(*self.SEARCH_RESULT   )
+        self.wait_for_element_visibility(*self.SEARCH_RESULT)
         # 点击添加销售计划按钮
         self.click_element(*self.ADD_SALES_PLAN_BUTTON)
         # 等待销售计划页面加载完成

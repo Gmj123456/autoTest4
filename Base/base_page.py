@@ -20,46 +20,20 @@ class BasePage:
         element.clear()
         element.send_keys(text)
 
-    def get_locator_by_text(self, json_file, target_text):
-        """
-        根据文本从 JSON 文件中获取定位器
-        参数:
-            json_file: JSON 文件路径
-            target_text: 要匹配的文本
-            
-        返回:
-            匹配的定位器值，如果未找到则返回 None
-        """
-        import json
+    def load_test_data(self, file_path, min_version='1.0'):
+        """通用测试数据加载方法"""
         try:
-            with open(json_file, 'r', encoding='utf-8') as f:
+            with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-            
-            # 遍历 tabs 模块
-            if 'tabs_module' in data:
-                for tab in data['tabs_module']['tabs']:
-                    if tab.get('text') == target_text:
-                        return (tab['locator'], tab['value'])
-            
-            # 遍历 form_buttons 模块
-            if 'search_module' in data and 'form_buttons' in data['search_module']:
-                for button in data['search_module']['form_buttons']:
-                    if button.get('text') == target_text:
-                        return (button['locator'], button['value'])
-            
-            # 遍历 table_headers 模块
-            if 'table_module' in data and 'table_headers' in data['table_module']:
-                for header in data['table_module']['table_headers']:
-                    if header.get('text') == target_text:
-                        return (header['locator'], header['value'])
-            
-            # 遍历 pagination_buttons 模块
-            if 'pagination_module' in data and 'pagination_buttons' in data['pagination_module']:
-                for button in data['pagination_module']['pagination_buttons']:
-                    if button.get('text') == target_text:
-                        return (button['locator'], button['value'])
-            
-        except Exception as e:
-            logging.error(f"从 JSON 文件获取定位器时出错: {e}")
-        
-        return None
+                
+                if not isinstance(data, list) or len(data) < 1:
+                    raise ValueError("测试数据格式错误，应为非空数组")
+                
+                if 'data_version' not in data[0] or data[0]['data_version'] < min_version:
+                    raise ValueError(f"数据版本过低，最低要求版本: {min_version}")
+                
+                return data[0]
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            self.take_screenshot(f"load_data_error_{datetime.now().strftime('%Y%m%d%H%M%S')}")
+            logging.error(f"加载测试数据失败: {str(e)}")
+            raise
