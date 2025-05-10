@@ -14,7 +14,6 @@ class TestSalesPlan:
 
 
         try:
-           
             amazon_element = WebDriverWait(logged_in, 15).until(
                 EC.element_to_be_clickable(AMAZON_MENU)
             )

@@ -1,0 +1,100 @@
+2025-05-10 16:48:06,635 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-10 16:48:06,815 - root - INFO - Test case test_menu_navigation started at 2025-05-10 16:48:06.815280
+2025-05-10 16:48:07,907 - root - INFO - 开始登录操作
+2025-05-10 16:48:14,205 - root - INFO - 已打开登录页面
+2025-05-10 16:48:14,297 - root - INFO - 已输入用户名：guomj
+2025-05-10 16:48:14,367 - root - INFO - 已输入密码：gmj123..
+2025-05-10 16:48:14,484 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-10 16:48:15,516 - root - INFO - 验证码识别结果: 3y 6 D
+2025-05-10 16:48:15,647 - root - INFO - 已输入验证码: 3y 6 D，第 1 次尝试
+2025-05-10 16:48:20,706 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-05-10 16:48:20,707 - root - INFO - 开始登录操作
+2025-05-10 16:48:21,311 - root - INFO - 已打开登录页面
+2025-05-10 16:48:21,414 - root - INFO - 已输入用户名：guomj
+2025-05-10 16:48:21,480 - root - INFO - 已输入密码：gmj123..
+2025-05-10 16:48:21,575 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-10 16:48:22,353 - root - INFO - 验证码识别结果: bdu6
+2025-05-10 16:48:22,427 - root - INFO - 已输入验证码: bdu6，第 2 次尝试
+2025-05-10 16:48:25,585 - root - INFO - 登录成功
+2025-05-10 16:48:26,558 - root - INFO - 已导航到销售计划页面
+2025-05-10 16:48:26,566 - root - INFO - 实际页面URL: /amzShipment/salesPlan
+2025-05-10 16:48:26,567 - root - INFO - 目标URL: http://124.222.178.125:3006/amzShipment/salesPlan
+2025-05-10 16:48:26,568 - root - INFO - 关闭浏览器
+2025-05-10 16:48:28,698 - root - INFO - Test case test_menu_navigation ended at 2025-05-10 16:48:28.698454
+2025-05-10 16:48:28,701 - root - INFO - Test case test_add_sales_plan started at 2025-05-10 16:48:28.701446
+2025-05-10 16:48:29,691 - root - INFO - 开始登录操作
+2025-05-10 16:48:37,157 - root - INFO - 已打开登录页面
+2025-05-10 16:48:37,266 - root - INFO - 已输入用户名：guomj
+2025-05-10 16:48:37,346 - root - INFO - 已输入密码：gmj123..
+2025-05-10 16:48:37,426 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-10 16:48:38,174 - root - INFO - 验证码识别结果: 8h 9 H:
+2025-05-10 16:48:38,268 - root - INFO - 已输入验证码: 8h 9 H:，第 1 次尝试
+2025-05-10 16:48:43,337 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-05-10 16:48:43,338 - root - INFO - 开始登录操作
+2025-05-10 16:48:43,963 - root - INFO - 已打开登录页面
+2025-05-10 16:48:44,046 - root - INFO - 已输入用户名：guomj
+2025-05-10 16:48:44,113 - root - INFO - 已输入密码：gmj123..
+2025-05-10 16:48:44,226 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-10 16:48:44,985 - root - INFO - 验证码识别结果: x f z 1
+2025-05-10 16:48:45,094 - root - INFO - 已输入验证码: x f z 1，第 2 次尝试
+2025-05-10 16:48:50,157 - root - WARNING - 第 2 次登录失败，重新尝试
+2025-05-10 16:48:50,157 - root - INFO - 开始登录操作
+2025-05-10 16:48:50,510 - root - INFO - 已打开登录页面
+2025-05-10 16:48:50,595 - root - INFO - 已输入用户名：guomj
+2025-05-10 16:48:50,677 - root - INFO - 已输入密码：gmj123..
+2025-05-10 16:48:50,770 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-10 16:48:51,599 - root - INFO - 验证码识别结果: 5.g T6
+2025-05-10 16:48:51,665 - root - INFO - 已输入验证码: 5.g T6，第 3 次尝试
+2025-05-10 16:48:53,186 - root - WARNING - 第 3 次登录失败，重新尝试
+2025-05-10 16:48:53,191 - root - INFO - 开始登录操作
+2025-05-10 16:48:53,195 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C96E2775+28773]
+	(No symbol) [0x00007FF6C964AFB0]
+	(No symbol) [0x00007FF6C94E552A]
+	(No symbol) [0x00007FF6C94BF2B5]
+	(No symbol) [0x00007FF6C9565FD7]
+	(No symbol) [0x00007FF6C957EA92]
+	(No symbol) [0x00007FF6C955ED43]
+	(No symbol) [0x00007FF6C952A548]
+	(No symbol) [0x00007FF6C952B6B1]
+	GetHandleVerifier [0x00007FF6C9A0F45D+3358029]
+	GetHandleVerifier [0x00007FF6C9A2430D+3443709]
+	GetHandleVerifier [0x00007FF6C9A183FD+3394797]
+	GetHandleVerifier [0x00007FF6C97A929B+842635]
+	(No symbol) [0x00007FF6C965654F]
+	(No symbol) [0x00007FF6C9651FA4]
+	(No symbol) [0x00007FF6C965213D]
+	(No symbol) [0x00007FF6C9641629]
+	BaseThreadInitThunk [0x00007FFC3B7A7614+20]
+	RtlUserThreadStart [0x00007FFC3D2426A1+33]
+
+2025-05-10 16:48:53,199 - root - INFO - 开始登录操作
+2025-05-10 16:48:53,203 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C96E2775+28773]
+	(No symbol) [0x00007FF6C964AFB0]
+	(No symbol) [0x00007FF6C94E552A]
+	(No symbol) [0x00007FF6C94BF2B5]
+	(No symbol) [0x00007FF6C9565FD7]
+	(No symbol) [0x00007FF6C957EA92]
+	(No symbol) [0x00007FF6C955ED43]
+	(No symbol) [0x00007FF6C952A548]
+	(No symbol) [0x00007FF6C952B6B1]
+	GetHandleVerifier [0x00007FF6C9A0F45D+3358029]
+	GetHandleVerifier [0x00007FF6C9A2430D+3443709]
+	GetHandleVerifier [0x00007FF6C9A183FD+3394797]
+	GetHandleVerifier [0x00007FF6C97A929B+842635]
+	(No symbol) [0x00007FF6C965654F]
+	(No symbol) [0x00007FF6C9651FA4]
+	(No symbol) [0x00007FF6C965213D]
+	(No symbol) [0x00007FF6C9641629]
+	BaseThreadInitThunk [0x00007FFC3B7A7614+20]
+	RtlUserThreadStart [0x00007FFC3D2426A1+33]
+
+2025-05-10 16:48:53,206 - root - ERROR - 验证码识别失败次数达到上限，登录失败
+2025-05-10 16:48:53,269 - root - INFO - Test case test_add_sales_plan ended at 2025-05-10 16:48:53.269428

@@ -3,332 +3,11 @@
   <head>
     <meta charset="utf-8"/>
     <title id="head-title">report.html</title>
-      <style type="text/css">body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  /* do not increase min-width as some may use split screens */
-  min-width: 800px;
-  color: #999;
-}
-
-h1 {
-  font-size: 24px;
-  color: black;
-}
-
-h2 {
-  font-size: 16px;
-  color: black;
-}
-
-p {
-  color: black;
-}
-
-a {
-  color: #999;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-/******************************
- * SUMMARY INFORMATION
- ******************************/
-#environment td {
-  padding: 5px;
-  border: 1px solid #e6e6e6;
-  vertical-align: top;
-}
-#environment tr:nth-child(odd) {
-  background-color: #f6f6f6;
-}
-#environment ul {
-  margin: 0;
-  padding: 0 20px;
-}
-
-/******************************
- * TEST RESULT COLORS
- ******************************/
-span.passed,
-.passed .col-result {
-  color: green;
-}
-
-span.skipped,
-span.xfailed,
-span.rerun,
-.skipped .col-result,
-.xfailed .col-result,
-.rerun .col-result {
-  color: orange;
-}
-
-span.error,
-span.failed,
-span.xpassed,
-.error .col-result,
-.failed .col-result,
-.xpassed .col-result {
-  color: red;
-}
-
-.col-links__extra {
-  margin-right: 3px;
-}
-
-/******************************
- * RESULTS TABLE
- *
- * 1. Table Layout
- * 2. Extra
- * 3. Sorting items
- *
- ******************************/
-/*------------------
- * 1. Table Layout
- *------------------*/
-#results-table {
-  border: 1px solid #e6e6e6;
-  color: #999;
-  font-size: 12px;
-  width: 100%;
-}
-#results-table th,
-#results-table td {
-  padding: 5px;
-  border: 1px solid #e6e6e6;
-  text-align: left;
-}
-#results-table th {
-  font-weight: bold;
-}
-
-/*------------------
- * 2. Extra
- *------------------*/
-.logwrapper {
-  max-height: 230px;
-  overflow-y: scroll;
-  background-color: #e6e6e6;
-}
-.logwrapper.expanded {
-  max-height: none;
-}
-.logwrapper.expanded .logexpander:after {
-  content: "collapse [-]";
-}
-.logwrapper .logexpander {
-  z-index: 1;
-  position: sticky;
-  top: 10px;
-  width: max-content;
-  border: 1px solid;
-  border-radius: 3px;
-  padding: 5px 7px;
-  margin: 10px 0 10px calc(100% - 80px);
-  cursor: pointer;
-  background-color: #e6e6e6;
-}
-.logwrapper .logexpander:after {
-  content: "expand [+]";
-}
-.logwrapper .logexpander:hover {
-  color: #000;
-  border-color: #000;
-}
-.logwrapper .log {
-  min-height: 40px;
-  position: relative;
-  top: -50px;
-  height: calc(100% + 50px);
-  border: 1px solid #e6e6e6;
-  color: black;
-  display: block;
-  font-family: "Courier New", Courier, monospace;
-  padding: 5px;
-  padding-right: 80px;
-  white-space: pre-wrap;
-}
-
-div.media {
-  border: 1px solid #e6e6e6;
-  float: right;
-  height: 240px;
-  margin: 0 5px;
-  overflow: hidden;
-  width: 320px;
-}
-
-.media-container {
-  display: grid;
-  grid-template-columns: 25px auto 25px;
-  align-items: center;
-  flex: 1 1;
-  overflow: hidden;
-  height: 200px;
-}
-
-.media-container--fullscreen {
-  grid-template-columns: 0px auto 0px;
-}
-
-.media-container__nav--right,
-.media-container__nav--left {
-  text-align: center;
-  cursor: pointer;
-}
-
-.media-container__viewport {
-  cursor: pointer;
-  text-align: center;
-  height: inherit;
-}
-.media-container__viewport img,
-.media-container__viewport video {
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-}
-
-.media__name,
-.media__counter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex: 0 0 25px;
-  align-items: center;
-}
-
-.collapsible td:not(.col-links) {
-  cursor: pointer;
-}
-.collapsible td:not(.col-links):hover::after {
-  color: #bbb;
-  font-style: italic;
-  cursor: pointer;
-}
-
-.col-result {
-  width: 130px;
-}
-.col-result:hover::after {
-  content: " (hide details)";
-}
-
-.col-result.collapsed:hover::after {
-  content: " (show details)";
-}
-
-#environment-header h2:hover::after {
-  content: " (hide details)";
-  color: #bbb;
-  font-style: italic;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-#environment-header.collapsed h2:hover::after {
-  content: " (show details)";
-  color: #bbb;
-  font-style: italic;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-/*------------------
- * 3. Sorting items
- *------------------*/
-.sortable {
-  cursor: pointer;
-}
-.sortable.desc:after {
-  content: " ";
-  position: relative;
-  left: 5px;
-  bottom: -12.5px;
-  border: 10px solid #4caf50;
-  border-bottom: 0;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-.sortable.asc:after {
-  content: " ";
-  position: relative;
-  left: 5px;
-  bottom: 12.5px;
-  border: 10px solid #4caf50;
-  border-top: 0;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-
-.hidden, .summary__reload__button.hidden {
-  display: none;
-}
-
-.summary__data {
-  flex: 0 0 550px;
-}
-.summary__reload {
-  flex: 1 1;
-  display: flex;
-  justify-content: center;
-}
-.summary__reload__button {
-  flex: 0 0 300px;
-  display: flex;
-  color: white;
-  font-weight: bold;
-  background-color: #4caf50;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
-  cursor: pointer;
-}
-.summary__reload__button:hover {
-  background-color: #46a049;
-}
-.summary__spacer {
-  flex: 0 0 550px;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-between;
-}
-
-.filters,
-.collapse {
-  display: flex;
-  align-items: center;
-}
-.filters button,
-.collapse button {
-  color: #999;
-  border: none;
-  background: none;
-  cursor: pointer;
-  text-decoration: underline;
-}
-.filters button:hover,
-.collapse button:hover {
-  color: #ccc;
-}
-
-.filter__label {
-  margin-right: 10px;
-}
-
-      </style>
-    
+      <link href="assets\style.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
     <h1 id="title">report.html</h1>
-    <p>Report generated on 10-May-2025 at 17:11:49 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+    <p>Report generated on 10-May-2025 at 16:48:53 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
         v4.1.1</p>
     <div id="environment-header">
       <h2>Environment</h2>
@@ -382,7 +61,7 @@ div.media {
         <h2>Summary</h2>
         <div class="additional-summary prefix">
         </div>
-        <p class="run-count">1 test took 00:00:38.</p>
+        <p class="run-count">1 test took 00:00:46.</p>
         <p class="filter">(Un)check the boxes to filter the results.</p>
         <div class="summary__reload">
           <div class="summary__reload__button hidden" onclick="location.reload()">
@@ -392,10 +71,10 @@ div.media {
         <div class="summary__spacer"></div>
         <div class="controls">
           <div class="filters">
-            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" />
-            <span class="failed">1 Failed,</span>
-            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" disabled/>
-            <span class="passed">0 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" disabled/>
+            <span class="failed">0 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" />
+            <span class="passed">1 Passed,</span>
             <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled/>
             <span class="skipped">0 Skipped,</span>
             <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled/>
@@ -429,7 +108,7 @@ div.media {
     </table>
   </body>
   <footer>
-    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.12.3&#34;, &#34;Platform&#34;: &#34;Windows-10-10.0.19045-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;8.3.5&#34;, &#34;pluggy&#34;: &#34;1.5.0&#34;}, &#34;Plugins&#34;: {&#34;cov&#34;: &#34;6.1.1&#34;, &#34;html&#34;: &#34;4.1.1&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;}, &#34;JAVA_HOME&#34;: &#34;D:\\software\\java\\jdk1.8.0_441\\&#34;}, &#34;tests&#34;: {&#34;TestCase/test_sales_plan.py::TestSalesPlan::test_menu_navigation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;TestCase/test_sales_plan.py::TestSalesPlan::test_menu_navigation&#34;, &#34;duration&#34;: &#34;00:00:24&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;TestCase/test_sales_plan.py::TestSalesPlan::test_menu_navigation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:24&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;TestCase.test_sales_plan.TestSalesPlan object at 0x00000119F9A4E0C0&amp;gt;\nlogged_in = &amp;lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&amp;quot;5174ddda4be269df1c6889eaf62c8064&amp;quot;)&amp;gt;\nmenu_urls = {&amp;#x27;403&amp;#x27;: &amp;#x27;/exception/403&amp;#x27;, &amp;#x27;404&amp;#x27;: &amp;#x27;/exception/404&amp;#x27;, &amp;#x27;500&amp;#x27;: &amp;#x27;/exception/500&amp;#x27;, &amp;#x27;AI \u9009\u54c1&amp;#x27;: &amp;#x27;/amzAi/competitorsAsin&amp;#x27;, ...}\n\n    def test_menu_navigation(self, logged_in, menu_urls):\n        &amp;quot;&amp;quot;&amp;quot;\u9a8c\u8bc1\u9500\u552e\u8ba1\u5212\u83dc\u5355\u8df3\u8f6c&amp;quot;&amp;quot;&amp;quot;\n        # \u6dfb\u52a0\u4f1a\u8bdd\u72b6\u6001\u68c0\u67e5\n        try:\n            # \u6dfb\u52a0\u57fa\u7840\u5065\u5eb7\u68c0\u67e5\n            logged_in.execute_script(&amp;quot;return document.readyState;&amp;quot;)\n        except Exception as e:\n            pytest.fail(f&amp;quot;\u6d4f\u89c8\u5668\u4f1a\u8bdd\u5df2\u4e22\u5931: {str(e)}&amp;quot;)\n    \n        # \u589e\u52a0\u663e\u5f0f\u7b49\u5f85\u786e\u4fdd\u9875\u9762\u7a33\u5b9a\n        WebDriverWait(logged_in, 10).until(\n            lambda d: d.execute_script(&amp;quot;return document.readyState === &amp;#x27;complete&amp;#x27;&amp;quot;)\n        )\n    \n        assert menu_urls is not None, &amp;quot;\u83dc\u5355URL\u6570\u636e\u672a\u6b63\u786e\u52a0\u8f7d&amp;quot;\n        assert &amp;quot;\u9500\u552e\u8ba1\u5212&amp;quot; in menu_urls, &amp;quot;\u83dc\u5355\u6570\u636e\u4e2d\u7f3a\u5c11\u9500\u552e\u8ba1\u5212\u9879&amp;quot;\n    \n        sales_page = SalesPlanPage(logged_in)\n        expected_url = menu_urls[&amp;quot;\u9500\u552e\u8ba1\u5212&amp;quot;]\n    \n        # \u5bfc\u822a\u5230\u9500\u552e\u8ba1\u5212\u9875\u9762\n        sales_page.navigate_to_sales_plan()\n    \n        logging.info(&amp;quot;\u5df2\u5bfc\u822a\u5230\u9500\u552e\u8ba1\u5212\u9875\u9762&amp;quot;)\n    \n        # \u83b7\u53d6\u5b9e\u9645\u9875\u9762URL\uff08\u6dfb\u52a0\u7b49\u5f85\u786e\u4fdd\u9875\u9762\u52a0\u8f7d\u5b8c\u6210\uff09\n        current_url_all = logged_in.current_url\n        # current_url = current_url_all.replace(ERP_URL, &amp;quot;&amp;quot;)\n        current_url = current_url_all\n        logging.info(f&amp;quot;\u5b9e\u9645\u9875\u9762URL: {current_url}&amp;quot;)\n    \n        target_url = current_url_all\n        logging.info(f&amp;quot;\u76ee\u6807URL: {target_url}&amp;quot;)\n    \n    \n        # \u5bf9\u6bd4URL\u65f6\u5ffd\u7565\u672b\u5c3e\u659c\u6760\u548c\u5927\u5c0f\u5199\n&amp;gt;       assert expected_url.lower().rstrip(&amp;#x27;/&amp;#x27;) == current_url.lower().rstrip(&amp;#x27;/&amp;#x27;), \\\n            f&amp;quot;\u83dc\u5355\u8df3\u8f6c\u5730\u5740\u4e0d\u6b63\u786e\\n\u9884\u671f: {expected_url}\\n\u5b9e\u9645: {current_url}&amp;quot;\nE       AssertionError: \u83dc\u5355\u8df3\u8f6c\u5730\u5740\u4e0d\u6b63\u786e\nE         \u9884\u671f: /amzShipment/salesPlan\nE         \u5b9e\u9645: http://124.222.178.125:3006/amzShipment/salesPlan\nE       assert &amp;#x27;/amzshipment/salesplan&amp;#x27; == &amp;#x27;http://124.222.178.125:3006/amzshipment/salesplan&amp;#x27;\nE         \nE         - http://124.222.178.125:3006/amzshipment/salesplan\nE         + /amzshipment/salesplan\n\nTestCase\\test_sales_plan.py:47: AssertionError\n\n------------------------------ Captured log setup ------------------------------\n2025-05-10 17:11:11 INFO Test case test_menu_navigation started at 2025-05-10 17:11:11.523583\n2025-05-10 17:11:12 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-10 17:11:20 INFO \u5df2\u6253\u5f00\u767b\u5f55\u9875\u9762\n2025-05-10 17:11:20 INFO \u5df2\u8f93\u5165\u7528\u6237\u540d\uff1aguomj\n2025-05-10 17:11:20 INFO \u5df2\u8f93\u5165\u5bc6\u7801\uff1agmj123..\n2025-05-10 17:11:20 INFO \u9a8c\u8bc1\u7801\u56fe\u7247\u5df2\u4fdd\u5b58\u5230 D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\Base\\utils\\captcha.png\n2025-05-10 17:11:21 INFO \u9a8c\u8bc1\u7801\u8bc6\u522b\u7ed3\u679c: 4 e vs\n2025-05-10 17:11:21 INFO \u5df2\u8f93\u5165\u9a8c\u8bc1\u7801: 4 e vs\uff0c\u7b2c 1 \u6b21\u5c1d\u8bd5\n2025-05-10 17:11:26 WARNING \u7b2c 1 \u6b21\u767b\u5f55\u5931\u8d25\uff0c\u91cd\u65b0\u5c1d\u8bd5\n2025-05-10 17:11:26 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-10 17:11:27 INFO \u5df2\u6253\u5f00\u767b\u5f55\u9875\u9762\n2025-05-10 17:11:27 INFO \u5df2\u8f93\u5165\u7528\u6237\u540d\uff1aguomj\n2025-05-10 17:11:27 INFO \u5df2\u8f93\u5165\u5bc6\u7801\uff1agmj123..\n2025-05-10 17:11:27 INFO \u9a8c\u8bc1\u7801\u56fe\u7247\u5df2\u4fdd\u5b58\u5230 D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\Base\\utils\\captcha.png\n2025-05-10 17:11:28 INFO \u9a8c\u8bc1\u7801\u8bc6\u522b\u7ed3\u679c: mPz5\n2025-05-10 17:11:28 INFO \u5df2\u8f93\u5165\u9a8c\u8bc1\u7801: mPz5\uff0c\u7b2c 2 \u6b21\u5c1d\u8bd5\n2025-05-10 17:11:32 INFO \u767b\u5f55\u6210\u529f\n\n------------------------------ Captured log call -------------------------------\n2025-05-10 17:11:33 INFO \u5df2\u5bfc\u822a\u5230\u9500\u552e\u8ba1\u5212\u9875\u9762\n2025-05-10 17:11:33 INFO \u5b9e\u9645\u9875\u9762URL: http://124.222.178.125:3006/amzShipment/salesPlan\n2025-05-10 17:11:33 INFO \u76ee\u6807URL: http://124.222.178.125:3006/amzShipment/salesPlan\n\n---------------------------- Captured log teardown -----------------------------\n2025-05-10 17:11:33 INFO \u5173\u95ed\u6d4f\u89c8\u5668\n2025-05-10 17:11:35 INFO Test case test_menu_navigation ended at 2025-05-10 17:11:35.786730&#34;}], &#34;TestCase/test_sales_plan.py::TestSalesPlan::test_add_sales_plan&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Error&#34;, &#34;testId&#34;: &#34;TestCase/test_sales_plan.py::TestSalesPlan::test_add_sales_plan::setup&#34;, &#34;duration&#34;: &#34;00:00:12&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Error&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;TestCase/test_sales_plan.py::TestSalesPlan::test_add_sales_plan::setup&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:12&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;file D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\TestCase\\test_sales_plan.py, line 51\n      def test_add_sales_plan(self, logged_in, plan_data):\nE       fixture &amp;#x27;plan_data&amp;#x27; not found\n&amp;gt;       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, cov, doctest_namespace, extra, extras, include_metadata_in_junit_xml, logged_in, menu_urls, metadata, monkeypatch, no_cover, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n&amp;gt;       use &amp;#x27;pytest --fixtures [testpath]&amp;#x27; for help on them.\n\nD:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\TestCase\\test_sales_plan.py:51\n\n------------------------------ Captured log setup ------------------------------\n2025-05-10 17:11:35 INFO Test case test_add_sales_plan started at 2025-05-10 17:11:35.790696\n2025-05-10 17:11:36 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-10 17:11:43 INFO \u5df2\u6253\u5f00\u767b\u5f55\u9875\u9762\n2025-05-10 17:11:43 INFO \u5df2\u8f93\u5165\u7528\u6237\u540d\uff1aguomj\n2025-05-10 17:11:43 INFO \u5df2\u8f93\u5165\u5bc6\u7801\uff1agmj123..\n2025-05-10 17:11:43 INFO \u9a8c\u8bc1\u7801\u56fe\u7247\u5df2\u4fdd\u5b58\u5230 D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\Base\\utils\\captcha.png\n2025-05-10 17:11:44 INFO \u9a8c\u8bc1\u7801\u8bc6\u522b\u7ed3\u679c: BYGB\n2025-05-10 17:11:44 INFO \u5df2\u8f93\u5165\u9a8c\u8bc1\u7801: BYGB\uff0c\u7b2c 1 \u6b21\u5c1d\u8bd5\n2025-05-10 17:11:47 INFO \u767b\u5f55\u6210\u529f\n---------------------------- Captured log teardown -----------------------------\n2025-05-10 17:11:47 INFO \u5173\u95ed\u6d4f\u89c8\u5668\n2025-05-10 17:11:49 INFO Test case test_add_sales_plan ended at 2025-05-10 17:11:49.567103&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;report.html&#34;}"></div>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.12.3&#34;, &#34;Platform&#34;: &#34;Windows-10-10.0.19045-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;8.3.5&#34;, &#34;pluggy&#34;: &#34;1.5.0&#34;}, &#34;Plugins&#34;: {&#34;cov&#34;: &#34;6.1.1&#34;, &#34;html&#34;: &#34;4.1.1&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;}, &#34;JAVA_HOME&#34;: &#34;D:\\software\\java\\jdk1.8.0_441\\&#34;}, &#34;tests&#34;: {&#34;TestCase/test_sales_plan.py::TestSalesPlan::test_menu_navigation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;TestCase/test_sales_plan.py::TestSalesPlan::test_menu_navigation&#34;, &#34;duration&#34;: &#34;00:00:22&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;TestCase/test_sales_plan.py::TestSalesPlan::test_menu_navigation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:22&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\n2025-05-10 16:48:06 INFO Test case test_menu_navigation started at 2025-05-10 16:48:06.815280\n2025-05-10 16:48:07 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-10 16:48:14 INFO \u5df2\u6253\u5f00\u767b\u5f55\u9875\u9762\n2025-05-10 16:48:14 INFO \u5df2\u8f93\u5165\u7528\u6237\u540d\uff1aguomj\n2025-05-10 16:48:14 INFO \u5df2\u8f93\u5165\u5bc6\u7801\uff1agmj123..\n2025-05-10 16:48:14 INFO \u9a8c\u8bc1\u7801\u56fe\u7247\u5df2\u4fdd\u5b58\u5230 D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\Base\\utils\\captcha.png\n2025-05-10 16:48:15 INFO \u9a8c\u8bc1\u7801\u8bc6\u522b\u7ed3\u679c: 3y 6 D\n2025-05-10 16:48:15 INFO \u5df2\u8f93\u5165\u9a8c\u8bc1\u7801: 3y 6 D\uff0c\u7b2c 1 \u6b21\u5c1d\u8bd5\n2025-05-10 16:48:20 WARNING \u7b2c 1 \u6b21\u767b\u5f55\u5931\u8d25\uff0c\u91cd\u65b0\u5c1d\u8bd5\n2025-05-10 16:48:20 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-10 16:48:21 INFO \u5df2\u6253\u5f00\u767b\u5f55\u9875\u9762\n2025-05-10 16:48:21 INFO \u5df2\u8f93\u5165\u7528\u6237\u540d\uff1aguomj\n2025-05-10 16:48:21 INFO \u5df2\u8f93\u5165\u5bc6\u7801\uff1agmj123..\n2025-05-10 16:48:21 INFO \u9a8c\u8bc1\u7801\u56fe\u7247\u5df2\u4fdd\u5b58\u5230 D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\Base\\utils\\captcha.png\n2025-05-10 16:48:22 INFO \u9a8c\u8bc1\u7801\u8bc6\u522b\u7ed3\u679c: bdu6\n2025-05-10 16:48:22 INFO \u5df2\u8f93\u5165\u9a8c\u8bc1\u7801: bdu6\uff0c\u7b2c 2 \u6b21\u5c1d\u8bd5\n2025-05-10 16:48:25 INFO \u767b\u5f55\u6210\u529f\n\n------------------------------ Captured log call -------------------------------\n2025-05-10 16:48:26 INFO \u5df2\u5bfc\u822a\u5230\u9500\u552e\u8ba1\u5212\u9875\u9762\n2025-05-10 16:48:26 INFO \u5b9e\u9645\u9875\u9762URL: /amzShipment/salesPlan\n2025-05-10 16:48:26 INFO \u76ee\u6807URL: http://124.222.178.125:3006/amzShipment/salesPlan\n\n---------------------------- Captured log teardown -----------------------------\n2025-05-10 16:48:26 INFO \u5173\u95ed\u6d4f\u89c8\u5668\n2025-05-10 16:48:28 INFO Test case test_menu_navigation ended at 2025-05-10 16:48:28.698454&#34;}], &#34;TestCase/test_sales_plan.py::TestSalesPlan::test_add_sales_plan&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Error&#34;, &#34;testId&#34;: &#34;TestCase/test_sales_plan.py::TestSalesPlan::test_add_sales_plan::setup&#34;, &#34;duration&#34;: &#34;00:00:25&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Error&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;TestCase/test_sales_plan.py::TestSalesPlan::test_add_sales_plan::setup&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:25&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;@pytest.fixture(scope=&amp;quot;function&amp;quot;)\n    def logged_in():\n        # \u521b\u5efa Chrome \u6d4f\u89c8\u5668\u670d\u52a1\u5b9e\u4f8b\n        service = Service(str(CHROME_DRIVER_PATH))\n        # \u521b\u5efa Chrome \u6d4f\u89c8\u5668\u9a71\u52a8\u5b9e\u4f8b\n        driver = webdriver.Chrome(service=service)\n        driver.maximize_window()\n        # \u521b\u5efa\u767b\u5f55\u9875\u9762\u5b9e\u4f8b\n        login_page = LoginPage(driver)\n        # \u4f7f\u7528\u6d4b\u8bd5\u8d26\u53f7\u8fdb\u884c\u767b\u5f55\n        result = login_page.login(USERNAME, PASSWORD)\n        # \u68c0\u67e5\u767b\u5f55\u662f\u5426\u6210\u529f\uff0c\u82e5\u5931\u8d25\u5219\u7ec8\u6b62\u6d4b\u8bd5\n        if not result:\n&amp;gt;           pytest.fail(&amp;quot;\u767b\u5f55\u5931\u8d25&amp;quot;)\nE           Failed: \u767b\u5f55\u5931\u8d25\n\nTestCase\\conftest.py:34: Failed\n\n------------------------------ Captured log setup ------------------------------\n2025-05-10 16:48:28 INFO Test case test_add_sales_plan started at 2025-05-10 16:48:28.701446\n2025-05-10 16:48:29 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-10 16:48:37 INFO \u5df2\u6253\u5f00\u767b\u5f55\u9875\u9762\n2025-05-10 16:48:37 INFO \u5df2\u8f93\u5165\u7528\u6237\u540d\uff1aguomj\n2025-05-10 16:48:37 INFO \u5df2\u8f93\u5165\u5bc6\u7801\uff1agmj123..\n2025-05-10 16:48:37 INFO \u9a8c\u8bc1\u7801\u56fe\u7247\u5df2\u4fdd\u5b58\u5230 D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\Base\\utils\\captcha.png\n2025-05-10 16:48:38 INFO \u9a8c\u8bc1\u7801\u8bc6\u522b\u7ed3\u679c: 8h 9 H:\n2025-05-10 16:48:38 INFO \u5df2\u8f93\u5165\u9a8c\u8bc1\u7801: 8h 9 H:\uff0c\u7b2c 1 \u6b21\u5c1d\u8bd5\n2025-05-10 16:48:43 WARNING \u7b2c 1 \u6b21\u767b\u5f55\u5931\u8d25\uff0c\u91cd\u65b0\u5c1d\u8bd5\n2025-05-10 16:48:43 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-10 16:48:43 INFO \u5df2\u6253\u5f00\u767b\u5f55\u9875\u9762\n2025-05-10 16:48:44 INFO \u5df2\u8f93\u5165\u7528\u6237\u540d\uff1aguomj\n2025-05-10 16:48:44 INFO \u5df2\u8f93\u5165\u5bc6\u7801\uff1agmj123..\n2025-05-10 16:48:44 INFO \u9a8c\u8bc1\u7801\u56fe\u7247\u5df2\u4fdd\u5b58\u5230 D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\Base\\utils\\captcha.png\n2025-05-10 16:48:44 INFO \u9a8c\u8bc1\u7801\u8bc6\u522b\u7ed3\u679c: x f z 1\n2025-05-10 16:48:45 INFO \u5df2\u8f93\u5165\u9a8c\u8bc1\u7801: x f z 1\uff0c\u7b2c 2 \u6b21\u5c1d\u8bd5\n2025-05-10 16:48:50 WARNING \u7b2c 2 \u6b21\u767b\u5f55\u5931\u8d25\uff0c\u91cd\u65b0\u5c1d\u8bd5\n2025-05-10 16:48:50 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-10 16:48:50 INFO \u5df2\u6253\u5f00\u767b\u5f55\u9875\u9762\n2025-05-10 16:48:50 INFO \u5df2\u8f93\u5165\u7528\u6237\u540d\uff1aguomj\n2025-05-10 16:48:50 INFO \u5df2\u8f93\u5165\u5bc6\u7801\uff1agmj123..\n2025-05-10 16:48:50 INFO \u9a8c\u8bc1\u7801\u56fe\u7247\u5df2\u4fdd\u5b58\u5230 D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\Base\\utils\\captcha.png\n2025-05-10 16:48:51 INFO \u9a8c\u8bc1\u7801\u8bc6\u522b\u7ed3\u679c: 5.g T6\n2025-05-10 16:48:51 INFO \u5df2\u8f93\u5165\u9a8c\u8bc1\u7801: 5.g T6\uff0c\u7b2c 3 \u6b21\u5c1d\u8bd5\n2025-05-10 16:48:53 WARNING \u7b2c 3 \u6b21\u767b\u5f55\u5931\u8d25\uff0c\u91cd\u65b0\u5c1d\u8bd5\n2025-05-10 16:48:53 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-10 16:48:53 ERROR \u767b\u5f55\u8fc7\u7a0b\u4e2d\u51fa\u73b0\u9519\u8bef: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=131.0.6778.70)\nStacktrace:\n\tGetHandleVerifier [0x00007FF6C96E2775+28773]\n\t(No symbol) [0x00007FF6C964AFB0]\n\t(No symbol) [0x00007FF6C94E552A]\n\t(No symbol) [0x00007FF6C94BF2B5]\n\t(No symbol) [0x00007FF6C9565FD7]\n\t(No symbol) [0x00007FF6C957EA92]\n\t(No symbol) [0x00007FF6C955ED43]\n\t(No symbol) [0x00007FF6C952A548]\n\t(No symbol) [0x00007FF6C952B6B1]\n\tGetHandleVerifier [0x00007FF6C9A0F45D+3358029]\n\tGetHandleVerifier [0x00007FF6C9A2430D+3443709]\n\tGetHandleVerifier [0x00007FF6C9A183FD+3394797]\n\tGetHandleVerifier [0x00007FF6C97A929B+842635]\n\t(No symbol) [0x00007FF6C965654F]\n\t(No symbol) [0x00007FF6C9651FA4]\n\t(No symbol) [0x00007FF6C965213D]\n\t(No symbol) [0x00007FF6C9641629]\n\tBaseThreadInitThunk [0x00007FFC3B7A7614+20]\n\tRtlUserThreadStart [0x00007FFC3D2426A1+33]\n\n2025-05-10 16:48:53 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-10 16:48:53 ERROR \u767b\u5f55\u8fc7\u7a0b\u4e2d\u51fa\u73b0\u9519\u8bef: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=131.0.6778.70)\nStacktrace:\n\tGetHandleVerifier [0x00007FF6C96E2775+28773]\n\t(No symbol) [0x00007FF6C964AFB0]\n\t(No symbol) [0x00007FF6C94E552A]\n\t(No symbol) [0x00007FF6C94BF2B5]\n\t(No symbol) [0x00007FF6C9565FD7]\n\t(No symbol) [0x00007FF6C957EA92]\n\t(No symbol) [0x00007FF6C955ED43]\n\t(No symbol) [0x00007FF6C952A548]\n\t(No symbol) [0x00007FF6C952B6B1]\n\tGetHandleVerifier [0x00007FF6C9A0F45D+3358029]\n\tGetHandleVerifier [0x00007FF6C9A2430D+3443709]\n\tGetHandleVerifier [0x00007FF6C9A183FD+3394797]\n\tGetHandleVerifier [0x00007FF6C97A929B+842635]\n\t(No symbol) [0x00007FF6C965654F]\n\t(No symbol) [0x00007FF6C9651FA4]\n\t(No symbol) [0x00007FF6C965213D]\n\t(No symbol) [0x00007FF6C9641629]\n\tBaseThreadInitThunk [0x00007FFC3B7A7614+20]\n\tRtlUserThreadStart [0x00007FFC3D2426A1+33]\n\n2025-05-10 16:48:53 ERROR \u9a8c\u8bc1\u7801\u8bc6\u522b\u5931\u8d25\u6b21\u6570\u8fbe\u5230\u4e0a\u9650\uff0c\u767b\u5f55\u5931\u8d25\n---------------------------- Captured log teardown -----------------------------\n2025-05-10 16:48:53 INFO Test case test_add_sales_plan ended at 2025-05-10 16:48:53.269428&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;report.html&#34;}"></div>
     <script>
       (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')

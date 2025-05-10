@@ -3,7 +3,6 @@ import pytest
 from Base.base_page import BasePage
 from Base.config import ERP_URL
 from PageObject.sales_plan_page import SalesPlanPage
-from pathlib import Path
 import logging
 from selenium.webdriver.support.ui import WebDriverWait
 from TestCase.conftest import logged_in
@@ -36,7 +35,8 @@ class TestSalesPlan:
 
         # 获取实际页面URL（添加等待确保页面加载完成）
         current_url_all = logged_in.current_url
-        current_url = current_url_all.replace(ERP_URL, "")
+        # current_url = current_url_all.replace(ERP_URL, "")
+        current_url = current_url_all
         logging.info(f"实际页面URL: {current_url}")
 
         target_url = current_url_all
@@ -47,13 +47,7 @@ class TestSalesPlan:
         assert expected_url.lower().rstrip('/') == current_url.lower().rstrip('/'), \
             f"菜单跳转地址不正确\n预期: {expected_url}\n实际: {current_url}"
 
-    # 新增BasePage导入
-    from Base.base_page import BasePage
-    
-    # # 修复实例化参数
-    # @pytest.mark.parametrize('plan_data',
-    #                          BasePage(logged_in).load_test_data(PRODUCT_INFO_PATH),
-    #                          ids=lambda d: f"添加{d['month']}计划")
+
     def test_add_sales_plan(self, logged_in, plan_data):
         """集成后的销售计划添加测试（参数化版本）"""
         sales_plan_page = SalesPlanPage(logged_in)
@@ -61,9 +55,9 @@ class TestSalesPlan:
 
         # 使用页面对象方法
         sales_plan_page.add_single_plan(
-            store=plan_data['store'],
-            market=plan_data['market'],
-            asin=plan_data['asin']
+            asin=plan_data['asin'],
+            months=plan_data['months'],
+            quantities=plan_data['quantities']
         )
 
         # 验证结果

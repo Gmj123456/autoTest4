@@ -2,11 +2,10 @@ import pytest
 import requests
 import logging
 from Base.utils.logger import setup_logging
-import json
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from PageObject.login_page import LoginPage
-from Base.config import USERNAME, PASSWORD, PTUSER_USERNAME, PTUSER_PASSWORD, GETMENU
+from Base.config import USERNAME, PASSWORD
 import datetime
 
 # 调用统一的日志配置
@@ -15,14 +14,9 @@ logger = setup_logging()
 from Base.config import CHROME_DRIVER_PATH
 # 记录使用的 ChromeDriver 路径
 logging.info(f"使用的 ChromeDriver 路径: {CHROME_DRIVER_PATH}")
-
 """
-测试账号登录，返回登录后的驱动实例
-
 此 fixture 用于创建一个 Chrome 浏览器实例，使用测试账号登录，并返回登录后的驱动实例。
 每个测试函数执行前都会重新创建浏览器实例并登录。
-
-:return: 登录后的浏览器驱动实例
 """
 @pytest.fixture(scope="function")
 def logged_in():
@@ -38,13 +32,23 @@ def logged_in():
     # 检查登录是否成功，若失败则终止测试
     if not result:
         pytest.fail("登录失败")
+        
     yield driver  # 返回登录后的浏览器驱动实例
 
     # 关闭浏览器
     logging.info("关闭浏览器")
     driver.quit()
 
+import json
+from pathlib import Path
 
+@pytest.fixture(scope="function")
+def menu_urls():
+    # 从TestData/menu.json读取菜单URL数据
+    test_data_path = Path(__file__).parent / "TestData" / "menu.json"
+    with open(test_data_path, "r", encoding="utf-8") as f:
+        menu_data = json.load(f)
+    return menu_data
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_setup(item):
@@ -52,7 +56,6 @@ def pytest_runtest_setup(item):
     start_time = datetime.datetime.now()
     logger.info(f"Test case {item.name} started at {start_time}")
     outcome = yield
-    # 这里可以添加更多的清理逻辑
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_teardown(item):
@@ -60,4 +63,3 @@ def pytest_runtest_teardown(item):
     outcome = yield
     end_time = datetime.datetime.now()
     logger.info(f"Test case {item.name} ended at {end_time}")
-    # 这里可以添加更多的清理逻辑

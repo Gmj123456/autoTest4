@@ -1,0 +1,326 @@
+2025-05-09 16:32:18,263 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-09 16:32:18,436 - root - INFO - Test case test_addsalesplan started at 2025-05-09 16:32:18.436844
+2025-05-09 16:32:29,914 - root - INFO - Test case test_addsalesplan ended at 2025-05-09 16:32:29.914020
+2025-05-09 16:32:29,916 - root - INFO - Test case test_sales_plan1 started at 2025-05-09 16:32:29.916949
+2025-05-09 16:32:31,007 - root - INFO - 开始登录操作
+2025-05-09 16:32:38,373 - root - INFO - 已打开登录页面
+2025-05-09 16:32:38,552 - root - INFO - 已输入用户名：guomj
+2025-05-09 16:32:38,651 - root - INFO - 已输入密码：gmj123..
+2025-05-09 16:32:38,734 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-09 16:32:41,061 - root - INFO - 验证码识别结果: UⅴzA
+2025-05-09 16:32:41,135 - root - INFO - 已输入验证码: UⅴzA，第 1 次尝试
+2025-05-09 16:32:46,202 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-05-09 16:32:46,202 - root - INFO - 开始登录操作
+2025-05-09 16:32:46,763 - root - INFO - 已打开登录页面
+2025-05-09 16:32:46,843 - root - INFO - 已输入用户名：guomj
+2025-05-09 16:32:46,920 - root - INFO - 已输入密码：gmj123..
+2025-05-09 16:32:47,004 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-09 16:32:47,954 - root - INFO - 验证码识别结果: a pss
+2025-05-09 16:32:48,032 - root - INFO - 已输入验证码: a pss，第 2 次尝试
+2025-05-09 16:32:53,112 - root - WARNING - 第 2 次登录失败，重新尝试
+2025-05-09 16:32:53,113 - root - INFO - 开始登录操作
+2025-05-09 16:32:53,425 - root - INFO - 已打开登录页面
+2025-05-09 16:32:53,527 - root - INFO - 已输入用户名：guomj
+2025-05-09 16:32:53,603 - root - INFO - 已输入密码：gmj123..
+2025-05-09 16:32:53,679 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-09 16:32:54,462 - root - INFO - 验证码识别结果: wu w.
+2025-05-09 16:32:54,528 - root - INFO - 已输入验证码: wu w.，第 3 次尝试
+2025-05-09 16:32:59,600 - root - WARNING - 第 3 次登录失败，重新尝试
+2025-05-09 16:32:59,601 - root - INFO - 开始登录操作
+2025-05-09 16:32:59,612 - root - INFO - 已打开登录页面
+2025-05-09 16:33:00,005 - root - INFO - 已输入用户名：guomj
+2025-05-09 16:33:00,077 - root - INFO - 已输入密码：gmj123..
+2025-05-09 16:33:00,176 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-09 16:33:00,955 - root - INFO - 验证码识别结果: Kcau
+2025-05-09 16:33:01,026 - root - INFO - 已输入验证码: Kcau，第 4 次尝试
+2025-05-09 16:33:01,655 - root - INFO - 登录成功
+2025-05-09 16:33:01,656 - root - ERROR - 登录过程中出现错误: 'LoginPage' object has no attribute 'get_access_token_ptuser'
+2025-05-09 16:33:01,657 - root - INFO - 开始登录操作
+2025-05-09 16:33:01,955 - root - INFO - 已打开登录页面
+2025-05-09 16:33:12,216 - root - ERROR - 登录过程中出现错误: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF67CF32775+28773]
+	(No symbol) [0x00007FF67CE9AFB0]
+	(No symbol) [0x00007FF67CD3552A]
+	(No symbol) [0x00007FF67CD88EAE]
+	(No symbol) [0x00007FF67CD8919C]
+	(No symbol) [0x00007FF67CDD23F7]
+	(No symbol) [0x00007FF67CDAEFDF]
+	(No symbol) [0x00007FF67CDCF1A4]
+	(No symbol) [0x00007FF67CDAED43]
+	(No symbol) [0x00007FF67CD7A548]
+	(No symbol) [0x00007FF67CD7B6B1]
+	GetHandleVerifier [0x00007FF67D25F45D+3358029]
+	GetHandleVerifier [0x00007FF67D27430D+3443709]
+	GetHandleVerifier [0x00007FF67D2683FD+3394797]
+	GetHandleVerifier [0x00007FF67CFF929B+842635]
+	(No symbol) [0x00007FF67CEA654F]
+	(No symbol) [0x00007FF67CEA1FA4]
+	(No symbol) [0x00007FF67CEA213D]
+	(No symbol) [0x00007FF67CE91629]
+	BaseThreadInitThunk [0x00007FF85D097614+20]
+	RtlUserThreadStart [0x00007FF85D2A26A1+33]
+
+2025-05-09 16:33:12,219 - root - ERROR - 验证码识别失败次数达到上限，登录失败
+2025-05-09 16:33:12,230 - root - INFO - Test case test_sales_plan1 ended at 2025-05-09 16:33:12.230922
+2025-05-09 16:33:12,233 - root - INFO - Test case test_menu_navigation started at 2025-05-09 16:33:12.233850
+2025-05-09 16:33:13,231 - root - INFO - 开始登录操作
+2025-05-09 16:33:16,940 - root - INFO - 已打开登录页面
+2025-05-09 16:33:16,953 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF67CF32775+28773]
+	(No symbol) [0x00007FF67CE9AFB0]
+	(No symbol) [0x00007FF67CD3552A]
+	(No symbol) [0x00007FF67CD0F2B5]
+	(No symbol) [0x00007FF67CDB5FD7]
+	(No symbol) [0x00007FF67CDCEA92]
+	(No symbol) [0x00007FF67CDAED43]
+	(No symbol) [0x00007FF67CD7A548]
+	(No symbol) [0x00007FF67CD7B6B1]
+	GetHandleVerifier [0x00007FF67D25F45D+3358029]
+	GetHandleVerifier [0x00007FF67D27430D+3443709]
+	GetHandleVerifier [0x00007FF67D2683FD+3394797]
+	GetHandleVerifier [0x00007FF67CFF929B+842635]
+	(No symbol) [0x00007FF67CEA654F]
+	(No symbol) [0x00007FF67CEA1FA4]
+	(No symbol) [0x00007FF67CEA213D]
+	(No symbol) [0x00007FF67CE91629]
+	BaseThreadInitThunk [0x00007FF85D097614+20]
+	RtlUserThreadStart [0x00007FF85D2A26A1+33]
+
+2025-05-09 16:33:16,956 - root - INFO - 开始登录操作
+2025-05-09 16:33:16,998 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF67CF32775+28773]
+	(No symbol) [0x00007FF67CE9AFB0]
+	(No symbol) [0x00007FF67CD3552A]
+	(No symbol) [0x00007FF67CD0F2B5]
+	(No symbol) [0x00007FF67CDB5FD7]
+	(No symbol) [0x00007FF67CDCEA92]
+	(No symbol) [0x00007FF67CDAED43]
+	(No symbol) [0x00007FF67CD7A548]
+	(No symbol) [0x00007FF67CD7B6B1]
+	GetHandleVerifier [0x00007FF67D25F45D+3358029]
+	GetHandleVerifier [0x00007FF67D27430D+3443709]
+	GetHandleVerifier [0x00007FF67D2683FD+3394797]
+	GetHandleVerifier [0x00007FF67CFF929B+842635]
+	(No symbol) [0x00007FF67CEA654F]
+	(No symbol) [0x00007FF67CEA1FA4]
+	(No symbol) [0x00007FF67CEA213D]
+	(No symbol) [0x00007FF67CE91629]
+	BaseThreadInitThunk [0x00007FF85D097614+20]
+	RtlUserThreadStart [0x00007FF85D2A26A1+33]
+
+2025-05-09 16:33:17,001 - root - INFO - 开始登录操作
+2025-05-09 16:33:17,007 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF67CF32775+28773]
+	(No symbol) [0x00007FF67CE9AFB0]
+	(No symbol) [0x00007FF67CD3552A]
+	(No symbol) [0x00007FF67CD0F2B5]
+	(No symbol) [0x00007FF67CDB5FD7]
+	(No symbol) [0x00007FF67CDCEA92]
+	(No symbol) [0x00007FF67CDAED43]
+	(No symbol) [0x00007FF67CD7A548]
+	(No symbol) [0x00007FF67CD7B6B1]
+	GetHandleVerifier [0x00007FF67D25F45D+3358029]
+	GetHandleVerifier [0x00007FF67D27430D+3443709]
+	GetHandleVerifier [0x00007FF67D2683FD+3394797]
+	GetHandleVerifier [0x00007FF67CFF929B+842635]
+	(No symbol) [0x00007FF67CEA654F]
+	(No symbol) [0x00007FF67CEA1FA4]
+	(No symbol) [0x00007FF67CEA213D]
+	(No symbol) [0x00007FF67CE91629]
+	BaseThreadInitThunk [0x00007FF85D097614+20]
+	RtlUserThreadStart [0x00007FF85D2A26A1+33]
+
+2025-05-09 16:33:17,010 - root - INFO - 开始登录操作
+2025-05-09 16:33:17,038 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF67CF32775+28773]
+	(No symbol) [0x00007FF67CE9AFB0]
+	(No symbol) [0x00007FF67CD3552A]
+	(No symbol) [0x00007FF67CD0F2B5]
+	(No symbol) [0x00007FF67CDB5FD7]
+	(No symbol) [0x00007FF67CDCEA92]
+	(No symbol) [0x00007FF67CDAED43]
+	(No symbol) [0x00007FF67CD7A548]
+	(No symbol) [0x00007FF67CD7B6B1]
+	GetHandleVerifier [0x00007FF67D25F45D+3358029]
+	GetHandleVerifier [0x00007FF67D27430D+3443709]
+	GetHandleVerifier [0x00007FF67D2683FD+3394797]
+	GetHandleVerifier [0x00007FF67CFF929B+842635]
+	(No symbol) [0x00007FF67CEA654F]
+	(No symbol) [0x00007FF67CEA1FA4]
+	(No symbol) [0x00007FF67CEA213D]
+	(No symbol) [0x00007FF67CE91629]
+	BaseThreadInitThunk [0x00007FF85D097614+20]
+	RtlUserThreadStart [0x00007FF85D2A26A1+33]
+
+2025-05-09 16:33:17,041 - root - INFO - 开始登录操作
+2025-05-09 16:33:17,050 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF67CF32775+28773]
+	(No symbol) [0x00007FF67CE9AFB0]
+	(No symbol) [0x00007FF67CD3552A]
+	(No symbol) [0x00007FF67CD0F2B5]
+	(No symbol) [0x00007FF67CDB5FD7]
+	(No symbol) [0x00007FF67CDCEA92]
+	(No symbol) [0x00007FF67CDAED43]
+	(No symbol) [0x00007FF67CD7A548]
+	(No symbol) [0x00007FF67CD7B6B1]
+	GetHandleVerifier [0x00007FF67D25F45D+3358029]
+	GetHandleVerifier [0x00007FF67D27430D+3443709]
+	GetHandleVerifier [0x00007FF67D2683FD+3394797]
+	GetHandleVerifier [0x00007FF67CFF929B+842635]
+	(No symbol) [0x00007FF67CEA654F]
+	(No symbol) [0x00007FF67CEA1FA4]
+	(No symbol) [0x00007FF67CEA213D]
+	(No symbol) [0x00007FF67CE91629]
+	BaseThreadInitThunk [0x00007FF85D097614+20]
+	RtlUserThreadStart [0x00007FF85D2A26A1+33]
+
+2025-05-09 16:33:17,053 - root - ERROR - 验证码识别失败次数达到上限，登录失败
+2025-05-09 16:33:17,067 - root - INFO - Test case test_menu_navigation ended at 2025-05-09 16:33:17.067009
+2025-05-09 16:33:17,068 - root - INFO - Test case test_add_sales_plan started at 2025-05-09 16:33:17.068961
+2025-05-09 16:33:18,235 - root - INFO - 开始登录操作
+2025-05-09 16:33:19,491 - root - ERROR - 登录过程中出现错误: Message: target frame detached: received Inspector.detached event
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF67CF32775+28773]
+	(No symbol) [0x00007FF67CE9AFB0]
+	(No symbol) [0x00007FF67CD3552A]
+	(No symbol) [0x00007FF67CD24E81]
+	(No symbol) [0x00007FF67CD23C96]
+	(No symbol) [0x00007FF67CD234CD]
+	(No symbol) [0x00007FF67CD233EA]
+	(No symbol) [0x00007FF67CD222A5]
+	(No symbol) [0x00007FF67CD4421A]
+	(No symbol) [0x00007FF67CDCF4EB]
+	(No symbol) [0x00007FF67CDAED43]
+	(No symbol) [0x00007FF67CD7A548]
+	(No symbol) [0x00007FF67CD7B6B1]
+	GetHandleVerifier [0x00007FF67D25F45D+3358029]
+	GetHandleVerifier [0x00007FF67D27430D+3443709]
+	GetHandleVerifier [0x00007FF67D2683FD+3394797]
+	GetHandleVerifier [0x00007FF67CFF929B+842635]
+	(No symbol) [0x00007FF67CEA654F]
+	(No symbol) [0x00007FF67CEA1FA4]
+	(No symbol) [0x00007FF67CEA213D]
+	(No symbol) [0x00007FF67CE91629]
+	BaseThreadInitThunk [0x00007FF85D097614+20]
+	RtlUserThreadStart [0x00007FF85D2A26A1+33]
+
+2025-05-09 16:33:19,507 - root - INFO - 开始登录操作
+2025-05-09 16:33:19,512 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF67CF32775+28773]
+	(No symbol) [0x00007FF67CE9AFB0]
+	(No symbol) [0x00007FF67CD3552A]
+	(No symbol) [0x00007FF67CD0F2B5]
+	(No symbol) [0x00007FF67CDB5FD7]
+	(No symbol) [0x00007FF67CDCEA92]
+	(No symbol) [0x00007FF67CDAED43]
+	(No symbol) [0x00007FF67CD7A548]
+	(No symbol) [0x00007FF67CD7B6B1]
+	GetHandleVerifier [0x00007FF67D25F45D+3358029]
+	GetHandleVerifier [0x00007FF67D27430D+3443709]
+	GetHandleVerifier [0x00007FF67D2683FD+3394797]
+	GetHandleVerifier [0x00007FF67CFF929B+842635]
+	(No symbol) [0x00007FF67CEA654F]
+	(No symbol) [0x00007FF67CEA1FA4]
+	(No symbol) [0x00007FF67CEA213D]
+	(No symbol) [0x00007FF67CE91629]
+	BaseThreadInitThunk [0x00007FF85D097614+20]
+	RtlUserThreadStart [0x00007FF85D2A26A1+33]
+
+2025-05-09 16:33:19,516 - root - INFO - 开始登录操作
+2025-05-09 16:33:19,518 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF67CF32775+28773]
+	(No symbol) [0x00007FF67CE9AFB0]
+	(No symbol) [0x00007FF67CD3552A]
+	(No symbol) [0x00007FF67CD0F2B5]
+	(No symbol) [0x00007FF67CDB5FD7]
+	(No symbol) [0x00007FF67CDCEA92]
+	(No symbol) [0x00007FF67CDAED43]
+	(No symbol) [0x00007FF67CD7A548]
+	(No symbol) [0x00007FF67CD7B6B1]
+	GetHandleVerifier [0x00007FF67D25F45D+3358029]
+	GetHandleVerifier [0x00007FF67D27430D+3443709]
+	GetHandleVerifier [0x00007FF67D2683FD+3394797]
+	GetHandleVerifier [0x00007FF67CFF929B+842635]
+	(No symbol) [0x00007FF67CEA654F]
+	(No symbol) [0x00007FF67CEA1FA4]
+	(No symbol) [0x00007FF67CEA213D]
+	(No symbol) [0x00007FF67CE91629]
+	BaseThreadInitThunk [0x00007FF85D097614+20]
+	RtlUserThreadStart [0x00007FF85D2A26A1+33]
+
+2025-05-09 16:33:19,521 - root - INFO - 开始登录操作
+2025-05-09 16:33:19,529 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF67CF32775+28773]
+	(No symbol) [0x00007FF67CE9AFB0]
+	(No symbol) [0x00007FF67CD3552A]
+	(No symbol) [0x00007FF67CD0F2B5]
+	(No symbol) [0x00007FF67CDB5FD7]
+	(No symbol) [0x00007FF67CDCEA92]
+	(No symbol) [0x00007FF67CDAED43]
+	(No symbol) [0x00007FF67CD7A548]
+	(No symbol) [0x00007FF67CD7B6B1]
+	GetHandleVerifier [0x00007FF67D25F45D+3358029]
+	GetHandleVerifier [0x00007FF67D27430D+3443709]
+	GetHandleVerifier [0x00007FF67D2683FD+3394797]
+	GetHandleVerifier [0x00007FF67CFF929B+842635]
+	(No symbol) [0x00007FF67CEA654F]
+	(No symbol) [0x00007FF67CEA1FA4]
+	(No symbol) [0x00007FF67CEA213D]
+	(No symbol) [0x00007FF67CE91629]
+	BaseThreadInitThunk [0x00007FF85D097614+20]
+	RtlUserThreadStart [0x00007FF85D2A26A1+33]
+
+2025-05-09 16:33:19,534 - root - INFO - 开始登录操作
+2025-05-09 16:33:19,536 - root - ERROR - 登录过程中出现错误: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF67CF32775+28773]
+	(No symbol) [0x00007FF67CE9AFB0]
+	(No symbol) [0x00007FF67CD3552A]
+	(No symbol) [0x00007FF67CD0F2B5]
+	(No symbol) [0x00007FF67CDB5FD7]
+	(No symbol) [0x00007FF67CDCEA92]
+	(No symbol) [0x00007FF67CDAED43]
+	(No symbol) [0x00007FF67CD7A548]
+	(No symbol) [0x00007FF67CD7B6B1]
+	GetHandleVerifier [0x00007FF67D25F45D+3358029]
+	GetHandleVerifier [0x00007FF67D27430D+3443709]
+	GetHandleVerifier [0x00007FF67D2683FD+3394797]
+	GetHandleVerifier [0x00007FF67CFF929B+842635]
+	(No symbol) [0x00007FF67CEA654F]
+	(No symbol) [0x00007FF67CEA1FA4]
+	(No symbol) [0x00007FF67CEA213D]
+	(No symbol) [0x00007FF67CE91629]
+	BaseThreadInitThunk [0x00007FF85D097614+20]
+	RtlUserThreadStart [0x00007FF85D2A26A1+33]
+
+2025-05-09 16:33:19,540 - root - ERROR - 验证码识别失败次数达到上限，登录失败
+2025-05-09 16:33:19,553 - root - INFO - Test case test_add_sales_plan ended at 2025-05-09 16:33:19.553459

@@ -156,7 +156,7 @@ class LoginPage(BasePage):
                     logging.info(f"已输入验证码: {captcha_text}，第 {attempts + 1} 次尝试")
                     result = self.check_login_result(attempts)
                     if result:
-                        self.access_token_ptuser = self.get_access_token_ptuser()  # 获取token
+                        # self.access_token_ptuser = self.get_access_token_ptuser()  # 获取token
                         return True
             except Exception as e:
                 logging.error(f"登录过程中出现错误: {e}")
