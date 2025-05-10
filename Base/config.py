@@ -20,11 +20,3 @@ GETMENU = "http://192.168.150.111:8099/erp/sys/permission/list"  #  请求菜单
 # ocr识别
 API_KEY = '5mPZWWtbEIcYzeFKmhpQ0Cat'
 SECRET_KEY = 'GBd6NyH5oBqXzrZfkyAsKSChKlZEMMTk'
-
-# 调Kimi接口配置
-KIMI_API_KEY = "sk-06yVOgiqtftN3wn0YYMAoMVMbPUeVOy2WJsPuuHwp2EXJ7Ow"
-KIMI_BASE_URL ="https://api.moonshot.cn/v1"
-
-# 调硅基流动接口配置
-GUIJI_API_KEY = "sk-zydsppbcjgjickijjagcftnjqxmrboxconeyyodneweywrcp"
-GUIJI_BASE_URL = "https://api.siliconflow.cn/v1/chat/completions"
