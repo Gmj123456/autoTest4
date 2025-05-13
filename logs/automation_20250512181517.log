@@ -1,0 +1,26 @@
+2025-05-12 18:15:17,608 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-12 18:15:17,748 - root - INFO - Test case test_menu_navigation started at 2025-05-12 18:15:17.748646
+2025-05-12 18:15:18,715 - root - INFO - 开始登录操作
+2025-05-12 18:15:26,187 - root - INFO - 已打开登录页面
+2025-05-12 18:15:26,300 - root - INFO - 已输入用户名：guomj
+2025-05-12 18:15:26,385 - root - INFO - 已输入密码：gmj123..
+2025-05-12 18:15:26,463 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-12 18:15:27,217 - root - INFO - 验证码识别结果: vuyn
+2025-05-12 18:15:27,287 - root - INFO - 已输入验证码: vuyn，第 1 次尝试
+2025-05-12 18:15:31,593 - root - INFO - 登录成功
+2025-05-12 18:15:32,509 - root - INFO - 已导航到销售计划页面
+2025-05-12 18:15:32,514 - root - INFO - 实际页面URL: http://124.222.178.125:3006/amzShipment/salesPlan
+2025-05-12 18:15:32,515 - root - INFO - 目标URL: http://124.222.178.125:3006/amzShipment/salesPlan
+2025-05-12 18:15:32,516 - root - INFO - 关闭浏览器
+2025-05-12 18:15:34,633 - root - INFO - Test case test_menu_navigation ended at 2025-05-12 18:15:34.633626
+2025-05-12 18:15:34,636 - root - INFO - Test case test_add_sales_plan started at 2025-05-12 18:15:34.636578
+2025-05-12 18:15:35,667 - root - INFO - 开始登录操作
+2025-05-12 18:15:44,127 - root - INFO - 已打开登录页面
+2025-05-12 18:15:44,216 - root - INFO - 已输入用户名：guomj
+2025-05-12 18:15:44,291 - root - INFO - 已输入密码：gmj123..
+2025-05-12 18:15:44,367 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-12 18:15:45,124 - root - INFO - 验证码识别结果: 5Ejl
+2025-05-12 18:15:45,196 - root - INFO - 已输入验证码: 5Ejl，第 1 次尝试
+2025-05-12 18:15:49,743 - root - INFO - 登录成功
+2025-05-12 18:15:49,746 - root - INFO - 关闭浏览器
+2025-05-12 18:15:51,833 - root - INFO - Test case test_add_sales_plan ended at 2025-05-12 18:15:51.833286

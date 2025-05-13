@@ -50,9 +50,7 @@ class SalesPlanPage(BasePage):
             logging.error(f"元素定位失败: {str(e)}")
             raise
     
-    def get_current_url(self):
-        """获取当前页面URL"""
-        return self.driver.current_url
+
 
     def add_sales_plan(self, asin, months, quantities):
         """添加销售计划"""

@@ -22,8 +22,8 @@ class LoginPage(BasePage):
     CAPTCHA_INPUT = (
     By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[3]/div[1]/div/div/div/span/span/input")
     CAPTCHA_IMAGE = (By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[3]/div[2]/img")
-    LOGOUT_BUTTON = (By.XPATH, "//*[@id='app']/section/section/header/div/div/span[6]/a/span/span/span")  # 假设退出登录按钮的定位器
-    # CONFIRM_LOGOUT_BUTTON = (By.XPATH, "/html/body/div[8]/div/div[2]/div/div[2]/div/div/div[2]/button[2]")  # 假设确定按钮的定位器
+    LOGOUT_BUTTON = (By.XPATH, "//*[@id='app']/section/section/header/div/div/span[6]/a/span/span/span")
+
     CONFIRM_LOGOUT_BUTTON = (By.CSS_SELECTOR,"body > div:nth-child(17) > div > div.ant-modal-wrap > div > div.ant-modal-content > div > div > div.ant-modal-confirm-btns > button.ant-btn.ant-btn-primary")
 
     NOTIFICATION_CLOSE_BUTTON = (By.CSS_SELECTOR, "body > div.ant-notification.ant-notification-topRight > span > div > a > span > i > svg")  # 登录成功通知框的定位器（遮挡退出登录按钮）
@@ -159,7 +159,7 @@ class LoginPage(BasePage):
                         # self.access_token_ptuser = self.get_access_token_ptuser()  # 获取token
                         return True
             except Exception as e:
-                logging.error(f"登录过程中出现错误: {e}")
+                logging.error(f"登录过程中出现错误: {str(e)}", exc_info=True)
 
             attempts += 1
 

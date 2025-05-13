@@ -33,7 +33,9 @@ def logged_in():
     if not result:
         pytest.fail("登录失败")
         
-    yield driver  # 返回登录后的浏览器驱动实例
+    yield driver
+
+
 
     # 关闭浏览器
     logging.info("关闭浏览器")

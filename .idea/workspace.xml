@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3827c2b0-9284-426f-aae7-fd9b84b52a68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base/utils/captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/Base/utils/captcha.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PageObject/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/login_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestCase/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/test_addsalesplan.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/test_click_salesplan.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/html_output/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestCase/test_sales_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/test_sales_plan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/html_output/report.html" afterDir="false" />
     </list>
@@ -41,6 +39,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.conftest.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/gmj/workSpaces/workSpaces_pycharm/autoTest4&quot;
@@ -53,6 +53,53 @@
       <recent name="D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\PageObject" />
       <recent name="D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base" />
     </key>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation">
+    <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="autoTest4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestCase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestCase/conftest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_sales_plan.TestSalesPlan.test_menu_navigation" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="autoTest4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestCase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_sales_plan.TestSalesPlan.test_menu_navigation&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation" />
+        <item itemvalue="Python.conftest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

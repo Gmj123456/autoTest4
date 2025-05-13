@@ -7,6 +7,10 @@ import logging
 from selenium.webdriver.support.ui import WebDriverWait
 from TestCase.conftest import logged_in
 
+"""
+1. 销售计划
+2. 
+"""
 class TestSalesPlan:
     def test_menu_navigation(self, logged_in, menu_urls):
         """验证销售计划菜单跳转"""
@@ -26,7 +30,7 @@ class TestSalesPlan:
         assert "销售计划" in menu_urls, "菜单数据中缺少销售计划项"
 
         sales_page = SalesPlanPage(logged_in)
-        expected_url = menu_urls["销售计划"]
+        expected_url = f"{ERP_URL}{menu_urls['销售计划']}"
 
         # 导航到销售计划页面
         sales_page.navigate_to_sales_plan()
@@ -35,7 +39,6 @@ class TestSalesPlan:
 
         # 获取实际页面URL（添加等待确保页面加载完成）
         current_url_all = logged_in.current_url
-        # current_url = current_url_all.replace(ERP_URL, "")
         current_url = current_url_all
         logging.info(f"实际页面URL: {current_url}")
 
@@ -62,4 +65,4 @@ class TestSalesPlan:
 
         # 验证结果
         assert sales_plan_page.is_success_message_displayed(), "应显示成功提示"
-        assert sales_plan_page.get_current_url() == sales_plan_page.SALES_PLAN_URL, "应在销售计划页面"
+        assert logged_in.current_url == sales_plan_page.SALES_PLAN_URL, "应在销售计划页面"

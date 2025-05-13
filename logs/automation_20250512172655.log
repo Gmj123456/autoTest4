@@ -1,0 +1,112 @@
+2025-05-12 17:26:55,533 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-12 17:26:55,681 - root - INFO - Test case test_menu_navigation started at 2025-05-12 17:26:55.681222
+2025-05-12 17:26:56,709 - root - INFO - 开始登录操作
+2025-05-12 17:27:03,940 - root - INFO - 已打开登录页面
+2025-05-12 17:27:04,025 - root - INFO - 已输入用户名：guomj
+2025-05-12 17:27:04,102 - root - INFO - 已输入密码：gmj123..
+2025-05-12 17:27:04,184 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-12 17:27:05,335 - root - INFO - 验证码识别结果: VW6F
+2025-05-12 17:27:05,408 - root - INFO - 已输入验证码: VW6F，第 1 次尝试
+2025-05-12 17:27:08,686 - root - INFO - 登录成功
+2025-05-12 17:27:09,612 - root - INFO - 已导航到销售计划页面
+2025-05-12 17:27:09,627 - root - INFO - 实际页面URL: http://124.222.178.125:3006/amzShipment/salesPlan
+2025-05-12 17:27:09,628 - root - INFO - 目标URL: http://124.222.178.125:3006/amzShipment/salesPlan
+2025-05-12 17:27:09,629 - root - INFO - 关闭浏览器
+2025-05-12 17:27:11,780 - root - INFO - Test case test_menu_navigation ended at 2025-05-12 17:27:11.780002
+2025-05-12 17:27:11,783 - root - INFO - Test case test_add_sales_plan started at 2025-05-12 17:27:11.783877
+2025-05-12 17:27:12,810 - root - INFO - 开始登录操作
+2025-05-12 17:27:20,435 - root - INFO - 已打开登录页面
+2025-05-12 17:27:20,522 - root - INFO - 已输入用户名：guomj
+2025-05-12 17:27:20,603 - root - INFO - 已输入密码：gmj123..
+2025-05-12 17:27:20,681 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-12 17:27:21,465 - root - INFO - 验证码识别结果: g VA9
+2025-05-12 17:27:21,554 - root - INFO - 已输入验证码: g VA9，第 1 次尝试
+2025-05-12 17:27:26,622 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-05-12 17:27:26,622 - root - INFO - 开始登录操作
+2025-05-12 17:27:27,266 - root - INFO - 已打开登录页面
+2025-05-12 17:27:27,375 - root - INFO - 已输入用户名：guomj
+2025-05-12 17:27:27,447 - root - INFO - 已输入密码：gmj123..
+2025-05-12 17:27:27,521 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-12 17:27:28,224 - root - INFO - 验证码识别结果: 2FR6
+2025-05-12 17:27:28,321 - root - INFO - 已输入验证码: 2FR6，第 2 次尝试
+2025-05-12 17:27:33,385 - root - WARNING - 第 2 次登录失败，重新尝试
+2025-05-12 17:27:33,386 - root - INFO - 开始登录操作
+2025-05-12 17:27:33,660 - root - INFO - 已打开登录页面
+2025-05-12 17:27:44,026 - root - ERROR - 登录过程中出现错误: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF64DCC2775+28773]
+	(No symbol) [0x00007FF64DC2AFB0]
+	(No symbol) [0x00007FF64DAC552A]
+	(No symbol) [0x00007FF64DB18EAE]
+	(No symbol) [0x00007FF64DB1919C]
+	(No symbol) [0x00007FF64DB623F7]
+	(No symbol) [0x00007FF64DB3EFDF]
+	(No symbol) [0x00007FF64DB5F1A4]
+	(No symbol) [0x00007FF64DB3ED43]
+	(No symbol) [0x00007FF64DB0A548]
+	(No symbol) [0x00007FF64DB0B6B1]
+	GetHandleVerifier [0x00007FF64DFEF45D+3358029]
+	GetHandleVerifier [0x00007FF64E00430D+3443709]
+	GetHandleVerifier [0x00007FF64DFF83FD+3394797]
+	GetHandleVerifier [0x00007FF64DD8929B+842635]
+	(No symbol) [0x00007FF64DC3654F]
+	(No symbol) [0x00007FF64DC31FA4]
+	(No symbol) [0x00007FF64DC3213D]
+	(No symbol) [0x00007FF64DC21629]
+	BaseThreadInitThunk [0x00007FFFDCB37614+20]
+	RtlUserThreadStart [0x00007FFFDE6826A1+33]
+
+2025-05-12 17:27:44,034 - root - INFO - 开始登录操作
+2025-05-12 17:27:44,055 - root - INFO - 已打开登录页面
+2025-05-12 17:27:54,584 - root - ERROR - 登录过程中出现错误: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF64DCC2775+28773]
+	(No symbol) [0x00007FF64DC2AFB0]
+	(No symbol) [0x00007FF64DAC552A]
+	(No symbol) [0x00007FF64DB18EAE]
+	(No symbol) [0x00007FF64DB1919C]
+	(No symbol) [0x00007FF64DB623F7]
+	(No symbol) [0x00007FF64DB3EFDF]
+	(No symbol) [0x00007FF64DB5F1A4]
+	(No symbol) [0x00007FF64DB3ED43]
+	(No symbol) [0x00007FF64DB0A548]
+	(No symbol) [0x00007FF64DB0B6B1]
+	GetHandleVerifier [0x00007FF64DFEF45D+3358029]
+	GetHandleVerifier [0x00007FF64E00430D+3443709]
+	GetHandleVerifier [0x00007FF64DFF83FD+3394797]
+	GetHandleVerifier [0x00007FF64DD8929B+842635]
+	(No symbol) [0x00007FF64DC3654F]
+	(No symbol) [0x00007FF64DC31FA4]
+	(No symbol) [0x00007FF64DC3213D]
+	(No symbol) [0x00007FF64DC21629]
+	BaseThreadInitThunk [0x00007FFFDCB37614+20]
+	RtlUserThreadStart [0x00007FFFDE6826A1+33]
+
+2025-05-12 17:27:54,588 - root - INFO - 开始登录操作
+2025-05-12 17:27:54,842 - root - INFO - 已打开登录页面
+2025-05-12 17:28:05,093 - root - ERROR - 登录过程中出现错误: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF64DCC2775+28773]
+	(No symbol) [0x00007FF64DC2AFB0]
+	(No symbol) [0x00007FF64DAC552A]
+	(No symbol) [0x00007FF64DB18EAE]
+	(No symbol) [0x00007FF64DB1919C]
+	(No symbol) [0x00007FF64DB623F7]
+	(No symbol) [0x00007FF64DB3EFDF]
+	(No symbol) [0x00007FF64DB5F1A4]
+	(No symbol) [0x00007FF64DB3ED43]
+	(No symbol) [0x00007FF64DB0A548]
+	(No symbol) [0x00007FF64DB0B6B1]
+	GetHandleVerifier [0x00007FF64DFEF45D+3358029]
+	GetHandleVerifier [0x00007FF64E00430D+3443709]
+	GetHandleVerifier [0x00007FF64DFF83FD+3394797]
+	GetHandleVerifier [0x00007FF64DD8929B+842635]
+	(No symbol) [0x00007FF64DC3654F]
+	(No symbol) [0x00007FF64DC31FA4]
+	(No symbol) [0x00007FF64DC3213D]
+	(No symbol) [0x00007FF64DC21629]
+	BaseThreadInitThunk [0x00007FFFDCB37614+20]
+	RtlUserThreadStart [0x00007FFFDE6826A1+33]
+
+2025-05-12 17:28:05,097 - root - ERROR - 验证码识别失败次数达到上限，登录失败
+2025-05-12 17:28:05,149 - root - INFO - Test case test_add_sales_plan ended at 2025-05-12 17:28:05.149608
