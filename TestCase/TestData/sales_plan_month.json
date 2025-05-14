@@ -1,18 +1,23 @@
 [
   {
-    "month": "四月",
-    "value": "1000"
-  },
-  {
-    "month": "五月", 
-    "value": "1000"
-  },
-  {
-    "month": "六月",
-    "value": "1000"
-  },
-  {
-    "month": "七月",
-    "value": "1000"
+    "asin": "B0BTHRCY23",
+    "months": [
+      {
+        "month": "五月",
+        "value": "1000"
+      },
+      {
+        "month": "六月",
+        "value": "1000"
+      },
+      {
+        "month": "七月",
+        "value": "1000"
+      },
+      {
+        "month": "八月",
+        "value": "1000"
+      }
+    ]
   }
 ]

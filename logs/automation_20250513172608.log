@@ -1,0 +1,13 @@
+2025-05-13 17:26:08,100 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-13 17:26:08,271 - root - INFO - Test case test_add_sales_plan started at 2025-05-13 17:26:08.271279
+2025-05-13 17:26:09,308 - root - INFO - 开始登录操作
+2025-05-13 17:26:15,683 - root - INFO - 已打开登录页面
+2025-05-13 17:26:15,922 - root - INFO - 已输入用户名：guomj
+2025-05-13 17:26:16,109 - root - INFO - 已输入密码：gmj123..
+2025-05-13 17:26:16,219 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-13 17:26:17,128 - root - INFO - 验证码识别结果: YBJ2
+2025-05-13 17:26:17,227 - root - INFO - 已输入验证码: YBJ2，第 1 次尝试
+2025-05-13 17:26:20,461 - root - INFO - 登录成功
+2025-05-13 17:26:21,622 - root - INFO - 准备添加销售计划，ASIN=B0BTHRCY23, 月份数据=[{'month': '五月', 'value': '1000'}, {'month': '六月', 'value': '1000'}, {'month': '七月', 'value': '1000'}, {'month': '八月', 'value': '1000'}]
+2025-05-13 17:26:58,846 - root - INFO - 关闭浏览器
+2025-05-13 17:27:00,938 - root - INFO - Test case test_add_sales_plan ended at 2025-05-13 17:27:00.938257

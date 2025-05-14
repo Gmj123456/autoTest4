@@ -1,14 +1,17 @@
 # pages/base_page.py
+import os
+from datetime import datetime
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import json
 
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
 
-    def find_element(self, by, value, timeout=10):
+    def find_element(self, by, value, timeout=15):  # 延长超时时间并修改等待条件为可点击
         return WebDriverWait(self.driver, timeout).until(
-            EC.presence_of_element_located((by, value))
+            EC.element_to_be_clickable((by, value))  # 改为等待元素可点击
         )
 
     def click_element(self, by, value, timeout=10):
@@ -19,6 +22,24 @@ class BasePage:
         element = self.find_element(by, value, timeout)
         element.clear()
         element.send_keys(text)
+
+    def wait_for_element_visibility(self, by, value, timeout=15):
+        """等待元素可见"""
+        return WebDriverWait(self.driver, timeout).until(
+            EC.visibility_of_element_located((by, value))
+        )
+
+    def take_screenshot(self, filename_prefix):
+        """截取当前页面截图并保存"""
+        timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+        screenshot_dir = os.path.join(os.path.dirname(__file__), '../screenshots')
+        os.makedirs(screenshot_dir, exist_ok=True)
+        screenshot_path = os.path.join(screenshot_dir, f'{filename_prefix}_{timestamp}.png')
+        try:
+            self.driver.save_screenshot(screenshot_path)
+            logging.info(f"截图已保存至：{screenshot_path}")
+        except Exception as e:
+            logging.error(f"截图失败: {str(e)}")
 
     def load_test_data(self, file_path, min_version='1.0'):
         """通用测试数据加载方法"""

@@ -1,0 +1,29 @@
+2025-05-13 17:09:40,667 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-13 17:09:41,171 - root - INFO - Test case test_add_sales_plan started at 2025-05-13 17:09:41.171371
+2025-05-13 17:09:42,214 - root - INFO - 开始登录操作
+2025-05-13 17:09:48,318 - root - INFO - 已打开登录页面
+2025-05-13 17:09:48,436 - root - INFO - 已输入用户名：guomj
+2025-05-13 17:09:48,548 - root - INFO - 已输入密码：gmj123..
+2025-05-13 17:09:48,645 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-13 17:09:59,380 - root - INFO - 验证码识别结果: ekh d
+2025-05-13 17:09:59,488 - root - INFO - 已输入验证码: ekh d，第 1 次尝试
+2025-05-13 17:10:04,586 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-05-13 17:10:04,587 - root - INFO - 开始登录操作
+2025-05-13 17:10:05,328 - root - INFO - 已打开登录页面
+2025-05-13 17:10:05,448 - root - INFO - 已输入用户名：guomj
+2025-05-13 17:10:05,550 - root - INFO - 已输入密码：gmj123..
+2025-05-13 17:10:05,665 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-13 17:10:14,557 - root - INFO - 验证码识别结果: g W6 Y
+2025-05-13 17:10:14,702 - root - INFO - 已输入验证码: g W6 Y，第 2 次尝试
+2025-05-13 17:10:19,788 - root - WARNING - 第 2 次登录失败，重新尝试
+2025-05-13 17:10:19,788 - root - INFO - 开始登录操作
+2025-05-13 17:10:20,137 - root - INFO - 已打开登录页面
+2025-05-13 17:10:20,228 - root - INFO - 已输入用户名：guomj
+2025-05-13 17:10:20,323 - root - INFO - 已输入密码：gmj123..
+2025-05-13 17:10:20,446 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-13 17:10:26,354 - root - INFO - 验证码识别结果: d1FE
+2025-05-13 17:10:26,459 - root - INFO - 已输入验证码: d1FE，第 3 次尝试
+2025-05-13 17:10:27,166 - root - INFO - 登录成功
+2025-05-13 17:10:28,203 - root - INFO - 准备添加销售计划，ASIN=B0BTHRCY23, 月份数据=[{'month': '五月', 'value': '1000'}, {'month': '六月', 'value': '1000'}, {'month': '七月', 'value': '1000'}, {'month': '八月', 'value': '1000'}]
+2025-05-13 17:10:49,183 - root - INFO - 关闭浏览器
+2025-05-13 17:10:51,286 - root - INFO - Test case test_add_sales_plan ended at 2025-05-13 17:10:51.286706

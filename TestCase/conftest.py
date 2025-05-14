@@ -52,6 +52,15 @@ def menu_urls():
         menu_data = json.load(f)
     return menu_data
 
+# 新增：加载销售计划测试数据的fixture
+@pytest.fixture(scope="function")
+def plan_data():
+    # 从TestData/sales_plan_month.json读取销售计划数据
+    test_data_path = Path(__file__).parent / "TestData" / "sales_plan_month.json"
+    with open(test_data_path, "r", encoding="utf-8") as f:
+        plan_data = json.load(f)
+    return plan_data
+
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_setup(item):
     """记录测试用例开始时间"""

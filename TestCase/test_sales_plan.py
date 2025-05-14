@@ -4,7 +4,10 @@ from Base.base_page import BasePage
 from Base.config import ERP_URL
 from PageObject.sales_plan_page import SalesPlanPage
 import logging
+import os
+from datetime import datetime
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from TestCase.conftest import logged_in
 
 """
@@ -52,17 +55,45 @@ class TestSalesPlan:
 
 
     def test_add_sales_plan(self, logged_in, plan_data):
-        """集成后的销售计划添加测试（参数化版本）"""
+        """有效等价类：添加销售计划"""
         sales_plan_page = SalesPlanPage(logged_in)
         sales_plan_page.navigate_to_sales_plan()
 
-        # 使用页面对象方法
-        sales_plan_page.add_single_plan(
-            asin=plan_data['asin'],
-            months=plan_data['months'],
-            quantities=plan_data['quantities']
+        # 调整数据字段匹配新的sales_plan_month.json结构（每个asin对应多个月份）
+        # 由于sales_plan_month.json顶层是列表，取第一个元素
+        plan_data_item = plan_data[0]
+        asin = plan_data_item['asin']
+        months_data = plan_data_item['months']
+        logging.info(f"准备添加销售计划，ASIN={asin}, 月份数据={months_data}")
+        
+        # 检查数据格式
+        assert all(isinstance(month_data['month'], str) for month_data in months_data), "月份应为字符串类型"
+        assert all(month_data['value'].isdigit() for month_data in months_data), "销售数量应为数字字符串"
+        
+        # 使用页面对象方法添加多个月份计划
+        # 从月份数据中提取数量列表作为quantities参数
+        quantities = [month_data['value'] for month_data in months_data]
+        sales_plan_page.add_sales_plan(
+            asin=asin,
+            months=months_data,
+            quantities=quantities
         )
-
-        # 验证结果
-        assert sales_plan_page.is_success_message_displayed(), "应显示成功提示"
-        assert logged_in.current_url == sales_plan_page.SALES_PLAN_URL, "应在销售计划页面"
+        
+        # 验证结果（添加异常时记录页面源码）
+        try:
+            assert sales_plan_page.is_success_message_displayed(), "应显示成功提示"
+            assert logged_in.current_url == sales_plan_page.SALES_PLAN_URL, "应在销售计划页面"
+        except AssertionError as e:
+            # 调用截图方法
+            sales_plan_page.take_screenshot('assert_failure')
+            # 保存页面源码到文件
+            timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+            screenshot_dir = os.path.join(os.path.dirname(__file__), '../screenshots')
+            os.makedirs(screenshot_dir, exist_ok=True)
+            source_path = os.path.join(screenshot_dir, f'assert_failure_{timestamp}.html')
+            with open(source_path, 'w', encoding='utf-8') as f:
+                f.write(logged_in.page_source)
+            logging.error(f"断言失败，页面源码已保存至：{source_path}")
+            raise
+        # 新增：验证搜索结果区域存在（补充检查）
+        assert len(logged_in.find_elements(*SalesPlanPage.SEARCH_RESULT)) > 0, "搜索结果区域未加载"
