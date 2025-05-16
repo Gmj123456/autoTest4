@@ -1,0 +1,200 @@
+2025-05-15 17:14:32,015 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-15 17:14:32,498 - root - INFO - Test case test_add_sales_plan started at 2025-05-15 17:14:32.498931
+2025-05-15 17:14:33,536 - root - INFO - 开始登录操作
+2025-05-15 17:14:39,704 - root - INFO - 已打开登录页面
+2025-05-15 17:14:39,820 - root - INFO - 已输入用户名：guomj
+2025-05-15 17:14:39,924 - root - INFO - 已输入密码：gmj123..
+2025-05-15 17:14:40,025 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-15 17:14:45,517 - root - INFO - 验证码识别结果: 57 pj
+2025-05-15 17:14:45,625 - root - INFO - 已输入验证码: 57 pj，第 1 次尝试
+2025-05-15 17:14:50,701 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-05-15 17:14:50,701 - root - INFO - 开始登录操作
+2025-05-15 17:14:51,284 - root - INFO - 已打开登录页面
+2025-05-15 17:14:51,394 - root - INFO - 已输入用户名：guomj
+2025-05-15 17:14:51,480 - root - INFO - 已输入密码：gmj123..
+2025-05-15 17:14:51,600 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-15 17:14:54,214 - root - INFO - 验证码识别结果: NiuG
+2025-05-15 17:14:54,305 - root - INFO - 已输入验证码: NiuG，第 2 次尝试
+2025-05-15 17:14:59,380 - root - WARNING - 第 2 次登录失败，重新尝试
+2025-05-15 17:14:59,381 - root - INFO - 开始登录操作
+2025-05-15 17:14:59,648 - root - INFO - 已打开登录页面
+2025-05-15 17:15:10,153 - root - ERROR - 登录过程中出现错误: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E54B2775+28773]
+	(No symbol) [0x00007FF6E541AFB0]
+	(No symbol) [0x00007FF6E52B552A]
+	(No symbol) [0x00007FF6E5308EAE]
+	(No symbol) [0x00007FF6E530919C]
+	(No symbol) [0x00007FF6E53523F7]
+	(No symbol) [0x00007FF6E532EFDF]
+	(No symbol) [0x00007FF6E534F1A4]
+	(No symbol) [0x00007FF6E532ED43]
+	(No symbol) [0x00007FF6E52FA548]
+	(No symbol) [0x00007FF6E52FB6B1]
+	GetHandleVerifier [0x00007FF6E57DF45D+3358029]
+	GetHandleVerifier [0x00007FF6E57F430D+3443709]
+	GetHandleVerifier [0x00007FF6E57E83FD+3394797]
+	GetHandleVerifier [0x00007FF6E557929B+842635]
+	(No symbol) [0x00007FF6E542654F]
+	(No symbol) [0x00007FF6E5421FA4]
+	(No symbol) [0x00007FF6E542213D]
+	(No symbol) [0x00007FF6E5411629]
+	BaseThreadInitThunk [0x00007FFC3D5F7614+20]
+	RtlUserThreadStart [0x00007FFC3E3426A1+33]
+Traceback (most recent call last):
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\PageObject\login_page.py", line 144, in login
+    self.send_keys(*self.USERNAME_INPUT, username)
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 23, in send_keys
+    element = self.find_element(by, value, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 14, in find_element
+    return WebDriverWait(self.driver, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E54B2775+28773]
+	(No symbol) [0x00007FF6E541AFB0]
+	(No symbol) [0x00007FF6E52B552A]
+	(No symbol) [0x00007FF6E5308EAE]
+	(No symbol) [0x00007FF6E530919C]
+	(No symbol) [0x00007FF6E53523F7]
+	(No symbol) [0x00007FF6E532EFDF]
+	(No symbol) [0x00007FF6E534F1A4]
+	(No symbol) [0x00007FF6E532ED43]
+	(No symbol) [0x00007FF6E52FA548]
+	(No symbol) [0x00007FF6E52FB6B1]
+	GetHandleVerifier [0x00007FF6E57DF45D+3358029]
+	GetHandleVerifier [0x00007FF6E57F430D+3443709]
+	GetHandleVerifier [0x00007FF6E57E83FD+3394797]
+	GetHandleVerifier [0x00007FF6E557929B+842635]
+	(No symbol) [0x00007FF6E542654F]
+	(No symbol) [0x00007FF6E5421FA4]
+	(No symbol) [0x00007FF6E542213D]
+	(No symbol) [0x00007FF6E5411629]
+	BaseThreadInitThunk [0x00007FFC3D5F7614+20]
+	RtlUserThreadStart [0x00007FFC3E3426A1+33]
+
+2025-05-15 17:15:10,156 - root - INFO - 开始登录操作
+2025-05-15 17:15:10,345 - root - INFO - 已打开登录页面
+2025-05-15 17:15:20,582 - root - ERROR - 登录过程中出现错误: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E54B2775+28773]
+	(No symbol) [0x00007FF6E541AFB0]
+	(No symbol) [0x00007FF6E52B552A]
+	(No symbol) [0x00007FF6E5308EAE]
+	(No symbol) [0x00007FF6E530919C]
+	(No symbol) [0x00007FF6E53523F7]
+	(No symbol) [0x00007FF6E532EFDF]
+	(No symbol) [0x00007FF6E534F1A4]
+	(No symbol) [0x00007FF6E532ED43]
+	(No symbol) [0x00007FF6E52FA548]
+	(No symbol) [0x00007FF6E52FB6B1]
+	GetHandleVerifier [0x00007FF6E57DF45D+3358029]
+	GetHandleVerifier [0x00007FF6E57F430D+3443709]
+	GetHandleVerifier [0x00007FF6E57E83FD+3394797]
+	GetHandleVerifier [0x00007FF6E557929B+842635]
+	(No symbol) [0x00007FF6E542654F]
+	(No symbol) [0x00007FF6E5421FA4]
+	(No symbol) [0x00007FF6E542213D]
+	(No symbol) [0x00007FF6E5411629]
+	BaseThreadInitThunk [0x00007FFC3D5F7614+20]
+	RtlUserThreadStart [0x00007FFC3E3426A1+33]
+Traceback (most recent call last):
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\PageObject\login_page.py", line 144, in login
+    self.send_keys(*self.USERNAME_INPUT, username)
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 23, in send_keys
+    element = self.find_element(by, value, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 14, in find_element
+    return WebDriverWait(self.driver, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E54B2775+28773]
+	(No symbol) [0x00007FF6E541AFB0]
+	(No symbol) [0x00007FF6E52B552A]
+	(No symbol) [0x00007FF6E5308EAE]
+	(No symbol) [0x00007FF6E530919C]
+	(No symbol) [0x00007FF6E53523F7]
+	(No symbol) [0x00007FF6E532EFDF]
+	(No symbol) [0x00007FF6E534F1A4]
+	(No symbol) [0x00007FF6E532ED43]
+	(No symbol) [0x00007FF6E52FA548]
+	(No symbol) [0x00007FF6E52FB6B1]
+	GetHandleVerifier [0x00007FF6E57DF45D+3358029]
+	GetHandleVerifier [0x00007FF6E57F430D+3443709]
+	GetHandleVerifier [0x00007FF6E57E83FD+3394797]
+	GetHandleVerifier [0x00007FF6E557929B+842635]
+	(No symbol) [0x00007FF6E542654F]
+	(No symbol) [0x00007FF6E5421FA4]
+	(No symbol) [0x00007FF6E542213D]
+	(No symbol) [0x00007FF6E5411629]
+	BaseThreadInitThunk [0x00007FFC3D5F7614+20]
+	RtlUserThreadStart [0x00007FFC3E3426A1+33]
+
+2025-05-15 17:15:20,583 - root - INFO - 开始登录操作
+2025-05-15 17:15:20,823 - root - INFO - 已打开登录页面
+2025-05-15 17:15:31,049 - root - ERROR - 登录过程中出现错误: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E54B2775+28773]
+	(No symbol) [0x00007FF6E541AFB0]
+	(No symbol) [0x00007FF6E52B552A]
+	(No symbol) [0x00007FF6E5308EAE]
+	(No symbol) [0x00007FF6E530919C]
+	(No symbol) [0x00007FF6E53523F7]
+	(No symbol) [0x00007FF6E532EFDF]
+	(No symbol) [0x00007FF6E534F1A4]
+	(No symbol) [0x00007FF6E532ED43]
+	(No symbol) [0x00007FF6E52FA548]
+	(No symbol) [0x00007FF6E52FB6B1]
+	GetHandleVerifier [0x00007FF6E57DF45D+3358029]
+	GetHandleVerifier [0x00007FF6E57F430D+3443709]
+	GetHandleVerifier [0x00007FF6E57E83FD+3394797]
+	GetHandleVerifier [0x00007FF6E557929B+842635]
+	(No symbol) [0x00007FF6E542654F]
+	(No symbol) [0x00007FF6E5421FA4]
+	(No symbol) [0x00007FF6E542213D]
+	(No symbol) [0x00007FF6E5411629]
+	BaseThreadInitThunk [0x00007FFC3D5F7614+20]
+	RtlUserThreadStart [0x00007FFC3E3426A1+33]
+Traceback (most recent call last):
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\PageObject\login_page.py", line 144, in login
+    self.send_keys(*self.USERNAME_INPUT, username)
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 23, in send_keys
+    element = self.find_element(by, value, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 14, in find_element
+    return WebDriverWait(self.driver, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E54B2775+28773]
+	(No symbol) [0x00007FF6E541AFB0]
+	(No symbol) [0x00007FF6E52B552A]
+	(No symbol) [0x00007FF6E5308EAE]
+	(No symbol) [0x00007FF6E530919C]
+	(No symbol) [0x00007FF6E53523F7]
+	(No symbol) [0x00007FF6E532EFDF]
+	(No symbol) [0x00007FF6E534F1A4]
+	(No symbol) [0x00007FF6E532ED43]
+	(No symbol) [0x00007FF6E52FA548]
+	(No symbol) [0x00007FF6E52FB6B1]
+	GetHandleVerifier [0x00007FF6E57DF45D+3358029]
+	GetHandleVerifier [0x00007FF6E57F430D+3443709]
+	GetHandleVerifier [0x00007FF6E57E83FD+3394797]
+	GetHandleVerifier [0x00007FF6E557929B+842635]
+	(No symbol) [0x00007FF6E542654F]
+	(No symbol) [0x00007FF6E5421FA4]
+	(No symbol) [0x00007FF6E542213D]
+	(No symbol) [0x00007FF6E5411629]
+	BaseThreadInitThunk [0x00007FFC3D5F7614+20]
+	RtlUserThreadStart [0x00007FFC3E3426A1+33]
+
+2025-05-15 17:15:31,050 - root - ERROR - 验证码识别失败次数达到上限，登录失败
+2025-05-15 17:15:31,205 - root - INFO - Test case test_add_sales_plan ended at 2025-05-15 17:15:31.205848

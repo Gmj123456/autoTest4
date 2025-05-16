@@ -1,0 +1,39 @@
+2025-05-15 17:08:50,868 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-15 17:08:51,379 - root - INFO - Test case test_add_sales_plan started at 2025-05-15 17:08:51.379726
+2025-05-15 17:08:52,406 - root - INFO - 开始登录操作
+2025-05-15 17:08:59,098 - root - INFO - 已打开登录页面
+2025-05-15 17:08:59,214 - root - INFO - 已输入用户名：guomj
+2025-05-15 17:08:59,317 - root - INFO - 已输入密码：gmj123..
+2025-05-15 17:08:59,415 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-15 17:09:07,568 - root - INFO - 验证码识别结果: GjF1
+2025-05-15 17:09:07,677 - root - INFO - 已输入验证码: GjF1，第 1 次尝试
+2025-05-15 17:09:12,761 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-05-15 17:09:12,762 - root - INFO - 开始登录操作
+2025-05-15 17:09:13,348 - root - INFO - 已打开登录页面
+2025-05-15 17:09:13,474 - root - INFO - 已输入用户名：guomj
+2025-05-15 17:09:13,558 - root - INFO - 已输入密码：gmj123..
+2025-05-15 17:09:13,677 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-15 17:09:18,514 - root - INFO - 验证码识别结果: i :e2 X
+2025-05-15 17:09:18,624 - root - INFO - 已输入验证码: i :e2 X，第 2 次尝试
+2025-05-15 17:09:23,696 - root - WARNING - 第 2 次登录失败，重新尝试
+2025-05-15 17:09:23,697 - root - INFO - 开始登录操作
+2025-05-15 17:09:24,050 - root - INFO - 已打开登录页面
+2025-05-15 17:09:24,138 - root - INFO - 已输入用户名：guomj
+2025-05-15 17:09:24,232 - root - INFO - 已输入密码：gmj123..
+2025-05-15 17:09:24,356 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-15 17:09:29,040 - root - INFO - 验证码识别结果: L 7x 4
+2025-05-15 17:09:29,135 - root - INFO - 已输入验证码: L 7x 4，第 3 次尝试
+2025-05-15 17:09:34,218 - root - WARNING - 第 3 次登录失败，重新尝试
+2025-05-15 17:09:34,219 - root - INFO - 开始登录操作
+2025-05-15 17:09:34,562 - root - INFO - 已打开登录页面
+2025-05-15 17:09:34,648 - root - INFO - 已输入用户名：guomj
+2025-05-15 17:09:34,747 - root - INFO - 已输入密码：gmj123..
+2025-05-15 17:09:34,866 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-15 17:09:37,212 - root - INFO - 验证码识别结果: 9STv
+2025-05-15 17:09:37,309 - root - INFO - 已输入验证码: 9STv，第 4 次尝试
+2025-05-15 17:09:38,351 - root - INFO - 登录成功
+2025-05-15 17:09:39,205 - root - INFO - 准备添加销售计划，ASIN=B0BTHRCY23, 月份数据=[{'month': '五月', 'value': '1000'}, {'month': '六月', 'value': '1000'}, {'month': '七月', 'value': '1000'}, {'month': '八月', 'value': '1000'}]
+2025-05-15 17:09:43,649 - root - INFO - 点击前
+2025-05-15 17:12:00,748 - root - INFO - 点击后
+2025-05-15 17:12:02,555 - root - INFO - 关闭浏览器
+2025-05-15 17:12:04,639 - root - INFO - Test case test_add_sales_plan ended at 2025-05-15 17:12:04.639796

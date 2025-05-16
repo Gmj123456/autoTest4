@@ -1,5 +1,6 @@
 # pages/base_page.py
 import os
+import logging
 from datetime import datetime
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC

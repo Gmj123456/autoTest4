@@ -5,57 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3827c2b0-9284-426f-aae7-fd9b84b52a68" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/testcase/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base/utils/captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/Base/utils/captcha.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/login_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PageObject/sales_plan_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/sales_plan_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/.coverage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/TestCase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/TestCase/html_output/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/TestData/product_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/TestData/product_info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/TestData/sales_plan_month.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/TestData/sales_plan_month.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/html_output/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/test_sales_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/test_sales_plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508155040.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508160927.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508162220.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508162743.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508162854.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508163350.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508163955.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508164209.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508164759.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508165716.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508171103.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508171220.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508171404.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508173314.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508174632.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250508174814.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250509161734.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250509161809.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250509161824.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250509162807.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250509163013.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250509163218.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250509164457.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250509164523.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250509165018.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250510142059.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250510142850.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250510164401.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250510164806.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250510171111.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250512171921.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250512172655.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250512180411.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250512181410.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250512181517.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250512181741.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250512181946.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/.coverage" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/TestCase/html_output/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestCase/html_output/assets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/TestCase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/TestData/menu.json" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestData/menu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/TestData/product_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestData/product_info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/TestData/sales_plan_month.json" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestData/sales_plan_month.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/.coverage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/bak_test_addsalesplan.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/bak_test_addsalesplan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/bak_test_click_salesplan.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/bak_test_click_salesplan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/demo_debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/demo_debug.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/html_output/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/html_output/assets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/html_output/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/test_sales_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_sales_plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250513170510.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250513170940.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250513171927.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250513172608.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250513173623.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250514091557.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/search_result_timeout_20250513173712_20250513173712.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/search_result_timeout_20250514091646_20250514091646.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,16 +162,5 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.ini" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PageObject/sales_plan_page.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -86,7 +86,7 @@ class LoginPage(BasePage):
     def check_login_result(self, attempts):
         """检查登录结果，等待页面 URL 变为登录成功后的 URL，最多等待 5 秒"""
         try:
-            WebDriverWait(self.driver, 5).until(lambda driver: driver.current_url == LOGIN_SUCCESS_URL)
+            WebDriverWait(self.driver, 10).until(lambda driver: driver.current_url == LOGIN_SUCCESS_URL)
             logging.info("登录成功")
             return True
         except Exception:
