@@ -67,3 +67,4 @@ def read_image(self, image_path):
 
 ## 许可证
 本项目遵循 [MIT 许可证](https://opensource.org/licenses/MIT)。    
+<a href="https://deepwiki.com/Gmj123456/autoTest4"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
