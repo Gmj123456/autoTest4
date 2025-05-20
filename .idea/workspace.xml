@@ -5,35 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3827c2b0-9284-426f-aae7-fd9b84b52a68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/testcase/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base/utils/captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/Base/utils/captcha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/login_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PageObject/sales_plan_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/sales_plan_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/.coverage" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/TestCase/html_output/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestCase/html_output/assets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/TestCase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/TestData/menu.json" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestData/menu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/TestData/product_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestData/product_info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/TestData/sales_plan_month.json" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestData/sales_plan_month.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/.coverage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/bak_test_addsalesplan.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/bak_test_addsalesplan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/bak_test_click_salesplan.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/bak_test_click_salesplan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/demo_debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/demo_debug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/html_output/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/html_output/assets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/html_output/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/test_sales_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_sales_plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250513170510.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250513170940.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250513171927.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250513172608.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250513173623.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250514091557.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/search_result_timeout_20250513173712_20250513173712.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/search_result_timeout_20250514091646_20250514091646.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250515164400.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250515165116.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250515170138.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250515170842.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250515170850.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250515171432.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250515173254.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250515173422.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250515180011.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250515180105.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250516150630.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250516151228.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250516151520.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250516152312.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250516152637.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250516154058.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250516155625.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250516174842.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250516175314.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250516175521.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250516175542.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/.coverage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,16 +55,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan.executor": "Run",
-    "Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation.executor": "Debug",
-    "Python.conftest.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/gmj/workSpaces/workSpaces_pycharm/autoTest4"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.conftest.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/gmj/workSpaces/workSpaces_pycharm/autoTest4&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\html_output" />

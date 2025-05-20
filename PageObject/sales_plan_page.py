@@ -32,9 +32,17 @@ class SalesPlanPage(BasePage):
     PLAN_QUANTITY_INPUT = (By.XPATH, "/html/body/div[7]/div/div[2]/div/div[2]/div[2]/div/div/form/div/div[5]/div/div/div[2]/div[1]/div[2]/table/tbody/tr/td[4]/div/div/div[2]/input")  # 数量输入
     SAVE_AND_CONTINUE_BUTTON = (By.XPATH,"/html/body/div[7]/div/div[2]/div/div[2]/div[3]/button[2]")
     CONFIRM_BUTTON = (By.XPATH, "//button[contains(text(),'确认')]")  # 确认按钮
+    SUCCESS_MESSAGE = (By.XPATH, "//div[contains(@class,'ant-message-success')]/span[contains(text(),'操作成功')]")  # 成功提示
 
 
     XIANGGUI = (By.XPATH,"//*[@id='app']/section/section/main/div[2]/div/div/div/div[3]/div/div[2]/div[1]/div[2]/table/tbody/tr/td[8]/div/div/a/span")
+
+    def is_success_message_displayed(self):
+        """验证成功提示是否显示"""
+        try:
+            return self.wait_for_element_visibility(*self.SUCCESS_MESSAGE).is_displayed()
+        except TimeoutException:
+            return False
 
     def navigate_to_sales_plan(self):
         """导航到销售计划页面（添加显式等待和重试机制）"""
@@ -74,16 +82,21 @@ class SalesPlanPage(BasePage):
 
         # 点击添加销售计划按钮
         self.click_element(*self.ADD_SALES_PLAN_BUTTON)
-        time.sleep(10)
+        WebDriverWait(self.driver, 15).until(
+            EC.visibility_of_element_located(self.MONTH_SELECT)
+        )
 
 
         # 选择月份和数量（循环添加多个月份，从months数据中获取month和value）
-        for month_data in months:
+        for i, month_data in enumerate(months):
             # self.click_element(*self.ADD_PLAN_BUTTON)
             self.send_keys(*self.MONTH_SELECT, month_data['month'])
-            self.send_keys(*self.PLAN_QUANTITY_INPUT, month_data['value'])
+            # 直接从月份字典获取value值
+            for month_data in months:
+                self.send_keys(*self.PLAN_QUANTITY_INPUT, str(month_data['value']))
             self.click_element(*self.SAVE_AND_CONTINUE_BUTTON)
 
         self.click_element(*self.CONFIRM_BUTTON)
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.SUCCESS_MESSAGE))
     
 
