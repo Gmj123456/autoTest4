@@ -9,25 +9,14 @@ import subprocess
 from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from TestCase.element_locator.login_elements import LoginElements
 
 # 在文件顶部添加统一日志配置
 from Base.utils.logger import setup_logging
 setup_logging()
 
 class LoginPage(BasePage):
-    USERNAME_INPUT = (
-    By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input")
-    PASSWORD_INPUT = (
-    By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[2]/div/div/span/input")
-    CAPTCHA_INPUT = (
-    By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[3]/div[1]/div/div/div/span/span/input")
-    CAPTCHA_IMAGE = (By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[3]/div[2]/img")
-    LOGOUT_BUTTON = (By.XPATH, "//*[@id='app']/section/section/header/div/div/span[6]/a/span/span/span")
-
-    CONFIRM_LOGOUT_BUTTON = (By.CSS_SELECTOR,"body > div:nth-child(17) > div > div.ant-modal-wrap > div > div.ant-modal-content > div > div > div.ant-modal-confirm-btns > button.ant-btn.ant-btn-primary")
-
-    NOTIFICATION_CLOSE_BUTTON = (By.CSS_SELECTOR, "body > div.ant-notification.ant-notification-topRight > span > div > a > span > i > svg")  # 登录成功通知框的定位器（遮挡退出登录按钮）
-
+   
     def __init__(self, driver):
         super().__init__(driver)
         # 确保 self.driver 是正确的驱动对象
@@ -41,7 +30,7 @@ class LoginPage(BasePage):
         captcha_path = captcha_dir / 'captcha.png'
 
         try:
-            captcha_image = self.find_element(*self.CAPTCHA_IMAGE)
+            captcha_image = self.find_element(*LoginElements.CAPTCHA_IMAGE)
             captcha_image.screenshot(str(captcha_path))
             logging.info(f"验证码图片已保存到 {captcha_path}")
             return captcha_path
@@ -141,9 +130,9 @@ class LoginPage(BasePage):
                 logging.info("开始登录操作")
                 self.driver.get(ERP_URL)
                 logging.info("已打开登录页面")
-                self.send_keys(*self.USERNAME_INPUT, username)
+                self.send_keys(*LoginElements.USERNAME_INPUT, username)
                 logging.info(f"已输入用户名：{username}")
-                self.send_keys(*self.PASSWORD_INPUT, password)
+                self.send_keys(*LoginElements.PASSWORD_INPUT, password)
                 logging.info(f"已输入密码：{password}")
 
                 captcha_path = self.save_captcha_image()
@@ -152,7 +141,7 @@ class LoginPage(BasePage):
                 print(captcha_text)
 
                 if captcha_text:
-                    self.send_keys(*self.CAPTCHA_INPUT, captcha_text + Keys.RETURN)
+                    self.send_keys(*LoginElements.CAPTCHA_INPUT, captcha_text + Keys.RETURN)
                     logging.info(f"已输入验证码: {captcha_text}，第 {attempts + 1} 次尝试")
                     result = self.check_login_result(attempts)
                     if result:
@@ -169,7 +158,7 @@ class LoginPage(BasePage):
     def logout(self):
         try:
             # 加强通知框关闭逻辑
-            self.close_notification_box(self.NOTIFICATION_CLOSE_BUTTON)  # 明确传入定位器
+            self.close_notification_box(LoginElements.NOTIFICATION_CLOSE_BUTTON)  # 明确传入定位器
             
             # 使用显式等待确保元素可点击
             from selenium.webdriver.support.ui import WebDriverWait
@@ -177,22 +166,20 @@ class LoginPage(BasePage):
             
             # 等待退出按钮可点击
             logout_button = WebDriverWait(self.driver, 10).until(
-                EC.element_to_be_clickable(self.LOGOUT_BUTTON)
+                EC.element_to_be_clickable(LoginElements.LOGOUT_BUTTON)
             )
             logout_button.click()
             logging.info("已点击退出登录按钮")
         
             # 增加弹窗消失等待
             WebDriverWait(self.driver, 5).until(
-                EC.invisibility_of_element_located(self.NOTIFICATION_CLOSE_BUTTON)
+                EC.invisibility_of_element_located(LoginElements.NOTIFICATION_CLOSE_BUTTON)
             )
         
             # 优化确认按钮定位和等待策略
             try:
                 confirm_button = WebDriverWait(self.driver, 10).until(
-                    EC.element_to_be_clickable(
-                        (By.CSS_SELECTOR, "div.ant-modal-confirm-btns > button.ant-btn-primary")
-                    )
+                    EC.element_to_be_clickable(LoginElements.CONFIRM_LOGOUT_BUTTON)
                 )
                 confirm_button.click()
                 logging.info("已点击确定按钮，完成退出登录")

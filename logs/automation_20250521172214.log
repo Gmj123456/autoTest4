@@ -1,0 +1,44 @@
+2025-05-21 17:22:14,961 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-21 17:22:15,095 - root - INFO - Test case test_add_sales_plan started at 2025-05-21 17:22:15.095549
+2025-05-21 17:22:16,117 - root - INFO - 开始登录操作
+2025-05-21 17:22:24,821 - root - INFO - 已打开登录页面
+2025-05-21 17:22:24,934 - root - INFO - 已输入用户名：guomj
+2025-05-21 17:22:25,020 - root - INFO - 已输入密码：gmj123..
+2025-05-21 17:22:25,106 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-21 17:22:26,404 - root - INFO - 验证码识别结果: 99 3 U
+2025-05-21 17:22:26,486 - root - INFO - 已输入验证码: 99 3 U，第 1 次尝试
+2025-05-21 17:22:36,589 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-05-21 17:22:36,589 - root - INFO - 开始登录操作
+2025-05-21 17:22:37,220 - root - INFO - 已打开登录页面
+2025-05-21 17:22:37,333 - root - INFO - 已输入用户名：guomj
+2025-05-21 17:22:37,452 - root - INFO - 已输入密码：gmj123..
+2025-05-21 17:22:37,549 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-21 17:22:38,728 - root - INFO - 验证码识别结果: Vy4r
+2025-05-21 17:22:38,806 - root - INFO - 已输入验证码: Vy4r，第 2 次尝试
+2025-05-21 17:22:39,827 - root - INFO - 登录成功
+2025-05-21 17:22:57,797 - root - ERROR - 添加销售计划异常，已截图: ./screenshots\add_sales_plan_error_20250521172257.png, 错误信息: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF714A92775+28773]
+	(No symbol) [0x00007FF7149FAFB0]
+	(No symbol) [0x00007FF71489552A]
+	(No symbol) [0x00007FF7148E8EAE]
+	(No symbol) [0x00007FF7148E919C]
+	(No symbol) [0x00007FF7149323F7]
+	(No symbol) [0x00007FF71490EFDF]
+	(No symbol) [0x00007FF71492F1A4]
+	(No symbol) [0x00007FF71490ED43]
+	(No symbol) [0x00007FF7148DA548]
+	(No symbol) [0x00007FF7148DB6B1]
+	GetHandleVerifier [0x00007FF714DBF45D+3358029]
+	GetHandleVerifier [0x00007FF714DD430D+3443709]
+	GetHandleVerifier [0x00007FF714DC83FD+3394797]
+	GetHandleVerifier [0x00007FF714B5929B+842635]
+	(No symbol) [0x00007FF714A0654F]
+	(No symbol) [0x00007FF714A01FA4]
+	(No symbol) [0x00007FF714A0213D]
+	(No symbol) [0x00007FF7149F1629]
+	BaseThreadInitThunk [0x00007FF850F57614+20]
+	RtlUserThreadStart [0x00007FF8521826A1+33]
+
+2025-05-21 17:22:57,858 - root - INFO - 关闭浏览器
+2025-05-21 17:22:59,961 - root - INFO - Test case test_add_sales_plan ended at 2025-05-21 17:22:59.961824

@@ -6,30 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3827c2b0-9284-426f-aae7-fd9b84b52a68" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base/utils/captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/Base/utils/captcha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/element_locations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/element_locations_guijiliudong.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/file_size_shrinker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/guijiliudong_upload_files.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/kimi_upload_files.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/model_selection.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/raw_response.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/result/login_location.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/result/sales_plan_locations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/result/sales_plan_stroe_location.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/sales_plan_body2_cleaned.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/sales_plan_element_location.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/save_html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/shouye.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/shouye.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/shouye_cleaned.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/login_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PageObject/sales_plan_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/sales_plan_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250519173100.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/.coverage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/test_sales_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_sales_plan.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

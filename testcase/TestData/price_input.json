@@ -1,0 +1,21 @@
+{
+    "valid": [
+      {"input": "0.0001", "expected": {"success": true, "value": "0.0001"}},
+      {"input": "9999.9999", "expected": {"success": true, "value": "9999.9999"}},
+      {"input": "10.25", "expected": {"success": true, "value": "10.2500"}},
+      {"input": "10", "expected": {"success": true, "value": "10.0000"}},
+      {"input": "0.1234", "expected": {"success": true, "value": "0.1234"}},
+      {"input": " 0.50  ", "expected": {"success": true, "value": "0.5000"}}
+    ],
+    "invalid": [
+      {"input": "", "expected": {"success": false, "message": "单价不能为空"}},
+      {"input": "0", "expected": {"success": false, "message": "单价不能为0"}},
+      {"input": "-0.01", "expected": {"success": false, "message": "单价不能为负数"}},
+      {"input": "0.00001", "expected": {"success": false, "message": "最多保留4位小数"}},
+      {"input": "10.25678", "expected": {"success": false, "message": "最多保留4位小数"}},
+      {"input": "abc", "expected": {"success": false, "message": "请输入合法数字"}},
+      {"input": "1,000.50", "expected": {"success": false, "message": "请输入合法数字"}},
+      {"input": "10..5", "expected": {"success": false, "message": "请输入合法数字"}},
+      {"input": "  ", "expected": {"success": false, "message": "单价不能为空"}}
+    ]
+  }
