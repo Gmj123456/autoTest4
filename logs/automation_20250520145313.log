@@ -1,0 +1,55 @@
+2025-05-20 14:53:13,372 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-20 14:53:13,496 - root - INFO - Test case test_menu_navigation started at 2025-05-20 14:53:13.496763
+2025-05-20 14:53:14,520 - root - INFO - 开始登录操作
+2025-05-20 14:53:20,997 - root - INFO - 已打开登录页面
+2025-05-20 14:53:21,097 - root - INFO - 已输入用户名：guomj
+2025-05-20 14:53:21,181 - root - INFO - 已输入密码：gmj123..
+2025-05-20 14:53:21,259 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-20 14:53:22,058 - root - INFO - 验证码识别结果: Dd1t
+2025-05-20 14:53:22,138 - root - INFO - 已输入验证码: Dd1t，第 1 次尝试
+2025-05-20 14:53:25,184 - root - INFO - 登录成功
+2025-05-20 14:53:26,050 - root - INFO - 已导航到销售计划页面
+2025-05-20 14:53:26,053 - root - INFO - 实际页面URL: http://124.222.178.125:3006/amzShipment/salesPlan
+2025-05-20 14:53:26,053 - root - INFO - 目标URL: http://124.222.178.125:3006/amzShipment/salesPlan
+2025-05-20 14:53:26,055 - root - INFO - 关闭浏览器
+2025-05-20 14:53:28,146 - root - INFO - Test case test_menu_navigation ended at 2025-05-20 14:53:28.146300
+2025-05-20 14:53:28,150 - root - INFO - Test case test_add_sales_plan started at 2025-05-20 14:53:28.150053
+2025-05-20 14:53:29,167 - root - INFO - 开始登录操作
+2025-05-20 14:53:35,245 - root - INFO - 已打开登录页面
+2025-05-20 14:53:35,350 - root - INFO - 已输入用户名：guomj
+2025-05-20 14:53:35,431 - root - INFO - 已输入密码：gmj123..
+2025-05-20 14:53:35,523 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-20 14:53:36,232 - root - INFO - 验证码识别结果: 0Zqs
+2025-05-20 14:53:36,312 - root - INFO - 已输入验证码: 0Zqs，第 1 次尝试
+2025-05-20 14:53:39,398 - root - INFO - 登录成功
+2025-05-20 14:53:46,341 - root - ERROR - 添加销售计划异常，已截图: ./screenshots\add_sales_plan_error_20250520145346.png, 错误信息: Message: element click intercepted: Element <input readonly="true" placeholder="请选择月份" class="ant-calendar-picker-input ant-input"> is not clickable at point (402, 187). Other element would receive the click: <div tabindex="-1" role="dialog" aria-labelledby="rcDialogTitle0" class="ant-modal-wrap ">...</div>
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF717AC2775+28773]
+	(No symbol) [0x00007FF717A2AFB0]
+	(No symbol) [0x00007FF7178C552A]
+	(No symbol) [0x00007FF717920B5E]
+	(No symbol) [0x00007FF71791E5FC]
+	(No symbol) [0x00007FF71791B7E6]
+	(No symbol) [0x00007FF71791A741]
+	(No symbol) [0x00007FF71790C970]
+	(No symbol) [0x00007FF71793EF9A]
+	(No symbol) [0x00007FF71790C1C6]
+	(No symbol) [0x00007FF71793F1B0]
+	(No symbol) [0x00007FF71795F1A4]
+	(No symbol) [0x00007FF71793ED43]
+	(No symbol) [0x00007FF71790A548]
+	(No symbol) [0x00007FF71790B6B1]
+	GetHandleVerifier [0x00007FF717DEF45D+3358029]
+	GetHandleVerifier [0x00007FF717E0430D+3443709]
+	GetHandleVerifier [0x00007FF717DF83FD+3394797]
+	GetHandleVerifier [0x00007FF717B8929B+842635]
+	(No symbol) [0x00007FF717A3654F]
+	(No symbol) [0x00007FF717A31FA4]
+	(No symbol) [0x00007FF717A3213D]
+	(No symbol) [0x00007FF717A21629]
+	BaseThreadInitThunk [0x00007FFA56BA7614+20]
+	RtlUserThreadStart [0x00007FFA57B626A1+33]
+
+2025-05-20 14:53:46,466 - root - INFO - 关闭浏览器
+2025-05-20 14:53:48,543 - root - INFO - Test case test_add_sales_plan ended at 2025-05-20 14:53:48.543454

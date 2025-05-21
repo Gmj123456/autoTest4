@@ -1,0 +1,14 @@
+2025-05-20 17:53:36,219 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-20 17:53:36,709 - root - INFO - Test case test_add_sales_plan started at 2025-05-20 17:53:36.709538
+2025-05-20 17:53:37,754 - root - INFO - 开始登录操作
+2025-05-20 17:53:44,348 - root - INFO - 已打开登录页面
+2025-05-20 17:53:44,461 - root - INFO - 已输入用户名：guomj
+2025-05-20 17:53:44,571 - root - INFO - 已输入密码：gmj123..
+2025-05-20 17:53:44,667 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-20 17:53:52,995 - root - INFO - 验证码识别结果: Ukrl
+2025-05-20 17:53:53,100 - root - INFO - 已输入验证码: Ukrl，第 1 次尝试
+2025-05-20 17:54:00,713 - root - INFO - 登录成功
+2025-05-20 17:55:49,067 - root - INFO - 关闭浏览器
+2025-05-20 17:55:53,074 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002642EB2D7F0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/290a2c4a9aa4dbf3ea9816cd537071ac
+2025-05-20 17:55:57,089 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002642EB2F8C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/290a2c4a9aa4dbf3ea9816cd537071ac
+2025-05-20 17:56:01,095 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002642EF8A900>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/290a2c4a9aa4dbf3ea9816cd537071ac

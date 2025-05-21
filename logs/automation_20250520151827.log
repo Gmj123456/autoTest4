@@ -1,0 +1,36 @@
+2025-05-20 15:18:27,281 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-20 15:18:27,407 - root - INFO - Test case test_add_sales_plan started at 2025-05-20 15:18:27.406848
+2025-05-20 15:18:28,418 - root - INFO - 开始登录操作
+2025-05-20 15:18:34,986 - root - INFO - 已打开登录页面
+2025-05-20 15:18:35,089 - root - INFO - 已输入用户名：guomj
+2025-05-20 15:18:35,177 - root - INFO - 已输入密码：gmj123..
+2025-05-20 15:18:35,261 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-20 15:18:36,161 - root - INFO - 验证码识别结果: SJXP
+2025-05-20 15:18:36,240 - root - INFO - 已输入验证码: SJXP，第 1 次尝试
+2025-05-20 15:18:40,018 - root - INFO - 登录成功
+2025-05-20 15:18:57,798 - root - ERROR - 添加销售计划异常，已截图: ./screenshots\add_sales_plan_error_20250520151857.png, 错误信息: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF717AC2775+28773]
+	(No symbol) [0x00007FF717A2AFB0]
+	(No symbol) [0x00007FF7178C552A]
+	(No symbol) [0x00007FF717918EAE]
+	(No symbol) [0x00007FF71791919C]
+	(No symbol) [0x00007FF7179623F7]
+	(No symbol) [0x00007FF71793EFDF]
+	(No symbol) [0x00007FF71795F1A4]
+	(No symbol) [0x00007FF71793ED43]
+	(No symbol) [0x00007FF71790A548]
+	(No symbol) [0x00007FF71790B6B1]
+	GetHandleVerifier [0x00007FF717DEF45D+3358029]
+	GetHandleVerifier [0x00007FF717E0430D+3443709]
+	GetHandleVerifier [0x00007FF717DF83FD+3394797]
+	GetHandleVerifier [0x00007FF717B8929B+842635]
+	(No symbol) [0x00007FF717A3654F]
+	(No symbol) [0x00007FF717A31FA4]
+	(No symbol) [0x00007FF717A3213D]
+	(No symbol) [0x00007FF717A21629]
+	BaseThreadInitThunk [0x00007FFA56BA7614+20]
+	RtlUserThreadStart [0x00007FFA57B626A1+33]
+
+2025-05-20 15:18:57,856 - root - INFO - 关闭浏览器
+2025-05-20 15:18:59,953 - root - INFO - Test case test_add_sales_plan ended at 2025-05-20 15:18:59.953901

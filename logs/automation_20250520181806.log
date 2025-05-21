@@ -1,0 +1,41 @@
+2025-05-20 18:18:06,397 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-20 18:18:06,526 - root - INFO - Test case test_add_sales_plan started at 2025-05-20 18:18:06.526653
+2025-05-20 18:18:07,505 - root - INFO - 开始登录操作
+2025-05-20 18:18:16,101 - root - INFO - 已打开登录页面
+2025-05-20 18:18:16,202 - root - INFO - 已输入用户名：guomj
+2025-05-20 18:18:16,286 - root - INFO - 已输入密码：gmj123..
+2025-05-20 18:18:16,375 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-20 18:18:17,439 - root - INFO - 验证码识别结果: EKF9
+2025-05-20 18:18:17,514 - root - INFO - 已输入验证码: EKF9，第 1 次尝试
+2025-05-20 18:18:22,191 - root - INFO - 登录成功
+2025-05-20 18:18:29,623 - root - ERROR - 添加销售计划异常，已截图: ./screenshots\add_sales_plan_error_20250520181829.png, 错误信息: Message: invalid selector
+from javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //a[@class='ant-calendar-month-panel-month' and text() = ’五月‘] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//a[@class='ant-calendar-month-panel-month' and text() = ’五月‘]' is not a valid XPath expression."}
+  (Session info: chrome=131.0.6778.70); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF717AC2775+28773]
+	(No symbol) [0x00007FF717A2AFB0]
+	(No symbol) [0x00007FF7178C552A]
+	(No symbol) [0x00007FF7178CC09F]
+	(No symbol) [0x00007FF7178CED4C]
+	(No symbol) [0x00007FF7178CEE1F]
+	(No symbol) [0x00007FF71791895A]
+	(No symbol) [0x00007FF71791919C]
+	(No symbol) [0x00007FF7179623F7]
+	(No symbol) [0x00007FF71793EFDF]
+	(No symbol) [0x00007FF71795F1A4]
+	(No symbol) [0x00007FF71793ED43]
+	(No symbol) [0x00007FF71790A548]
+	(No symbol) [0x00007FF71790B6B1]
+	GetHandleVerifier [0x00007FF717DEF45D+3358029]
+	GetHandleVerifier [0x00007FF717E0430D+3443709]
+	GetHandleVerifier [0x00007FF717DF83FD+3394797]
+	GetHandleVerifier [0x00007FF717B8929B+842635]
+	(No symbol) [0x00007FF717A3654F]
+	(No symbol) [0x00007FF717A31FA4]
+	(No symbol) [0x00007FF717A3213D]
+	(No symbol) [0x00007FF717A21629]
+	BaseThreadInitThunk [0x00007FFA56BA7614+20]
+	RtlUserThreadStart [0x00007FFA57B626A1+33]
+
+2025-05-20 18:18:29,751 - root - INFO - 关闭浏览器
+2025-05-20 18:18:31,877 - root - INFO - Test case test_add_sales_plan ended at 2025-05-20 18:18:31.877477

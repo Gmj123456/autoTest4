@@ -5,31 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3827c2b0-9284-426f-aae7-fd9b84b52a68" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base/utils/captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/Base/utils/captcha.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/element_locations.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/element_locations_guijiliudong.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/file_size_shrinker.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/guijiliudong_upload_files.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/kimi_upload_files.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/model_selection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/raw_response.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/result/login_location.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/result/sales_plan_locations.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/result/sales_plan_stroe_location.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/sales_plan_body2_cleaned.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/sales_plan_element_location.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/save_html.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/shouye.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/shouye.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/bak_element/element_location/shouye_cleaned.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PageObject/sales_plan_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/sales_plan_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250515164400.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250515165116.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250515170138.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250515170842.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250515170850.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250515171432.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250515173254.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250515173422.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250515180011.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250515180105.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250516150630.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250516151228.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250516151520.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250516152312.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250516152637.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250516154058.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250516155625.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250516174842.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250516175314.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250516175521.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250516175542.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250519173100.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/.coverage" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/test_sales_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_sales_plan.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +57,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python tests.pytest for test_sales_plan.TestSalesPlan.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation.executor&quot;: &quot;Debug&quot;,
     &quot;Python.conftest.executor&quot;: &quot;Debug&quot;,
@@ -96,6 +97,23 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_sales_plan.TestSalesPlan" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="autoTest4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestCase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_sales_plan.TestSalesPlan&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="autoTest4" />
       <option name="ENV_FILES" value="" />
@@ -133,6 +151,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan" />
+        <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan" />
         <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation" />
         <item itemvalue="Python.conftest" />
       </list>

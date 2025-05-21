@@ -15,9 +15,20 @@ class BasePage:
             EC.element_to_be_clickable((by, value))  # 改为等待元素可点击
         )
 
-    def click_element(self, by, value, timeout=10):
-        element = self.find_element(by, value, timeout)
-        element.click()
+    # def click_element(self, by, value, timeout=10):
+    #     element = self.find_element(by, value, timeout)
+    #     element.click()
+
+    def click_element(self, by, value):
+        try:
+            element = WebDriverWait(self.driver, 10).until(
+                EC.element_to_be_clickable((by, value))
+            )
+            element.click()
+        except Exception as e:
+            #  fallback: 使用 JS 点击
+            self.driver.execute_script("arguments[0].click();", element)
+            print(f"通过 JS 点击元素：{value}，原异常：{e}")
 
     def send_keys(self, by, value, text, timeout=10):
         element = self.find_element(by, value, timeout)
@@ -59,3 +70,4 @@ class BasePage:
             self.take_screenshot(f"load_data_error_{datetime.now().strftime('%Y%m%d%H%M%S')}")
             logging.error(f"加载测试数据失败: {str(e)}")
             raise
+

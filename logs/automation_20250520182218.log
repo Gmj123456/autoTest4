@@ -1,0 +1,29 @@
+2025-05-20 18:22:18,985 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-20 18:22:19,106 - root - INFO - Test case test_add_sales_plan started at 2025-05-20 18:22:19.106610
+2025-05-20 18:22:20,137 - root - INFO - 开始登录操作
+2025-05-20 18:22:30,936 - root - INFO - 已打开登录页面
+2025-05-20 18:22:31,036 - root - INFO - 已输入用户名：guomj
+2025-05-20 18:22:31,119 - root - INFO - 已输入密码：gmj123..
+2025-05-20 18:22:31,242 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-20 18:22:32,228 - root - INFO - 验证码识别结果: 8S q U
+2025-05-20 18:22:32,314 - root - INFO - 已输入验证码: 8S q U，第 1 次尝试
+2025-05-20 18:22:42,408 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-05-20 18:22:42,408 - root - INFO - 开始登录操作
+2025-05-20 18:22:42,962 - root - INFO - 已打开登录页面
+2025-05-20 18:22:43,055 - root - INFO - 已输入用户名：guomj
+2025-05-20 18:22:43,133 - root - INFO - 已输入密码：gmj123..
+2025-05-20 18:22:43,237 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-20 18:22:44,037 - root - INFO - 验证码识别结果: 404
+2025-05-20 18:22:44,107 - root - INFO - 已输入验证码: 404，第 2 次尝试
+2025-05-20 18:22:54,205 - root - WARNING - 第 2 次登录失败，重新尝试
+2025-05-20 18:22:54,205 - root - INFO - 开始登录操作
+2025-05-20 18:22:54,520 - root - INFO - 已打开登录页面
+2025-05-20 18:22:54,594 - root - INFO - 已输入用户名：guomj
+2025-05-20 18:22:54,682 - root - INFO - 已输入密码：gmj123..
+2025-05-20 18:22:54,783 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-20 18:22:55,631 - root - INFO - 验证码识别结果: hCLN
+2025-05-20 18:22:55,704 - root - INFO - 已输入验证码: hCLN，第 3 次尝试
+2025-05-20 18:22:56,764 - root - INFO - 登录成功
+2025-05-20 18:23:03,458 - root - ERROR - 添加销售计划异常，已截图: ./screenshots\add_sales_plan_error_20250520182303.png, 错误信息: element_to_be_clickable() takes 1 positional argument but 2 were given
+2025-05-20 18:23:03,509 - root - INFO - 关闭浏览器
+2025-05-20 18:23:05,616 - root - INFO - Test case test_add_sales_plan ended at 2025-05-20 18:23:05.616723
