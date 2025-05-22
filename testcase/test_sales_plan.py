@@ -2,6 +2,7 @@
 import pytest
 from Base.base_page import BasePage
 from Base.config import ERP_URL
+from Base.base_element import BaseElement
 from PageObject.sales_plan_page import SalesPlanPage
 import logging
 import os
@@ -67,7 +68,7 @@ class TestSalesPlan:
         
         try:
             assert sales_plan_page.is_success_message_displayed(), "应显示成功提示"
-            success_message = sales_plan_page.find_element(*sales_plan_page.SUCCESS_MESSAGE).text
+            success_message = sales_plan_page.find_element(*BaseElement.SUCCESS_MESSAGE).text
             logging.info(f"实际成功提示内容: {success_message}")
             assert "成功" in success_message, "提示消息应包含成功标识"
         except AssertionError as e:

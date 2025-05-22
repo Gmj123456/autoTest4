@@ -1,0 +1,22 @@
+2025-05-22 18:36:21,937 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-22 18:36:22,074 - root - INFO - Test case test_add_sales_plan started at 2025-05-22 18:36:22.074016
+2025-05-22 18:36:23,089 - root - INFO - 开始登录操作
+2025-05-22 18:36:30,447 - root - INFO - 已打开登录页面
+2025-05-22 18:36:30,548 - root - INFO - 已输入用户名：guomj
+2025-05-22 18:36:30,633 - root - INFO - 已输入密码：gmj123..
+2025-05-22 18:36:30,727 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-22 18:36:31,599 - root - INFO - 验证码识别结果: Us
+2025-05-22 18:36:31,669 - root - INFO - 已输入验证码: Us，第 1 次尝试
+2025-05-22 18:36:41,777 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-05-22 18:36:41,778 - root - INFO - 开始登录操作
+2025-05-22 18:36:42,355 - root - INFO - 已打开登录页面
+2025-05-22 18:36:42,464 - root - INFO - 已输入用户名：guomj
+2025-05-22 18:36:42,548 - root - INFO - 已输入密码：gmj123..
+2025-05-22 18:36:42,636 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-22 18:36:43,773 - root - INFO - 验证码识别结果: iPAl
+2025-05-22 18:36:43,843 - root - INFO - 已输入验证码: iPAl，第 2 次尝试
+2025-05-22 18:36:45,866 - root - INFO - 登录成功
+2025-05-22 18:36:55,627 - root - INFO - 关闭浏览器
+2025-05-22 18:36:59,661 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027031C843E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/0565cd7e13f9c8636d3809a43e788845
+2025-05-22 18:37:03,688 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027032106570>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/0565cd7e13f9c8636d3809a43e788845
+2025-05-22 18:37:07,725 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027032106990>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/0565cd7e13f9c8636d3809a43e788845

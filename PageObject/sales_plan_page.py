@@ -1,5 +1,6 @@
 # pages/sales_plan_page.py
 from Base.base_page import BasePage
+from Base.base_element import BaseElement
 from TestCase.element_locator.sales_plan_elements import SalesPlanElements
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -15,7 +16,7 @@ class SalesPlanPage(BasePage):
     def is_success_message_displayed(self):
         """验证成功提示是否显示"""
         try:
-            return self.wait_for_element_visibility(*SalesPlanElements.SUCCESS_MESSAGE).is_displayed()
+            return self.wait_for_element_visibility(*BaseElement.SUCCESS_MESSAGE).is_displayed()
         except TimeoutException:
             return False
 
@@ -24,7 +25,7 @@ class SalesPlanPage(BasePage):
         try:
             # 确保元素可交互
             WebDriverWait(self.driver, 15).until(
-                EC.element_to_be_clickable(SalesPlanElements.AMAZON_MENU)
+                EC.element_to_be_clickable(SalesPlanElements.MENU_AMAZON)
             ).click()
             
             # 等待菜单项可见
@@ -50,12 +51,12 @@ class SalesPlanPage(BasePage):
     def add_sales_plan(self, asin):
         """添加销售计划"""
         try:
-            self.click_element(*SalesPlanElements.STORE_LOCATOR)  # 选择店铺
-            self.click_element(*SalesPlanElements.MARKET_LOCATOR)  # 选择市场
+            self.click_element(*BaseElement.STORE_LOCATOR)  # 选择店铺
+            self.click_element(*BaseElement.MARKET_LOCATOR)  # 选择市场
             self.click_element(*SalesPlanElements.SALES_PLAN_MENU)
-            self.send_keys(*SalesPlanElements.ASIN_INPUT, asin)  # 使用入参ASIN值
+            self.send_keys(*BaseElement.ASIN_INPUT, asin)  # 使用入参ASIN值
             # 点击搜索按钮
-            self.click_element(*SalesPlanElements.SEARCH_BUTTON)
+            self.click_element(*BaseElement.SEARCH_BUTTON)
         
             # 点击创建需求按钮
             self.click_element(*SalesPlanElements.ADD_SALES_PLAN_BUTTON)
