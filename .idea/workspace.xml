@@ -7,47 +7,19 @@
     <list default="true" id="3827c2b0-9284-426f-aae7-fd9b84b52a68" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base/utils/captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/Base/utils/captcha.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PageObject/sales_plan_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/sales_plan_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520144224.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520144727.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520145313.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520151827.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520152045.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520152719.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520153304.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520153813.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520173825.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520175336.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520175606.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520181806.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520182010.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520182218.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520182453.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520183245.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250520183333.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250521171604.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250521172214.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250522183502.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250522183621.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250522184407.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250522185126.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/automation_20250522185934.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/.coverage" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/element_locator/sales_plan_elements.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/element_locator/sales_plan_elements.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520144758.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520145346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520151857.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520152120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520152757.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520153339.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520153846.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520173859.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520181829.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520182034.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520182303.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520182532.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520183316.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250520183404.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250521171638.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/screenshots/add_sales_plan_error_20250521172257.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/html_output/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/test_sales_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_sales_plan.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

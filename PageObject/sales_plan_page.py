@@ -73,11 +73,18 @@ class SalesPlanPage(BasePage):
 
             self.send_keys(*SalesPlanElements.PLAN_QUANTITY_INPUT, 1000)
             self.click_element(*SalesPlanElements.SAVE_AND_CONTINUE_BUTTON)
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(SalesPlanElements.SUCCESS_MESSAGE))
-            success_message = self.find_element(*SalesPlanElements.SUCCESS_MESSAGE).text
-            logging.info(f"保存成功提示: {success_message}")
-            self.click_element(*SalesPlanElements.CONFIRM_BUTTON)
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(SalesPlanElements.SUCCESS_MESSAGE))
+
+            try:
+                WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(BaseElement.SUCCESS_MESSAGE))
+                success_message = self.find_element(*BaseElement.SUCCESS_MESSAGE).text
+                logging.info(f"保存成功提示: {success_message}")
+                return success_message
+            except Exception as e:
+                logging.error(f"获取成功提示信息失败: {str(e)}")
+                return ""
+                
+            # self.click_element(*SalesPlanElements.CONFIRM_BUTTON)
+            # WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(SalesPlanElements.SUCCESS_MESSAGE))
         except Exception as e:
             timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
             screenshot_dir = './screenshots'
@@ -87,5 +94,7 @@ class SalesPlanPage(BasePage):
             self.driver.save_screenshot(screenshot_path)
             logging.error(f"添加销售计划异常，已截图: {screenshot_path}, 错误信息: {str(e)}")
             raise
+
+    
     
 

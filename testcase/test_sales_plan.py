@@ -64,35 +64,13 @@ class TestSalesPlan:
         plan_data_item = plan_data[0]
         asin = plan_data_item['asin']
         
-        sales_plan_page.add_sales_plan(asin=asin)
-        
+        success_message = sales_plan_page.add_sales_plan(asin=asin)
+        logging.info(f"实际成功提示内容: {success_message}")
         try:
-            assert sales_plan_page.is_success_message_displayed(), "应显示成功提示"
-            success_message = sales_plan_page.find_element(*BaseElement.SUCCESS_MESSAGE).text
-            logging.info(f"实际成功提示内容: {success_message}")
+            # 验证成功消息
             assert "成功" in success_message, "提示消息应包含成功标识"
         except AssertionError as e:
-            sales_plan_page.take_screenshot('assert_failure')
-            timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
-            screenshot_dir = os.path.join(os.path.dirname(__file__), '../screenshots')
-            os.makedirs(screenshot_dir, exist_ok=True)
-            source_path = os.path.join(screenshot_dir, f'assert_failure_{timestamp}.html')
-            with open(source_path, 'w', encoding='utf-8') as f:
-                f.write(logged_in.page_source)
-            logging.error(f"断言失败，页面源码已保存至：{source_path}")
+            # 断言失败时记录日志并截图
+            logging.error(f"断言失败: {str(e)}")
+            sales_plan_page.take_screenshot('success_message_assertion_failed')
             raise
-        #     assert logged_in.current_url == sales_plan_page.SALES_PLAN_URL, "应在销售计划页面"
-        # except AssertionError as e:
-        #     # 调用截图方法
-        #     sales_plan_page.take_screenshot('assert_failure')
-        #     # 保存页面源码到文件
-        #     timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
-        #     screenshot_dir = os.path.join(os.path.dirname(__file__), '../screenshots')
-        #     os.makedirs(screenshot_dir, exist_ok=True)
-        #     source_path = os.path.join(screenshot_dir, f'assert_failure_{timestamp}.html')
-        #     with open(source_path, 'w', encoding='utf-8') as f:
-        #         f.write(logged_in.page_source)
-        #     logging.error(f"断言失败，页面源码已保存至：{source_path}")
-        #     raise
-        # # 新增：验证搜索结果区域存在（补充检查）
-        # assert len(logged_in.find_elements(*SalesPlanPage.SEARCH_RESULT)) > 0, "搜索结果区域未加载"

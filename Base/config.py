@@ -7,7 +7,7 @@ CHROME_DRIVER_PATH = project_root / 'Base' / 'utils' / 'chromedriver.exe'
 # ERP_URL = "http://192.168.150.222:3066"  # 本地环境
 # LOGIN_SUCCESS_URL = "http://192.168.150.222:3066/dashboard/analysis"
 
-ERP_URL = "http://124.222.178.125:3006" # 测试环境（修正末尾斜杠）
+ERP_URL = "http://124.222.178.125:3006" # 测试环境
 LOGIN_SUCCESS_URL = "http://124.222.178.125:3006/dashboard/analysis"
 
 USERNAME = "guomj"  # 主测试账号
