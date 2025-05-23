@@ -10,11 +10,10 @@ from datetime import datetime
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from TestCase.conftest import logged_in
+import json
+from TestCase.element_locator.sales_plan_elements import SalesPlanElements
 
-"""
-1. 销售计划
-2. 
-"""
+
 class TestSalesPlan:
     def test_menu_navigation(self, logged_in, menu_urls):
         """验证销售计划菜单跳转"""
@@ -56,8 +55,7 @@ class TestSalesPlan:
 
 
     def test_add_sales_plan(self, logged_in, plan_data):
-        """有效等价类：添加销售计划"""
-
+        """有效等价类：添加五月销售计划1000"""
         sales_plan_page = SalesPlanPage(logged_in)
         sales_plan_page.navigate_to_sales_plan()
 
@@ -74,3 +72,21 @@ class TestSalesPlan:
             logging.error(f"断言失败: {str(e)}")
             sales_plan_page.take_screenshot('success_message_assertion_failed')
             raise
+
+    def test_add_sales_plan_quantity(self, logged_in, plan_data):
+        """测试计划数量"""
+        
+        sales_plan_page = SalesPlanPage(logged_in)
+        sales_plan_page.navigate_to_sales_plan()
+        # 读取测试数据
+        with open('d:/gmj/workSpaces/workSpaces_pycharm/autoTest4/TestCase/TestData/quantity_input.json', encoding='utf-8') as f:
+            quantity_data = json.load(f)
+        valid_cases = quantity_data.get('valid', [])
+        invalid_cases = quantity_data.get('invalid', [])
+        # 以“五月”为例，实际可参数化
+        month_locator = SalesPlanElements.get_month_option("五月")
+        all_cases = valid_cases + invalid_cases
+        results = sales_plan_page.add_sales_plan_with_quantity_cases(month_locator, all_cases)
+        for r in results:
+            print(f"输入: {r['input']}，期望: {r['expected']}，实际: {r['actual']}，结果: {r['result']}")
+            # 可根据需要添加断言

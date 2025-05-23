@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3827c2b0-9284-426f-aae7-fd9b84b52a68" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/components/input_box_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/components/input_box_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base/utils/captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/Base/utils/captcha.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PageObject/sales_plan_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/sales_plan_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250522183502.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250522183621.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250522184407.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250522185126.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250522185934.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/.coverage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/element_locator/sales_plan_elements.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/element_locator/sales_plan_elements.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/html_output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/html_output/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/test_sales_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_sales_plan.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +38,7 @@
   "keyToString": {
     "Python tests.pytest for test_sales_plan.TestSalesPlan.executor": "Run",
     "Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan.executor": "Run",
+    "Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity.executor": "Run",
     "Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation.executor": "Run",
     "Python.conftest.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -64,7 +54,7 @@
       <recent name="D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan">
+  <component name="RunManager" selected="Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity">
     <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="autoTest4" />
       <option name="ENV_FILES" value="" />
@@ -121,6 +111,23 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="autoTest4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestCase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest for test_sales_plan.TestSalesPlan.test_menu_navigation" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="autoTest4" />
       <option name="ENV_FILES" value="" />
@@ -140,6 +147,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity" />
         <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan" />
         <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation" />
         <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan" />

@@ -57,7 +57,6 @@ class InputBoxTester:
                 results.append({"input": case["input"], "result": "失败", "error": str(e)})
         return results
 
-# 工厂方法，便于业务用例直接调用
 
 def test_price_input(driver, input_locator, message_locator=None):
     """

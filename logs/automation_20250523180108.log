@@ -1,0 +1,12 @@
+2025-05-23 18:01:08,407 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-23 18:01:08,551 - root - INFO - Test case test_add_sales_plan_quantity started at 2025-05-23 18:01:08.551157
+2025-05-23 18:01:09,573 - root - INFO - 开始登录操作
+2025-05-23 18:01:19,025 - root - INFO - 已打开登录页面
+2025-05-23 18:01:19,124 - root - INFO - 已输入用户名：guomj
+2025-05-23 18:01:19,210 - root - INFO - 已输入密码：gmj123..
+2025-05-23 18:01:19,296 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-23 18:01:20,138 - root - INFO - 验证码识别结果: U2ly
+2025-05-23 18:01:20,214 - root - INFO - 已输入验证码: U2ly，第 1 次尝试
+2025-05-23 18:01:24,520 - root - INFO - 登录成功
+2025-05-23 18:01:25,639 - root - INFO - 关闭浏览器
+2025-05-23 18:01:27,723 - root - INFO - Test case test_add_sales_plan_quantity ended at 2025-05-23 18:01:27.723272
