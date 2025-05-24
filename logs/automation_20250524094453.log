@@ -1,0 +1,20 @@
+2025-05-24 09:44:53,411 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-24 09:44:53,554 - root - INFO - Test case test_add_sales_plan_quantity started at 2025-05-24 09:44:53.554754
+2025-05-24 09:44:54,567 - root - INFO - 开始登录操作
+2025-05-24 09:45:01,216 - root - INFO - 已打开登录页面
+2025-05-24 09:45:01,319 - root - INFO - 已输入用户名：guomj
+2025-05-24 09:45:01,401 - root - INFO - 已输入密码：gmj123..
+2025-05-24 09:45:01,497 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-24 09:45:02,521 - root - INFO - 验证码识别结果: gh v a
+2025-05-24 09:45:02,602 - root - INFO - 已输入验证码: gh v a，第 1 次尝试
+2025-05-24 09:45:12,699 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-05-24 09:45:12,700 - root - INFO - 开始登录操作
+2025-05-24 09:45:13,285 - root - INFO - 已打开登录页面
+2025-05-24 09:45:13,394 - root - INFO - 已输入用户名：guomj
+2025-05-24 09:45:13,479 - root - INFO - 已输入密码：gmj123..
+2025-05-24 09:45:13,575 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-24 09:45:14,350 - root - INFO - 验证码识别结果: p3h2
+2025-05-24 09:45:14,490 - root - INFO - 已输入验证码: p3h2，第 2 次尝试
+2025-05-24 09:45:17,159 - root - INFO - 登录成功
+2025-05-24 09:45:18,127 - root - INFO - 关闭浏览器
+2025-05-24 09:45:20,222 - root - INFO - Test case test_add_sales_plan_quantity ended at 2025-05-24 09:45:20.222695

@@ -3,332 +3,11 @@
   <head>
     <meta charset="utf-8"/>
     <title id="head-title">report.html</title>
-      <style type="text/css">body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  /* do not increase min-width as some may use split screens */
-  min-width: 800px;
-  color: #999;
-}
-
-h1 {
-  font-size: 24px;
-  color: black;
-}
-
-h2 {
-  font-size: 16px;
-  color: black;
-}
-
-p {
-  color: black;
-}
-
-a {
-  color: #999;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-/******************************
- * SUMMARY INFORMATION
- ******************************/
-#environment td {
-  padding: 5px;
-  border: 1px solid #e6e6e6;
-  vertical-align: top;
-}
-#environment tr:nth-child(odd) {
-  background-color: #f6f6f6;
-}
-#environment ul {
-  margin: 0;
-  padding: 0 20px;
-}
-
-/******************************
- * TEST RESULT COLORS
- ******************************/
-span.passed,
-.passed .col-result {
-  color: green;
-}
-
-span.skipped,
-span.xfailed,
-span.rerun,
-.skipped .col-result,
-.xfailed .col-result,
-.rerun .col-result {
-  color: orange;
-}
-
-span.error,
-span.failed,
-span.xpassed,
-.error .col-result,
-.failed .col-result,
-.xpassed .col-result {
-  color: red;
-}
-
-.col-links__extra {
-  margin-right: 3px;
-}
-
-/******************************
- * RESULTS TABLE
- *
- * 1. Table Layout
- * 2. Extra
- * 3. Sorting items
- *
- ******************************/
-/*------------------
- * 1. Table Layout
- *------------------*/
-#results-table {
-  border: 1px solid #e6e6e6;
-  color: #999;
-  font-size: 12px;
-  width: 100%;
-}
-#results-table th,
-#results-table td {
-  padding: 5px;
-  border: 1px solid #e6e6e6;
-  text-align: left;
-}
-#results-table th {
-  font-weight: bold;
-}
-
-/*------------------
- * 2. Extra
- *------------------*/
-.logwrapper {
-  max-height: 230px;
-  overflow-y: scroll;
-  background-color: #e6e6e6;
-}
-.logwrapper.expanded {
-  max-height: none;
-}
-.logwrapper.expanded .logexpander:after {
-  content: "collapse [-]";
-}
-.logwrapper .logexpander {
-  z-index: 1;
-  position: sticky;
-  top: 10px;
-  width: max-content;
-  border: 1px solid;
-  border-radius: 3px;
-  padding: 5px 7px;
-  margin: 10px 0 10px calc(100% - 80px);
-  cursor: pointer;
-  background-color: #e6e6e6;
-}
-.logwrapper .logexpander:after {
-  content: "expand [+]";
-}
-.logwrapper .logexpander:hover {
-  color: #000;
-  border-color: #000;
-}
-.logwrapper .log {
-  min-height: 40px;
-  position: relative;
-  top: -50px;
-  height: calc(100% + 50px);
-  border: 1px solid #e6e6e6;
-  color: black;
-  display: block;
-  font-family: "Courier New", Courier, monospace;
-  padding: 5px;
-  padding-right: 80px;
-  white-space: pre-wrap;
-}
-
-div.media {
-  border: 1px solid #e6e6e6;
-  float: right;
-  height: 240px;
-  margin: 0 5px;
-  overflow: hidden;
-  width: 320px;
-}
-
-.media-container {
-  display: grid;
-  grid-template-columns: 25px auto 25px;
-  align-items: center;
-  flex: 1 1;
-  overflow: hidden;
-  height: 200px;
-}
-
-.media-container--fullscreen {
-  grid-template-columns: 0px auto 0px;
-}
-
-.media-container__nav--right,
-.media-container__nav--left {
-  text-align: center;
-  cursor: pointer;
-}
-
-.media-container__viewport {
-  cursor: pointer;
-  text-align: center;
-  height: inherit;
-}
-.media-container__viewport img,
-.media-container__viewport video {
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-}
-
-.media__name,
-.media__counter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex: 0 0 25px;
-  align-items: center;
-}
-
-.collapsible td:not(.col-links) {
-  cursor: pointer;
-}
-.collapsible td:not(.col-links):hover::after {
-  color: #bbb;
-  font-style: italic;
-  cursor: pointer;
-}
-
-.col-result {
-  width: 130px;
-}
-.col-result:hover::after {
-  content: " (hide details)";
-}
-
-.col-result.collapsed:hover::after {
-  content: " (show details)";
-}
-
-#environment-header h2:hover::after {
-  content: " (hide details)";
-  color: #bbb;
-  font-style: italic;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-#environment-header.collapsed h2:hover::after {
-  content: " (show details)";
-  color: #bbb;
-  font-style: italic;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-/*------------------
- * 3. Sorting items
- *------------------*/
-.sortable {
-  cursor: pointer;
-}
-.sortable.desc:after {
-  content: " ";
-  position: relative;
-  left: 5px;
-  bottom: -12.5px;
-  border: 10px solid #4caf50;
-  border-bottom: 0;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-.sortable.asc:after {
-  content: " ";
-  position: relative;
-  left: 5px;
-  bottom: 12.5px;
-  border: 10px solid #4caf50;
-  border-top: 0;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-
-.hidden, .summary__reload__button.hidden {
-  display: none;
-}
-
-.summary__data {
-  flex: 0 0 550px;
-}
-.summary__reload {
-  flex: 1 1;
-  display: flex;
-  justify-content: center;
-}
-.summary__reload__button {
-  flex: 0 0 300px;
-  display: flex;
-  color: white;
-  font-weight: bold;
-  background-color: #4caf50;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
-  cursor: pointer;
-}
-.summary__reload__button:hover {
-  background-color: #46a049;
-}
-.summary__spacer {
-  flex: 0 0 550px;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-between;
-}
-
-.filters,
-.collapse {
-  display: flex;
-  align-items: center;
-}
-.filters button,
-.collapse button {
-  color: #999;
-  border: none;
-  background: none;
-  cursor: pointer;
-  text-decoration: underline;
-}
-.filters button:hover,
-.collapse button:hover {
-  color: #ccc;
-}
-
-.filter__label {
-  margin-right: 10px;
-}
-
-      </style>
-    
+      <link href="assets\style.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
     <h1 id="title">report.html</h1>
-    <p>Report generated on 22-May-2025 at 18:52:03 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+    <p>Report generated on 24-May-2025 at 09:45:20 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
         v4.1.1</p>
     <div id="environment-header">
       <h2>Environment</h2>
@@ -382,7 +61,7 @@ div.media {
         <h2>Summary</h2>
         <div class="additional-summary prefix">
         </div>
-        <p class="run-count">1 test took 00:00:37.</p>
+        <p class="run-count">1 test took 00:00:27.</p>
         <p class="filter">(Un)check the boxes to filter the results.</p>
         <div class="summary__reload">
           <div class="summary__reload__button hidden" onclick="location.reload()">
@@ -392,10 +71,10 @@ div.media {
         <div class="summary__spacer"></div>
         <div class="controls">
           <div class="filters">
-            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" />
-            <span class="failed">1 Failed,</span>
-            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" disabled/>
-            <span class="passed">0 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" disabled/>
+            <span class="failed">0 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" />
+            <span class="passed">1 Passed,</span>
             <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled/>
             <span class="skipped">0 Skipped,</span>
             <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled/>
@@ -429,7 +108,7 @@ div.media {
     </table>
   </body>
   <footer>
-    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.12.3&#34;, &#34;Platform&#34;: &#34;Windows-10-10.0.19045-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;8.3.5&#34;, &#34;pluggy&#34;: &#34;1.5.0&#34;}, &#34;Plugins&#34;: {&#34;cov&#34;: &#34;6.1.1&#34;, &#34;html&#34;: &#34;4.1.1&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;}, &#34;JAVA_HOME&#34;: &#34;D:\\software\\java\\jdk1.8.0_441\\&#34;}, &#34;tests&#34;: {&#34;TestCase/test_sales_plan.py::TestSalesPlan::test_add_sales_plan&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;TestCase/test_sales_plan.py::TestSalesPlan::test_add_sales_plan&#34;, &#34;duration&#34;: &#34;00:00:37&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;TestCase/test_sales_plan.py::TestSalesPlan::test_add_sales_plan&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:37&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;TestCase\\test_sales_plan.py:67: in test_add_sales_plan\n    sales_plan_page.add_sales_plan(asin=asin)\nPageObject\\sales_plan_page.py:76: in add_sales_plan\n    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(SalesPlanElements.SUCCESS_MESSAGE))\n.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\wait.py:146: in until\n    raise TimeoutException(message, screen, stacktrace)\nE   selenium.common.exceptions.TimeoutException: Message: \nE   Stacktrace:\nE   \tGetHandleVerifier [0x00007FF6F6DF2775+28773]\nE   \t(No symbol) [0x00007FF6F6D5AFB0]\nE   \t(No symbol) [0x00007FF6F6BF552A]\nE   \t(No symbol) [0x00007FF6F6C48EAE]\nE   \t(No symbol) [0x00007FF6F6C4919C]\nE   \t(No symbol) [0x00007FF6F6C923F7]\nE   \t(No symbol) [0x00007FF6F6C6EFDF]\nE   \t(No symbol) [0x00007FF6F6C8F1A4]\nE   \t(No symbol) [0x00007FF6F6C6ED43]\nE   \t(No symbol) [0x00007FF6F6C3A548]\nE   \t(No symbol) [0x00007FF6F6C3B6B1]\nE   \tGetHandleVerifier [0x00007FF6F711F45D+3358029]\nE   \tGetHandleVerifier [0x00007FF6F713430D+3443709]\nE   \tGetHandleVerifier [0x00007FF6F71283FD+3394797]\nE   \tGetHandleVerifier [0x00007FF6F6EB929B+842635]\nE   \t(No symbol) [0x00007FF6F6D6654F]\nE   \t(No symbol) [0x00007FF6F6D61FA4]\nE   \t(No symbol) [0x00007FF6F6D6213D]\nE   \t(No symbol) [0x00007FF6F6D51629]\nE   \tBaseThreadInitThunk [0x00007FFA3FC07614+20]\nE   \tRtlUserThreadStart [0x00007FFA3FEA26A1+33]\n\n---------------------------- Captured stdout setup -----------------------------\nt2SF\n\n---------------------------- Captured stderr setup -----------------------------\n2025-05-22 18:51:26,587 - root - INFO - Test case test_add_sales_plan started at 2025-05-22 18:51:26.587208\n2025-05-22 18:51:27,897 - root - INFO - \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-22 18:51:36,755 - root - INFO - \u5df2\u6253\u5f00\u767b\u5f55\u9875\u9762\n2025-05-22 18:51:36,856 - root - INFO - \u5df2\u8f93\u5165\u7528\u6237\u540d\uff1aguomj\n2025-05-22 18:51:36,943 - root - INFO - \u5df2\u8f93\u5165\u5bc6\u7801\uff1agmj123..\n2025-05-22 18:51:37,034 - root - INFO - \u9a8c\u8bc1\u7801\u56fe\u7247\u5df2\u4fdd\u5b58\u5230 D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\Base\\utils\\captcha.png\n2025-05-22 18:51:37,985 - root - INFO - \u9a8c\u8bc1\u7801\u8bc6\u522b\u7ed3\u679c: t2SF\n2025-05-22 18:51:38,078 - root - INFO - \u5df2\u8f93\u5165\u9a8c\u8bc1\u7801: t2SF\uff0c\u7b2c 1 \u6b21\u5c1d\u8bd5\n2025-05-22 18:51:41,660 - root - INFO - \u767b\u5f55\u6210\u529f\n\n------------------------------ Captured log setup ------------------------------\n2025-05-22 18:51:26 INFO Test case test_add_sales_plan started at 2025-05-22 18:51:26.587208\n2025-05-22 18:51:27 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-22 18:51:36 INFO \u5df2\u6253\u5f00\u767b\u5f55\u9875\u9762\n2025-05-22 18:51:36 INFO \u5df2\u8f93\u5165\u7528\u6237\u540d\uff1aguomj\n2025-05-22 18:51:36 INFO \u5df2\u8f93\u5165\u5bc6\u7801\uff1agmj123..\n2025-05-22 18:51:37 INFO \u9a8c\u8bc1\u7801\u56fe\u7247\u5df2\u4fdd\u5b58\u5230 D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\Base\\utils\\captcha.png\n2025-05-22 18:51:37 INFO \u9a8c\u8bc1\u7801\u8bc6\u522b\u7ed3\u679c: t2SF\n2025-05-22 18:51:38 INFO \u5df2\u8f93\u5165\u9a8c\u8bc1\u7801: t2SF\uff0c\u7b2c 1 \u6b21\u5c1d\u8bd5\n2025-05-22 18:51:41 INFO \u767b\u5f55\u6210\u529f\n\n----------------------------- Captured stdout call -----------------------------\n\u901a\u8fc7 JS \u70b9\u51fb\u5143\u7d20\uff1a//div[@class=&amp;#x27;ant-modal-footer&amp;#x27;]//button[@class=&amp;#x27;ant-btn ant-btn-primary&amp;#x27;]//span[text()=&amp;#x27;\u4fdd\u5b58\u5e76\u7ee7\u7eed&amp;#x27;]\uff0c\u539f\u5f02\u5e38\uff1aMessage: element click intercepted: Element &amp;lt;span&amp;gt;...&amp;lt;/span&amp;gt; is not clickable at point (1067, 709). Other element would receive the click: &amp;lt;button data-v-7c9e3f15=&amp;quot;&amp;quot; type=&amp;quot;button&amp;quot; class=&amp;quot;ant-btn ant-btn-primary&amp;quot;&amp;gt;...&amp;lt;/button&amp;gt;\n  (Session info: chrome=131.0.6778.70)\nStacktrace:\n\tGetHandleVerifier [0x00007FF6F6DF2775+28773]\n\t(No symbol) [0x00007FF6F6D5AFB0]\n\t(No symbol) [0x00007FF6F6BF552A]\n\t(No symbol) [0x00007FF6F6C50B5E]\n\t(No symbol) [0x00007FF6F6C4E5FC]\n\t(No symbol) [0x00007FF6F6C4B7E6]\n\t(No symbol) [0x00007FF6F6C4A741]\n\t(No symbol) [0x00007FF6F6C3C970]\n\t(No symbol) [0x00007FF6F6C6EF9A]\n\t(No symbol) [0x00007FF6F6C3C1C6]\n\t(No symbol) [0x00007FF6F6C6F1B0]\n\t(No symbol) [0x00007FF6F6C8F1A4]\n\t(No symbol) [0x00007FF6F6C6ED43]\n\t(No symbol) [0x00007FF6F6C3A548]\n\t(No symbol) [0x00007FF6F6C3B6B1]\n\tGetHandleVerifier [0x00007FF6F711F45D+3358029]\n\tGetHandleVerifier [0x00007FF6F713430D+3443709]\n\tGetHandleVerifier [0x00007FF6F71283FD+3394797]\n\tGetHandleVerifier [0x00007FF6F6EB929B+842635]\n\t(No symbol) [0x00007FF6F6D6654F]\n\t(No symbol) [0x00007FF6F6D61FA4]\n\t(No symbol) [0x00007FF6F6D6213D]\n\t(No symbol) [0x00007FF6F6D51629]\n\tBaseThreadInitThunk [0x00007FFA3FC07614+20]\n\tRtlUserThreadStart [0x00007FFA3FEA26A1+33]\n\n\n----------------------------- Captured stderr call -----------------------------\n2025-05-22 18:52:00,377 - root - ERROR - \u6dfb\u52a0\u9500\u552e\u8ba1\u5212\u5f02\u5e38\uff0c\u5df2\u622a\u56fe: ./screenshots\\add_sales_plan_error_20250522185200.png, \u9519\u8bef\u4fe1\u606f: Message: \nStacktrace:\n\tGetHandleVerifier [0x00007FF6F6DF2775+28773]\n\t(No symbol) [0x00007FF6F6D5AFB0]\n\t(No symbol) [0x00007FF6F6BF552A]\n\t(No symbol) [0x00007FF6F6C48EAE]\n\t(No symbol) [0x00007FF6F6C4919C]\n\t(No symbol) [0x00007FF6F6C923F7]\n\t(No symbol) [0x00007FF6F6C6EFDF]\n\t(No symbol) [0x00007FF6F6C8F1A4]\n\t(No symbol) [0x00007FF6F6C6ED43]\n\t(No symbol) [0x00007FF6F6C3A548]\n\t(No symbol) [0x00007FF6F6C3B6B1]\n\tGetHandleVerifier [0x00007FF6F711F45D+3358029]\n\tGetHandleVerifier [0x00007FF6F713430D+3443709]\n\tGetHandleVerifier [0x00007FF6F71283FD+3394797]\n\tGetHandleVerifier [0x00007FF6F6EB929B+842635]\n\t(No symbol) [0x00007FF6F6D6654F]\n\t(No symbol) [0x00007FF6F6D61FA4]\n\t(No symbol) [0x00007FF6F6D6213D]\n\t(No symbol) [0x00007FF6F6D51629]\n\tBaseThreadInitThunk [0x00007FFA3FC07614+20]\n\tRtlUserThreadStart [0x00007FFA3FEA26A1+33]\n\n\n------------------------------ Captured log call -------------------------------\n2025-05-22 18:52:00 ERROR \u6dfb\u52a0\u9500\u552e\u8ba1\u5212\u5f02\u5e38\uff0c\u5df2\u622a\u56fe: ./screenshots\\add_sales_plan_error_20250522185200.png, \u9519\u8bef\u4fe1\u606f: Message: \nStacktrace:\n\tGetHandleVerifier [0x00007FF6F6DF2775+28773]\n\t(No symbol) [0x00007FF6F6D5AFB0]\n\t(No symbol) [0x00007FF6F6BF552A]\n\t(No symbol) [0x00007FF6F6C48EAE]\n\t(No symbol) [0x00007FF6F6C4919C]\n\t(No symbol) [0x00007FF6F6C923F7]\n\t(No symbol) [0x00007FF6F6C6EFDF]\n\t(No symbol) [0x00007FF6F6C8F1A4]\n\t(No symbol) [0x00007FF6F6C6ED43]\n\t(No symbol) [0x00007FF6F6C3A548]\n\t(No symbol) [0x00007FF6F6C3B6B1]\n\tGetHandleVerifier [0x00007FF6F711F45D+3358029]\n\tGetHandleVerifier [0x00007FF6F713430D+3443709]\n\tGetHandleVerifier [0x00007FF6F71283FD+3394797]\n\tGetHandleVerifier [0x00007FF6F6EB929B+842635]\n\t(No symbol) [0x00007FF6F6D6654F]\n\t(No symbol) [0x00007FF6F6D61FA4]\n\t(No symbol) [0x00007FF6F6D6213D]\n\t(No symbol) [0x00007FF6F6D51629]\n\tBaseThreadInitThunk [0x00007FFA3FC07614+20]\n\tRtlUserThreadStart [0x00007FFA3FEA26A1+33]\n\n--------------------------- Captured stderr teardown ---------------------------\n2025-05-22 18:52:00,477 - root - INFO - \u5173\u95ed\u6d4f\u89c8\u5668\n\n---------------------------- Captured log teardown -----------------------------\n2025-05-22 18:52:00 INFO \u5173\u95ed\u6d4f\u89c8\u5668\n2025-05-22 18:52:03 INFO Test case test_add_sales_plan ended at 2025-05-22 18:52:03.684492&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;report.html&#34;}"></div>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.12.3&#34;, &#34;Platform&#34;: &#34;Windows-10-10.0.19045-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;8.3.5&#34;, &#34;pluggy&#34;: &#34;1.5.0&#34;}, &#34;Plugins&#34;: {&#34;cov&#34;: &#34;6.1.1&#34;, &#34;html&#34;: &#34;4.1.1&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;}, &#34;JAVA_HOME&#34;: &#34;D:\\software\\java\\jdk1.8.0_441\\&#34;}, &#34;tests&#34;: {&#34;TestCase/test_sales_plan.py::TestSalesPlan::test_add_sales_plan_quantity&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;TestCase/test_sales_plan.py::TestSalesPlan::test_add_sales_plan_quantity&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;TestCase/test_sales_plan.py::TestSalesPlan::test_add_sales_plan_quantity&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\n2025-05-24 09:44:53 INFO Test case test_add_sales_plan_quantity started at 2025-05-24 09:44:53.554754\n2025-05-24 09:44:54 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-24 09:45:01 INFO \u5df2\u6253\u5f00\u767b\u5f55\u9875\u9762\n2025-05-24 09:45:01 INFO \u5df2\u8f93\u5165\u7528\u6237\u540d\uff1aguomj\n2025-05-24 09:45:01 INFO \u5df2\u8f93\u5165\u5bc6\u7801\uff1agmj123..\n2025-05-24 09:45:01 INFO \u9a8c\u8bc1\u7801\u56fe\u7247\u5df2\u4fdd\u5b58\u5230 D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\Base\\utils\\captcha.png\n2025-05-24 09:45:02 INFO \u9a8c\u8bc1\u7801\u8bc6\u522b\u7ed3\u679c: gh v a\n2025-05-24 09:45:02 INFO \u5df2\u8f93\u5165\u9a8c\u8bc1\u7801: gh v a\uff0c\u7b2c 1 \u6b21\u5c1d\u8bd5\n2025-05-24 09:45:12 WARNING \u7b2c 1 \u6b21\u767b\u5f55\u5931\u8d25\uff0c\u91cd\u65b0\u5c1d\u8bd5\n2025-05-24 09:45:12 INFO \u5f00\u59cb\u767b\u5f55\u64cd\u4f5c\n2025-05-24 09:45:13 INFO \u5df2\u6253\u5f00\u767b\u5f55\u9875\u9762\n2025-05-24 09:45:13 INFO \u5df2\u8f93\u5165\u7528\u6237\u540d\uff1aguomj\n2025-05-24 09:45:13 INFO \u5df2\u8f93\u5165\u5bc6\u7801\uff1agmj123..\n2025-05-24 09:45:13 INFO \u9a8c\u8bc1\u7801\u56fe\u7247\u5df2\u4fdd\u5b58\u5230 D:\\gmj\\workSpaces\\workSpaces_pycharm\\autoTest4\\Base\\utils\\captcha.png\n2025-05-24 09:45:14 INFO \u9a8c\u8bc1\u7801\u8bc6\u522b\u7ed3\u679c: p3h2\n2025-05-24 09:45:14 INFO \u5df2\u8f93\u5165\u9a8c\u8bc1\u7801: p3h2\uff0c\u7b2c 2 \u6b21\u5c1d\u8bd5\n2025-05-24 09:45:17 INFO \u767b\u5f55\u6210\u529f\n---------------------------- Captured log teardown -----------------------------\n2025-05-24 09:45:18 INFO \u5173\u95ed\u6d4f\u89c8\u5668\n2025-05-24 09:45:20 INFO Test case test_add_sales_plan_quantity ended at 2025-05-24 09:45:20.222695&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;report.html&#34;}"></div>
     <script>
       (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')

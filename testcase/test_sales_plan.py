@@ -11,6 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from TestCase.conftest import logged_in
 import json
+from TestCase.element_locator import sales_plan_elements
 from TestCase.element_locator.sales_plan_elements import SalesPlanElements
 
 
@@ -78,13 +79,21 @@ class TestSalesPlan:
         
         sales_plan_page = SalesPlanPage(logged_in)
         sales_plan_page.navigate_to_sales_plan()
+
+        plan_data_item = plan_data[0]
+        asin = plan_data_item['asin']
+
+        success_message = sales_plan_page.add_sales_plan(asin=asin)
+        logging.info(f"实际成功提示内容: {success_message}")
+
+
         # 读取测试数据
         with open('d:/gmj/workSpaces/workSpaces_pycharm/autoTest4/TestCase/TestData/quantity_input.json', encoding='utf-8') as f:
             quantity_data = json.load(f)
         valid_cases = quantity_data.get('valid', [])
         invalid_cases = quantity_data.get('invalid', [])
         # 以“五月”为例，实际可参数化
-        month_locator = SalesPlanElements.get_month_option("五月")
+        month_locator = sales_plan_elements.SalesPlanElements.SELECT_MONTH_5
         all_cases = valid_cases + invalid_cases
         results = sales_plan_page.add_sales_plan_with_quantity_cases(month_locator, all_cases)
         for r in results:
