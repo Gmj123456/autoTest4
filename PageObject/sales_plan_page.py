@@ -3,6 +3,7 @@ from Base.base_page import BasePage
 from Base.base_element import BaseElement
 from TestCase.element_locator.sales_plan_elements import SalesPlanElements
 from selenium.webdriver.support.ui import WebDriverWait
+import time
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException  # 新增异常导入
 import logging
@@ -65,8 +66,8 @@ class SalesPlanPage(BasePage):
             self.click_element(*SalesPlanElements.SAVE_AND_CONTINUE_BUTTON)
 
             try:
-                WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(BaseElement.SUCCESS_MESSAGE))
-                success_message = self.find_element(*BaseElement.SUCCESS_MESSAGE).text
+                WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(BaseElement.MESSAGE))
+                success_message = self.find_element(*BaseElement.MESSAGE).text
                 logging.info(f"保存成功提示: {success_message}")
                 return success_message
             except Exception as e:
@@ -84,9 +85,6 @@ class SalesPlanPage(BasePage):
             self.driver.save_screenshot(screenshot_path)
             logging.error(f"添加销售计划异常，已截图: {screenshot_path}, 错误信息: {str(e)}")
             raise
-
-    
-    
 
     def add_sales_plan_with_quantity_cases(self, month_locator, quantity_cases):
         """
@@ -107,12 +105,23 @@ class SalesPlanPage(BasePage):
                 self.send_keys(*SalesPlanElements.PLAN_QUANTITY_INPUT, case["input"])
                 self.click_element(*SalesPlanElements.SAVE_AND_CONTINUE_BUTTON)
                 try:
-                    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(BaseElement.SUCCESS_MESSAGE))
-                    success_message = self.find_element(*BaseElement.SUCCESS_MESSAGE).text
-                    logging.info(f"保存成功提示: {success_message}")
-                    results.append({"input": case["input"], "expected": case["expected"], "actual": success_message, "result": "pass"})
+                    message_element = BaseElement.MESSAGE  # 统一使用MESSAGE元素定位器
+                    
+                    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(message_element))
+                    message_text = self.find_element(*message_element).text
+                    logging.info(f"获取提示信息: {message_text}")
+                    
+                    assertion_status = "fail"
+                    if case['expected']['success']:
+                        if "添加成功" in message_text:
+                            assertion_status = "pass"
+                    else:
+                        if "请添加sku计划数量" in message_text:
+                            assertion_status = "pass"
+                            
+                    results.append({"input": case["input"], "expected": case["expected"], "actual": message_text, "result": assertion_status})
                 except Exception as e:
-                    logging.error(f"获取成功提示信息失败: {str(e)}")
+                    logging.error(f"获取或断言提示信息失败: {str(e)}")
                     results.append({"input": case["input"], "expected": case["expected"], "actual": str(e), "result": "fail"})
             except Exception as e:
                 timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
@@ -122,6 +131,7 @@ class SalesPlanPage(BasePage):
                 self.driver.save_screenshot(screenshot_path)
                 logging.error(f"添加销售计划异常，已截图: {screenshot_path}, 错误信息: {str(e)}")
                 results.append({"input": case["input"], "expected": case["expected"], "actual": str(e), "result": "fail"})
+            time.sleep(2)  # 每轮执行后等待2秒
         return results
 
     

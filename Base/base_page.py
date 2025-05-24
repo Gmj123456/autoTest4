@@ -4,6 +4,7 @@ import logging
 from datetime import datetime
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys # 导入Keys
 import json
 
 class BasePage:
@@ -32,7 +33,14 @@ class BasePage:
 
     def send_keys(self, by, value, text, timeout=10):
         element = self.find_element(by, value, timeout)
-        element.clear()
+
+        # # element.clear()
+        # # 尝试使用JS清空，因为 standard clear() 可能无效
+        # self.driver.execute_script("arguments[0].value = '';", element)
+
+        # 尝试模拟键盘操作清空输入框
+        element.send_keys(Keys.CONTROL + "a") # 全选
+        element.send_keys(Keys.DELETE) # 删除
         element.send_keys(text)
 
     def wait_for_element_visibility(self, by, value, timeout=15):

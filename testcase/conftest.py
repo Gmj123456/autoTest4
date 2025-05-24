@@ -35,8 +35,6 @@ def logged_in():
         
     yield driver
 
-
-
     # 关闭浏览器
     logging.info("关闭浏览器")
     driver.quit()

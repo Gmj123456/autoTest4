@@ -1,5 +1,7 @@
 # autoTest1/TestCase/test_sales_plan.py
 import pytest
+import logging
+import time
 from Base.base_page import BasePage
 from Base.config import ERP_URL
 from Base.base_element import BaseElement
@@ -85,6 +87,7 @@ class TestSalesPlan:
 
         success_message = sales_plan_page.add_sales_plan(asin=asin)
         logging.info(f"实际成功提示内容: {success_message}")
+        time.sleep(1)
 
 
         # 读取测试数据

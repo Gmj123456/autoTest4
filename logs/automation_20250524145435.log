@@ -1,0 +1,14 @@
+2025-05-24 14:54:35,357 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-05-24 14:54:35,501 - root - INFO - Test case test_add_sales_plan started at 2025-05-24 14:54:35.501767
+2025-05-24 14:54:36,535 - root - INFO - 开始登录操作
+2025-05-24 14:54:43,107 - root - INFO - 已打开登录页面
+2025-05-24 14:54:43,215 - root - INFO - 已输入用户名：guomj
+2025-05-24 14:54:43,313 - root - INFO - 已输入密码：gmj123..
+2025-05-24 14:54:43,406 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-05-24 14:54:44,221 - root - INFO - 验证码识别结果: DEcQ
+2025-05-24 14:54:44,314 - root - INFO - 已输入验证码: DEcQ，第 1 次尝试
+2025-05-24 14:54:47,920 - root - INFO - 登录成功
+2025-05-24 14:54:56,928 - root - INFO - 保存成功提示: 添加成功！
+2025-05-24 14:54:56,929 - root - INFO - 实际成功提示内容: 添加成功！
+2025-05-24 14:54:56,931 - root - INFO - 关闭浏览器
+2025-05-24 14:54:59,062 - root - INFO - Test case test_add_sales_plan ended at 2025-05-24 14:54:59.062217
