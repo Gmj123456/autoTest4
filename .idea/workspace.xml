@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3827c2b0-9284-426f-aae7-fd9b84b52a68" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base/base_element.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/base_element.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/base_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base/utils/captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/Base/utils/captcha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObject/sales_plan_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/sales_plan_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250524094033.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/automation_20250524094453.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/.coverage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/TestCase/html_output/assets/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/TestCase/html_output/report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/TestData/sales_plan_month.json" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/TestData/sales_plan_month.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/test_sales_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_sales_plan.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,18 +32,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.pytest for test_sales_plan.TestSalesPlan.executor": "Run",
-    "Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan.executor": "Run",
-    "Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity.executor": "Run",
-    "Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation.executor": "Run",
-    "Python.conftest.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/gmj/workSpaces/workSpaces_pycharm/autoTest4"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.pytest for test_sales_plan.TestSalesPlan.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.conftest.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/gmj/workSpaces/workSpaces_pycharm/autoTest4&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\html_output" />

@@ -102,3 +102,6 @@ class TestSalesPlan:
         for r in results:
             print(f"输入: {r['input']}，期望: {r['expected']}，实际: {r['actual']}，结果: {r['result']}")
             # 可根据需要添加断言
+
+    def test_add_sales_plan_sku(self, logged_in, plan_data):
+        """测试sku"""
