@@ -7,7 +7,8 @@
     <list default="true" id="3827c2b0-9284-426f-aae7-fd9b84b52a68" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base/utils/captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/Base/utils/captcha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/sales_plan_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/sales_plan_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/.coverage" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,7 @@
     &quot;Python.conftest.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/gmj/workSpaces/workSpaces_pycharm/autoTest4&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/gmj/workSpaces/workSpaces_pycharm/demo1&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -53,7 +54,7 @@
       <recent name="D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan">
+  <component name="RunManager" selected="Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity">
     <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="autoTest4" />
       <option name="ENV_FILES" value="" />
@@ -146,8 +147,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan" />
         <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity" />
+        <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan" />
         <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation" />
         <item itemvalue="Python tests.pytest for test_sales_plan.TestSalesPlan" />
         <item itemvalue="Python.conftest" />

@@ -44,28 +44,40 @@ class SalesPlanPage(BasePage):
     def add_sales_plan(self, asin):
         """添加销售计划"""
         try:
+            logging.info("点击店铺选择器")
             self.click_element(*BaseElement.STORE_LOCATOR)  # 选择店铺
+            logging.info("点击市场选择器")
             self.click_element(*BaseElement.MARKET_LOCATOR)  # 选择市场
+            logging.info("点击销售计划菜单")
             self.click_element(*SalesPlanElements.SALES_PLAN_MENU)
+            logging.info(f"输入ASIN: {asin}")
             self.send_keys(*BaseElement.ASIN_INPUT, asin)  # 使用入参ASIN值
+            logging.info("点击搜索按钮")
             self.click_element(*BaseElement.SEARCH_BUTTON)# 点击搜索按钮
+            logging.info("点击创建需求按钮")
             self.click_element(*SalesPlanElements.ADD_SALES_PLAN_BUTTON)# 点击创建需求按钮
             # 等待月份选择框出现
+            logging.info("等待月份选择框出现")
             WebDriverWait(self.driver, 15).until(
                 EC.presence_of_element_located(SalesPlanElements.MONTH_SELECT)
             )
+            logging.info("点击月份选择框")
             self.click_element(*SalesPlanElements.MONTH_SELECT)   # 点击月份选择框
             # 等待弹窗月份选项出现
+            logging.info("等待弹窗月份选项出现")
             WebDriverWait(self.driver, 10).until(
                 EC.element_to_be_clickable(SalesPlanElements.SELECT_MONTH_5)
             )
+            logging.info("点击五月选项")
             self.click_element(*SalesPlanElements.SELECT_MONTH_5) 
 
-
+            logging.info("输入计划数量1000")
             self.send_keys(*SalesPlanElements.PLAN_QUANTITY_INPUT, 1000)
+            logging.info("点击保存并继续按钮")
             self.click_element(*SalesPlanElements.SAVE_AND_CONTINUE_BUTTON)
 
             try:
+                logging.info("等待提示消息出现")
                 WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(BaseElement.MESSAGE))
                 success_message = self.find_element(*BaseElement.MESSAGE).text
                 logging.info(f"保存成功提示: {success_message}")
@@ -94,9 +106,11 @@ class SalesPlanPage(BasePage):
         results = []
         for case in quantity_cases:
             try:
+                logging.info("等待月份选择框出现")
                 WebDriverWait(self.driver, 15).until(
                     EC.presence_of_element_located(SalesPlanElements.MONTH_SELECT)
                 )
+                logging.info("点击月份选择框")
                 self.click_element(*SalesPlanElements.MONTH_SELECT)
                 WebDriverWait(self.driver, 10).until(
                     EC.element_to_be_clickable(month_locator)
