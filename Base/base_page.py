@@ -11,6 +11,44 @@ class BasePage:
     def __init__(self, driver):
         self.driver = driver
 
+    def navigate_to_menu(self, menu_locator, submenu_locator=None, url_keyword=None):
+        """
+        通用菜单导航方法
+        :param menu_locator: 主菜单定位元组
+        :param submenu_locator: 子菜单定位元组（可选）
+        :param url_keyword: URL中应包含的关键字（可选）
+        """
+        try:
+            logging.info(f"点击主菜单: {menu_locator}")
+            WebDriverWait(self.driver, 15).until(
+                EC.element_to_be_clickable(menu_locator)
+            ).click()
+            if submenu_locator:
+                logging.info(f"点击子菜单: {submenu_locator}")
+                WebDriverWait(self.driver, 15).until(
+                    EC.visibility_of_element_located(submenu_locator)
+                ).click()
+            if url_keyword:
+                logging.info(f"等待URL包含: {url_keyword}")
+                WebDriverWait(self.driver, 15).until(
+                    EC.url_contains(url_keyword)
+                )
+        except Exception as e:
+            logging.error(f"导航菜单异常: {str(e)}")
+            raise
+
+    def select_store_and_market(self):
+        """选择店铺和市场"""
+        from Base.base_element import BaseElement
+        try:
+            logging.info("点击店铺选择器")
+            self.click_element(*BaseElement.STORE_LOCATOR)
+            logging.info("点击市场选择器")
+            self.click_element(*BaseElement.MARKET_LOCATOR)
+        except Exception as e:
+            logging.error(f"选择店铺或市场失败: {e}")
+            raise
+
     def find_element(self, by, value, timeout=15):  # 延长超时时间并修改等待条件为可点击
         return WebDriverWait(self.driver, timeout).until(
             EC.element_to_be_clickable((by, value))  # 改为等待元素可点击

@@ -5,49 +5,26 @@ from TestCase.element_locator.sales_plan_elements import SalesPlanElements
 from selenium.webdriver.support.ui import WebDriverWait
 import time
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException  # 新增异常导入
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
 import logging
-from datetime import datetime  # 新增datetime导入
+from datetime import datetime
 import time
 import os
 
 class SalesPlanPage(BasePage):
 
     def navigate_to_sales_plan(self):
-        """导航到销售计划页面（添加显式等待和重试机制）"""
-        try:
-            # 确保元素可交互
-            WebDriverWait(self.driver, 15).until(
-                EC.element_to_be_clickable(SalesPlanElements.MENU_AMAZON)
-            ).click()
-            
-            # 等待菜单项可见
-            WebDriverWait(self.driver, 15).until(
-                EC.visibility_of_element_located(SalesPlanElements.SALES_PLAN_MENU)
-            ).click()
-            
-            # 等待URL包含目标路径
-            WebDriverWait(self.driver, 15).until(
-                EC.url_contains(SalesPlanElements.SALES_PLAN_URL)
-            )
-            
-        except TimeoutException as e:
-            logging.error(f"导航到销售计划页面超时: {str(e)}")
-            raise
-        except NoSuchElementException as e:
-            logging.error(f"元素定位失败: {str(e)}")
-            raise
-    
+        """导航到销售计划页面（兼容旧用例）"""
+        self.navigate_to_menu(
+            SalesPlanElements.MENU_AMAZON,
+            SalesPlanElements.SALES_PLAN_MENU,
+            SalesPlanElements.SALES_PLAN_URL
+        )
 
-
-    # def add_sales_plan(self, asin, months, value):
     def add_sales_plan(self, asin):
         """添加销售计划"""
         try:
-            logging.info("点击店铺选择器")
-            self.click_element(*BaseElement.STORE_LOCATOR)  # 选择店铺
-            logging.info("点击市场选择器")
-            self.click_element(*BaseElement.MARKET_LOCATOR)  # 选择市场
+            self.select_store_and_market()
             logging.info("点击销售计划菜单")
             self.click_element(*SalesPlanElements.SALES_PLAN_MENU)
             logging.info(f"输入ASIN: {asin}")
@@ -149,5 +126,15 @@ class SalesPlanPage(BasePage):
         return results
 
     
-    
+    # 对照商品
+
+    # 对照耗材
+
+    # 修改箱规
+
+    # 删除销售计划
+
+    # 编辑销售计划
+
+
 

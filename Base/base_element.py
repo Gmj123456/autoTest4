@@ -28,10 +28,8 @@ class BaseElement:
 
 
     """
-    通用组件
+    通用组件的定位方式
     """
     ASIN_INPUT = (By.CSS_SELECTOR, "input[placeholder='请输入ASIN']")  # ASIN输入框
     SEARCH_BUTTON = (By.XPATH, "//button[contains(@class, 'ant-btn-primary') and span[text()='查询']]")  # 搜索按钮
-    # SUCCESS_MESSAGE = (By.XPATH, "//span[text()='添加成功！']")  # 成功提示消息
-    # FAIL_MESSAGE = (By.XPATH,"//span[text()='请添加sku计划数量']")
-    MESSAGE = (By.CSS_SELECTOR,"body > div.ant-message > span > div > div > div > span")
+    MESSAGE = (By.CSS_SELECTOR,"body > div.ant-message > span > div > div > div > span")#消息提示
