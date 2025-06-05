@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3827c2b0-9284-426f-aae7-fd9b84b52a68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/createfile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcase/elements_locator/elements_login.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcase/elements_locator/elements_salesPlan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base/utils/captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/Base/utils/captcha.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/base_element.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/base_element.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/login_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PageObject/sales_plan_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/sales_plan_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createfile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/element_locator/login_elements.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/element_locator/sales_plan_elements.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/test_sales_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_sales_plan.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +49,7 @@
     "Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity.executor": "Run",
     "Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation.executor": "Run",
     "Python.conftest.executor": "Debug",
+    "Python.createfile.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "D:/gmj/workSpaces/workSpaces_pycharm/demo1",

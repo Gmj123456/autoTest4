@@ -16,8 +16,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from TestCase.conftest import logged_in
 import json
-from TestCase.element_locator import sales_plan_elements
-from TestCase.element_locator.sales_plan_elements import SalesPlanElements
+from TestCase.elements_locator import elements_salesPlan
+from TestCase.elements_locator.elements_salesPlan import SalesPlanElements
 
 
 class TestSalesPlan:
@@ -110,7 +110,7 @@ class TestSalesPlan:
         valid_cases = quantity_data.get('valid', [])
         invalid_cases = quantity_data.get('invalid', [])
         # 以“五月”为例，实际可参数化
-        month_locator = sales_plan_elements.SalesPlanElements.SELECT_MONTH_5
+        month_locator = elements_salesPlan.SalesPlanElements.SELECT_MONTH_5
         all_cases = valid_cases + invalid_cases
         results = sales_plan_page.add_sales_plan_with_quantity_cases(month_locator, all_cases)
         for r in results:

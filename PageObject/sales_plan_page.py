@@ -1,7 +1,7 @@
 # pages/sales_plan_page.py
 from Base.base_page import BasePage
 from Base.base_element import BaseElement
-from TestCase.element_locator.sales_plan_elements import SalesPlanElements
+from TestCase.elements_locator.elements_salesPlan import SalesPlanElements
 from selenium.webdriver.support.ui import WebDriverWait
 import time
 from selenium.webdriver.support import expected_conditions as EC

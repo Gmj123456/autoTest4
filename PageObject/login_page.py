@@ -9,7 +9,7 @@ import subprocess
 from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from TestCase.element_locator.login_elements import LoginElements
+from TestCase.elements_locator.elements_login import LoginElements
 
 # 在文件顶部添加统一日志配置
 from Base.utils.logger import setup_logging

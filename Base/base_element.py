@@ -5,6 +5,12 @@ import os
 from selenium.webdriver.common.by import By
 
 class BaseElement:
+
+
+    MENU_AMAZON = (By.XPATH, "//*[@role='menu']//span[text()='Amazon发货']") # Amazon发货菜单
+
+
+
     """
     动态读取店铺和市场
     """
@@ -31,5 +37,8 @@ class BaseElement:
     通用组件的定位方式
     """
     ASIN_INPUT = (By.CSS_SELECTOR, "input[placeholder='请输入ASIN']")  # ASIN输入框
-    SEARCH_BUTTON = (By.XPATH, "//button[contains(@class, 'ant-btn-primary') and span[text()='查询']]")  # 搜索按钮
-    MESSAGE = (By.CSS_SELECTOR,"body > div.ant-message > span > div > div > div > span")#消息提示
+    MONTH_SELECT = (By.XPATH, "//div[@class='ant-modal-content']//input[@placeholder='请选择月份']")  # 月份选择框
+    SKU_INPUT = (By.CSS_SELECTOR, "input[placeholder='请输入SKU名称']")  # SKU名称输入框
+    SELECT_FACTORY = (By.XPATH, "//div[contains(@class, 'ant-select') and .//div[text()='请选择生产工厂']]")  # 生产工厂选择框
+    SEARCH_BUTTON = (By.XPATH, "//button[contains(@class, 'ant-btn-primary') and span[text()='查询']]")  # 查询按钮
+    MESSAGE = (By.CSS_SELECTOR,"body > div.ant-message > span > div > div > div > span")  # 消息提示
