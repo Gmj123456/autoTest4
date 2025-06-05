@@ -1,0 +1,12 @@
+2025-06-03 15:57:22,920 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-06-03 15:57:23,064 - root - INFO - Test case test_add_sales_plan_months started at 2025-06-03 15:57:23.064142
+2025-06-03 15:57:24,079 - root - INFO - 开始登录操作
+2025-06-03 15:57:30,413 - root - INFO - 已打开登录页面
+2025-06-03 15:57:30,521 - root - INFO - 已输入用户名：guomj
+2025-06-03 15:57:30,618 - root - INFO - 已输入密码：gmj123..
+2025-06-03 15:57:30,704 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-06-03 15:57:31,623 - root - INFO - 验证码识别结果: bmbx
+2025-06-03 15:57:31,717 - root - INFO - 已输入验证码: bmbx，第 1 次尝试
+2025-06-03 15:57:34,746 - root - INFO - 登录成功
+2025-06-03 15:57:34,805 - root - INFO - 关闭浏览器
+2025-06-03 15:57:36,878 - root - INFO - Test case test_add_sales_plan_months ended at 2025-06-03 15:57:36.878711

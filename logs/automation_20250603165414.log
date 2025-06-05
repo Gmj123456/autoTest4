@@ -1,0 +1,27 @@
+2025-06-03 16:54:14,477 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-06-03 16:54:14,635 - root - INFO - Test case test_add_sales_plan_onemonth started at 2025-06-03 16:54:14.635080
+2025-06-03 16:54:15,733 - root - INFO - 开始登录操作
+2025-06-03 16:54:22,076 - root - INFO - 已打开登录页面
+2025-06-03 16:54:22,224 - root - INFO - 已输入用户名：guomj
+2025-06-03 16:54:22,327 - root - INFO - 已输入密码：gmj123..
+2025-06-03 16:54:22,410 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-06-03 16:54:26,854 - root - INFO - 验证码识别结果: Kd Wj
+2025-06-03 16:54:26,957 - root - INFO - 已输入验证码: Kd Wj，第 1 次尝试
+2025-06-03 16:54:37,054 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-06-03 16:54:37,055 - root - INFO - 开始登录操作
+2025-06-03 16:54:37,707 - root - INFO - 已打开登录页面
+2025-06-03 16:54:37,814 - root - INFO - 已输入用户名：guomj
+2025-06-03 16:54:37,901 - root - INFO - 已输入密码：gmj123..
+2025-06-03 16:54:38,009 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-06-03 16:54:42,231 - root - INFO - 验证码识别结果: 6806
+2025-06-03 16:54:42,312 - root - INFO - 已输入验证码: 6806，第 2 次尝试
+2025-06-03 16:54:43,187 - root - INFO - 登录成功
+2025-06-03 16:54:43,189 - root - INFO - 点击主菜单: ('xpath', "//*[@role='menu']//span[text()='Amazon发货']")
+2025-06-03 16:54:43,347 - root - INFO - 点击子菜单: ('xpath', "//*[@role='menu']//a[span[text()='销售计划']]")
+2025-06-03 16:54:44,053 - root - INFO - 等待URL包含: /amzShipment/salesPlan
+2025-06-03 16:54:44,060 - root - INFO - 输入ASIN: B0BV29TQWG
+2025-06-03 16:54:44,234 - root - INFO - 点击搜索按钮
+2025-06-03 16:54:44,334 - root - INFO - 点击创建需求按钮
+2025-06-03 16:54:54,652 - root - ERROR - 添加销售计划异常，已截图: ./screenshots\add_sales_plan_error_20250603165454.png, 错误信息: cannot access local variable 'element' where it is not associated with a value
+2025-06-03 16:54:54,720 - root - INFO - 关闭浏览器
+2025-06-03 16:54:56,817 - root - INFO - Test case test_add_sales_plan_onemonth ended at 2025-06-03 16:54:56.817466

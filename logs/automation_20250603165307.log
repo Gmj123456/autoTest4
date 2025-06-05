@@ -1,0 +1,26 @@
+2025-06-03 16:53:07,617 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-06-03 16:53:07,772 - root - INFO - Test case test_menu_navigation started at 2025-06-03 16:53:07.772441
+2025-06-03 16:53:08,877 - root - INFO - 开始登录操作
+2025-06-03 16:53:15,124 - root - INFO - 已打开登录页面
+2025-06-03 16:53:15,231 - root - INFO - 已输入用户名：guomj
+2025-06-03 16:53:15,326 - root - INFO - 已输入密码：gmj123..
+2025-06-03 16:53:15,411 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-06-03 16:53:19,738 - root - INFO - 验证码识别结果: e s wk
+2025-06-03 16:53:19,844 - root - INFO - 已输入验证码: e s wk，第 1 次尝试
+2025-06-03 16:53:29,937 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-06-03 16:53:29,937 - root - INFO - 开始登录操作
+2025-06-03 16:53:30,551 - root - INFO - 已打开登录页面
+2025-06-03 16:53:30,647 - root - INFO - 已输入用户名：guomj
+2025-06-03 16:53:30,728 - root - INFO - 已输入密码：gmj123..
+2025-06-03 16:53:30,826 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-06-03 16:53:35,022 - root - INFO - 验证码识别结果: dCyu
+2025-06-03 16:53:35,104 - root - INFO - 已输入验证码: dCyu，第 2 次尝试
+2025-06-03 16:53:35,796 - root - INFO - 登录成功
+2025-06-03 16:53:35,808 - root - INFO - 点击主菜单: ('xpath', "//*[@role='menu']//span[text()='Amazon发货']")
+2025-06-03 16:53:35,928 - root - INFO - 点击子菜单: ('xpath', "//*[@role='menu']//a[span[text()='销售计划']]")
+2025-06-03 16:53:36,641 - root - INFO - 等待URL包含: /amzShipment/salesPlan
+2025-06-03 16:53:36,646 - root - INFO - 已导航到销售计划页面
+2025-06-03 16:53:36,650 - root - INFO - 实际页面URL: http://124.222.178.125:3006/amzShipment/salesPlan
+2025-06-03 16:53:36,651 - root - INFO - 目标URL: http://124.222.178.125:3006/amzShipment/salesPlan
+2025-06-03 16:53:36,652 - root - INFO - 关闭浏览器
+2025-06-03 16:53:38,758 - root - INFO - Test case test_menu_navigation ended at 2025-06-03 16:53:38.758163

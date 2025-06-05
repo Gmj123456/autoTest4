@@ -27,6 +27,7 @@ class SalesPlanPage(BasePage):
             self.select_store_and_market()
             logging.info("点击销售计划菜单")
             self.click_element(*SalesPlanElements.SALES_PLAN_MENU)
+
             logging.info(f"输入ASIN: {asin}")
             self.send_keys(*BaseElement.ASIN_INPUT, asin)  # 使用入参ASIN值
             logging.info("点击搜索按钮")
@@ -43,10 +44,12 @@ class SalesPlanPage(BasePage):
             # 等待弹窗月份选项出现
             logging.info("等待弹窗月份选项出现")
             WebDriverWait(self.driver, 10).until(
-                EC.element_to_be_clickable(SalesPlanElements.SELECT_MONTH_5)
+                # EC.element_to_be_clickable(SalesPlanElements.SELECT_MONTH_5)
+                EC.element_to_be_clickable(SalesPlanElements.get_month_option("五月"))
             )
             logging.info("点击五月选项")
-            self.click_element(*SalesPlanElements.SELECT_MONTH_5) 
+            self.click_element(*SalesPlanElements.SELECT_MONTH_5)
+            self.click_element(*SalesPlanElements.get_month_option("五月")) 
 
             logging.info("输入计划数量1000")
             self.send_keys(*SalesPlanElements.PLAN_QUANTITY_INPUT, 1000)
@@ -92,6 +95,13 @@ class SalesPlanPage(BasePage):
                 WebDriverWait(self.driver, 10).until(
                     EC.element_to_be_clickable(month_locator)
                 )
+                # 月份选择逻辑
+                month_locator = self.get_month_locator(month)
+                WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(month_locator))
+                self.click_element(*month_locator)
+                
+                # 修正OCR处理逻辑
+                self.recognize_captcha()
                 self.click_element(*month_locator)
                 self.send_keys(*SalesPlanElements.PLAN_QUANTITY_INPUT, case["input"])
                 self.click_element(*SalesPlanElements.SAVE_AND_CONTINUE_BUTTON)
@@ -135,6 +145,21 @@ class SalesPlanPage(BasePage):
     # 删除销售计划
 
     # 编辑销售计划
+
+    def add_sales_plan_for_months(self, months_data):
+        """连续添加多个月份的销售计划"""
+        all_results = []
+        for month_data in months_data:
+            month_name = month_data['month']
+            quantity_cases = month_data['quantity_cases']
+            logging.info(f"开始添加 {month_name} 的销售计划")
+            month_locator = SalesPlanElements.get_month_option(month_name)
+            results = self.add_sales_plan_with_quantity_cases(month_locator, quantity_cases)
+            for r in results:
+                r['month'] = month_name  # 添加月份信息到结果中
+            all_results.extend(results)
+            logging.info(f"完成添加 {month_name} 的销售计划")
+        return all_results
 
 
 

@@ -1,0 +1,19 @@
+2025-06-03 17:16:00,470 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-06-03 17:16:00,635 - root - INFO - Test case test_add_sales_plan_onemonth started at 2025-06-03 17:16:00.635948
+2025-06-03 17:16:01,661 - root - INFO - 开始登录操作
+2025-06-03 17:16:07,881 - root - INFO - 已打开登录页面
+2025-06-03 17:16:07,981 - root - INFO - 已输入用户名：guomj
+2025-06-03 17:16:08,076 - root - INFO - 已输入密码：gmj123..
+2025-06-03 17:16:08,160 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-06-03 17:16:12,877 - root - INFO - 验证码识别结果: SkA9
+2025-06-03 17:16:12,983 - root - INFO - 已输入验证码: SkA9，第 1 次尝试
+2025-06-03 17:16:17,033 - root - INFO - 登录成功
+2025-06-03 17:16:17,040 - root - INFO - 点击主菜单: ('xpath', "//*[@role='menu']//span[text()='Amazon发货']")
+2025-06-03 17:16:17,161 - root - INFO - 点击子菜单: ('xpath', "//*[@role='menu']//a[span[text()='销售计划']]")
+2025-06-03 17:16:17,898 - root - INFO - 等待URL包含: /amzShipment/salesPlan
+2025-06-03 17:16:17,901 - root - INFO - 输入ASIN: B0BV29TQWG
+2025-06-03 17:16:18,085 - root - INFO - 点击搜索按钮
+2025-06-03 17:16:18,376 - root - INFO - 点击创建需求按钮
+2025-06-03 17:16:28,663 - root - ERROR - 添加销售计划异常，已截图: ./screenshots\add_sales_plan_error_20250603171628.png, 错误信息: cannot access local variable 'element' where it is not associated with a value
+2025-06-03 17:16:28,727 - root - INFO - 关闭浏览器
+2025-06-03 17:16:30,886 - root - INFO - Test case test_add_sales_plan_onemonth ended at 2025-06-03 17:16:30.886659

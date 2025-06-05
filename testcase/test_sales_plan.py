@@ -2,6 +2,9 @@
 import pytest
 import logging
 import time
+
+from selenium.webdriver.common.by import By
+
 from Base.base_page import BasePage
 from Base.config import ERP_URL
 from Base.base_element import BaseElement
@@ -57,7 +60,7 @@ class TestSalesPlan:
             f"菜单跳转地址不正确\n预期: {expected_url}\n实际: {current_url}"
 
 
-    def test_add_sales_plan(self, logged_in, plan_data):
+    def test_add_sales_plan_onemonth(self, logged_in, plan_data):
         """有效等价类：添加五月销售计划1000"""
         sales_plan_page = SalesPlanPage(logged_in)
         sales_plan_page.navigate_to_sales_plan()
@@ -75,6 +78,17 @@ class TestSalesPlan:
             logging.error(f"断言失败: {str(e)}")
             sales_plan_page.take_screenshot('success_message_assertion_failed')
             raise
+
+        # # 确保元素可点击
+        # try:
+        #     element = WebDriverWait(logged_in, 10).until(
+        #         EC.element_to_be_clickable((By.ID, 'element_id'))  # 替换为实际的元素定位器
+        #     )
+        #     element.click()
+        # except Exception as e:
+        #     logging.error(f"元素点击失败: {str(e)}")
+        #     sales_plan_page.take_screenshot('element_click_failed')
+        #     raise
 
     def test_add_sales_plan_quantity(self, logged_in, plan_data):
         """测试计划数量"""
@@ -105,3 +119,47 @@ class TestSalesPlan:
 
     def test_add_sales_plan_sku(self, logged_in, plan_data):
         """测试sku"""
+
+
+    def test_add_sales_plan_months(self, logged_in):
+        """有效等价类，连续添加4个月的销售计划"""
+        sales_plan_page = SalesPlanPage(logged_in)
+        sales_plan_page.navigate_to_sales_plan()
+
+        # 读取测试数据
+        with open('d:/gmj/workSpaces/workSpaces_pycharm/autoTest4/TestCase/TestData/FBA_shipping.json', encoding='utf-8') as f:
+            fba_shipping_data = json.load(f)
+
+        for plan_data_item in fba_shipping_data:
+            store = plan_data_item['store']
+            marketplace = plan_data_item['marketplace']
+            asin = plan_data_item['asin']
+            months_data = plan_data_item['months']
+
+            logging.info(f"开始为店铺: {store}, 市场: {marketplace}, ASIN: {asin} 添加销售计划")
+
+            # 选择店铺和市场
+            # sales_plan_page.select_store_and_market(store, marketplace)
+            sales_plan_page.select_store_and_market()
+
+            # 添加销售计划（ASIN）
+            success_message = sales_plan_page.add_sales_plan(asin=asin)
+            logging.info(f"ASIN添加成功提示: {success_message}")
+            assert "成功" in success_message, f"ASIN {asin} 添加失败: {success_message}"
+
+            # 连续添加多个月份的销售计划
+            results = sales_plan_page.add_sales_plan_for_months(months_data)
+            for r in results:
+                logging.info(f"月份: {r['month']}，输入: {r['input']}，期望: {r['expected']}，实际: {r['actual']}，结果: {r['result']}")
+                assert r['result'] == '成功', f"月份 {r['month']} 销售计划添加失败: {r['actual']}"
+
+
+            # 循环取多个月份的计划数量
+            for month_data in months_data:
+                month = month_data['month']
+                quantity = sales_plan_page.get_plan_quantity(month)
+                logging.info(f"月份: {month}，计划数量: {quantity}")
+                assert quantity == month_data['quantity'], f"月份 {month} 的计划数量错误，期望: {month_data['quantity']}，实际: {quantity}"
+
+            logging.info(f"完成为店铺: {store}, 市场: {marketplace}, ASIN: {asin} 添加销售计划")
+            # 可以添加一些清理或验证步骤，例如检查数据是否正确显示在页面上

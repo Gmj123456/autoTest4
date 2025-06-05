@@ -1,0 +1,27 @@
+[
+    {
+      "store": "美时美刻",
+      "marketplace": "美国",
+      "asin": "B0BV29TQWG",
+      "product_name": "冰锤 蓝色",
+      "sku": "HF-024",
+      "months": [
+        {
+          "month": "六月",
+          "value": "1000"
+        },
+        {
+          "month": "七月",
+          "value": "2000"
+        },
+        {
+          "month": "八月",
+          "value": "3000"
+        },
+        {
+          "month": "九月",
+          "value": "4000"
+        }
+      ]
+    }
+  ]

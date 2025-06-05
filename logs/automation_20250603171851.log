@@ -1,0 +1,16 @@
+2025-06-03 17:18:51,620 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-06-03 17:18:51,762 - root - INFO - Test case test_add_sales_plan_months started at 2025-06-03 17:18:51.762044
+2025-06-03 17:18:52,773 - root - INFO - 开始登录操作
+2025-06-03 17:18:52,835 - root - INFO - 已打开登录页面
+2025-06-03 17:18:59,718 - root - INFO - 已输入用户名：guomj
+2025-06-03 17:18:59,804 - root - INFO - 已输入密码：gmj123..
+2025-06-03 17:18:59,883 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-06-03 17:19:04,350 - root - INFO - 验证码识别结果: NwR4
+2025-06-03 17:19:04,458 - root - INFO - 已输入验证码: NwR4，第 1 次尝试
+2025-06-03 17:19:08,049 - root - INFO - 登录成功
+2025-06-03 17:19:08,052 - root - INFO - 点击主菜单: ('xpath', "//*[@role='menu']//span[text()='Amazon发货']")
+2025-06-03 17:19:08,187 - root - INFO - 点击子菜单: ('xpath', "//*[@role='menu']//a[span[text()='销售计划']]")
+2025-06-03 17:19:09,102 - root - INFO - 等待URL包含: /amzShipment/salesPlan
+2025-06-03 17:19:09,123 - root - INFO - 开始为店铺: 美时美刻, 市场: 美国, ASIN: B0BV29TQWG 添加销售计划
+2025-06-03 17:19:09,182 - root - INFO - 关闭浏览器
+2025-06-03 17:19:11,272 - root - INFO - Test case test_add_sales_plan_months ended at 2025-06-03 17:19:11.272863

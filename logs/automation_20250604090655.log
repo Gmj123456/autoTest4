@@ -1,0 +1,48 @@
+2025-06-04 09:06:55,175 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-06-04 09:06:55,309 - root - INFO - Test case test_add_sales_plan_onemonth started at 2025-06-04 09:06:55.308535
+2025-06-04 09:06:56,321 - root - INFO - 开始登录操作
+2025-06-04 09:07:02,741 - root - INFO - 已打开登录页面
+2025-06-04 09:07:02,844 - root - INFO - 已输入用户名：guomj
+2025-06-04 09:07:02,936 - root - INFO - 已输入密码：gmj123..
+2025-06-04 09:07:03,013 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-06-04 09:07:07,346 - root - INFO - 验证码识别结果: r0Pc
+2025-06-04 09:07:07,436 - root - INFO - 已输入验证码: r0Pc，第 1 次尝试
+2025-06-04 09:07:11,980 - root - INFO - 登录成功
+2025-06-04 09:07:11,985 - root - INFO - 点击主菜单: ('xpath', "//*[@role='menu']//span[text()='Amazon发货']")
+2025-06-04 09:07:12,088 - root - INFO - 点击子菜单: ('xpath', "//*[@role='menu']//a[span[text()='销售计划']]")
+2025-06-04 09:07:12,844 - root - INFO - 等待URL包含: /amzShipment/salesPlan
+2025-06-04 09:07:12,861 - root - INFO - 点击店铺选择器
+2025-06-04 09:07:14,558 - root - INFO - 点击市场选择器
+2025-06-04 09:07:15,411 - root - INFO - 点击销售计划菜单
+2025-06-04 09:07:15,505 - root - INFO - 输入ASIN: B0BV29TQWG
+2025-06-04 09:07:15,582 - root - INFO - 点击搜索按钮
+2025-06-04 09:07:16,564 - root - INFO - 点击创建需求按钮
+2025-06-04 09:07:17,028 - root - INFO - 等待月份选择框出现
+2025-06-04 09:07:17,042 - root - INFO - 点击月份选择框
+2025-06-04 09:07:17,621 - root - INFO - 等待弹窗月份选项出现
+2025-06-04 09:07:27,920 - root - ERROR - 添加销售计划异常，已截图: ./screenshots\add_sales_plan_error_20250604090727.png, 错误信息: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff755126f65+78965]
+	GetHandleVerifier [0x0x7ff755126fc0+79056]
+	(No symbol) [0x0x7ff754eb9dda]
+	(No symbol) [0x0x7ff754f102ea]
+	(No symbol) [0x0x7ff754f1059c]
+	(No symbol) [0x0x7ff754f63f37]
+	(No symbol) [0x0x7ff754f386af]
+	(No symbol) [0x0x7ff754f60dbe]
+	(No symbol) [0x0x7ff754f38443]
+	(No symbol) [0x0x7ff754f01311]
+	(No symbol) [0x0x7ff754f020a3]
+	GetHandleVerifier [0x0x7ff7553de26d+2926461]
+	GetHandleVerifier [0x0x7ff7553d8993+2903715]
+	GetHandleVerifier [0x0x7ff7553f6aed+3026941]
+	GetHandleVerifier [0x0x7ff7551416fe+187406]
+	GetHandleVerifier [0x0x7ff7551496ef+220159]
+	GetHandleVerifier [0x0x7ff75512faf4+114692]
+	GetHandleVerifier [0x0x7ff75512fca9+115129]
+	GetHandleVerifier [0x0x7ff7551164d8+10728]
+	BaseThreadInitThunk [0x0x7ffd678d7614+20]
+	RtlUserThreadStart [0x0x7ffd687e26a1+33]
+
+2025-06-04 09:07:27,978 - root - INFO - 关闭浏览器
+2025-06-04 09:07:30,065 - root - INFO - Test case test_add_sales_plan_onemonth ended at 2025-06-04 09:07:30.065715

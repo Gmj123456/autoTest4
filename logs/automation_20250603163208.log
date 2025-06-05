@@ -1,0 +1,43 @@
+2025-06-03 16:32:08,471 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-06-03 16:32:08,623 - root - INFO - Test case test_add_sales_plan_months started at 2025-06-03 16:32:08.623783
+2025-06-03 16:32:09,646 - root - INFO - 开始登录操作
+2025-06-03 16:32:16,653 - root - INFO - 已打开登录页面
+2025-06-03 16:32:16,754 - root - INFO - 已输入用户名：guomj
+2025-06-03 16:32:16,842 - root - INFO - 已输入密码：gmj123..
+2025-06-03 16:32:16,930 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-06-03 16:32:21,393 - root - INFO - 验证码识别结果: 1YR5
+2025-06-03 16:32:21,484 - root - INFO - 已输入验证码: 1YR5，第 1 次尝试
+2025-06-03 16:32:26,207 - root - INFO - 登录成功
+2025-06-03 16:32:26,214 - root - INFO - 点击主菜单: ('xpath', "//*[@role='menu']//span[text()='Amazon发货']")
+2025-06-03 16:32:26,315 - root - INFO - 点击子菜单: ('xpath', "//span[text()='销售计划']")
+2025-06-03 16:32:27,892 - root - ERROR - 导航菜单异常: Message: element click intercepted: Element <span>...</span> is not clickable at point (76, 274). Other element would receive the click: <a href="/amzShipment/salesPlan" class="">...</a>
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff755126f65+78965]
+	GetHandleVerifier [0x0x7ff755126fc0+79056]
+	(No symbol) [0x0x7ff754eb9dda]
+	(No symbol) [0x0x7ff754f182e9]
+	(No symbol) [0x0x7ff754f15c82]
+	(No symbol) [0x0x7ff754f12cd1]
+	(No symbol) [0x0x7ff754f11c44]
+	(No symbol) [0x0x7ff754f032a4]
+	(No symbol) [0x0x7ff754f3866a]
+	(No symbol) [0x0x7ff754f02b56]
+	(No symbol) [0x0x7ff754f38880]
+	(No symbol) [0x0x7ff754f60dbe]
+	(No symbol) [0x0x7ff754f38443]
+	(No symbol) [0x0x7ff754f01311]
+	(No symbol) [0x0x7ff754f020a3]
+	GetHandleVerifier [0x0x7ff7553de26d+2926461]
+	GetHandleVerifier [0x0x7ff7553d8993+2903715]
+	GetHandleVerifier [0x0x7ff7553f6aed+3026941]
+	GetHandleVerifier [0x0x7ff7551416fe+187406]
+	GetHandleVerifier [0x0x7ff7551496ef+220159]
+	GetHandleVerifier [0x0x7ff75512faf4+114692]
+	GetHandleVerifier [0x0x7ff75512fca9+115129]
+	GetHandleVerifier [0x0x7ff7551164d8+10728]
+	BaseThreadInitThunk [0x0x7ffd678d7614+20]
+	RtlUserThreadStart [0x0x7ffd687e26a1+33]
+
+2025-06-03 16:32:28,028 - root - INFO - 关闭浏览器
+2025-06-03 16:32:30,120 - root - INFO - Test case test_add_sales_plan_months ended at 2025-06-03 16:32:30.120424
