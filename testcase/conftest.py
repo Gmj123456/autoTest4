@@ -8,10 +8,11 @@ from PageObject.login_page import LoginPage
 from Base.config import USERNAME, PASSWORD
 import datetime
 from Base.config import CHROME_DRIVER_PATH
+import json
+from pathlib import Path
 
 # 调用统一的日志配置
 logger = setup_logging()
-
 
 # 记录使用的 ChromeDriver 路径
 logging.info(f"使用的 ChromeDriver 路径: {CHROME_DRIVER_PATH}")
@@ -39,9 +40,6 @@ def logged_in():
     # 关闭浏览器
     logging.info("关闭浏览器")
     driver.quit()
-
-import json
-from pathlib import Path
 
 @pytest.fixture(scope="function")
 def menu_urls():
