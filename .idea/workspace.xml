@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3827c2b0-9284-426f-aae7-fd9b84b52a68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/automation_20250626115203.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcase/TestData/.coverage" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcase/TestData/assets/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcase/TestData/data_faker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcase/TestData/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/TestData/data_faker.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +48,10 @@
     "Python.conftest.executor": "Debug",
     "Python.createfile.executor": "Run",
     "Python.data_faker.executor": "Run",
+    "Python.data_faker2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/gmj/workSpaces/workSpaces_pycharm/demo1",
+    "last_opened_file_path": "D:/gmj/workSpaces/workSpaces_pycharm/autoTest4",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -66,7 +63,7 @@
       <recent name="D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.data_faker">
+  <component name="RunManager" selected="Python.data_faker2">
     <configuration name="createfile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="autoTest4" />
       <option name="ENV_FILES" value="" />
@@ -111,6 +108,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="data_faker2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="autoTest4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestCase/TestData" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestCase/TestData/data_faker2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest (data_faker.py 内)" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="autoTest4" />
       <option name="ENV_FILES" value="" />
@@ -126,23 +145,6 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/TestCase/TestData/data_faker.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_sales_plan.TestSalesPlan.test_add_sales_plan_onemonth 的 pytest" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="autoTest4" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestCase" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_sales_plan.TestSalesPlan.test_add_sales_plan_onemonth&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity 的 pytest" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -164,6 +166,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.data_faker2" />
         <item itemvalue="Python.data_faker" />
         <item itemvalue="Python 测试.pytest (data_faker.py 内)" />
         <item itemvalue="Python.createfile" />
