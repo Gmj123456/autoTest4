@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3827c2b0-9284-426f-aae7-fd9b84b52a68" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/logs/automation_20250711141627.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/automation_20250711143308.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/find_element_timeout_20250711141741.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/find_element_timeout_20250711141757.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/send_keys_error_20250711141741.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/send_keys_error_20250711141757.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/TestData/data_faker.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/utils/captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/Base/utils/captcha.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/utils/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Base/utils/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/.coverage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +56,7 @@
     "Python tests.pytest for test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity.executor": "Run",
     "Python tests.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation.executor": "Run",
     "Python 测试.pytest (test_data_faker.py 内).executor": "Run",
+    "Python 测试.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation.executor": "Run",
     "Python.conftest.executor": "Debug",
     "Python.createfile.executor": "Run",
     "Python.data_faker.executor": "Run",
@@ -63,7 +75,7 @@
       <recent name="D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.data_faker2">
+  <component name="RunManager" selected="Python 测试.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation">
     <configuration name="createfile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="autoTest4" />
       <option name="ENV_FILES" value="" />
@@ -147,7 +159,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity 的 pytest" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_sales_plan.TestSalesPlan.test_menu_navigation" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="autoTest4" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,12 +172,13 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_sales_plan.TestSalesPlan.test_add_sales_plan_quantity&quot;" />
+      <option name="_new_target" value="&quot;test_sales_plan.TestSalesPlan.test_menu_navigation&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python 测试.pytest for test_sales_plan.TestSalesPlan.test_menu_navigation" />
         <item itemvalue="Python.data_faker2" />
         <item itemvalue="Python.data_faker" />
         <item itemvalue="Python 测试.pytest (data_faker.py 内)" />

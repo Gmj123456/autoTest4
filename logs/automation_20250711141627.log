@@ -1,0 +1,290 @@
+2025-07-11 14:16:27,042 - root - INFO - 使用的 ChromeDriver 路径: D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\chromedriver.exe
+2025-07-11 14:16:27,401 - root - INFO - Test case test_menu_navigation started at 2025-07-11 14:16:27.401096
+2025-07-11 14:16:28,644 - root - INFO - 开始登录操作
+2025-07-11 14:17:04,360 - root - INFO - 已打开登录页面
+2025-07-11 14:17:04,462 - root - INFO - 成功输入文本到元素: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input
+2025-07-11 14:17:04,462 - root - INFO - 已输入用户名：guomj
+2025-07-11 14:17:04,539 - root - INFO - 成功输入文本到元素: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[2]/div/div/span/input
+2025-07-11 14:17:04,539 - root - INFO - 已输入密码：gmj123..
+2025-07-11 14:17:04,657 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-07-11 14:17:15,798 - root - INFO - 验证码识别结果: tCGU
+2025-07-11 14:17:15,875 - root - INFO - 成功输入文本到元素: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[3]/div[1]/div/div/div/span/span/input
+2025-07-11 14:17:15,875 - root - INFO - 已输入验证码: tCGU，第 1 次尝试
+2025-07-11 14:17:25,972 - root - WARNING - 第 1 次登录失败，重新尝试
+2025-07-11 14:17:25,972 - root - INFO - 开始登录操作
+2025-07-11 14:17:26,460 - root - INFO - 已打开登录页面
+2025-07-11 14:17:41,718 - root - ERROR - 查找元素超时: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input
+2025-07-11 14:17:41,827 - root - INFO - 截图已保存至：D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\../screenshots\find_element_timeout_20250711141741.png
+2025-07-11 14:17:41,827 - root - ERROR - 输入文本异常: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input, 错误: Message: 查找元素超时: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input
+
+2025-07-11 14:17:41,965 - root - INFO - 截图已保存至：D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\../screenshots\send_keys_error_20250711141741.png
+2025-07-11 14:17:41,965 - root - ERROR - 登录过程中出现错误: Message: 查找元素超时: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input
+Traceback (most recent call last):
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 118, in find_element
+    return WebDriverWait(self.driver, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7b73e6f75+76917]
+	GetHandleVerifier [0x0x7ff7b73e6fd0+77008]
+	(No symbol) [0x0x7ff7b7199dea]
+	(No symbol) [0x0x7ff7b71f0256]
+	(No symbol) [0x0x7ff7b71f050c]
+	(No symbol) [0x0x7ff7b7243887]
+	(No symbol) [0x0x7ff7b72184af]
+	(No symbol) [0x0x7ff7b724065c]
+	(No symbol) [0x0x7ff7b7218243]
+	(No symbol) [0x0x7ff7b71e1431]
+	(No symbol) [0x0x7ff7b71e21c3]
+	GetHandleVerifier [0x0x7ff7b76bd2ad+3051437]
+	GetHandleVerifier [0x0x7ff7b76b7903+3028483]
+	GetHandleVerifier [0x0x7ff7b76d589d+3151261]
+	GetHandleVerifier [0x0x7ff7b740183e+185662]
+	GetHandleVerifier [0x0x7ff7b74096ff+218111]
+	GetHandleVerifier [0x0x7ff7b73efaf4+112628]
+	GetHandleVerifier [0x0x7ff7b73efca9+113065]
+	GetHandleVerifier [0x0x7ff7b73d6c78+10616]
+	BaseThreadInitThunk [0x0x7fffbc0c7614+20]
+	RtlUserThreadStart [0x0x7fffbc8226a1+33]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\PageObject\login_page.py", line 133, in login
+    self.send_keys(*LoginElements.USERNAME_INPUT, username)
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 201, in send_keys
+    element = self.find_element(by, value, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 125, in find_element
+    raise TimeoutException(error_msg)
+selenium.common.exceptions.TimeoutException: Message: 查找元素超时: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input
+
+2025-07-11 14:17:41,982 - root - INFO - 开始登录操作
+2025-07-11 14:17:42,192 - root - INFO - 已打开登录页面
+2025-07-11 14:17:57,424 - root - ERROR - 查找元素超时: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input
+2025-07-11 14:17:57,530 - root - INFO - 截图已保存至：D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\../screenshots\find_element_timeout_20250711141757.png
+2025-07-11 14:17:57,531 - root - ERROR - 输入文本异常: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input, 错误: Message: 查找元素超时: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input
+
+2025-07-11 14:17:57,656 - root - INFO - 截图已保存至：D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\../screenshots\send_keys_error_20250711141757.png
+2025-07-11 14:17:57,656 - root - ERROR - 登录过程中出现错误: Message: 查找元素超时: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input
+Traceback (most recent call last):
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 118, in find_element
+    return WebDriverWait(self.driver, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7b73e6f75+76917]
+	GetHandleVerifier [0x0x7ff7b73e6fd0+77008]
+	(No symbol) [0x0x7ff7b7199dea]
+	(No symbol) [0x0x7ff7b71f0256]
+	(No symbol) [0x0x7ff7b71f050c]
+	(No symbol) [0x0x7ff7b7243887]
+	(No symbol) [0x0x7ff7b72184af]
+	(No symbol) [0x0x7ff7b724065c]
+	(No symbol) [0x0x7ff7b7218243]
+	(No symbol) [0x0x7ff7b71e1431]
+	(No symbol) [0x0x7ff7b71e21c3]
+	GetHandleVerifier [0x0x7ff7b76bd2ad+3051437]
+	GetHandleVerifier [0x0x7ff7b76b7903+3028483]
+	GetHandleVerifier [0x0x7ff7b76d589d+3151261]
+	GetHandleVerifier [0x0x7ff7b740183e+185662]
+	GetHandleVerifier [0x0x7ff7b74096ff+218111]
+	GetHandleVerifier [0x0x7ff7b73efaf4+112628]
+	GetHandleVerifier [0x0x7ff7b73efca9+113065]
+	GetHandleVerifier [0x0x7ff7b73d6c78+10616]
+	BaseThreadInitThunk [0x0x7fffbc0c7614+20]
+	RtlUserThreadStart [0x0x7fffbc8226a1+33]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\PageObject\login_page.py", line 133, in login
+    self.send_keys(*LoginElements.USERNAME_INPUT, username)
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 201, in send_keys
+    element = self.find_element(by, value, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 125, in find_element
+    raise TimeoutException(error_msg)
+selenium.common.exceptions.TimeoutException: Message: 查找元素超时: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input
+
+2025-07-11 14:17:57,657 - root - INFO - 开始登录操作
+2025-07-11 14:17:57,846 - root - INFO - 已打开登录页面
+2025-07-11 14:18:12,215 - root - INFO - 成功输入文本到元素: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[1]/div/div/span/input
+2025-07-11 14:18:12,216 - root - INFO - 已输入用户名：guomj
+2025-07-11 14:18:12,289 - root - INFO - 成功输入文本到元素: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[2]/div/div/span/input
+2025-07-11 14:18:12,289 - root - INFO - 已输入密码：gmj123..
+2025-07-11 14:18:12,431 - root - INFO - 验证码图片已保存到 D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\utils\captcha.png
+2025-07-11 14:18:21,594 - root - INFO - 验证码识别结果: 404
+2025-07-11 14:18:21,596 - root - ERROR - 输入文本异常: xpath=/html/body/div[1]/div/div/div/div[2]/div/div/form/div[1]/form/div[3]/div[1]/div/div/div/span/span/input, 错误: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7b73e6f75+76917]
+	GetHandleVerifier [0x0x7ff7b73e6fd0+77008]
+	(No symbol) [0x0x7ff7b7199dea]
+	(No symbol) [0x0x7ff7b7185f15]
+	(No symbol) [0x0x7ff7b71aabf4]
+	(No symbol) [0x0x7ff7b721fa85]
+	(No symbol) [0x0x7ff7b723ff72]
+	(No symbol) [0x0x7ff7b7218243]
+	(No symbol) [0x0x7ff7b71e1431]
+	(No symbol) [0x0x7ff7b71e21c3]
+	GetHandleVerifier [0x0x7ff7b76bd2ad+3051437]
+	GetHandleVerifier [0x0x7ff7b76b7903+3028483]
+	GetHandleVerifier [0x0x7ff7b76d589d+3151261]
+	GetHandleVerifier [0x0x7ff7b740183e+185662]
+	GetHandleVerifier [0x0x7ff7b74096ff+218111]
+	GetHandleVerifier [0x0x7ff7b73efaf4+112628]
+	GetHandleVerifier [0x0x7ff7b73efca9+113065]
+	GetHandleVerifier [0x0x7ff7b73d6c78+10616]
+	BaseThreadInitThunk [0x0x7fffbc0c7614+20]
+	RtlUserThreadStart [0x0x7fffbc8226a1+33]
+
+2025-07-11 14:18:21,632 - root - ERROR - 截图失败: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7b73e6f75+76917]
+	GetHandleVerifier [0x0x7ff7b73e6fd0+77008]
+	(No symbol) [0x0x7ff7b7199c1c]
+	(No symbol) [0x0x7ff7b71e055f]
+	(No symbol) [0x0x7ff7b7218332]
+	(No symbol) [0x0x7ff7b7212e53]
+	(No symbol) [0x0x7ff7b7211f19]
+	(No symbol) [0x0x7ff7b7164b05]
+	GetHandleVerifier [0x0x7ff7b76bd2ad+3051437]
+	GetHandleVerifier [0x0x7ff7b76b7903+3028483]
+	GetHandleVerifier [0x0x7ff7b76d589d+3151261]
+	GetHandleVerifier [0x0x7ff7b740183e+185662]
+	GetHandleVerifier [0x0x7ff7b74096ff+218111]
+	(No symbol) [0x0x7ff7b7163b00]
+	GetHandleVerifier [0x0x7ff7b77d5f18+4201496]
+	BaseThreadInitThunk [0x0x7fffbc0c7614+20]
+	RtlUserThreadStart [0x0x7fffbc8226a1+33]
+
+2025-07-11 14:18:21,633 - root - ERROR - 登录过程中出现错误: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7b73e6f75+76917]
+	GetHandleVerifier [0x0x7ff7b73e6fd0+77008]
+	(No symbol) [0x0x7ff7b7199dea]
+	(No symbol) [0x0x7ff7b7185f15]
+	(No symbol) [0x0x7ff7b71aabf4]
+	(No symbol) [0x0x7ff7b721fa85]
+	(No symbol) [0x0x7ff7b723ff72]
+	(No symbol) [0x0x7ff7b7218243]
+	(No symbol) [0x0x7ff7b71e1431]
+	(No symbol) [0x0x7ff7b71e21c3]
+	GetHandleVerifier [0x0x7ff7b76bd2ad+3051437]
+	GetHandleVerifier [0x0x7ff7b76b7903+3028483]
+	GetHandleVerifier [0x0x7ff7b76d589d+3151261]
+	GetHandleVerifier [0x0x7ff7b740183e+185662]
+	GetHandleVerifier [0x0x7ff7b74096ff+218111]
+	GetHandleVerifier [0x0x7ff7b73efaf4+112628]
+	GetHandleVerifier [0x0x7ff7b73efca9+113065]
+	GetHandleVerifier [0x0x7ff7b73d6c78+10616]
+	BaseThreadInitThunk [0x0x7fffbc0c7614+20]
+	RtlUserThreadStart [0x0x7fffbc8226a1+33]
+Traceback (most recent call last):
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\PageObject\login_page.py", line 144, in login
+    self.send_keys(*LoginElements.CAPTCHA_INPUT, captcha_text + Keys.RETURN)
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 201, in send_keys
+    element = self.find_element(by, value, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\Base\base_page.py", line 118, in find_element
+    return WebDriverWait(self.driver, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 137, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 633, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 917, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 448, in execute
+    self.error_handler.check_response(response)
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7b73e6f75+76917]
+	GetHandleVerifier [0x0x7ff7b73e6fd0+77008]
+	(No symbol) [0x0x7ff7b7199dea]
+	(No symbol) [0x0x7ff7b7185f15]
+	(No symbol) [0x0x7ff7b71aabf4]
+	(No symbol) [0x0x7ff7b721fa85]
+	(No symbol) [0x0x7ff7b723ff72]
+	(No symbol) [0x0x7ff7b7218243]
+	(No symbol) [0x0x7ff7b71e1431]
+	(No symbol) [0x0x7ff7b71e21c3]
+	GetHandleVerifier [0x0x7ff7b76bd2ad+3051437]
+	GetHandleVerifier [0x0x7ff7b76b7903+3028483]
+	GetHandleVerifier [0x0x7ff7b76d589d+3151261]
+	GetHandleVerifier [0x0x7ff7b740183e+185662]
+	GetHandleVerifier [0x0x7ff7b74096ff+218111]
+	GetHandleVerifier [0x0x7ff7b73efaf4+112628]
+	GetHandleVerifier [0x0x7ff7b73efca9+113065]
+	GetHandleVerifier [0x0x7ff7b73d6c78+10616]
+	BaseThreadInitThunk [0x0x7fffbc0c7614+20]
+	RtlUserThreadStart [0x0x7fffbc8226a1+33]
+
+2025-07-11 14:18:21,644 - root - INFO - 开始登录操作
+2025-07-11 14:18:21,645 - root - ERROR - 登录过程中出现错误: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7b73e6f75+76917]
+	GetHandleVerifier [0x0x7ff7b73e6fd0+77008]
+	(No symbol) [0x0x7ff7b7199c1c]
+	(No symbol) [0x0x7ff7b71e055f]
+	(No symbol) [0x0x7ff7b7218332]
+	(No symbol) [0x0x7ff7b7212e53]
+	(No symbol) [0x0x7ff7b7211f19]
+	(No symbol) [0x0x7ff7b7164b05]
+	GetHandleVerifier [0x0x7ff7b76bd2ad+3051437]
+	GetHandleVerifier [0x0x7ff7b76b7903+3028483]
+	GetHandleVerifier [0x0x7ff7b76d589d+3151261]
+	GetHandleVerifier [0x0x7ff7b740183e+185662]
+	GetHandleVerifier [0x0x7ff7b74096ff+218111]
+	(No symbol) [0x0x7ff7b7163b00]
+	GetHandleVerifier [0x0x7ff7b77d5f18+4201496]
+	BaseThreadInitThunk [0x0x7fffbc0c7614+20]
+	RtlUserThreadStart [0x0x7fffbc8226a1+33]
+Traceback (most recent call last):
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\PageObject\login_page.py", line 131, in login
+    self.driver.get(ERP_URL)
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 473, in get
+    self.execute(Command.GET, {"url": url})
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 448, in execute
+    self.error_handler.check_response(response)
+  File "D:\gmj\workSpaces\workSpaces_pycharm\autoTest4\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7b73e6f75+76917]
+	GetHandleVerifier [0x0x7ff7b73e6fd0+77008]
+	(No symbol) [0x0x7ff7b7199c1c]
+	(No symbol) [0x0x7ff7b71e055f]
+	(No symbol) [0x0x7ff7b7218332]
+	(No symbol) [0x0x7ff7b7212e53]
+	(No symbol) [0x0x7ff7b7211f19]
+	(No symbol) [0x0x7ff7b7164b05]
+	GetHandleVerifier [0x0x7ff7b76bd2ad+3051437]
+	GetHandleVerifier [0x0x7ff7b76b7903+3028483]
+	GetHandleVerifier [0x0x7ff7b76d589d+3151261]
+	GetHandleVerifier [0x0x7ff7b740183e+185662]
+	GetHandleVerifier [0x0x7ff7b74096ff+218111]
+	(No symbol) [0x0x7ff7b7163b00]
+	GetHandleVerifier [0x0x7ff7b77d5f18+4201496]
+	BaseThreadInitThunk [0x0x7fffbc0c7614+20]
+	RtlUserThreadStart [0x0x7fffbc8226a1+33]
+
+2025-07-11 14:18:21,648 - root - ERROR - 验证码识别失败次数达到上限，登录失败
+2025-07-11 14:18:21,743 - root - INFO - Test case test_menu_navigation ended at 2025-07-11 14:18:21.743466

@@ -7,11 +7,12 @@ from selenium.webdriver.chrome.service import Service
 from PageObject.login_page import LoginPage
 from Base.config import USERNAME, PASSWORD
 import datetime
+from Base.config import CHROME_DRIVER_PATH
 
 # 调用统一的日志配置
 logger = setup_logging()
 
-from Base.config import CHROME_DRIVER_PATH
+
 # 记录使用的 ChromeDriver 路径
 logging.info(f"使用的 ChromeDriver 路径: {CHROME_DRIVER_PATH}")
 """
